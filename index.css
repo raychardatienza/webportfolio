@@ -132,160 +132,121 @@ img {
   transform: scale(0.98);
 }
 
-.css-typing h1 {
-  border-right: .15em solid orange;
-  font-family: "Courier";
-  font-size: 120px;
-  white-space: nowrap;
-  overflow: hidden;
-  color: var(--main-color);
-  text-align: center;
-  margin: 0 205px;
-   margin-bottom: 205px;
+.hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #222222;
 }
 
-.css-typing h3 {
-  border-right: .15em solid orange;
-  font-family: "Courier";
-  font-size: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  color: var(--main-color);
-  display: flex;
-  margin: 0 205px;
+.hero h1 {
+      font-weight: lighter;
+      text-align: center;
+      letter-spacing: -2px;
+      line-height: 58px;
+      color: #fff;
 }
 
-.css-typing h5 {
-  border-right: .15em solid orange;
-  font-family: "Courier";
-  font-size: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  color: var(--main-color);
-  display: flex;
-  margin: 0 205px;
-  margin-bottom: 100px;
-}
-
-.css-typing h1:nth-child(1) {
-  width: 15em;
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(0, end);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing h3:nth-child(2) {
-  width: 15em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing h5:nth-child(3) {
-  width: 15em;
-  opacity: 0;
-  -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
-  animation: type3 3s steps(20, end), blink .5s step-end infinite alternate;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    border: none;
-  }
-}
-
-@-webkit-keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    border: none;
-  }
-}
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@keyframes type3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes type3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    border-color: tranparent;
-  }
+.hero-content h1{
+      color: ff4d05;
 }
 
 
+.line {
+      width: 24em;
+      top: 50%;
+      margin: auto;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);
+      color: #ff4d05;
+}
+
+.anim-typewriter {
+      font-size: 60px;
+      animation: typewriter 4s steps(40) 1s 1 normal both,
+      blinkTextCussor 500ms steps(40) infinite normal;
+}
+.anim-typewriter1 {
+    font-size: 40px;
+      animation: typewriter 4s steps(40) 5s 1 normal both,
+      blinkTextCussor 500ms steps(40) infinite normal;
+}
+.anim-typewriter2 {
+    font-size: 40px;
+      animation: typewriter 4s steps(40) 9s 1 normal both,
+      blinkTextCussor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+      from {
+            width: 0;
+      }
+      to {
+            width: 18em;
+      }
+}
+
+
+@keyframes blinkTextCussor {
+      from {
+            border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+            border-right-color: transparent;
+      }
+}
+
+
+
+@media screen and (max-width: 1200px ) {
+
+      @keyframes typewriter {
+            from {
+                  width: 0;
+            }
+            to {
+                  width: 17em;
+            }
+      }
+      .header h1 {
+            font-size: 15px;
+            color: #fff;
+      }
+}
+
+@media screen and (max-width: 992px ) {
+
+      @keyframes typewriter {
+            from {
+                  width: 0;
+            }
+            to {
+                  width: 17em;
+            }
+      }
+      .header h1 {
+            font-size: 15px;
+            color: #fff;
+      }
+}
+
+
+@media screen and (max-width: 768px) {
+
+      @keyframes typewriter {
+            from {
+                  width: 0;
+            }
+            to {
+                  width: 17em;
+            }
+      }
+      .header h1 {
+            font-size: 15px;
+            color: #fff;
+      }
+}
