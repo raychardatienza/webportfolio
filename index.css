@@ -68,7 +68,7 @@ span{
   font-family: roboto;
   margin: 0 5px;
   transition: all .45s ease;
-  margin-bottom: 50px !important;
+  margin-bottom: 20px !important;
 }
 
 .navlist a:hover{
@@ -137,7 +137,7 @@ img {
   color: #fff;
   border-radius: 5px;
   border: solid var(--main-color) 1px;
-  margin-top: 25px;
+  margin-top: 50px;
   opacity: 0.7;
 }
 
@@ -305,9 +305,6 @@ img {
 }
 
 
-
-
-
 .global .social{
   width: 100%;
   margin: 0 auto;
@@ -346,8 +343,9 @@ img {
 
 svg {
 
-  margin: -50px;
-    font: 9em 'Montserrat';
+        margin-top: -65px;
+        margin-bottom: -25px;
+    font: 5em 'Montserrat';
 }
 
 .text-copy {
@@ -530,7 +528,10 @@ svg {
     border-radius: 30px;
 }
 
-
 .card-text1{
       font-size: 30px;
+}
+
+.modal-body, .modal-footer{
+  background: var(--bg-color);
 }
