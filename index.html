@@ -11,7 +11,7 @@
 		<title>Full Stack Web Developer</title>
 	</head>
 	<body>
-		<div class=".body">
+
 		<!-- Navbar Section Start -->
 		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
 		 <a href="#" class="navbar-brand"><span>r.</span></a>
@@ -23,30 +23,56 @@
 				<li><a href="#landing" class="Active" >Home</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#experience">Experience</a></li>
+				<li><a href="#skills">Skills</a></li>
 				<li><a href="#tools">Tools</a></li>
 				<li><a href="#contact">Contact Me</a></li>
 			</ul>
 		  </div>
 		</nav>
-		<!-- Navbar Section End -->
 
-		<!-- Main Content Section Start -->
-		<div class="container-fluid text-center">
-			<div class="row">
-			<div class="col-xl-12 p-0">
-				<div id="landing">
-					<div class="hero">
-	                  <div class="header">
-	                        <h1 class="line anim-typewriter mb-5 p-5">Welcome to my Portfolio</h1> 
-	                        <h1 class="line anim-typewriter1 mt-5">Raychard Atienza</h1>
-	                        <h1 class="line anim-typewriter2"> Full Stack Web Developer</h1>
-	                        <a href="#projects" class="btn mt-5">Read More</a>
-	                  </div>
-	            </div>										
-				</div>
-			</div>				
-				<!-- Start of Project  -->
+			<!-- Landing Page Start -->
+			<div class="container-fluid text-center">
+				<div class="row">
+					<div class="col-xl-12 p-0">
+						<div id="landing">
+							<div class="hero">
+			                 	<div class="header">
+			                        <h1 class="line anim-typewriter mb-5 p-5">Welcome to my Portfolio</h1> 
+			                        <h1 class="line anim-typewriter1 mt-5">Raychard Atienza</h1>
+			                        <h1 class="line anim-typewriter2"> Full Stack Web Developer</h1>
+			                        <a href="#about" class="btn mt-5">About Me</a>
+			                 	 </div>
+			            	</div>										
+						</div>
+					</div>
+			<!-- Landing Page End -->
 
+	            <!-- About Me Section Start -->
+				<div class="container-fluid px-0 text-center">
+				<div class=" text-light min-vh-100 p-5">
+					<div id="about" class="container">
+					  <svg viewBox="0 0 960 300">
+					    <symbol id="s-text5">
+					      <text text-anchor="middle" x="50%" y="80%">About Me</text>
+					    </symbol>
+
+					    <g class = "g-ants">
+					      <use xlink:href="#s-text5" class="text-copy"></use>
+					      <use xlink:href="#s-text5" class="text-copy"></use>
+					      <use xlink:href="#s-text5" class="text-copy"></use>
+					      <use xlink:href="#s-text5" class="text-copy"></use>
+					      <use xlink:href="#s-text5" class="text-copy"></use>
+					    </g>
+					  </svg>
+					</div>
+						<div class="d-flex flex-column d-md-block">
+	                        <img width="70%" src="images/about.png" class="img-fluid" />
+	                    </div>
+	            </div>
+	            </div>
+	            <!-- About Me Section End -->
+
+				<!-- Project Section Start -->
 				<div class=" text-light min-vh-100 p-5">							
 					<div id="projects" class="container">
 					  <svg viewBox="0 0 960 300">
@@ -64,11 +90,10 @@
 					  </svg>
 					</div>
 
-					<!-- Container for Other Projects Start -->
-					<div class="d-lg-flex justify-content-center p-md-5">
+					<div class="d-lg-flex justify-content-center card-body">
 						
 						<!-- Automated Fruit Picking Machine Card Start -->
-						<div class="card bg-dark col-xl-4 mb-5 mb-xl-0"> 
+						<div class="card bg-dark col-xl-4 mb-5 mb-xl-5 ml-xl-5"> 
 						  <div class="card-body">
 						  	<img src="./images/fruit.png" class="card-img-top" alt="...">
 						  	<h5 class="card-title mt-3">Automated Fruit Picking Machine</h5>
@@ -84,7 +109,7 @@
 						<!-- Automated Fruit Picking Machine Card End -->
 
 						<!-- Automated Advising System Card Start -->
-						<div class="card bg-dark col-xl-4 mb-5 mb-xl-0 mr-xl-5 ml-xl-5" > 
+						<div class="card bg-dark col-xl-4 mb-5 mb-xl-5 mr-xl-5 ml-xl-5 " > 
 						  <div class="card-body">
 						  	<img src="./images/advise.png" class="card-img-top" alt="...">
 						  	<h5 class="card-title mt-3">Automated Advising System</h5>
@@ -98,7 +123,7 @@
 						<!-- Automated Advising System Card End -->
 
 						<!-- Room Lighting Control System Card Start -->
-						<div class="card bg-dark col-xl-4 mb-5 mb-xl-0 mr-xl-5" > 
+						<div class="card bg-dark col-xl-4 mb-5 mb-xl-5 mr-xl-5" >  
 						  <div class="card-body">
 						  	<img src="./images/lighting.png" class="card-img-top" alt="...">
 						  	<h5 class="card-title mt-3">Room Lighting Control System</h5>
@@ -112,8 +137,8 @@
 						</div>
 						<!-- Room Lighting Control System Card End -->
 					</div>
-
-
+				</div>
+				<!-- Project Section End -->
 
 				<!-- Work Experience Section Start -->
 				<div class=" text-light min-vh-100 p-5">
@@ -132,10 +157,11 @@
 					    </g>
 					  </svg>
 					</div>
-					<!-- Container for Other Projects Start -->
-					<div class="d-lg-flex justify-content-center p-md-5">								
+
+					<div class="d-lg-flex justify-content-center card-body">	
+
 						<!-- Project Support Engineer Card Start -->
-						<div class="card bg-dark col-xl-4 mb-5 mb-xl-0"> 
+						<div class="card bg-dark col-xl-4 mb-5 mb-xl-5 ml-xl-5"> 
 						  <div class="card-body">
 						  	<img src="./images/fiber.png" class="card-img-top" alt="...">
 						  	<h5 class="card-title mt-3">Project Support Engineer</h5>
@@ -153,7 +179,7 @@
 						<!-- Project Support Engineer Card End -->
 
 						<!-- Systems Engineer Card Start -->
-						<div class="card bg-dark col-xl-4 mb-5 mb-xl-0 mr-xl-5 ml-xl-5" > 
+						<div class="card bg-dark col-xl-4 mb-5 mb-xl-5 mr-xl-5 ml-xl-5 " > 
 						  <div class="card-body">
 						  	<img src="./images/security.png" class="card-img-top" alt="...">
 						  	<h5 class="card-title mt-3">Systems Engineer</h5>
@@ -167,7 +193,7 @@
 						<!-- Systems Engineer Card End -->
 
 						<!-- Cryptocurrency Trader & Beta Tester Card Start -->
-						<div class="card bg-dark col-xl-4 mb-5 mb-xl-0 mr-xl-5" > 
+						<div class="card bg-dark col-xl-4 mb-5 mb-xl-5 mr-xl-5" > 
 						  <div class="card-body">
 						  	<img src="./images/crypto.png" class="card-img-top" alt="...">
 						  	<h5 class="card-title mt-3">Cryptocurrency Trader & Beta Tester</h5>
@@ -184,8 +210,80 @@
 						</div>
 						<!-- Cryptocurrency Trader & Beta Tester End -->
 					</div>
+				</div>
+				<!-- Work Experience Section End -->
 
-					<!-- Tools ID Start -->
+				<!-- Skills Section Start -->
+				<div class="container-fluid px-0 text-center">
+				<div class=" text-light min-vh-100 p-5">
+					<div id="skills" class="container">
+					  <svg viewBox="0 0 960 300">
+					    <symbol id="s-text4">
+					      <text text-anchor="middle" x="50%" y="80%">SKILLS</text>
+					    </symbol>
+
+					    <g class = "g-ants">
+					      <use xlink:href="#s-text4" class="text-copy"></use>
+					      <use xlink:href="#s-text4" class="text-copy"></use>
+					      <use xlink:href="#s-text4" class="text-copy"></use>
+					      <use xlink:href="#s-text4" class="text-copy"></use>
+					      <use xlink:href="#s-text4" class="text-copy"></use>
+					    </g>
+					  </svg>
+					</div>
+						<div class="feat pt-5 pb-5">
+					    <div class="container">
+					      <div class="row">
+					        <div class="section-head col-sm-12">
+					          <h3><span>Why Choose</span> Me?</h3>
+					          <p>I am a knowledgeable computer engineer and experienced full-stack web developer with the skills and expertise needed to design and develop cutting-edge software solutions that meet the needs of modern businesses and organizations.</p>
+					        </div>
+					        <div class="col-lg-4 col-sm-6">
+					          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-globe"></i></span>
+					            <h6>Fornt-End</h6>
+					            <p>Knowledgeable frontend developer with experience in creating dynamic and visually appealing websites that engage users and enhance their experience.</p>
+					          </div>
+					        </div>
+					        <div class="col-lg-4 col-sm-6">
+					          <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-database"></i></span>
+					            <h6>Back-End</h6>
+					            <p>Expertise in building robust and scalable applications that handle complex data and backend processes, ensuring optimal website performance and functionality.</p>
+					          </div>
+					        </div>
+					        <div class="col-lg-4 col-sm-6">
+					          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-code"></i></span>
+					            <h6>Full-Stack</h6>
+					            <p>Experience in both frontend and backend development, allowing me to create high-quality, end-to-end web solutions that meet client needs and exceed their expectations.</p>
+					          </div>
+					        </div>
+					        <div class="col-lg-4 col-sm-6">
+					          <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-shield"></i></span>
+					            <h6>Blockchain</h6>
+					            <p>Knowledgeable and experienced blockchain developer with expertise in building secure, decentralized applications that leverage blockchain technology.</p>
+					          </div>
+					        </div>
+					        <div class="col-lg-4 col-sm-6">
+					          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-user-secret"></i></span>
+					            <h6>Security Sytems</h6>
+					            <p>Experienced security systems expert with a deep understanding of the latest security trends and technologies, allowing me to design and implement secure systems.</p>
+					          </div>
+					        </div>
+					        <div class="col-lg-4 col-sm-6">
+					          <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-wrench"></i></span>
+					            <h6>Troubleshooting</h6>
+					            <p>Expertise in quickly diagnosing and resolving technical issues, ensuring optimal performance and minimizing downtime for businesses and organizations.</p>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<!-- Skills Section End -->
+
+								<!-- TOOLS SECTION START -->
+				<div class="container-fluid px-0 text-center">
+				<div class=" text-light min-vh-100 p-5">
 					<div id="tools" class="container">
 					  <svg viewBox="0 0 960 300">
 					    <symbol id="s-text2">
@@ -201,25 +299,40 @@
 					    </g>
 					  </svg>
 					</div>
-		                <div class="d-flex flex-row d-md-block justify-content-around">
-							<div class="d-flex flex-column d-md-block">
-		                        <img width="150" src="images/logo-mongodb.png" class="img-fluid" />
-		                        <img width="150" src="images/logo-nodejs.png" class="img-fluid" />
-		                        <img width="150" src="images/logo-expressjs.png" class="img-fluid" />
-		                        <img width="150" src="images/logo-react.png" class="img-fluid" />
-		                        <img width="150" src="images/logo-heroku.png" class="img-fluid" />
-		                    </div>
-							<div class="d-flex flex-column d-md-block">
-		                        <img width="150" src="images/logo-git.png" class="img-fluid" />
-		                        <img width="150" src="images/logo-sublime-text-3.png" class="img-fluid" />
-		                        <img width="150" src="images/logo-postman.png" class="img-fluid" />
-		                        <img width="150" src="images/logo-gitlab-ci-cd.png" class="img-fluid" />
-		                    </div>
-		                </div>
-		            </div>
-		            <!-- Tools ID Start -->
 
-					<!-- Contact Me Section Start -->
+
+	                <!-- Core Tools Section Start -->
+	                <div>
+	                    <div>
+	                        <img width="150" src="images/logo-html5.png"/>
+	                    </div>
+	                    <div>
+	                        <img width="150" src="images/logo-css3.png"/>
+	                        <img width="150" src="images/logo-javascript.png"/>
+	                    </div>
+	                </div>
+	                <div class="d-flex flex-row d-md-block justify-content-around">
+						<div class="d-flex flex-column d-md-block">
+	                        <img width="150" src="images/logo-mongodb.png" class="img-fluid" />
+	                        <img width="150" src="images/logo-nodejs.png" class="img-fluid" />
+	                        <img width="150" src="images/logo-expressjs.png" class="img-fluid" />
+	                        <img width="150" src="images/logo-react.png" class="img-fluid" />
+	                        <img width="150" src="images/logo-heroku.png" class="img-fluid" />
+	                    </div>
+						<div class="d-flex flex-column d-md-block">
+	                        <img width="150" src="images/logo-git.png" class="img-fluid" />
+	                        <img width="150" src="images/logo-sublime-text-3.png" class="img-fluid" />
+	                        <img width="150" src="images/logo-postman.png" class="img-fluid" />
+	                        <img width="150" src="images/logo-gitlab-ci-cd.png" class="img-fluid" />
+	                    </div>
+	                </div>
+	            </div>
+	            </div>
+	            <!-- Core Tools Section End -->
+
+	            <!-- Contact Me Section Start -->
+	            <div class="container-fluid px-0 text-center">
+				<div class=" text-light min-vh-100 p-5">
 					<div id="contact" class="container">
 					  <svg viewBox="0 0 960 300">
 					    <symbol id="s-text3">
@@ -235,31 +348,35 @@
 					    </g>
 					  </svg>
 					</div>
-						<div class="text-center row col-mt-5">
-					            <div class="col-md-4 bg-dark p-5 text-white order-sm-first order-last ">
+
+					<div class="d-lg-flex justify-content-center card-body">
+						<div class="card bg-dark col-xl-4 mb-5 mb-xl-5 ml-xl-5"> 
+					            	<div class="card-body">
 					                <h2>Let's get in touch</h2>
-					                <p>We're open for any suggestion or just to have a chat</p>
-					                <div class="d-flex mt-2 mb-3">
+					                <div class="mb-5 mt-5">
 					                    <i class="fa fa-map-marker">
 					                    <p class="mt-2 ms-3">Address : Cuenca, Batangas 4222 Philippines</p></i>
 					                </div>
-					                <div class="mb-3">
+					                <div class="mb-5 mt-5">
 					                    <i class="fa fa-mobile">
 					                    <p class="mt-2 ms-3">Phone : 639176348553</p></i>
 					                </div>
-					                <div class="mb-3">
+					                <div class="mb-5 mt-5">
 					                    <i class="fa fa-envelope">
-					                    <p class="mt-2 ms-3">Email : raychardatienza@gmail.com</p></i>
+					                    <p class="mt-2 ms-3">Email : araychard@gmail.com</p></i>
 					                </div>
-					                <div class="mb-3">
+					                <div class="mb-5 mt-5">
 					                    <i class="fa fa-linkedin">
-					                    <p class="mt-2 ms-3">LinkedIn : https://www.linkedin.com/in/raychard-atienza-98b1a0271/</p></i>
+					                    <p class="mt-2 ms-3">LinkedIn : /raychard-atienza-98b1a0271/</p></i>
 					                </div>
 					            </div>
-								<div class="col-sm-12 col-md-8 col-xl-6 bg-dark m-auto">
+					        </div>
+					            
+						<div class="card bg-dark col-xl-4 mb-5 mb-xl-5 ml-xl-5"> 
 								<div class="card-body">
 									<form>
 										<div class="form-group">
+											<h4>Have a question? Message us.</h4>
 											<label for="name">Name</label>
 											<input type="text" class="form-control" id="name"  placeholder="Your Name" required  rows="3">
 										
@@ -298,20 +415,16 @@
 										</div>
 									</form>
 								</div>
-								</div>
-								</div>
-								</div>
 							</div>
 						</div>
-						<!-- Contact Me Section End -->
 					</div>
-				<!-- Side Content Section End -->
-			</div>
-		</div>
-		<!-- Main Content Section End -->
-    
-			<div class="global">
-			      <div class="curve"></div>
+				</div>
+	            <!-- Contact Me Section Start -->
+
+				<!-- Footer Section Start -->
+				<div class="container-fluid px-0 text-center">
+				<div class="global">
+			      <div class="curve">
 			      <div class="container">
 			        <div class="row">
 			          <div class="social">
@@ -322,16 +435,18 @@
 			            <a href="https://www.instagram.com/raychard.eiei/" target="_blank"><i class="fa fa-instagram"></i> </a>
 			            <a href="https://myaccount.google.com/" target="_blank"><i class="fa fa-google-plus"></i> </a>
 			          </div>
-
 			        </div>
 			        <p class="copyright"> &copy; Copyright All rights reserved. 2023 </p>
 			      </div>
+			      </div>
 			    </div>
+			    </div>
+			    <!-- Footer Section End -->
 
-		</div>
 
 		<!-- Bootstrap JS Script -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	</body>
 	</body>
 </html>
