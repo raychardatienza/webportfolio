@@ -198,7 +198,7 @@ img {
 
 @keyframes typewriter {
       from {
-            width: 1;
+            width: 0;
       }
       to {
             width: 18em;
