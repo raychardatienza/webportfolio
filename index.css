@@ -154,10 +154,10 @@ img {
 }
 
 .hero h1 {
-      font-weight: lighter;
+
       text-align: center;
       letter-spacing: -2px;
-      line-height: 58px;
+      line-height: 85px;
       color: var(--main-color);
       font-family: monospace;
 }
@@ -180,25 +180,25 @@ img {
 }
 
 .anim-typewriter {
-      font-size: 60px;
-      animation: typewriter 4s steps(40) 1s 1 normal both,
-      blinkTextCussor 500ms steps(40) infinite normal;
+      font-size: 80px;
+      animation: typewriter 4s steps(30) 1s 1 normal both,
+      blinkTextCussor 500ms steps(30) infinite normal;
 
 }
 .anim-typewriter1 {
-    font-size: 35px;
-      animation: typewriter 4s steps(40) 5s 1 normal both,
-      blinkTextCussor 500ms steps(40) infinite normal;
+    font-size: 80px;
+      animation: typewriter 4s steps(30) 5s 1 normal both,
+      blinkTextCussor 500ms steps(30) infinite normal;
 }
 .anim-typewriter2 {
-    font-size: 35px;
-      animation: typewriter 4s steps(40) 9s 1 normal both,
-      blinkTextCussor 500ms steps(40) infinite normal;
+    font-size: 40px;
+      animation: typewriter 4s steps(30) 9s 1 normal both,
+      blinkTextCussor 500ms steps(30) infinite normal;
 }
 
 @keyframes typewriter {
       from {
-            width: 0;
+            width: 1;
       }
       to {
             width: 18em;
@@ -231,13 +231,7 @@ img {
             font-size: 50px;
     color: var(--main-color);
       }
-
-           svg {
-    font-size: 1.5em;
-
-  }
-
-}
+    } 
 
 @media screen and (max-width: 992px ) {
 
@@ -250,15 +244,10 @@ img {
             }
       }
       .header h1 {
-            font-size: 35px;
+            font-size: 30px;
     color: var(--main-color);
       }
-
-         svg {
-    font-size: 1.5em;
-
-  }
-}
+    } 
 
 
 @media screen and (max-width: 768px) {
@@ -275,14 +264,9 @@ img {
             font-size: 18px;
     color: var(--main-color);
       }
+    } 
 
-      svg {
-    font-size: 1.5em;
-
-  }
-}
-
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
 
       @keyframes typewriter {
             from {
@@ -292,16 +276,12 @@ img {
                   width: 15em;
             }
       }
+
       .header h1 {
             font-size: 13px;
     color: var(--main-color);
       }
-
-      svg {
-    font-size: 1em;
-
-  }
-}
+    } 
 
 
 .global .social{
@@ -342,9 +322,9 @@ img {
 
 svg {
 
-        margin-top: -65px;
+        margin-top: -25px;
         margin-bottom: -25px;
-    font: 5em 'Montserrat';
+    font: 5.5em 'Montserrat';
 }
 
 .text-copy {
@@ -537,7 +517,10 @@ svg {
 
 .fa{
     color: var(--main-color);
+    font-size: 35px;
+
     }
 .faa{
       color: var(--text-color);
+      font-size: 20px;
 }
