@@ -109,6 +109,8 @@ h4{
 
 h5{
     color: var(--main-color);
+    font-size: 1.8rem;
+    padding-top: 30px;
 }
 
 strong{
@@ -142,6 +144,7 @@ img {
 
 .btn:hover {
   transform: scale(0.98);
+  color: #fff;
 
 }
 
@@ -322,9 +325,9 @@ img {
 
 svg {
 
-        margin-top: -25px;
+        margin-top: -35px;
         margin-bottom: -25px;
-    font: 5.5em 'Montserrat';
+    font: 4.5rem 'Montserrat';
 }
 
 .text-copy {
