@@ -264,12 +264,12 @@ img {
             }
       }
       .header h1 {
-            font-size: 18px;
+            font-size: 23px;
     color: var(--main-color);
       }
     } 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 380px) {
 
       @keyframes typewriter {
             from {
@@ -325,8 +325,8 @@ img {
 
 svg {
 
-        margin-top: -220px;
-        margin-bottom: -25px;
+        margin-top: -130px;
+        margin-bottom: -45px;
     font: 6rem 'Montserrat';
 }
 
