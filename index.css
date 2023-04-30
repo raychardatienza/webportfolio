@@ -53,8 +53,8 @@ span{
   color: var(--main-color);
 }
 
-.navbar{
-      
+nav{
+
 }
 
 .navlist{
@@ -67,12 +67,12 @@ span{
   font-size: 20px;
   font-weight: 300;
   font-family: monospace;
-  margin: 0 5px;
   transition: all .45s ease;
 }
 
 .navlist a:hover{
   color: var(--main-color);
+  transform: translateY(-10px);
 
 }
 
@@ -566,6 +566,10 @@ img {
     transition: all 0.5s ease 0s; 
 }
 
+#me:hover{
+    transform: translateY(-10px);
+}
+
 #resume{
     border-radius: 0%;
 }
@@ -637,5 +641,6 @@ button {
 }
 
 button:hover {
+    transform: translateY(-10px);
   transform: scale(0.98);
   color: #fff;
