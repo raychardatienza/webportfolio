@@ -46,8 +46,8 @@ header{
   font-size: 30px;
   font-weight: 700;
   padding: -20px;
-  margin-top:-20px;
-  margin-bottom: -20px;
+  margin-top:-10px;
+  margin-bottom: -10px;
 
 }
 
@@ -591,8 +591,8 @@ img {
 
 svg {
 
-        margin-top: -300px;
-        margin-bottom: -45px;
+        margin-top: -350px;
+        margin-bottom: -045px;
     font: 6rem 'Montserrat';
 }
 
@@ -651,3 +651,58 @@ button:hover {
     transform: translateY(-10px);
   transform: scale(0.98);
   color: #fff;
+}
+
+.contact {
+  position: relative;
+  width: 20em;
+  margin: -1em auto 1.5em auto;
+}
+
+.fa-facebook:hover{
+        transform: translateY(-10px);
+  transform: scale(0.98);
+  color: #fff;
+}
+.fa-twitter:hover{
+        transform: translateY(-10px);
+  transform: scale(0.98);
+  color: #fff;
+}
+.fa-linkedin:hover{
+        transform: translateY(-10px);
+  transform: scale(0.98);
+  color: #fff;
+}
+.fa-gitlab:hover{
+        transform: translateY(-10px);
+  transform: scale(0.98);
+  color: #fff;
+}
+
+.contact a {
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0;
+  width: 2em;
+  line-height: 2em;
+  margin: 0 .20em;
+  color: #555;
+  font-size: 1.5em;
+  transition: background-color .2s ease-in-out;
+  border-radius: 50%;
+  animation: icons .2s ease-out 0s 1 normal forwards;
+}
+
+@keyframes icons {
+  0%    { transform: translateY(3em); opacity: 0; }
+  70%   { transform: translateY(-.5em); opacity: 1; }
+  100%  { transform: translateY(0em); opacity: 1; }
+}
+
+.contact a:nth-child(1) { animation-delay: 2.5s; }
+.contact a:nth-child(2) { animation-delay: 2.55s; }
+.contact a:nth-child(3) { animation-delay: 2.6s; }
+.contact a:nth-child(4) { animation-delay: 2.65s; }
+
+.contact a:hover { color: #39F; }
