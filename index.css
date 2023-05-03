@@ -238,8 +238,8 @@ img {
 
 svg {
 
-  margin-top: -350px;
-  margin-bottom: -045px;
+  margin-top: -150px;
+  margin-bottom: -45px;
   font: 6rem 'Montserrat';
 }
 
@@ -299,9 +299,13 @@ svg {
   border-radius: 0%;
 }
 
-#about, #projects, #experience, #skills, #tools, #contact{
-  padding-top: 200px;
+/*#about, #projects, #experience, #skills, #tools, #contact{
+  padding-top: -200px;
 }
+
+#landing{
+  margin-bottom: -200px;
+}*/
 
 #me:hover{
   transform: translateY(-10px);
@@ -446,6 +450,7 @@ button:hover {
   font-size: 20px;
 }
 
+
 .card{
   background: #222222 !important;
   text-align: center;
@@ -468,11 +473,6 @@ button:hover {
 
 }
 
-.contact {
-  position: relative;
-  width: 20em;
-  margin: -1em auto 1.5em auto;
-}
 
 .fa-facebook:hover{
   transform: translateY(-10px);
