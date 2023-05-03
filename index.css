@@ -79,15 +79,6 @@ span{
   color: var(--main-color);
 }
 
-#menu-icon{
-  font-size: 35px;
-  color: var(--text-color);
-  z-index: 1001;
-  cursor: pointer;
-  margin-left: 25px;
-  display: none;
-}
-
 h1{
   color: var(--main-color);
 }
@@ -151,7 +142,7 @@ img {
 }
 
 .anim-typewriter {
-  font-size: 100px;
+  font-size: 95px;
   animation: typewriter 4s steps(30) 1s 1 normal both,
   blinkTextCussor 500ms steps(30) infinite normal;
 
@@ -299,14 +290,6 @@ svg {
   border-radius: 0%;
 }
 
-/*#about, #projects, #experience, #skills, #tools, #contact{
-  padding-top: -200px;
-}
-
-#landing{
-  margin-bottom: -200px;
-}*/
-
 #me:hover{
   transform: translateY(-10px);
 }
@@ -322,8 +305,6 @@ svg {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
-
-
 }
 
 .popup-content {
@@ -443,13 +424,12 @@ button:hover {
 .fa{
   color: var(--main-color);
   font-size: 35px;
+}
 
-    }
 .faa{
   color: var(--text-color);
   font-size: 20px;
 }
-
 
 .card{
   background: #222222 !important;
@@ -470,25 +450,31 @@ button:hover {
   -webkit-transition: all .5s ease 0;
   transition: all .5s ease 0;
   transition: all 0.5s ease 0s;
-
 }
 
+.card-body{
+  padding: 2%;
+  margin: 0;
+}
 
 .fa-facebook:hover{
   transform: translateY(-10px);
   transform: scale(0.98);
   color: #fff;
 }
+
 .fa-twitter:hover{
   transform: translateY(-10px);
   transform: scale(0.98);
   color: #fff;
 }
+
 .fa-linkedin:hover{
   transform: translateY(-10px);
   transform: scale(0.98);
   color: #fff;
 }
+
 .fa-gitlab:hover{
   transform: translateY(-10px);
   transform: scale(0.98);
