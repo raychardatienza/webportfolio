@@ -384,7 +384,7 @@ button:hover {
   transition: all 0.5s ease 0s;
 }
 
-}
+
 
 .item .feature_box_col_one{
   color:#ff4d05
@@ -417,6 +417,10 @@ button:hover {
   font-size: 30px;
 }
 
+.card-subtitle{
+  color: var(--text-color);
+}
+
 .modal-body, .modal-footer{
   background: var(--bg-color);
 }
@@ -443,6 +447,8 @@ button:hover {
   -webkit-transition: all .5s ease 0;
   transition: all .5s ease 0;
   transition: all 0.5s ease 0s; 
+
+
 }
 
 .card:hover {
@@ -503,6 +509,14 @@ button:hover {
   transition: background-color .2s ease-in-out;
   border-radius: 50%;
   animation: icons .2s ease-out 0s 1 normal forwards;
+  transform: translateY(-10px);
+}
+
+#message-sent-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes icons {
