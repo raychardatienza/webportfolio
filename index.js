@@ -11,6 +11,7 @@ contactForm.addEventListener('submit', (event) => {
   
   // Get the form values and update the 'Message Sent' card
   const name = document.querySelector('#name').value;
+  const contact = document.querySelector('#contact').value;
   const email = document.querySelector('#email').value;
   const message = document.querySelector('#message').value;
   
