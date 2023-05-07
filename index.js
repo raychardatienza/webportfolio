@@ -17,6 +17,7 @@ contactForm.addEventListener('submit', (event) => {
   
   // Update the 'Message Sent' card with the form values
   messageSentName.textContent = name;
+  messageSentName.textContent = contact;
   messageSentEmail.textContent = email;
   messageSentMessage.textContent = message;
   
