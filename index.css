@@ -211,9 +211,6 @@ span{
 }
 .navlist {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 .navlist a{
@@ -667,26 +664,42 @@ button:hover {
 
 #message-sent-card{
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  text-align: center;
 }
 
-#message-sent-card p{
+#message-sent-card p #message-sent-name, #message-sent-contact, #message-sent-email, #message-sent-message{
   display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  font-size: 1.5em;
-}
-
-#message-sent-card h5{
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 2.5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#message-sent-card h5 #message-sent-name, #message-sent-contact, #message-sent-email, #message-sent-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-align: center;
+}
+
+#message-sent-name, #message-sent-contact, #message-sent-email, #message-sent-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555 !important;
+  text-align: center;
+}
+
+#name, #contactnum, #email, #message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555 !important;
+  text-align: center;
 }
 
 @keyframes icons {
@@ -745,3 +758,7 @@ button:hover {
   transform: scale(0.98);
   color: var(--text-color);
 }
+
+
+
+
