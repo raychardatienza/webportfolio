@@ -26,65 +26,6 @@ body{
   font-family: roboto;
 }
 
-.toggle-button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  border: none;
-  background-color: transparent;
-  color: inherit;
-  font-size: 1rem;
-  cursor: pointer;
-
-}
-
-.toggle-label {
-  margin-right: 0.5rem;
-}
-
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 2rem;
-  height: 1rem;
-  background-color: #999;
-  border-radius: 1rem;
-  
-}
-
-.toggle-switch::before {
-  content: "";
-  position: absolute;
-  left: 0.125rem;
-  top: 0.125rem;
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: transform 0.2s ease;
-}
-
-.toggle-button.light-mode .toggle-label {
-  margin-left: 0.5rem;
-  margin-right: 0;
-}
-
-.toggle-button.light-mode .toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 2rem;
-  height: 1rem;
-  background-color: #999;
-  border-radius: 1rem;
-}
-
-.toggle-button.light-mode .toggle-switch::before {
-  
-  transform: translateX(100%);
-}
-
-
-
 
 
 body.light-mode {
@@ -93,10 +34,6 @@ body.light-mode {
 }
 
 body.light-mode .hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #ffff;
   
 }body.light-mode  .btn{
@@ -105,16 +42,6 @@ body.light-mode .hero {
 
 body.light-mode .card{
   background: #ffff !important;
-  text-align: center;
-  padding: 30px 25px;
-  -webkit-box-shadow:0 0px 25px rgba(255,99,71,1.000);
-  box-shadow:0 0px 25px rgba(255,99,71,1.000);
-  border-radius: 20px;
-  border:5px solid rgba(0, 0, 0, 0.07);
-  margin-bottom: 30px;
-  -webkit-transition: all .5s ease 0;
-  transition: all .5s ease 0;
-  transition: all 0.5s ease 0s; 
 }
 
 body.light-mode .card-subtitle{
@@ -122,60 +49,30 @@ body.light-mode .card-subtitle{
 }
 
 body.light-mode button {
-  display: inline-block;
-  padding: 10px 30px;
   background: var(--primary-color);
   color: #000;
-  border-radius: 5px;
-  border: solid var(--main-color) 1px;
-  margin-top: 50px;
-  opacity: 0.7;
 }
 
 body.light-mode button:hover {
   background: var(--main-color);
-  transform: scale(0.98);
   color: var(--text-color);
 }
 
 body.light-mode .item {
   background: #fff;
-  text-align: center;
-  padding: 30px 25px;
-  -webkit-box-shadow:0 0px 25px rgba(0, 0, 0, 0.07);
-  box-shadow:0 0px 25px rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
-  border:5px solid rgba(0, 0, 0, 0.07);
-  margin-bottom: 30px;
-  -webkit-transition: all .5s ease 0;
-  transition: all .5s ease 0;
-  transition: all 0.5s ease 0s;
 }
 
 body.light-mode .item:hover{
   background:#ff4d05;
-  transform: translateY(-10px); 
-  box-shadow:0 8px 20px 0px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all .5s ease 0;
-  transition: all .5s ease 0;
-  transition: all 0.5s ease 0s;
 }
 
 body.light-mode .faa{
   color: #000;
-  font-size: 20px;
 }
-
-
 
 body.light-mode .popup-content {
   background: #fff;
   color: #000;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
 }
 
 header{
@@ -758,7 +655,3 @@ button:hover {
   transform: scale(0.98);
   color: var(--text-color);
 }
-
-
-
-
