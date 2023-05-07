@@ -560,7 +560,6 @@ button:hover {
 }
 
 #message-sent-card{
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
@@ -568,7 +567,6 @@ button:hover {
 }
 
 #message-sent-card p #message-sent-name, #message-sent-contact, #message-sent-email, #message-sent-message{
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
@@ -576,23 +574,13 @@ button:hover {
 }
 
 #message-sent-card h5 #message-sent-name, #message-sent-contact, #message-sent-email, #message-sent-message{
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2em;
   text-align: center;
 }
 
-#message-sent-name, #message-sent-contact, #message-sent-email, #message-sent-message{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #555 !important;
-  text-align: center;
-}
-
 #name, #contactnum, #email, #message{
-  display: flex;
   justify-content: center;
   align-items: center;
   color: #555 !important;

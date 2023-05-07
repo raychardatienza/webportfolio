@@ -18,10 +18,10 @@ contactForm.addEventListener('submit', (event) => {
   const message = document.querySelector('#message').value;
   
   // Update the 'Message Sent' card with the form values
-  messageSentName.textContent =  name;
-  messageSentContact.textContent = contactnum;
-  messageSentEmail.textContent = email;
-  messageSentMessage.textContent = message;
+  // messageSentName.textContent =  name;
+  // messageSentContact.textContent = contactnum;
+  // messageSentEmail.textContent = email;
+  // messageSentMessage.textContent = message;
   
   // Show the 'Message Sent' card and hide the contact card
   contactCard.classList.add('d-none');
