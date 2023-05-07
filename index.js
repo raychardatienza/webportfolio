@@ -1,3 +1,5 @@
+
+
 const contactForm = document.querySelector('#contact-form');
 const contactCard = document.querySelector('#contact-card');
 const messageSentCard = document.querySelector('#message-sent-card');
@@ -16,7 +18,7 @@ contactForm.addEventListener('submit', (event) => {
   const message = document.querySelector('#message').value;
   
   // Update the 'Message Sent' card with the form values
-  messageSentName.textContent = name;
+  messageSentName.textContent =  name;
   messageSentContact.textContent = contactnum;
   messageSentEmail.textContent = email;
   messageSentMessage.textContent = message;
@@ -66,5 +68,59 @@ navbarLinks.forEach(link => {
     window.history.replaceState(null, null, cleanUrl);
   });
 });
+
+// Get the buttons
+const scrollBtn = document.getElementById("scrollBtn");
+const scrollBtns = document.getElementById("scrollBtns");
+
+// When the user scrolls down 20px from the top of the document, show the buttons
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    scrollBtns.style.display = "block";
+  } else {
+    scrollBtns.style.display = "none";
+  }
+};
+
+// When the user clicks on the first button, scroll back to the top of the document
+scrollBtn.addEventListener("click", function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
+// When the user clicks on the second button, scroll to a specific section of the webpage
+scrollBtns.addEventListener("click", function() {
+  document.querySelector('#section3').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+
+
+
+
+
+
+/* JavaScript code to toggle light mode class */
+
+const toggleButton = document.querySelector('.toggle-button');
+const body = document.querySelector('body');
+const label = toggleButton.querySelector('.toggle-label');
+
+toggleButton.addEventListener('click', () => {
+   body.classList.toggle('light-mode');
+   if (label.textContent === 'Dark Mode') {
+     label.textContent = 'Light Mode';
+   } else {
+     label.textContent = 'Dark Mode';
+   }
+});
+
 
 
