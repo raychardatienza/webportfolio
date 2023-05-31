@@ -190,9 +190,9 @@ img {
 }
 
 .anim-typewriter {
-  font-size: 95px;
-  animation: typewriter 4s steps(30) 1s 1 normal both,
-  blinkTextCussor 500ms steps(30) infinite normal;
+  font-size: 80px;
+  animation: typewriter 4s steps(35) 1s 1 normal both,
+  blinkTextCussor 500ms steps(35) infinite normal;
 
 }
 
