@@ -1,3 +1,154 @@
+function highlightLink(link) {
+  // Remove active class from all links
+  var links = document.querySelectorAll('.navbar-nav .nav-link');
+  links.forEach(function(link) {
+    link.classList.remove('active');
+  });
+
+  // Add active class to the clicked link
+  link.classList.add('active');
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var cardsPerPage = 6; // Number of cards to display per page
+  var currentPage = 1; // Current page number
+  var currentFilter = "all"; // Current filter category
+  var currentSort = "default"; // Current sort option
+
+  // Function to display cards based on the current page
+  function displayCards(filter, sort) {
+    var cards;
+    if (filter === "all") {
+      cards = document.querySelectorAll(".card");
+    } else {
+      cards = document.querySelectorAll(
+        ".card[data-filter='" + filter + "']"
+      );
+    }
+
+    var sortedCards = Array.from(cards).sort(function (a, b) {
+      if (sort === "title") {
+        var titleA = a.querySelector(".card-title").innerText.toLowerCase();
+        var titleB = b.querySelector(".card-title").innerText.toLowerCase();
+        return titleA.localeCompare(titleB);
+      } else if (sort === "date") {
+        var dateA = a.getAttribute("data-date");
+        var dateB = b.getAttribute("data-date");
+        return dateA.localeCompare(dateB);
+      } else {
+        return 0;
+      }
+    });
+
+    var startIndex = (currentPage - 1) * cardsPerPage;
+    var endIndex = startIndex + cardsPerPage;
+
+    for (var i = 0; i < sortedCards.length; i++) {
+      if (i >= startIndex && i < endIndex) {
+        sortedCards[i].style.display = "block";
+      } else {
+        sortedCards[i].style.display = "none";
+      }
+    }
+  }
+
+  // Function to update the pager
+  function updatePager() {
+    var cards;
+    if (currentFilter === "all") {
+      cards = document.querySelectorAll(".card");
+    } else {
+      cards = document.querySelectorAll(
+        ".card[data-filter='" + currentFilter + "']"
+      );
+    }
+
+    var totalPages = Math.ceil(cards.length / cardsPerPage);
+
+    var pager = document.getElementById("pager");
+    pager.innerHTML = "";
+
+    for (var i = 1; i <= totalPages; i++) {
+      var pageButton = document.createElement("button");
+      pageButton.innerText = i;
+      pageButton.classList.add("page-button");
+
+      if (i === currentPage) {
+        pageButton.classList.add("active");
+      }
+
+      pageButton.addEventListener("click", function () {
+        currentPage = parseInt(this.innerText);
+        displayCards(currentFilter, currentSort);
+        updatePager();
+      });
+
+      pager.appendChild(pageButton);
+    }
+  }
+
+  // Function to handle sorting options
+  function handleSort(sort) {
+    currentSort = sort;
+    displayCards(currentFilter, currentSort);
+    updatePager();
+  }
+
+  // Display cards for the default filter and page on page load
+  var defaultFilter = "all";
+  displayCards(defaultFilter, currentSort);
+  updatePager();
+
+  // Get all filter buttons
+  var filterButtons = document.querySelectorAll(".filter-button");
+
+  // Add click event listener to each filter button
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      currentFilter = button.getAttribute("data-filter");
+      currentPage = 1; // Reset the current page to 1
+
+      // Get all cards
+      var cards = document.querySelectorAll(".card");
+
+      // Hide all cards
+      cards.forEach(function (card) {
+        card.style.display = "none";
+      });
+
+      // Display the appropriate number of cards for the selected category
+      displayCards(currentFilter, currentSort);
+      updatePager();
+    });
+  });
+
+  // Get all sort buttons
+  var sortButtons = document.querySelectorAll(".sort-button");
+
+  // Add click event listener to each sort button
+  sortButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var sortOption = button.getAttribute("data-sort");
+      handleSort(sortOption);
+    });
+  });
+});
+
+// Function to shuffle an array
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+
+
+
+
 
 
 const contactForm = document.querySelector('#contact-form');
@@ -34,14 +185,14 @@ contactForm.addEventListener('submit', (event) => {
 
 
 
-function openPopup(popupId) {
-  var popup = document.getElementById(popupId);
-  popup.style.display = "block";
+  function openPopup(popupId) {
+    var popup = document.getElementById(popupId);
+    popup.style.display = "block";
 }
 
 function closePopup(popupId) {
-  var popup = document.getElementById(popupId);
-  popup.style.display = "none";
+    var popup = document.getElementById(popupId);
+    popup.style.display = "none";
 }
 
 // Get all navbar links
@@ -121,6 +272,7 @@ toggleButton.addEventListener('click', () => {
      label.textContent = 'Dark Mode';
    }
 });
+
 
 
 

@@ -18,310 +18,598 @@
 	<body>
 
 
-		<!-- Navbar Section Start -->
-		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+	<!-- Navbar Section Start -->
+
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<div class="container">
+
 			<a href="#landing" class="navbar-brand"><span>r.</span></a>
-			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			   <span class="navbar-toggler-icon"></span>
-			 </button>
-			 <div class="collapse navbar-collapse" id="navbarNav">
-			   <ul class="navlist navbar-nav ml-auto">
-				   <li><a href="#landing" class="Active" >Home</a></li>
-				   <li><a href="#projects"><span>|</span>Projects</a></li>
-				   <li><a href="#experience"><span>|</span>Experience</a></li>
-				   <li><a href="#skills"><span>|</span>Skills</a></li>
-				   <li><a href="#tools"><span>|</span>Tools</a></li>
-				   <li><a href="#contact"><span>|</span>Contact Me</a></li>
-			   </ul>
-			 </div>
-		   </nav>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<nav class="navbar-default">
+				<ul class="navbar-nav">
+					<li><a href="#landing" class="nav-link active" onclick="highlightLink(this)">Home</a></li>
+					<li><a href="#projects" class="nav-link" onclick="highlightLink(this)">Projects</a></li>
+					<li><a href="#experience" class="nav-link" onclick="highlightLink(this)">Experience</a></li>
+					<li><a href="#skills" class="nav-link" onclick="highlightLink(this)">Skills</a></li>
+					<li><a href="#tools" class="nav-link" onclick="highlightLink(this)">Tools</a></li>
+					<li><a href="#contact" class="nav-link" onclick="highlightLink(this)">Contact Me</a></li>
+				</ul>
+				<div class="line-animation"></div>
+			</nav>
+
+		</div>
+	</nav>
    
-			<li>
-				<button class="toggle-button" id="scrollBtns">
-				  <span class="toggle-label">Dark Mode</span>
-				</button>
-			  </li>
+	<li>
+		<button class="toggle-button" id="scrollBtns">
+			<span class="toggle-label">Dark Mode</span>
+		</button>
+	</li>
+
 		<button id="scrollBtn">Scroll to top</button>
-		<!-- Landing Page Start -->
-			<div class="container-fluid text-center">
-				<div class="row">
-					<div class="pt-5 col-xl-12">
-						<div id="landing">
-							<div class="hero">
-			                 	<div class="header ">
-			                        <h1 class="line anim-typewriter mb-5 p-5">Welcome to my Portfolio</h1> 
-			                        <h1 class="line anim-typewriter1 mt-5">Raychard Atienza</h1>
-			                        <h1 class="line anim-typewriter2 mb-5"> Full Stack Web Developer</h1>
-			                        <a href="#about" class="btn mt-5">About Me</a>
-								</div>
-			                </div>
-			            </div>										
-					</div>
-				</div>
-			</div>
 
-		<!-- Landing Page End -->
-
-        <!-- About Me Section Start -->
-		<div class="container-fluid px-0 text-center">
-			<div class="pt-5">
-				<div id="about" class="container">
-				  <svg viewBox="0 0 760 300">
-				    <symbol id="s-text5">
-				      <text text-anchor="middle" x="50%" y="80%">ABOUT ME</text>
-				    </symbol>
-
-				    <g class = "g-ants">
-				      <use xlink:href="#s-text5" class="text-copy"></use>
-				      <use xlink:href="#s-text5" class="text-copy"></use>
-				      <use xlink:href="#s-text5" class="text-copy"></use>
-				      <use xlink:href="#s-text5" class="text-copy"></use>
-				      <use xlink:href="#s-text5" class="text-copy"></use>
-				    </g>
-				  </svg>
-				</div>
-			</div>
-			<div class="d-lg-flex justify-content-center card-body">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-md-6" >
-					  	<img src="./images/me.jpg" class="card-img-top" id="me">
-					  	<div class="contact">
-	 						<a href="https://www.facebook.com/raychard.eiei/" target="_blank"><i class="fa fa-facebook"></i> </a>
-				            	<a href="https://twitter.com/iamWittyCrypto" target="_blank"> <i class="fa fa-twitter"></i> </a>
-				            	<a href="https://www.linkedin.com/in/raychardatienza/" target="_blank"><i class="fa fa-linkedin"></i> </a>
-				            	<a href="https://gitlab.com/b279-atienza" target="_blank"><i class="fa fa-gitlab"></i> </a>
-						</div>
-   						</div>
-							<div class="col-xs-12 col-md-6 text-center" > <p class="card-text1">Hello! I am a <span>Computer Engineering</span>  graduate with a passion for technology and innovation. To further advance my skills and knowledge in <span>Full-Stack Web Development</span>, I have recently enrolled in Zuitt's Full Stack Web Development Bootcamp. This program provides me with the opportunity to sharpen my abilities and learn the latest technologies and techniques in web development </p>
-
-						<!-- Additional Info Section Start -->
-						<button onclick="openPopup('popup7')">View Resume</button>
-
-						<div id="popup7" class="popup pb-5">
-						  <div class="popup-content">
-						    <span class="close" onclick="closePopup('popup7')">&times;</span>
-
-
-				        	<a href="https://drive.google.com/file/d/1KRDQxIejDFrYkw7Ds6OGaS5xG9LFDG5U/view" target="_blank">
-						  	<img src="./images/resume.png" class="card-img-top" id="resume"></a>
-						<a href="./images/resume.png" target="_blank" class="ml-auto">
-						      <button>Download Resume</button>
-						    </a>
-						    <button onclick="closePopup('popup7')">Close</button>
-						  </div>
-						</div>
-						<!-- Additional Info Section End -->
+	<!-- Landing Page Start -->
+	<div class="container-fluid text-center">
+		<div class="row">
+			<div class="pt-5 col-xl-12">
+				<div id="landing">
+					<div class="hero">
+						<div class="header ">
+							<h1 class="line anim-typewriter mb-5 p-5">Welcome to my Portfolio</h1> 
+							<h1 class="line anim-typewriter1 mt-5">Raychard Atienza</h1>
+							<h1 class="line anim-typewriter2 mb-5"> Full Stack Web Developer</h1>
+							<a href="#about" class="btn mt-5">About Me</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-            <!-- About Me Section End -->
+	</div>
+	<!-- Landing Page End -->
 
-			<!-- Project Section Start -->
-			<div class="pt-5 mt-5">				
-				<div id="projects" class="container ">
-				  <svg viewBox="0 0 760 300">
-				    <symbol id="s-text">
-				      <text text-anchor="middle" x="50%" y="80%">PROJECTS</text>
-				    </symbol>
+	<!-- About Me Section Start -->
+	<div class="container-fluid px-0 text-center">
+		<div class="pt-5">
+			<div id="about" class="container">
+				<svg viewBox="0 0 760 300">
+				<symbol id="s-text5">
+					<text text-anchor="middle" x="50%" y="80%">ABOUT ME</text>
+				</symbol>
 
-				    <g class = "g-ants">
-				      <use xlink:href="#s-text" class="text-copy"></use>
-				      <use xlink:href="#s-text" class="text-copy"></use>
-				      <use xlink:href="#s-text" class="text-copy"></use>
-				      <use xlink:href="#s-text" class="text-copy"></use>
-				      <use xlink:href="#s-text" class="text-copy"></use>
-				    </g>
-				  </svg>
-				</div>
+				<g class = "g-ants">
+					<use xlink:href="#s-text5" class="text-copy"></use>
+					<use xlink:href="#s-text5" class="text-copy"></use>
+					<use xlink:href="#s-text5" class="text-copy"></use>
+					<use xlink:href="#s-text5" class="text-copy"></use>
+					<use xlink:href="#s-text5" class="text-copy"></use>
+				</g>
+				</svg>
 			</div>
+		</div>
 
-
-
-				<div class="d-lg-flex justify-content-center card-body">
+		<div class="d-lg-flex justify-content-center card-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6" >
+						<img src="./images/me.jpg" class="card-img-top" id="me">
+							<div class="contact">
+								<a href="https://www.facebook.com/raychard.eiei/" target="_blank"><i class="fa fa-facebook"></i> </a>
+									<a href="https://twitter.com/iamWittyCrypto" target="_blank"> <i class="fa fa-twitter"></i> </a>
+									<a href="https://www.linkedin.com/in/raychardatienza/" target="_blank"><i class="fa fa-linkedin"></i> </a>
+									<a href="https://gitlab.com/b279-atienza" target="_blank"><i class="fa fa-gitlab"></i> </a>
+							</div>
+					</div>
 					
-					<!-- Automated Fruit Picking Machine Card Start -->
-					<div class="card bg-dark m-4 mb-xl-5 mr-xl-4 ml-xl-5" > 
-					  <div class="card-body">
-					  	<img src="./images/fruit.png "  class="card-img-top" alt="...">
-					  	<h5 class="card-title mt-3">Automated Fruit Picking Machine</h5>
-					  	<h6 class="card-subtitle mb-2">De La Salle Lipa  </h6>
 
-						<!-- Additional Info Section Start -->
-						<button onclick="openPopup('popup1')">View more</button>
-
-						<div id="popup1" class="popup">
-						  <div class="popup-content">
-						    <span class="close" onclick="closePopup('popup1')">&times;</span>
-						    <img src="./images/fruit.png" class="card-img-top" alt="...">
-
-						    <h2 class="pt-5 pb-2">Automated Fruit Picking Machine</h2>
-
-							<p>A design project that accurately judge which produce fruits are ready for harvest then plucked it from the tree while ignoring unripe fruit nearby. The aim of the project is to provide a proper handling and picking of certain fruits and prevent fruits from rotting due to time of its maturity. </p>
-						    <button onclick="closePopup('popup1')">Close</button>
-						  </div>
-						</div>
-						<!-- Additional Info Section End -->
-
-					  </div>
-					</div>
-					<!-- Automated Fruit Picking Machine Card End -->
-
-					<!-- Automated Advising System Card Start -->
-					<div class="card bg-dark m-4 mb-xl-5 mr-xl-5 ml-xl-5" > 
-					  <div class="card-body">
-					  	<img src="./images/advise.png" class="card-img-top" alt="...">
-					  	<h5 class="card-title mt-3">Automated Advising System</h5>
-					  	<h6 class="card-subtitle mb-2">De La Salle Lipa</h6>
-
-						<!-- Additional Info Section Start -->
-						<button onclick="openPopup('popup2')">View more</button>
-
-						<div id="popup2" class="popup">
-						  <div class="popup-content">
-						    <span class="close" onclick="closePopup('popup2')">&times;</span>
-						    <img src="./images/advise.png" class="card-img-top" alt="...">
-
-						    <h2 class="pt-5 pb-2">Automated Advising System</h2>
-
-							<p>A system which features automation in managing student data of Computer Engineering Department of De La Salle Lipa and transform it into useable information.</p>
-						    <button onclick="closePopup('popup2')">Close</button>
-						  </div>
-						</div>
-						<!-- Additional Info Section End -->
-
-					  </div>
-					</div>
-					<!-- Automated Advising System Card End -->
-
-					<!-- Room Lighting Control System Card Start -->
-					<div class="card bg-dark m-4 mb-xl-5 mr-xl-5 ml-xl-4" > 
-					  <div class="card-body mr-1">
-					  	<img src="./images/lighting.png" class="card-img-top" alt="...">
-					  	<h5 class="card-title mt-3">Room Lighting Control System</h5>
-					  	<h6 class="card-subtitle mb-2">De La Salle Lipa</h6>
-
-						<!-- Additional Info Section Start -->
-						<button onclick="openPopup('popup3')">View more</button>
-
-						<div id="popup3" class="popup">
-						  <div class="popup-content">
-						    <span class="close" onclick="closePopup('popup3')">&times;</span>
-						    <img src="./images/lighting.png" class="card-img-top" alt="...">
-
-						    <h2 class="pt-5 pb-2">Room Lighting Control System</h2>
-
-							<p>A system which adjusts room lighting based on current room lighting levels. It runs through Arduino Uno; works through servo motors and is programmed in Matlab GUIDE to exhibit feedback. 
-																</p>
-						    <button onclick="closePopup('popup3')">Close</button>
-						  </div>
-						</div>
-						<!-- Additional Info Section End -->
-
-
-					  </div>
-					</div>
-					<!-- Room Lighting Control System Card End -->
-				</div>
-			<!-- Project Section End -->
-
-			<div class="d-lg-flex justify-content-center card-body">
-				<!-- Capstone 1 Card Start -->
-				<div class="card bg-dark m-4 mb-xl-5 mr-xl-4 ml-xl-5" > 
-				  <div class="card-body">
-					  <img src="./images/capstone1.png "  class="card-img-top" alt="...">
-					  <h5 class="card-title mt-3">Front-end Capstone Project</h5>
-					  <h6 class="card-subtitle mb-2">Zuitt Coding Bootcamp  </h6>
+					<div class="col-xs-12 col-md-6 text-center mt-5" > <p class="card-text1">Hello! I am a highly motivated <span>Computer Engineering</span> graduate with a passion for <span>technology, innovation, and problem-solving.</span> With expertise in <span>Web Development</span> and proficiency in multiple programming languages, I create dynamic and engaging digital experiences. I stay up-to-date with industry trends and continuously expand my knowledge to deliver cutting-edge solutions. My drive to make a positive impact in the world of technology makes me a valuable asset. </p>
 
 					<!-- Additional Info Section Start -->
-					<button onclick="openPopup('popup8')">View more</button>
+					<button onclick="openPopup('popup7')">View Resume</button>
 
-					<div id="popup8" class="popup">
-					  <div class="popup-content">
-						<span class="close" onclick="closePopup('popup8')">&times;</span>
-						<img src="./images/capstone1.png" class="card-img-top" alt="...">
+					<div id="popup7" class="popup pb-5">
+						<div class="popup-content">
+						<span class="close" onclick="closePopup('popup7')">&times;</span>
+						<a href="https://drive.google.com/file/d/1KRDQxIejDFrYkw7Ds6OGaS5xG9LFDG5U/view" target="_blank">
+						<img src="./images/resume.png" class="card-img-top" id="resume"></a>
 
-						<h2 class="pt-5 pb-2">Professional Portfolio</h2>
+						<a href="./images/resume.png" target="_blank" class="ml-auto">
+							<button>Download Resume</button>
+						</a>
 
-						<p>The professional portfolio was created using HTML, Bootstrap, and CSS, resulting in a sleek and modern design that showcases the owner's work, skills, and experience. The owner utilized the strengths of HTML to structure the website's content and layout, while Bootstrap's pre-built CSS styles and components were used to enhance the website's look and feel. CSS was used to tailor the design to the owner's preferences and create a cohesive brand image. The website is user-friendly and easy to navigate, providing potential clients or employers with a clear understanding of the owner's strengths and capabilities. Overall, the owner's use of HTML, Bootstrap, and CSS has resulted in a professional and impressive online portfolio.
-
-						</p>
-						<p><a href="https://raychardatienza.github.io/webportfolio/" target="_blank" class="btn btn-primary stretched-link">Go to project</a>	</p>
-						<button onclick="closePopup('popup8')">Close</button>
-					  </div>
+						<button onclick="closePopup('popup7')">Close</button>
+						</div>
 					</div>
 					<!-- Additional Info Section End -->
 
-				  </div>
-				</div>
-				<!-- Capstone 1 Card End -->
-
-				<!-- Capstone 2 Card Start -->
-				<div class="card bg-dark m-4 mb-xl-5 mr-xl-5 ml-xl-5" > 
-				  <div class="card-body">
-					  <img src="./images/capstone2.png" class="card-img-top" alt="...">
-					  <h5 class="card-title mt-3">Back-end Capstone Project</h5>
-					  <h6 class="card-subtitle mb-2">Zuitt Coding Bootcamp  </h6>
-
-					<!-- Additional Info Section Start -->
-					<button onclick="openPopup('popup9')">View more</button>
-
-					<div id="popup9" class="popup">
-					  <div class="popup-content">
-						<span class="close" onclick="closePopup('popup9')">&times;</span>
-						<img src="./images/capstone2.png" class="card-img-top" alt="...">
-
-						<h2 class="pt-5 pb-2">EcommerCE API</h2>
-
-						<p>This API was developed using MongoDB, Node.js, Express, and Postman. The API utilized MongoDB, a popular document-based NoSQL database, to store and manage data. Node.js was used as the backend runtime environment, while Express was used as the web application framework to create the API. Postman, a collaboration platform for API development, was used to test and debug the API during development. Overall, the use of these technologies has resulted in a robust and functional API that is able to efficiently manage and serve data.
-
-						</p>
-						<p><a href="https://gitlab.com/b279-atienza/backend/-/tree/master/s42-s46" target="_blank" class="btn btn-primary stretched-link">Go to project</a>	</p>
-														
-						<button onclick="closePopup('popup9')">Close</button>
-					  </div>
 					</div>
-					<!-- Additional Info Section End -->
-
-				  </div>
 				</div>
-				<!-- Capstone 2 Card End -->
-
-				<!-- Capstone 3 Card Start -->
-				<div class="card bg-dark m-4 mb-xl-5 mr-xl-5 ml-xl-4" > 
-				  <div class="card-body mr-1">
-					  <img src="./images/capstone3.png" class="card-img-top" alt="...">
-					  <h5 class="card-title mt-3">Full-stack Capstone Project</h5>
-					  <h6 class="card-subtitle mb-2">Zuitt Coding Bootcamp  </h6>
-
-					<!-- Additional Info Section Start -->
-					<button onclick="openPopup('popup10')">View more</button>
-
-					<div id="popup10" class="popup">
-					  <div class="popup-content">
-						<span class="close" onclick="closePopup('popup10')">&times;</span>
-						<img src="./images/capstone3.png" class="card-img-top" alt="...">
-
-						<h2 class="pt-5 pb-2">Ecommerce Website</h2>
-
-						<p>This ecommerce website was built using the MERN stack, which includes MongoDB, Express, React, and Node.js. MongoDB was used as the database to store and manage data, while Express was used as the web application framework to create the API. React, a popular front-end library, was used to create the user interface and provide a seamless user experience. Node.js was used as the backend runtime environment. The use of the MERN stack has resulted in a scalable and efficient ecommerce website that is able to handle a large volume of traffic and transactions.
-							
- 
-															</p>
-						<p><a href="https://fullstack-capstone3-atienza.vercel.app/" target="_blank"  class="btn btn-primary stretched-link">Go to project</a>	</p>
-														
-						<button onclick="closePopup('popup10')">Close</button>
-					  </div>
-					</div>
-					<!-- Additional Info Section End -->
-				  </div>
-				</div>
-				<!-- Capstone 3 Card End -->
 			</div>
-		<!-- Project Section End -->
+		</div>
+	</div>
+    <!-- About Me Section End -->
 
+	<!-- Project Section Start -->
+	<div class="pt-5 mt-5">				
+		<div id="projects" class="container ">
+			<svg viewBox="0 0 760 300">
+			<symbol id="s-text">
+				<text text-anchor="middle" x="50%" y="80%">PROJECTS</text>
+			</symbol>
+
+			<g class = "g-ants">
+				<use xlink:href="#s-text" class="text-copy"></use>
+				<use xlink:href="#s-text" class="text-copy"></use>
+				<use xlink:href="#s-text" class="text-copy"></use>
+				<use xlink:href="#s-text" class="text-copy"></use>
+				<use xlink:href="#s-text" class="text-copy"></use>
+			</g>
+			</svg>
+		</div>
+	</div>
+
+	<!-- Filter Button Start -->
+	<div class="d-lg-flex justify-content-center card-body mb-5">
+		<div class="row">
+		<div class="col-md-12">
+			<div class="btn-group">
+			<button class="filter-button" data-filter="all">All</button>
+			<button class="filter-button" data-filter="school">School</button>
+			<button class="filter-button" data-filter="software">Software</button>
+			<button class="filter-button" data-filter="hardware">Hardware</button>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- Filter Button End -->
+
+	<!-- Project Section Start -->
+	<div class="row justify-content-center" id="card-container">
+
+
+		<!-- Front-end Capstone Project Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="software">
+			<div class="card-body">
+				<img src="./images/capstone1.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Front-end Capstone Project</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup13')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup13" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup13')">&times;</span>
+						<img src="./images/capstone1.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Front-end Capstone Project: Personal Portfolio</h2>
+
+						<p>The professional portfolio was created using HTML, Bootstrap, and CSS, resulting in a sleek and modern design that showcases the owner's work, skills, and experience. The owner utilized the strengths of HTML to structure the website's content and layout, while Bootstrap's pre-built CSS styles and components were used to enhance the website's look and feel. CSS was used to tailor the design to the owner's preferences and create a cohesive brand image. The website is user-friendly and easy to navigate, providing potential clients or employers with a clear understanding of the owner's strengths and capabilities. Overall, the owner's use of HTML, Bootstrap, and CSS has resulted in a professional and impressive online portfolio.</p>
+						
+						<button onclick="closePopup('popup13')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Front-end Capstone Project Card End -->
+
+
+		<!-- Public Address System Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
+			<div class="card-body">
+				<img src="./images/pasystem.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Public Address System</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup1')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup1" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup1')">&times;</span>
+						<img src="./images/pasystem.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Public Address System</h2>
+						<p>A system which amplifies sound signals through converting it into
+							electrical signals. Electrical signals are then amplified through transistors and converted back to
+							sound form.</p>
+						
+						<button onclick="closePopup('popup1')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Public Address System Card End -->
+
+
+		<!-- CCTV Installation Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5"  data-filter="hardware">
+			<div class="card-body">
+				<img src="./images/cctv.png" class="card-img-top" alt="...">
+				<h5 class="card-title">CCTV Installation</h5>
+				<h6 class="card-subtitle">Calvelo Engineered System</h6>
+				
+				<button onclick="openPopup('popup9')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup9" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup9')">&times;</span>
+						<img src="./images/cctv.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">CCTV Installation</h2>
+						<p>A system converting 220 V AC voltage into a 3V, 6V, 9V, and 12V DC outpu
+							tvoltage. It makes use of rectification, regulation, and voltage division for it to function. </p>
+						
+						<button onclick="closePopup('popup9')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- CCTV Installation Card End -->
+
+
+		<!-- Back-end Capstone Project Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="software">
+			<div class="card-body">
+				<img src="./images/capstone2.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Back-end Capstone Project</h5>
+				<h6 class="card-subtitle">Zuitt Coding Bootcamp</h6>
+				
+				<button onclick="openPopup('popup14')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup14" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup14')">&times;</span>
+						<img src="./images/capstone2.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Back-end Capstone Project: E-commerce API</h2>
+
+						<p>This API was developed using MongoDB, Node.js, Express, and Postman. The API utilized MongoDB, a popular document-based NoSQL database, to store and manage data. Node.js was used as the backend runtime environment, while Express was used as the web application framework to create the API. Postman, a collaboration platform for API development, was used to test and debug the API during development. Overall, the use of these technologies has resulted in a robust and functional API that is able to efficiently manage and serve data.</p>
+						
+						<button onclick="closePopup('popup14')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Back-end Capstone Project Card End -->
+
+
+		<!-- Burglar Prototype Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
+			<div class="card-body">
+				<img src="./images/burglar.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Burglar Prototype</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup2')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup2" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup2')">&times;</span>
+						<img src="./images/burglar.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Burglar Prototype</h2>
+						<p>A system using infrared proximity detector that triggers an alarm when the
+							rays falling on its sensor are interrupted. </p>
+						
+						<button onclick="closePopup('popup2')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Burglar Prototype Card End -->
+
+
+		<!-- Ping Pong Game using Arduino Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
+			<div class="card-body">
+				<img src="./images/pp.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Ping Pong using Arduino</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup3')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup3" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup3')">&times;</span>
+						<img src="./images/pp.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Ping Pong Game using Arduino</h2>
+						<p>A classical Pong game implemented on an Arduino Uno and
+							8x8 mono-color led matrix. </p>
+						
+						<button onclick="closePopup('popup3')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Ping Pong Game Prototype Card End -->
+
+
+		<!-- Full-stack Capstone Project Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="software">
+			<div class="card-body">
+				<img src="./images/capstone3.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Full-stack Capstone Project</h5>
+				<h6 class="card-subtitle">Zuitt Coding Bootcamp</h6>
+				
+				<button onclick="openPopup('popup15')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup15" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup15')">&times;</span>
+						<img src="./images/capstone3.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Full-stack Capstone Project: E-commerce Website</h2>
+
+						<p>This ecommerce website was built using the MERN stack, which includes MongoDB, Express, React, and Node.js. MongoDB was used as the database to store and manage data, while Express was used as the web application framework to create the API. React, a popular front-end library, was used to create the user interface and provide a seamless user experience. Node.js was used as the backend runtime environment. The use of the MERN stack has resulted in a scalable and efficient ecommerce website that is able to handle a large volume of traffic and transactions.</p>
+						
+						<button onclick="closePopup('popup15')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Full-stack Capstone Project Card End -->
+
+
+		<!-- Access Control System Card Start -->
+			<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="hardware">
+			<div class="card-body">
+				<img src="./images/access.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Access Control System</h5>
+				<h6 class="card-subtitle">Calvelo Engineered System</h6>
+				
+				<button onclick="openPopup('popup11')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup11" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup11')">&times;</span>
+						<img src="./images/access.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Access Control System</h2>
+						<p>A system converting 220 V AC voltage into a 3V, 6V, 9V, and 12V DC outpu
+							tvoltage. It makes use of rectification, regulation, and voltage division for it to function. </p>
+						
+						<button onclick="closePopup('popup11')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Access Control System Card End -->
+
+
+		<!-- Arhitect Personal Portfolio Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="software">
+			<div class="card-body">
+				<img src="./images/advise.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Arhitect Personal Portfolio</h5>
+				<h6 class="card-subtitle">Byte Brew Solutions</h6>
+				
+				<button onclick="openPopup('popup16')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup16" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup16')">&times;</span>
+						<img src="./images/advise.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Arhitect Personal Portfolio</h2>
+
+						<p>This ecommerce website was built using the MERN stack, which includes MongoDB, Express, React, and Node.js. MongoDB was used as the database to store and manage data, while Express was used as the web application framework to create the API. React, a popular front-end library, was used to create the user interface and provide a seamless user experience. Node.js was used as the backend runtime environment. The use of the MERN stack has resulted in a scalable and efficient ecommerce website that is able to handle a large volume of traffic and transactions.</p>
+						
+						<button onclick="closePopup('popup16')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Arhitect Personal Portfolio Card End -->
+
+
+		<!-- Room Lighting Control System using Arduino Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
+			<div class="card-body">
+				<img src="./images/lighting.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Room Lighting System</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup4')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup4" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup4')">&times;</span>
+						<img src="./images/lighting.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Room Lighting Control System</h2>
+						<p>A system which adjusts room lighting based on current room
+							lighting levels. It runs through Arduino Uno; works through servo motors and is programmed in
+							Matlab GUIDE to exhibit feedback.  </p>
+						
+						<button onclick="closePopup('popup4')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Room Lighting Control System Card End -->
+
+		
+		<!-- Water Leak Detection Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="hardware">
+			<div class="card-body">
+				<img src="./images/water.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Water Leak Detection</h5>
+				<h6 class="card-subtitle">Calvelo Engineered System</h6>
+				
+				<button onclick="openPopup('popup12')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup12" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup12')">&times;</span>
+						<img src="./images/water.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Water Leak Detection</h2>
+						<p>A system converting 220 V AC voltage into a 3V, 6V, 9V, and 12V DC outpu
+							tvoltage. It makes use of rectification, regulation, and voltage division for it to function. </p>
+						
+						<button onclick="closePopup('popup12')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Water Leak Detection Card End -->
+
+
+		<!-- Assembly Language-based Calculator Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
+			<div class="card-body">
+				<img src="./images/calculator.png" class="card-img-top" alt="...">
+				<h5 class="card-title">AL-based Calculator</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup5')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup5" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup5')">&times;</span>
+						<img src="./images/calculator.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Assembly Language-based Calculator</h2>
+						<p>An AL-based program featuring basic mathematical
+							operations</p>
+						
+						<button onclick="closePopup('popup5')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Assembly Language-based Calculator Card End -->
+
+
+		<!-- Automated Advising system Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
+			<div class="card-body">
+				<img src="./images/advise.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Automated Advising System</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup6')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup6" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup6')">&times;</span>
+						<img src="./images/advise.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Automated Advising System</h2>
+						<p>A system which features automation in managing student data
+							of Computer Engineering Department of De La Salle Lipa and transform it into useable
+							information.</p>
+						
+						<button onclick="closePopup('popup6')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Automated Advising system Card End -->
+
+
+		<!-- Thesis: Automated Fruit Picking Machine Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
+			<div class="card-body">
+				<img src="./images/fruit.png" class="card-img-top" alt="...">
+				<h5 class="card-title">Fruit Picking Machine</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup7')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup7" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup7')">&times;</span>
+						<img src="./images/fruit.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">Thesis: Automated Fruit Picking Machine</h2>
+						<p>A design project that accurately judge which
+							produce fruits are ready for harvest then plucked it from the tree while ignoring unripe fruit
+							nearby. The aim of the project is to provide a proper handling and picking of certain fruits and
+							prevent fruits from rotting due to time of its maturity.</p>
+						
+						<button onclick="closePopup('popup7')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- Thesis: Automated Fruit Picking Machine -a Card End -->
+
+
+		<!-- DC Power Supply - Card Start -->
+		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
+			<div class="card-body">
+				<img src="./images/dc.png" class="card-img-top" alt="...">
+				<h5 class="card-title">DC Power Supply System</h5>
+				<h6 class="card-subtitle">De La Salle Lipa</h6>
+				
+				<button onclick="openPopup('popup8')">View more</button>
+
+				<!-- Additional Info Section Start -->
+				<div id="popup8" class="popup">
+					<div class="popup-content">
+						<span class="close" onclick="closePopup('popup8')">&times;</span>
+						<img src="./images/dc.png" class="card-img-top" alt="...">
+						<h2 class="pt-5 pb-2">DC Power Supply</h2>
+						<p>A system converting 220 V AC voltage into a 3V, 6V, 9V, and 12V DC outpu
+							tvoltage. It makes use of rectification, regulation, and voltage division for it to function. </p>
+						
+						<button onclick="closePopup('popup8')">Close</button>
+					</div>
+				</div>
+				<!-- Additional Info Section End -->
+
+			</div>
+		</div>
+		<!-- DC Power Supply - Card End -->
+	</div>
+	<!-- Project Section End -->
+
+
+	<div class="d-lg-flex justify-content-center card-body mb-5">
+		<div class="row">
+			<div id="pager"></div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+	
 			<!-- Work Experience Section Start -->
 			<div class="pt-5">	
 				<div id="experience" class="container">
@@ -341,89 +629,57 @@
 			</div>
 
 
-				<div class="d-lg-flex justify-content-center card-body">	
-					<!-- Project Support Engineer Card Start -->
-					<div class="card bg-dark m-4 mb-xl-5 mr-xl-4 ml-xl-5" >  
-					  <div class="card-body">
-					  	<img src="./images/fiber.png" class="card-img-top" alt="...">
-					  	<h5 class="card-title mt-3">Project Support Engineer</h5>
-					  	<h6 class="card-subtitle mb-2">MG Exeo Network, Inc. </h6>
 
-						<!-- Additional Info Section Start -->
-						<button onclick="openPopup('popup4')">View more</button>
-
-						<div id="popup4" class="popup">
-						  <div class="popup-content">
-						    <span class="close" onclick="closePopup('popup4')">&times;</span>
-						    <img src="./images/fiber.png" class="card-img-top" alt="...">
-
-						    <h2 class="pt-5 pb-2">Project Support Engineer</h2>
-
-							<p>I bring extensive experience in Copper Installation, including PLDT Home DSL and Fiber to the Home Installation through PLDT Home Fibr. Additionally, my experience includes troubleshooting of Telephone Cabinets, knowledge of Copper/DSL Basic Repair, proficiency in the use of PLDT Tools and Equipment, and strong adherence to Safety Precautions protocols.</p>
-						    <button onclick="closePopup('popup4')">Close</button>
-						  </div>
-						</div>
-						<!-- Additional Info Section End -->
-
+			<body>
+				<div class="timeline">
+				  <ul>
+					<li>
+					  <div class="content">
+						<h3> Computer Hardware & Troubleshooting</h3>
+						<p>I have experience in Computer Hardware & Troubleshooting, specializing in diagnosing and resolving issues related to computer systems. I possess knowledge of hardware components such as processors, memory modules, storage devices, and peripherals. With strong troubleshooting skills, I can quickly identify and fix hardware-related problems. My expertise in computer architecture allows me to optimize system performance and provide efficient technical support. I am experienced in providing reliable solutions to individuals and organizations.</p>
 					  </div>
-					</div>
-					<!-- Project Support Engineer Card End -->
-
-					<!-- Systems Engineer Card Start -->
-					<div class="card bg-dark m-4 mb-xl-5 mr-xl-5 ml-xl-5" > 
-					  <div class="card-body">
-					  	<img src="./images/security.png" class="card-img-top" alt="...">
-					  	<h5 class="card-title mt-3">Systems Engineer</h5>
-					  	<h6 class="card-subtitle mb-2">Calvelo Engineered Systems</h6>
-
-						<!-- Additional Info Section Start -->
-						<button onclick="openPopup('popup5')">View more</button>
-
-						<div id="popup5" class="popup">
-						  <div class="popup-content">
-						    <span class="close" onclick="closePopup('popup5')">&times;</span>
-						    <img src="./images/security.png" class="card-img-top" alt="...">
-
-						    <h2 class="pt-5 pb-2">Systems Engineer</h2>
-
-							<p>I have extensive experience in CCTV Installation and Support, both with Analog and IP CCTV systems. I am also skilled in Access Control System Installation and Support</p>
-						    <button onclick="closePopup('popup5')">Close</button>
-						  </div>
-						</div>
-						<!-- Additional Info Section End -->
-
+					  <div class="time">
+						<h4>January 2015</h4>
 					  </div>
-					</div>
-					<!-- Systems Engineer Card End -->
-
-					<!-- Cryptocurrency Trader & Beta Tester Card Start -->
-					<div class="card bg-dark m-4 mb-xl-5 mr-xl-5 ml-xl-4" >  
-					  <div class="card-body">
-					  	<img src="./images/crypto.png" class="card-img-top" alt="...">
-					  	<h5 class="card-title mt-3">Cryptocurrency Trader & Beta Tester</h5>
-					  	<h6 class="card-subtitle mb-2">Freelance</h6>
-
-						<!-- Additional Info Section Start -->
-						<button onclick="openPopup('popup6')">View more</button>
-
-						<div id="popup6" class="popup">
-						  <div class="popup-content">
-						    <span class="close" onclick="closePopup('popup65')">&times;</span>
-						    <img src="./images/crypto.png" class="card-img-top" alt="...">
-
-						    <h2 class="pt-5 pb-2">Cryptocurrency Trader & Beta Tester</h2>
-
-							<p>As a Cryptocurrency Trader, I have gained experience in trading various cryptocurrencies and keeping up-to-date with the latest trends in the market. Additionally, I have served as a Beta Tester for a Cryptocurrency Trading Website and as a Bug Hunter for a Cryptocurrency Online Casino, both of which have honed my attention to detail and problem-solving skills.</p>
-						    <button onclick="closePopup('popup6')">Close</button>
-						  </div>
-						</div>
-						<!-- Additional Info Section End -->
-
+					</li>
+					
+					<li>
+					  <div class="content">
+						<h3>Project Support Engineer</h3>
+						<p>I bring extensive experience in Copper Installation, including PLDT Home DSL and Fiber to the Home Installation through PLDT Home Fibr. Additionally, my experience includes troubleshooting of Telephone Cabinets, knowledge of Copper/DSL Basic Repair, proficiency in the use of PLDT Tools and Equipment, and strong adherence to Safety Precautions protocols.</p>
 					  </div>
-					</div>
-					<!-- Cryptocurrency Trader & Beta Tester End -->
-
+					  <div class="time">
+						<h4>August 2017</h4>
+					  </div>
+					</li>
+					
+					<li>
+					  <div class="content">
+						<h3>Systems Engineer</h3>
+						<p>I have extensive experience in CCTV Installation and Support, encompassing both Analog and IP CCTV systems. Additionally, I possess strong skills in Access Control System Installation and Support. With a proven track record in the field, I have successfully handled the installation, configuration, and maintenance of CCTV systems, ensuring optimal surveillance coverage and security. My expertise extends to troubleshooting and resolving technical issues related to CCTV and Access Control systems, providing efficient and reliable support to clients. With a focus on delivering high-quality solutions, I am dedicated to ensuring the seamless operation and functionality of these critical security systems. </p>
+					  </div>
+					  <div class="time">
+						<h4>December 2016</h4>
+					  </div>
+					</li>
+					
+					<li>
+					  <div class="content">
+						<h3>Cryptocurrency Trader & Beta Tester</h3>
+						<p>As a Cryptocurrency Trader, I have gained experience in trading various cryptocurrencies and keeping up-to-date with the latest trends in the market. Additionally, I have served as a Beta Tester for a Cryptocurrency Trading Website and as a Bug Hunter for a Cryptocurrency Online Casino, both of which have honed my attention to detail and problem-solving skills.</p>
+					  </div>
+					  <div class="time">
+						<h4>December 2017</h4>
+					  </div>
+					</li>
+					
+					<div style="clear:both;"></div>
+				  </ul>
 				</div>
+			  </body>
+
+
+
 			<!-- Work Experience Section End -->
 
 			<!-- Skills Section Start -->
@@ -449,23 +705,23 @@
 					<div class="feat">
 				    <div class="container">
 				      <div class="row">
-				        <div class="section-head col-sm-12">
-				          <h3><span>Why Choose</span> Me?</h3>
-				          <p>I am a knowledgeable computer engineer and experienced full-stack web developer with the skills and expertise needed to design and develop cutting-edge software solutions that meet the needs of modern businesses and organizations.</p>
+				        <div class="section-head col-sm-12 pt-2">
+				          <h2><span>Why Choose</span> Me?</h2>
+				          <p >I am a knowledgeable computer engineer and experienced full-stack web developer with the skills and expertise needed to design and develop cutting-edge software solutions that meet the needs of modern businesses and organizations.</p>
 				        </div>
-				        <div class="col-lg-4 col-sm-6">
+				        <div class="col-lg-4 col-sm-6 pt-5">
 				          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-globe"></i></span>
 				            <h6>Front-End</h6>
 				            <p>Knowledgeable frontend developer with experience in creating dynamic and visually appealing websites that engage users and enhance their experience.</p>
 				          </div>
 				        </div>
-				        <div class="col-lg-4 col-sm-6">
+				        <div class="col-lg-4 col-sm-6 pt-5">
 				          <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-database"></i></span>
 				            <h6>Back-End</h6>
 				            <p>Expertise in building robust and scalable applications that handle complex data and backend processes, ensuring optimal website performance and functionality.</p>
 				          </div>
 				        </div>
-				        <div class="col-lg-4 col-sm-6">
+				        <div class="col-lg-4 col-sm-6 pt-5">
 				          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-code"></i></span>
 				            <h6>Full-Stack</h6>
 				            <p>Experience in both frontend and backend development, allowing me to create high-quality, end-to-end web solutions that meet client needs and exceed their expectations.</p>
@@ -496,7 +752,7 @@
 			</div>
 			</div>
 			<!-- Skills Section End -->
-
+				
             <!-- Core Tools Section End -->
 			<div class="pt-5">
 			<div class="container-fluid px-0 text-center">
@@ -516,29 +772,73 @@
 				  </svg>
 				</div>
 				<div class="d-lg-flex justify-content-center card-body">
-				    <div class="card-body">
-                        <img class="item img-fluid" width="150" src="images/logo-html5.png"/>
-                        <img class="item img-fluid" width="150" src="images/logo-css3.png"/>
-                        <img class="item img-fluid" width="150" src="images/logo-javascript.png"/>
+					<div class="item">
+						<img class="img-fluid" width="100" src="images/logo-html5.png">
+						<div class="item-text">HTML5</div>
+					  </div>
+					  <div class="item">
+						<img class="img-fluid" width="100" src="images/logo-css3.png">
+						<div class="item-text">CSS3</div>
+					  </div>
+					  <div class="item">
+						<img class="img-fluid" width="100" src="images/logo-javascript.png">
+						<div class="item-text">JavaScript</div>
+					  </div>
+                	</div>
+
+					<div class="d-lg-flex justify-content-center card-body">
+							<div class="item">
+							  <img class="img-fluid" width="100" src="images/logo-mongodb.png">
+							  <div class="item-text">MongoDB</div>
+							</div>
+							<div class="item">
+							  <img class="img-fluid" width="100" src="images/logo-nodejs.png">
+							  <div class="item-text">Node.js</div>
+							</div>
+							<div class="item">
+							  <img class="img-fluid" width="100" src="images/logo-expressjs.png">
+							  <div class="item-text">Express.js</div>
+							</div>
+							<div class="item">
+							  <img class="img-fluid" width="100" src="images/logo-react.png">
+							  <div class="item-text">React</div>
+							</div>
+							<div class="item">
+							  <img class="img-fluid" width="100" src="images/logo-net.png">
+							  <div class="item-text">Heroku</div>
+							</div>
+						  </div>
+                    </div>
+
+					<div class="d-lg-flex justify-content-center card-body">
+							<div class="item">
+							  <img class="item-img" width="100" src="images/logo-git.png">
+							  <div class="item-text">Git</div>
+							</div>
+							<div class="item">
+							  <img class="item-img" width="100" src="images/logo-sublime-text-3.png">
+							  <div class="item-text">Sublime Text 3</div>
+							</div>
+							<div class="item">
+								<img class="item-img" width="100" src="images/logo-vsc.png">
+								<div class="item-text">VS Code</div>
+							</div>
+							<div class="item">
+								<img class="item-img" width="100" src="images/logo-postman.png">
+								<div class="item-text">Postman</div>
+							  </div>
+							<div class="item">
+								<img class="item-img" width="100" src="images/logo-vs.png">
+								<div class="item-text">VS 2022</div>
+							</div>
+							<div class="item">
+							  <img class="item-img" width="100" src="images/logo-gitlab-ci-cd.png">
+							  <div class="item-text">GitLab</div>
+							</div>
+						  </div>
                     </div>
                 </div>
-                <div class="d-flex flex-row d-md-block justify-content-around">
-					<div class="d-flex flex-column d-md-block">
-                        <img class="item img-fluid" width="150" src="images/logo-mongodb.png"/>
-                        <img class="item img-fluid" width="150" src="images/logo-nodejs.png"/>
-                        <img class="item img-fluid" width="150" src="images/logo-expressjs.png"/>
-                        <img class="item img-fluid" width="150" src="images/logo-react.png"/>
-                        <img class="item img-fluid" width="150" src="images/logo-heroku.png"/>
-                    </div>
-                    </div>
-                <div class="d-flex flex-row d-md-block justify-content-around">
-					<div class="d-flex flex-column d-md-block">
-                        <img class="item" width="150" src="images/logo-git.png"/>
-                        <img class="item" width="150" src="images/logo-sublime-text-3.png"/>
-                        <img class="item" width="150" src="images/logo-postman.png"/>
-                        <img class="item" width="150" src="images/logo-gitlab-ci-cd.png"/>
-                    </div>
-                </div>
+				
             </div>
 		</div>
             <!-- Core Tools Section End -->
@@ -563,86 +863,161 @@
 				</div>
 			</div>
 
-			<div class="d-lg-flex justify-content-center card-body">
-				<div class="card bg-dark m-5 mb-xl-5 mr-xl-4 ml-xl-5"> 
-					<div class="card-body">
-						<h4 class="mb-5">LETS'S GET IN TOUCH </h4>
-						<ul class="contact-list">
-						<li>
-							<li><i class="fa fa-map-marker"></i></li>
-							<span class="faa">Address: Cuenca, Batangas 4222 Philippines</span>
-						</li>
-						<li>
-							<li><i class="fa fa-mobile mt-5"></i></li>
-							<span class="faa">Phone: 639176348553</span>
-						</li>
-						<li>
-							<li><i class="fa fa-envelope mt-5"></i></li>
-							<span class="faa">Email: araychard@gmail.com</span>
-						</li>
-						<li>
-							<li><i class="fa fa-linkedin mt-5"></i></li>
-							<span class="faa">LinkedIn: /in/raychardatienza/</span>
-						</li>
-						</ul>
-					</div>
-				</div>
-				            
-				<div class="card bg-dark m-5 mb-xl-5 mr-xl-4 ml-xl-5" id="contact-card">
-					<div class="card-body">
-						<h4>HAVE A QUESTION? MESSAGE ME</h4>
-						<form id="contact-form" method="post" novalidate>
-						<div class="form-group mt-3">
-							<label for="name">Name</label>
-							<input type="text" class="form-control" id="name" name="name" required>
-						</div>
-						<div class="form-group mt-2">
-							<label for="contactnum">Contact Number</label>
-							<input type="number" class="form-control" id="contactnum" name="contactnum" required>
-							</div>
-						<div class="form-group mt-2">
-							<label for="email">Email address</label>
-							<input type="email" class="form-control" id="email" name="email" required>
-						</div>
-						<div class="form-group mt-2">
-							<label for="message">Message</label>
-							<textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-						</div>
-						<button type="submit" class="btn">Submit</button>
-						</form>
-					</div>
-				</div>			
-				<!-- 'Message Sent' Card -->					  
-				<div class="card bg-dark d-none m-5 mb-xl-5 mr-xl-4 ml-xl-5" id="message-sent-card">
-					<div class="card-body">
-						<h5 class="card-title mb-5">MESSAGE SENT</h5>
-						<p>Name: <span id="message-sent-name"></span></p>
-						<p>Contact Number: <span id="message-sent-contact"></span></p>
-						<p>Email: <span id="message-sent-email"></span></p>
-						<p>Message: <span id="message-sent-message"></span></p>
-					</div>
-				</div>
-				<!-- Contact Me Section Start -->
-			</div>
+			
+
+			<section class="contact-page-section">
+				<div class="container">
+					  <div class="inner-container">
+						<div class="row clearfix">
+						  
+							<!--Form Column-->
+							  <div class="form-column col-md-8 col-sm-12 col-xs-12">
+								<div class="inner-column">							
+									  <!--Contact Form-->
+									  <div class="contact-form">
+										  <form method="post" action="sendemail.php" id="contact-form">
+											  <div class="row clearfix">
+												  <div class="form-group col-md-6 col-sm-6 col-xs-12">
+													  <input type="text" name="name" value="" placeholder="Name" required>
+												  </div>
+												  <div class="form-group col-md-6 col-sm-6 co-xs-12">
+													  <input type="email" name="email" value="" placeholder="Email" required>
+												  </div>
+												  <div class="form-group col-md-6 col-sm-6 co-xs-12">
+													  <input type="text" name="subject" value="" placeholder="Subject" required>
+												  </div>
+												  <div class="form-group col-md-6 col-sm-6 co-xs-12">
+													  <input type="text" name="phone" value="" placeholder="Phone" required>
+												  </div>
+												  <div class="form-group col-md-12 col-sm-12 co-xs-12">
+													  <textarea name="message" placeholder="Message"></textarea>
+												  </div>
+												  <div class="form-group col-md-12 col-sm-12 co-xs-12">
+													  <button type="submit" class="theme-btn btn-style-one">Send Now</button>
+												  </div>
+											  </div>
+										  </form>
+									  </div>
+									  <!--End Contact Form-->
+									  
+								  </div>
+							  </div>
+							  
+							  <!--Info Column-->
+							  <div class="info-column col-md-4 col-sm-12 col-xs-12">
+								<div class="inner-column">
+									<h2>Contact Info</h2>
+									  <ul class="list-info">
+										<li class="mb-5"><i class="fa fa-map-marker "></i>Cuenca, Batangas Philippines 4222</li>
+										<li class="mb-5"><i class="fa fa-envelope"></i>araychard@gmail.com</li>
+										<li class="mb-5"><i class="fa fa-mobile"></i>+63-917-634-8553 <br> +63-976-568-4552</li>
+									  </ul>
+									  <ul class="social-icon-four">
+										  <li class="follow mb-3 mt-5">Follow on: </li>
+										  <a href="https://www.facebook.com/raychard.eiei/" target="_blank" class="logo-link"><i class="fa fa-facebook logo-white"></i></a>
+										  <a href="https://twitter.com/iamWittyCrypto" target="_blank" class="logo-link"><i class="fa fa-twitter logo-white"></i></a>
+										  <a href="https://www.linkedin.com/in/raychardatienza/" target="_blank" class="logo-link"><i class="fa fa-linkedin logo-white"></i></a>
+										  <a href="https://www.instagram.com/oooraychardeiei/" target="_blank" class="logo-link"><i class="fa fa-instagram logo-white"></i></a>
+										  <a href="https://gitlab.com/b279-atienza" target="_blank" class="logo-link"><i class="fa fa-gitlab logo-white"></i></a>
+									  </ul>
+								  </div>
+							  </div>
+							  
+						  </div>
+					  </div>
+				  </div>
+			  </section>
+
 
 			</div>
 			<!-- Footer Section Start -->
-			<div class="container-fluid px-0 text-center">
+			<footer class="footer-section">
 				<div class="container">
-		        	<div class="social">
-						<div class="contact">
-							<h6>Follow me</h6>
- 							<a href="https://www.facebook.com/raychard.eiei/" target="_blank"><i class="fa fa-facebook"></i> </a>
-			        		<a href="https://twitter.com/iamWittyCrypto" target="_blank"> <i class="fa fa-twitter"></i> </a>
-			        		<a href="https://www.linkedin.com/in/raychardatienza/" target="_blank"><i class="fa fa-linkedin"></i> </a>
-			        		<a href="https://www.instagram.com/oooraychardeiei/" target="_blank"><i class="fa fa-instagram"></i> </a>
-			        		<a href="https://gitlab.com/b279-atienza" target="_blank"><i class="fa fa-gitlab"></i> </a>
-			        		<p class="copyright"> &copy; Copyright All rights reserved. 2023 </p>
+
+					<div class="footer-content pt-5 pb-5">
+						<div class="row">
+							<div class="col-xl-4 col-lg-4 mb-50">
+								<div class="footer-widget">
+									<div class="footer-logo">
+										<a href="#landing" class="navbar-brand"><span>r.</span></a>
+									</div>
+									<div class="footer-text">
+										<p class="card-text1">Hello! I am a highly motivated individual with a strong educational background in <span>Computer Engineering</span> My passion lies in the realm of technology and innovation, where I constantly seek to explore new possibilities."</p>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+								<div class="footer-widget">
+									<div class="footer-widget-heading">
+										<h3>Useful Links</h3>
+									</div>
+									<ul>
+										<li><a href="#landing">Home</a></li>
+										<li><a href="#projects">Projects</a></li>
+										<li><a href="#experience">Experience</a></li>
+										<li><a href="#contact">Contact Me</a></li>
+										<li><a href="#skills">Skills</a></li>
+										<li><a href="#tools">Tools</a></li>
+										<li><a href="#certificate">Certificates</a></li>
+										<li><a href="#about">About Me</a></li>
+										<li><a href="#about">Resume</a></li>
+										<li><a href="#landing">Latest News</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+								<div class="footer-widget">
+									<div class="footer-widget-heading">
+										<h3>Subscribe</h3>
+									</div>
+
+									<div class="subscribe-form">
+										<form action="#">
+											<input type="text" placeholder="Email Address">
+										</form>
+									</div>
+								</div>
+
+								<div class="footer-social-icon ">
+									<div class="footer-widget-heading">
+										<h3>Follow us</h3>
+									</div>
+									<a href="https://www.facebook.com/raychard.eiei/" target="_blank"><i class="fa fa-facebook"></i> </a>
+									<a href="https://twitter.com/iamWittyCrypto" target="_blank"> <i class="fa fa-twitter"></i> </a>
+									<a href="https://www.linkedin.com/in/raychardatienza/" target="_blank"><i class="fa fa-linkedin"></i> </a>
+									<a href="https://www.instagram.com/oooraychardeiei/" target="_blank"><i class="fa fa-instagram"></i> </a>
+									<a href="https://gitlab.com/b279-atienza" target="_blank"><i class="fa fa-gitlab"></i> </a>
+
+								</div>
+							</div>
 						</div>
 					</div>
-	    		</div>
-	    	</div>
-		    <!-- Footer Section End -->
+				</div>
+				<div class="copyright-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-6 col-lg-6 text-center text-lg-left">
+								<div class="copyright-text">
+									<p>Copyright &copy; 2023, All Right Reserved <a href="#about">Raychard Atienza</a></p>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+								<div class="footer-menu">
+									<ul>
+										<li><a href="#landing">Home</a></li>
+										<li><a href="#about">About Me</a></li>
+										<li><a href="#projects">Projects</a></li>
+										<li><a href="#experience">Experience</a></li>
+										<li><a href="#contact">Contact</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer Section End -->
 
 
 		<!-- Bootstrap JS Script -->
@@ -650,6 +1025,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	</body>
 	</body>
 </html>
