@@ -1221,3 +1221,20 @@ color: #878787;
 .footer-social-icon {
   margin-top: 30px;
 }
+
+@media (max-width: 768px) {
+  .navbar-default {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav li {
+    margin-bottom: 10px;
+  }
+}
