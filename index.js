@@ -9,6 +9,21 @@ function highlightLink(link) {
   link.classList.add('active');
 }
 
+function redirectToWebsite1() {
+  window.open('https://raychardatienza.github.io/webportfolio/', '_blank'); // Replace with the URL of the website you want to redirect to
+}
+
+function redirectToWebsite2() {
+  window.open('https://gitlab.com/b279-atienza/backend/-/tree/master/s42-s46?ref_type=heads', '_blank'); // Replace with the URL of the website you want to redirect to
+}
+
+function redirectToWebsite3() {
+  window.open('https://fullstack-capstone3-atienza.vercel.app/', '_blank'); // Replace with the URL of the website you want to redirect to
+}
+
+function redirectToWebsite4() {
+  window.open('https://wittycrypto.github.io/diannamarieaquino/', '_blank'); // Replace with the URL of the website you want to redirect to
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   var cardsPerPage = 6; // Number of cards to display per page

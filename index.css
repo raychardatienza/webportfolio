@@ -54,6 +54,10 @@ body, html {
   position: relative;
 }
 
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ff4d05 !important;
+}
+
 .navbar-default .navbar-nav > li > a.active:after {
   content: "";
   position: absolute;
@@ -106,9 +110,13 @@ body, html {
 
 .filter-button.active {
   background-color: orange;
-  color: white;
+  color: #ff4d05;
 }
 
+.active-button {
+  background-color: #ff4d05;
+  color: #ffffff;
+}
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
