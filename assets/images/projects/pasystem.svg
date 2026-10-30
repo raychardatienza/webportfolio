@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.48" r="0.55"><stop offset="0" stop-color="#a78bfa" stop-opacity="0.30"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="120" y="110" width="44" height="74" rx="22" stroke="#e6f1ff" stroke-opacity=".85"/>
+      <path d="M128 134h28M128 148h28M128 162h28" stroke="#e6f1ff" stroke-opacity=".5" stroke-width="2"/>
+      <path d="M110 160a32 32 0 0 0 64 0M142 192v50M118 242h48" stroke="#e6f1ff" stroke-opacity=".85"/>
+      <path d="M174 214C210 214 214 238 250 238" stroke="#a78bfa" stroke-dasharray="4 5"/>
+      <rect x="250" y="200" width="130" height="76" rx="10" stroke="#a78bfa"/>
+      <rect x="264" y="214" width="62" height="28" rx="4" stroke="#22d3ee" stroke-width="1.8"/><path d="M268 228c6-14 10 14 16 0s10 14 16 0 10 14 16 0" stroke="#22d3ee" stroke-width="1.8"/>
+      <circle cx="350" cy="228" r="9" stroke="#a78bfa"/><circle cx="290" cy="260" r="6" stroke="#a78bfa" stroke-width="1.8"/><circle cx="316" cy="260" r="6" stroke="#a78bfa" stroke-width="1.8"/>
+      <path d="M380 238C410 238 420 200 440 180" stroke="#a78bfa" stroke-dasharray="4 5"/>
+      <path d="M440 150h22l50-40v140l-50-40h-22z" stroke="#22d3ee"/>
+      <path d="M528 150a30 30 0 0 1 0 40M542 134a52 52 0 0 1 0 72M556 118a74 74 0 0 1 0 104" stroke="#22d3ee"/></g>
+
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// public address system</text>
+<rect x="0" y="356" width="640" height="4" fill="#a78bfa" fill-opacity="0.85"/>
+</svg>

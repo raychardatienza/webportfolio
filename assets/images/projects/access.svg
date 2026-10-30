@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.48" r="0.55"><stop offset="0" stop-color="#a78bfa" stop-opacity="0.30"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="150" y="60" width="160" height="264" rx="4" stroke="#e6f1ff" stroke-opacity=".75"/><rect x="164" y="74" width="132" height="236" stroke="#e6f1ff" stroke-opacity=".35"/>
+      <path d="M282 190h-14" stroke="#e6f1ff" stroke-width="4"/>
+      <rect x="340" y="110" width="80" height="140" rx="12" stroke="#a78bfa"/>
+      <circle cx="380" cy="132" r="4" fill="#34d399" stroke="none"/>
+      <rect x="356" y="148" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/><rect x="374" y="148" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/><rect x="392" y="148" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/><rect x="356" y="166" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/><rect x="374" y="166" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/><rect x="392" y="166" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/><rect x="356" y="184" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/><rect x="374" y="184" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/><rect x="392" y="184" width="12" height="12" rx="3" stroke="#a78bfa" stroke-width="1.6"/>
+      <path d="M368 224a12 12 0 0 1 24 0M364 232a16 16 0 0 1 32 0M372 224v8M388 224v6" stroke="#22d3ee" stroke-width="1.8"/>
+      <g transform="rotate(-14 520 170)"><rect x="470" y="140" width="96" height="60" rx="8" stroke="#22d3ee"/><rect x="482" y="152" width="22" height="16" rx="3" stroke="#fbbf24" stroke-width="2"/><path d="M482 184h50" stroke="#22d3ee" stroke-width="2"/></g>
+      <path d="M440 150a28 28 0 0 1 0 40M452 140a44 44 0 0 1 0 60" stroke="#22d3ee"/></g>
+
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// access control system</text>
+<rect x="0" y="356" width="640" height="4" fill="#a78bfa" fill-opacity="0.85"/>
+</svg>

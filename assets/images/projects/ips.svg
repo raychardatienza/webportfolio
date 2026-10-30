@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.74" cy="0.48" r="0.55"><stop offset="0" stop-color="#a78bfa" stop-opacity="0.30"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M480 100L390 170M480 100L480 170M480 100L570 170M390 170L355 248M390 170L420 248M480 170L470 248M480 170L525 248M570 170L580 248" stroke="#a78bfa" stroke-opacity=".7"/>
+      <circle cx="480" cy="92" r="16" stroke="#a78bfa"/><circle cx="480" cy="88" r="5" stroke="#e6f1ff" stroke-width="2"/><path d="M472 99.27272727272727a8 6.153846153846153 0 0 1 16 0" stroke="#e6f1ff" stroke-width="2"/><circle cx="390" cy="170" r="13" stroke="#a78bfa"/><circle cx="390" cy="166" r="4.0625" stroke="#e6f1ff" stroke-width="2"/><path d="M383.5 175.9090909090909a6.5 5 0 0 1 13 0" stroke="#e6f1ff" stroke-width="2"/><circle cx="480" cy="170" r="13" stroke="#a78bfa"/><circle cx="480" cy="166" r="4.0625" stroke="#e6f1ff" stroke-width="2"/><path d="M473.5 175.9090909090909a6.5 5 0 0 1 13 0" stroke="#e6f1ff" stroke-width="2"/><circle cx="570" cy="170" r="13" stroke="#a78bfa"/><circle cx="570" cy="166" r="4.0625" stroke="#e6f1ff" stroke-width="2"/><path d="M563.5 175.9090909090909a6.5 5 0 0 1 13 0" stroke="#e6f1ff" stroke-width="2"/>
+      <circle cx="355" cy="252" r="9" stroke="#22d3ee"/><circle cx="355" cy="252" r="2.5" fill="#22d3ee" stroke="none"/><circle cx="420" cy="252" r="9" stroke="#22d3ee"/><circle cx="420" cy="252" r="2.5" fill="#22d3ee" stroke="none"/><circle cx="470" cy="252" r="9" stroke="#22d3ee"/><circle cx="470" cy="252" r="2.5" fill="#22d3ee" stroke="none"/><circle cx="525" cy="252" r="9" stroke="#22d3ee"/><circle cx="525" cy="252" r="2.5" fill="#22d3ee" stroke="none"/><circle cx="580" cy="252" r="9" stroke="#22d3ee"/><circle cx="580" cy="252" r="2.5" fill="#22d3ee" stroke="none"/></g>
+
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// indigenous political structures &amp; organizations</text>
+  <rect x="552" y="18" width="68" height="24" rx="6" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".3"/>
+  <text x="586" y="34" font-family="Consolas,'Courier New',monospace" font-size="12" font-weight="700" fill="#e6f1ff" fill-opacity="1" text-anchor="middle">NCIP</text>
+  <text x="28" y="322" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="800" fill="#ffffff" filter="url(#neon)" letter-spacing="-1">IPS · IPO</text>
+<rect x="0" y="356" width="640" height="4" fill="#a78bfa" fill-opacity="0.85"/>
+</svg>

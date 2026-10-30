@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.74" cy="0.48" r="0.55"><stop offset="0" stop-color="#2dd4bf" stop-opacity="0.30"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M480 92l62 24v52c0 46-31 72-62 84-31-12-62-38-62-84v-52z" stroke="#2dd4bf"/>
+      <circle cx="480" cy="160" r="13" stroke="#e6f1ff"/><path d="M480 173v24" stroke="#e6f1ff"/>
+      <rect x="352" y="70" width="44" height="44" rx="10" stroke="#a78bfa"/><path d="M364 86h20M364 94h14M364 102h18" stroke="#a78bfa" stroke-width="2"/><rect x="352" y="240" width="44" height="44" rx="10" stroke="#a78bfa"/><path d="M364 256h20M364 264h14M364 272h18" stroke="#a78bfa" stroke-width="2"/><rect x="568" y="70" width="44" height="44" rx="10" stroke="#a78bfa"/><path d="M580 86h20M580 94h14M580 102h18" stroke="#a78bfa" stroke-width="2"/><rect x="568" y="240" width="44" height="44" rx="10" stroke="#a78bfa"/><path d="M580 256h20M580 264h14M580 272h18" stroke="#a78bfa" stroke-width="2"/>
+      <path d="M396 100L428 128M396 252L428 220M568 100L536 128M568 252L536 220" stroke="#2dd4bf" stroke-dasharray="4 6"/></g>
+
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// single sign-on</text>
+  <rect x="552" y="18" width="68" height="24" rx="6" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".3"/>
+  <text x="586" y="34" font-family="Consolas,'Courier New',monospace" font-size="12" font-weight="700" fill="#e6f1ff" fill-opacity="1" text-anchor="middle">NCIP</text>
+  <text x="28" y="322" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="60" font-weight="800" fill="#ffffff" filter="url(#neon)" letter-spacing="-1">SSO</text>
+<rect x="0" y="356" width="640" height="4" fill="#2dd4bf" fill-opacity="0.85"/>
+</svg>

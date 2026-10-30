@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.48" r="0.55"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.30"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M96 104H300M96 128H300M340 104H560M340 128H560" stroke="#e6f1ff" stroke-opacity=".8"/>
+      <rect x="296" y="94" width="48" height="44" rx="6" stroke="#38bdf8"/><path d="M320 94V74M306 74h28" stroke="#38bdf8"/>
+      <path d="M326 138l-4 8 6 4" stroke="#ff5a4e"/>
+      <path d="M322 158c7 9 10 14 10 19a10 10 0 0 1 -20 0c0-5 3-10 10-19z" stroke="#38bdf8" fill="#38bdf8" fill-opacity=".18"/><path d="M334 196.1c5.95 7.6499999999999995 8.5 11.9 8.5 16.15a8.5 8.5 0 0 1 -17 0c0-5 2.55-10 8.5-19z" stroke="#38bdf8" fill="#38bdf8" fill-opacity=".18"/><path d="M318 228.2c4.8999999999999995 6.3 7 9.799999999999999 7 13.299999999999999a7 7 0 0 1 -14 0c0-5 2.0999999999999996-10 7-19z" stroke="#38bdf8" fill="#38bdf8" fill-opacity=".18"/>
+      <ellipse cx="330" cy="290" rx="90" ry="12" stroke="#38bdf8" fill="#38bdf8" fill-opacity=".12"/>
+      <rect x="420" y="270" width="70" height="26" rx="6" stroke="#a78bfa"/><circle cx="436" cy="283" r="4" fill="#ff5a4e" stroke="none"/>
+      <path d="M440 254a20 20 0 0 1 30 0M430 240a36 36 0 0 1 50 0M420 226a52 52 0 0 1 70 0" stroke="#fbbf24"/></g>
+<text x="455" y="316" font-family="Consolas,'Courier New',monospace" font-size="11" font-weight="400" fill="#a78bfa" fill-opacity="1" text-anchor="middle">sensor</text>
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// water leak detection</text>
+<rect x="0" y="356" width="640" height="4" fill="#38bdf8" fill-opacity="0.85"/>
+</svg>

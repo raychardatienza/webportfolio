@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.74" cy="0.48" r="0.55"><stop offset="0" stop-color="#22d3ee" stop-opacity="0.30"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="500" cy="100" rx="78" ry="20" stroke="#22d3ee"/>
+      <path d="M422 100v160M578 100v160" stroke="#22d3ee"/>
+      <path d="M422 153a78 20 0 0 0 156 0M422 206a78 20 0 0 0 156 0M422 260a78 20 0 0 0 156 0" stroke="#22d3ee"/>
+      <circle cx="452" cy="128" r="3" fill="#22d3ee" stroke="none"/><circle cx="480" cy="132" r="3" fill="#22d3ee" stroke="none"/><circle cx="508" cy="130" r="3" fill="#22d3ee" stroke="none"/><circle cx="462" cy="182" r="3" fill="#22d3ee" stroke="none"/><circle cx="500" cy="186" r="3" fill="#22d3ee" stroke="none"/><circle cx="536" cy="182" r="3" fill="#22d3ee" stroke="none"/><circle cx="470" cy="235" r="3" fill="#22d3ee" stroke="none"/><circle cx="520" cy="238" r="3" fill="#22d3ee" stroke="none"/>
+      <path d="M352 82a12 12 0 0 1 12 12c0 9-12 20-12 20s-12-11-12-20a12 12 0 0 1 12-12z" stroke="#a78bfa"/><circle cx="352" cy="94" r="4" stroke="#a78bfa"/><path d="M338 164a12 12 0 0 1 12 12c0 9-12 20-12 20s-12-11-12-20a12 12 0 0 1 12-12z" stroke="#a78bfa"/><circle cx="338" cy="176" r="4" stroke="#a78bfa"/><path d="M360 244a12 12 0 0 1 12 12c0 9-12 20-12 20s-12-11-12-20a12 12 0 0 1 12-12z" stroke="#a78bfa"/><circle cx="360" cy="256" r="4" stroke="#a78bfa"/>
+      <path d="M366 92C392 92 400 108 420 118M352 176C380 176 396 178 420 178M374 252C396 252 404 240 420 236" stroke="#a78bfa" stroke-dasharray="4 7"/></g>
+
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// data repository</text>
+  <rect x="552" y="18" width="68" height="24" rx="6" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".3"/>
+  <text x="586" y="34" font-family="Consolas,'Courier New',monospace" font-size="12" font-weight="700" fill="#e6f1ff" fill-opacity="1" text-anchor="middle">NCIP</text>
+  <text x="28" y="322" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="60" font-weight="800" fill="#ffffff" filter="url(#neon)" letter-spacing="-1">DRIP</text>
+<rect x="0" y="356" width="640" height="4" fill="#22d3ee" fill-opacity="0.85"/>
+</svg>

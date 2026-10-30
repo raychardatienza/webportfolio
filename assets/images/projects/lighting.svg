@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.48" r="0.55"><stop offset="0" stop-color="#fbbf24" stop-opacity="0.30"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M320 64a42 42 0 0 1 26 75v19h-52v-19a42 42 0 0 1 26-75z" stroke="#fbbf24" fill="#fbbf24" fill-opacity=".12"/>
+      <path d="M298 168h44M302 178h36M312 188h16" stroke="#fbbf24"/><path d="M310 120l10 14 10-14" stroke="#fbbf24" stroke-width="2"/>
+      <path d="M252 104h-26M388 104h26M266 58l-18-18M374 58l18-18M320 40V16" stroke="#fbbf24"/>
+      <rect x="250" y="236" width="140" height="74" rx="8" stroke="#22d3ee"/>
+      <path d="M266 236v-8" stroke="#22d3ee" stroke-width="2"/><path d="M280 236v-8" stroke="#22d3ee" stroke-width="2"/><path d="M294 236v-8" stroke="#22d3ee" stroke-width="2"/><path d="M308 236v-8" stroke="#22d3ee" stroke-width="2"/><path d="M322 236v-8" stroke="#22d3ee" stroke-width="2"/><path d="M336 236v-8" stroke="#22d3ee" stroke-width="2"/><path d="M350 236v-8" stroke="#22d3ee" stroke-width="2"/><path d="M364 236v-8" stroke="#22d3ee" stroke-width="2"/>
+      <rect x="292" y="258" width="48" height="30" rx="4" stroke="#22d3ee" stroke-opacity=".6"/>
+      <circle cx="160" cy="250" r="20" stroke="#a78bfa"/><path d="M148 250h6l3-7 6 14 3-7h6" stroke="#a78bfa" stroke-width="2"/>
+      <path d="M180 250H250" stroke="#a78bfa" stroke-dasharray="4 5"/>
+      <rect x="450" y="244" width="70" height="46" rx="6" stroke="#34d399"/><circle cx="472" cy="267" r="9" stroke="#34d399"/><path d="M472 267l40-34" stroke="#34d399" stroke-width="4"/>
+      <path d="M390 268H450" stroke="#34d399" stroke-dasharray="4 5"/></g>
+<text x="160" y="294" font-family="Consolas,'Courier New',monospace" font-size="11" font-weight="400" fill="#a78bfa" fill-opacity="1" text-anchor="middle">LDR</text><text x="320" y="327" font-family="Consolas,'Courier New',monospace" font-size="11" font-weight="400" fill="#22d3ee" fill-opacity="1" text-anchor="middle">Arduino Uno</text><text x="485" y="310" font-family="Consolas,'Courier New',monospace" font-size="11" font-weight="400" fill="#34d399" fill-opacity="1" text-anchor="middle">servo</text>
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// room lighting system</text>
+<rect x="0" y="356" width="640" height="4" fill="#fbbf24" fill-opacity="0.85"/>
+</svg>

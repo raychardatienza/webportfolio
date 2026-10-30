@@ -1,1035 +1,1839 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="./index.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-		<link rel="icon" href="./images/logo.png">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
-
-
-		<title>Full Stack Web Developer</title>
-	</head>
-	<body>
-
-
-	<!-- Navbar Section Start -->
-
-
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-		<div class="container">
-		  <a href="#landing" class="navbar-brand"><span>r.</span></a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-	  
-		  <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
-			<ul class="navbar-nav">
-			  <li class="nav-item"><a href="#landing" class="nav-link active" onclick="highlightLink(this)">Home</a></li>
-			  <li class="nav-item"><a href="#projects" class="nav-link" onclick="highlightLink(this)">Projects</a></li>
-			  <li class="nav-item"><a href="#experience" class="nav-link" onclick="highlightLink(this)">Experience</a></li>
-			  <li class="nav-item"><a href="#skills" class="nav-link" onclick="highlightLink(this)">Skills</a></li>
-			  <li class="nav-item"><a href="#tools" class="nav-link" onclick="highlightLink(this)">Tools</a></li>
-			  <li class="nav-item"><a href="#contact" class="nav-link" onclick="highlightLink(this)">Contact Me</a></li>
-			</ul>
-		  </div>
-		</div>
-	  </nav>
-   
-	<li>
-		<button class="toggle-button" id="scrollBtns">
-			<span class="toggle-label">Dark Mode</span>
-		</button>
-	</li>
-
-		<button id="scrollBtn">Scroll to top</button>
-
-	<!-- Landing Page Start -->
-	<div class="container-fluid text-center">
-		<div class="row">
-			<div class="pt-5 col-xl-12">
-				<div id="landing">
-					<div class="hero">
-						<div class="header ">
-							<h1 class="line anim-typewriter mb-5 p-5">Welcome to my Portfolio</h1> 
-							<h1 class="line anim-typewriter1 mt-5">Raychard Atienza</h1>
-							<h1 class="line anim-typewriter2 mb-5"> Full Stack Web Developer</h1>
-							<a href="#about" class="btn mt-5">About Me</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Landing Page End -->
-
-	<!-- About Me Section Start -->
-	<div class="container-fluid px-0 text-center">
-		<div class="pt-5">
-			<div id="about" class="container">
-				<svg viewBox="0 0 760 300">
-				<symbol id="s-text5">
-					<text text-anchor="middle" x="50%" y="80%">ABOUT ME</text>
-				</symbol>
-
-				<g class = "g-ants">
-					<use xlink:href="#s-text5" class="text-copy"></use>
-					<use xlink:href="#s-text5" class="text-copy"></use>
-					<use xlink:href="#s-text5" class="text-copy"></use>
-					<use xlink:href="#s-text5" class="text-copy"></use>
-					<use xlink:href="#s-text5" class="text-copy"></use>
-				</g>
-				</svg>
-			</div>
-		</div>
-
-		<div class="d-lg-flex justify-content-center card-body">
-			<div class="container">
-			  <div class="row">
-				<div class="col-xs-12 col-md-6">
-				  <img src="./images/me.jpg" class="card-img-top" id="me">
-				  <div class="contact">
-					<a href="https://www.facebook.com/raychard.eiei/" target="_blank"><i class="fa fa-facebook"></i></a>
-					<a href="https://twitter.com/iamWittyCrypto" target="_blank"><i class="fa fa-twitter"></i></a>
-					<a href="https://www.linkedin.com/in/raychardatienza/" target="_blank"><i class="fa fa-linkedin"></i></a>
-					<a href="https://gitlab.com/b279-atienza" target="_blank"><i class="fa fa-gitlab"></i></a>
-				  </div>
-				</div>
-				
-				<div class="col-xs-12 col-md-6 text-center mt-5">
-				  <p class="card-text1">Hello! I am a highly motivated <span>Computer Engineering</span> graduate with a passion for <span>technology, innovation, and problem-solving.</span> With expertise in <span>Web Development</span> and proficiency in multiple programming languages, I create dynamic and engaging digital experiences. I stay up-to-date with industry trends and continuously expand my knowledge to deliver cutting-edge solutions. My drive to make a positive impact in the world of technology makes me a valuable asset.</p>
-				  
-				  <!-- Additional Info Section Start -->
-				  <button onclick="openPopup('popup7')">View Resume</button>
-		  
-				  <div id="popup7" class="popup pb-5">
-					<div class="popup-content">
-					  <span class="close" onclick="closePopup('popup7')">&times;</span>
-					  <a href="https://drive.google.com/file/d/1anTMJC5bxI2GG-Sw2IuS-2Vq3nh9pT7g/view?usp=drive_link" target="_blank">
-						<img src="./images/resume.png" class="card-img-top" id="resume" style="display: block; margin: 0 auto; width: 190%; height: auto;">
-					  </a>
-					
-					  <a href="./images/resume.png" target="_blank" class="ml-auto">
-						<button>Download Resume</button>
-					  </a>
-					
-					  <button onclick="closePopup('popup7')">Close</button>
-					</div>
-				  </div>
-				  <!-- Additional Info Section End -->
-				  
-				</div>
-			  </div>
-			</div>
-		  </div>
-	</div>
-    <!-- About Me Section End -->
-
-	<!-- Project Section Start -->
-	<div class="pt-5 mt-5">				
-		<div id="projects" class="container ">
-			<svg viewBox="0 0 760 300">
-			<symbol id="s-text">
-				<text text-anchor="middle" x="50%" y="80%">PROJECTS</text>
-			</symbol>
-
-			<g class = "g-ants">
-				<use xlink:href="#s-text" class="text-copy"></use>
-				<use xlink:href="#s-text" class="text-copy"></use>
-				<use xlink:href="#s-text" class="text-copy"></use>
-				<use xlink:href="#s-text" class="text-copy"></use>
-				<use xlink:href="#s-text" class="text-copy"></use>
-			</g>
-			</svg>
-		</div>
-	</div>
-
-	<!-- Filter Button Start -->
-	<div class="container">
-		<div class="row justify-content-center">
-		  <div class="col-md-12">
-			<div class="btn-group d-flex flex-wrap justify-content-center text-center" role="group">
-			  <button class="filter-button" data-filter="all">All</button>
-			  <button class="filter-button" data-filter="school">School</button>
-			  <button class="filter-button" data-filter="software">Software</button>
-			  <button class="filter-button" data-filter="hardware">Hardware</button>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	<!-- Filter Button End -->
-
-	<!-- Project Section Start -->
-	<div class="container">
-		<div class="row justify-content-center" id="card-container">
-		  <!-- Front-end Capstone Project Card Start -->
-		  <div class="card bg-dark col-lg-3 col-md-6 col-sm-12 m-4 mb-xl-5" data-filter="software">
-			<div class="card-body">
-			  <img src="./images/capstone1.png" class="card-img-top" alt="...">
-			  <h5 class="card-title">Front-end Capstone Project</h5>
-			  <h6 class="card-subtitle">De La Salle Lipa</h6>
-			  
-			  <button onclick="openPopup('popup13')">View more</button>
-	  
-			  <!-- Additional Info Section Start -->
-			  <div id="popup13" class="popup">
-				<div class="popup-content">
-				  <span class="close" onclick="closePopup('popup13')">&times;</span>
-				  <img src="./images/capstone1.png" class="card-img-top" alt="...">
-				  <h2 class="pt-5 pb-2">Front-end Capstone Project: Personal Portfolio</h2>
-	  
-				  <p>The professional portfolio was created using HTML, Bootstrap, and CSS, resulting in a sleek and modern design that showcases the owner's work, skills, and experience. The owner utilized the strengths of HTML to structure the website's content and layout, while Bootstrap's pre-built CSS styles and components were used to enhance the website's look and feel. CSS was used to tailor the design to the owner's preferences and create a cohesive brand image. The website is user-friendly and easy to navigate, providing potential clients or employers with a clear understanding of the owner's strengths and capabilities. Overall, the owner's use of HTML, Bootstrap, and CSS has resulted in a professional and impressive online portfolio.</p>
-				  
-				  <button onclick="closePopup('popup13')">Close</button>
-				  <button onclick="redirectToWebsite1()">Check Project</button>
-				</div>
-			  </div>
-			  <!-- Additional Info Section End -->
-			</div>
-		  </div>
-		  <!-- Front-end Capstone Project Card End -->
-
-
-
-		<!-- Public Address System Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
-			<div class="card-body">
-				<img src="./images/pasystem.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Public Address System</h5>
-				<h6 class="card-subtitle">De La Salle Lipa</h6>
-				
-				<button onclick="openPopup('popup1')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup1" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup1')">&times;</span>
-						<img src="./images/pasystem.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Public Address System</h2>
-						<p>A system which amplifies sound signals through converting it into
-							electrical signals. Electrical signals are then amplified through transistors and converted back to
-							sound form.</p>
-						
-						<button onclick="closePopup('popup1')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Public Address System Card End -->
-
-
-		<!-- CCTV Installation Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5"  data-filter="hardware">
-			<div class="card-body">
-				<img src="./images/cctv.png" class="card-img-top" alt="...">
-				<h5 class="card-title">CCTV Installation</h5>
-				<h6 class="card-subtitle">Calvelo Engineered System</h6>
-				
-				<button onclick="openPopup('popup9')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup9" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup9')">&times;</span>
-						<img src="./images/cctv.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">CCTV Installation</h2>
-						<p>A system converting 220 V AC voltage into a 3V, 6V, 9V, and 12V DC outpu
-							tvoltage. It makes use of rectification, regulation, and voltage division for it to function. </p>
-						
-						<button onclick="closePopup('popup9')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- CCTV Installation Card End -->
-
-
-		<!-- Back-end Capstone Project Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="software">
-			<div class="card-body">
-				<img src="./images/capstone2.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Back-end Capstone Project</h5>
-				<h6 class="card-subtitle">Zuitt Coding Bootcamp</h6>
-				
-				<button onclick="openPopup('popup14')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup14" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup14')">&times;</span>
-						<img src="./images/capstone2.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Back-end Capstone Project: E-commerce API</h2>
-
-						<p>This API was developed using MongoDB, Node.js, Express, and Postman. The API utilized MongoDB, a popular document-based NoSQL database, to store and manage data. Node.js was used as the backend runtime environment, while Express was used as the web application framework to create the API. Postman, a collaboration platform for API development, was used to test and debug the API during development. Overall, the use of these technologies has resulted in a robust and functional API that is able to efficiently manage and serve data.</p>
-						
-						<button onclick="closePopup('popup14')">Close</button>
-						<button onclick="redirectToWebsite2()">Check Project</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Back-end Capstone Project Card End -->
-
-
-		<!-- Burglar Prototype Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
-			<div class="card-body">
-				<img src="./images/burglar.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Burglar Prototype</h5>
-				<h6 class="card-subtitle">De La Salle Lipa</h6>
-				
-				<button onclick="openPopup('popup2')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup2" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup2')">&times;</span>
-						<img src="./images/burglar.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Burglar Prototype</h2>
-						<p>A system using infrared proximity detector that triggers an alarm when the
-							rays falling on its sensor are interrupted. </p>
-						
-						<button onclick="closePopup('popup2')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Burglar Prototype Card End -->
-
-
-		<!-- Ping Pong Game using Arduino Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
-			<div class="card-body">
-				<img src="./images/pp.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Ping Pong using Arduino</h5>
-				<h6 class="card-subtitle">De La Salle Lipa</h6>
-				
-				<button onclick="openPopup('popup3')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup3" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup3')">&times;</span>
-						<img src="./images/pp.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Ping Pong Game using Arduino</h2>
-						<p>A classical Pong game implemented on an Arduino Uno and
-							8x8 mono-color led matrix. </p>
-						
-						<button onclick="closePopup('popup3')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Ping Pong Game Prototype Card End -->
-
-
-		<!-- Full-stack Capstone Project Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="software">
-			<div class="card-body">
-				<img src="./images/capstone3.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Full-stack Capstone Project</h5>
-				<h6 class="card-subtitle">Zuitt Coding Bootcamp</h6>
-				
-				<button onclick="openPopup('popup15')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup15" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup15')">&times;</span>
-						<img src="./images/capstone3.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Full-stack Capstone Project: E-commerce Website</h2>
-
-						<p>This ecommerce website was built using the MERN stack, which includes MongoDB, Express, React, and Node.js. MongoDB was used as the database to store and manage data, while Express was used as the web application framework to create the API. React, a popular front-end library, was used to create the user interface and provide a seamless user experience. Node.js was used as the backend runtime environment. The use of the MERN stack has resulted in a scalable and efficient ecommerce website that is able to handle a large volume of traffic and transactions.</p>
-						
-						<button onclick="closePopup('popup15')">Close</button>
-						<button onclick="redirectToWebsite3()">Check Project</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Full-stack Capstone Project Card End -->
-
-
-		<!-- Access Control System Card Start -->
-			<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="hardware">
-			<div class="card-body">
-				<img src="./images/access.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Access Control System</h5>
-				<h6 class="card-subtitle">Calvelo Engineered System</h6>
-				
-				<button onclick="openPopup('popup11')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup11" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup11')">&times;</span>
-						<img src="./images/access.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Access Control System</h2>
-						<p>A system converting 220 V AC voltage into a 3V, 6V, 9V, and 12V DC outpu
-							tvoltage. It makes use of rectification, regulation, and voltage division for it to function. </p>
-						
-						<button onclick="closePopup('popup11')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Access Control System Card End -->
-
-
-		<!-- Arhitect Personal Portfolio Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="software">
-			<div class="card-body">
-				<img src="./images/dianne.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Arhitect Personal Portfolio</h5>
-				<h6 class="card-subtitle">Byte Brew Solutions</h6>
-				
-				<button onclick="openPopup('popup16')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup16" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup16')">&times;</span>
-						<img src="./images/dianne.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Arhitect Personal Portfolio</h2>
-
-						<p>Personal Portfolio for the Architectural Designer based on Italy</p>
-						
-						<button onclick="closePopup('popup16')">Close</button>
-						<button onclick="redirectToWebsite4()">Check Project</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Arhitect Personal Portfolio Card End -->
-
-
-		<!-- Room Lighting Control System using Arduino Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
-			<div class="card-body">
-				<img src="./images/lighting.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Room Lighting System</h5>
-				<h6 class="card-subtitle">De La Salle Lipa</h6>
-				
-				<button onclick="openPopup('popup4')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup4" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup4')">&times;</span>
-						<img src="./images/lighting.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Room Lighting Control System</h2>
-						<p>A system which adjusts room lighting based on current room
-							lighting levels. It runs through Arduino Uno; works through servo motors and is programmed in
-							Matlab GUIDE to exhibit feedback.  </p>
-						
-						<button onclick="closePopup('popup4')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Room Lighting Control System Card End -->
-
-		
-		<!-- Water Leak Detection Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="hardware">
-			<div class="card-body">
-				<img src="./images/water.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Water Leak Detection</h5>
-				<h6 class="card-subtitle">Calvelo Engineered System</h6>
-				
-				<button onclick="openPopup('popup12')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup12" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup12')">&times;</span>
-						<img src="./images/water.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Water Leak Detection</h2>
-						<p>A system converting 220 V AC voltage into a 3V, 6V, 9V, and 12V DC outpu
-							tvoltage. It makes use of rectification, regulation, and voltage division for it to function. </p>
-						
-						<button onclick="closePopup('popup12')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Water Leak Detection Card End -->
-
-
-		<!-- Assembly Language-based Calculator Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
-			<div class="card-body">
-				<img src="./images/calculator.png" class="card-img-top" alt="...">
-				<h5 class="card-title">AL-based Calculator</h5>
-				<h6 class="card-subtitle">De La Salle Lipa</h6>
-				
-				<button onclick="openPopup('popup5')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup5" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup5')">&times;</span>
-						<img src="./images/calculator.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Assembly Language-based Calculator</h2>
-						<p>An AL-based program featuring basic mathematical
-							operations</p>
-						
-						<button onclick="closePopup('popup5')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Assembly Language-based Calculator Card End -->
-
-
-		<!-- Automated Advising system Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
-			<div class="card-body">
-				<img src="./images/advise.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Automated Advising System</h5>
-				<h6 class="card-subtitle">De La Salle Lipa</h6>
-				
-				<button onclick="openPopup('popup6')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup6" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup6')">&times;</span>
-						<img src="./images/advise.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Automated Advising System</h2>
-						<p>A system which features automation in managing student data
-							of Computer Engineering Department of De La Salle Lipa and transform it into useable
-							information.</p>
-						
-						<button onclick="closePopup('popup6')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Automated Advising system Card End -->
-
-
-		<!-- Thesis: Automated Fruit Picking Machine Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
-			<div class="card-body">
-				<img src="./images/fruit.png" class="card-img-top" alt="...">
-				<h5 class="card-title">Fruit Picking Machine</h5>
-				<h6 class="card-subtitle">De La Salle Lipa</h6>
-				
-				<button onclick="openPopup('popup7')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup7" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup7')">&times;</span>
-						<img src="./images/fruit.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">Thesis: Automated Fruit Picking Machine</h2>
-						<p>A design project that accurately judge which
-							produce fruits are ready for harvest then plucked it from the tree while ignoring unripe fruit
-							nearby. The aim of the project is to provide a proper handling and picking of certain fruits and
-							prevent fruits from rotting due to time of its maturity.</p>
-						
-						<button onclick="closePopup('popup7')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- Thesis: Automated Fruit Picking Machine -a Card End -->
-
-
-		<!-- DC Power Supply - Card Start -->
-		<div class="card bg-dark col-lg-3 col-md-4 col-sm-6 m-4 mb-xl-5" data-filter="school">
-			<div class="card-body">
-				<img src="./images/dc.png" class="card-img-top" alt="...">
-				<h5 class="card-title">DC Power Supply System</h5>
-				<h6 class="card-subtitle">De La Salle Lipa</h6>
-				
-				<button onclick="openPopup('popup8')">View more</button>
-
-				<!-- Additional Info Section Start -->
-				<div id="popup8" class="popup">
-					<div class="popup-content">
-						<span class="close" onclick="closePopup('popup8')">&times;</span>
-						<img src="./images/dc.png" class="card-img-top" alt="...">
-						<h2 class="pt-5 pb-2">DC Power Supply</h2>
-						<p>A system converting 220 V AC voltage into a 3V, 6V, 9V, and 12V DC outpu
-							tvoltage. It makes use of rectification, regulation, and voltage division for it to function. </p>
-						
-						<button onclick="closePopup('popup8')">Close</button>
-					</div>
-				</div>
-				<!-- Additional Info Section End -->
-
-			</div>
-		</div>
-		<!-- DC Power Supply - Card End -->
-	</div>
-	<!-- Project Section End -->
-
-
-	<div class="container">
-		<div class="row justify-content-center">
-		  <div class="col-md-12">
-			<div class="card-body mb-5 text-center">
-			  <div id="pager"></div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-
-
-
-
-
-
-	
-			<!-- Work Experience Section Start -->
-			<div class="pt-5">	
-				<div id="experience" class="container">
-				  <svg viewBox="0 0 760 300">
-				    <symbol id="s-text1">
-				      <text text-anchor="middle" x="50%" y="80%">EXPERIENCE</text>
-				    </symbol>
-				    <g class = "g-ants">
-				      <use xlink:href="#s-text1" class="text-copy"></use>
-				      <use xlink:href="#s-text1" class="text-copy"></use>
-				      <use xlink:href="#s-text1" class="text-copy"></use>
-				      <use xlink:href="#s-text1" class="text-copy"></use>
-				      <use xlink:href="#s-text1" class="text-copy"></use>
-				    </g>
-				  </svg>
-				</div>
-			</div>
-
-
-
-			<body>
-				<div class="timeline">
-				  <ul>
-					<li>
-					  <div class="content">
-						<h3> Computer Hardware & Troubleshooting</h3>
-						<p>I have experience in Computer Hardware & Troubleshooting, specializing in diagnosing and resolving issues related to computer systems. I possess knowledge of hardware components such as processors, memory modules, storage devices, and peripherals. With strong troubleshooting skills, I can quickly identify and fix hardware-related problems. My expertise in computer architecture allows me to optimize system performance and provide efficient technical support. I am experienced in providing reliable solutions to individuals and organizations.</p>
-					  </div>
-					  <div class="time">
-						<h4>January 2015</h4>
-					  </div>
-					</li>
-					
-					<li>
-					  <div class="content">
-						<h3>Project Support Engineer</h3>
-						<p>I bring extensive experience in Copper Installation, including PLDT Home DSL and Fiber to the Home Installation through PLDT Home Fibr. Additionally, my experience includes troubleshooting of Telephone Cabinets, knowledge of Copper/DSL Basic Repair, proficiency in the use of PLDT Tools and Equipment, and strong adherence to Safety Precautions protocols.</p>
-					  </div>
-					  <div class="time">
-						<h4>August 2017</h4>
-					  </div>
-					</li>
-					
-					<li>
-					  <div class="content">
-						<h3>Systems Engineer</h3>
-						<p>I have extensive experience in CCTV Installation and Support, encompassing both Analog and IP CCTV systems. Additionally, I possess strong skills in Access Control System Installation and Support. With a proven track record in the field, I have successfully handled the installation, configuration, and maintenance of CCTV systems, ensuring optimal surveillance coverage and security. My expertise extends to troubleshooting and resolving technical issues related to CCTV and Access Control systems, providing efficient and reliable support to clients. With a focus on delivering high-quality solutions, I am dedicated to ensuring the seamless operation and functionality of these critical security systems. </p>
-					  </div>
-					  <div class="time">
-						<h4>December 2016</h4>
-					  </div>
-					</li>
-					
-					<li>
-					  <div class="content">
-						<h3>Cryptocurrency Trader & Beta Tester</h3>
-						<p>As a Cryptocurrency Trader, I have gained experience in trading various cryptocurrencies and keeping up-to-date with the latest trends in the market. Additionally, I have served as a Beta Tester for a Cryptocurrency Trading Website and as a Bug Hunter for a Cryptocurrency Online Casino, both of which have honed my attention to detail and problem-solving skills.</p>
-					  </div>
-					  <div class="time">
-						<h4>December 2017</h4>
-					  </div>
-					</li>
-					
-					<div style="clear:both;"></div>
-				  </ul>
-				</div>
-			  </body>
-
-
-
-			<!-- Work Experience Section End -->
-
-			<!-- Skills Section Start -->
-			<div class="pt-5">
-			<div class="container-fluid text-center">
-				<div id="skills" class="container">
-				  <svg viewBox="0 0 760 300">
-				    <symbol id="s-text4">
-				      <text text-anchor="middle" x="50%" y="80%">SKILLS</text>
-				    </symbol>
-
-				    <g class = "g-ants">
-				      <use xlink:href="#s-text4" class="text-copy"></use>
-				      <use xlink:href="#s-text4" class="text-copy"></use>
-				      <use xlink:href="#s-text4" class="text-copy"></use>
-				      <use xlink:href="#s-text4" class="text-copy"></use>
-				      <use xlink:href="#s-text4" class="text-copy"></use>
-				    </g>
-				  </svg>
-				</div>
-			</div>
-				<div class="d-lg-flex justify-content-center card-body">
-					<div class="feat">
-				    <div class="container">
-				      <div class="row">
-				        <div class="section-head col-sm-12 pt-2">
-				          <h2><span>Why Choose</span> Me?</h2>
-				          <p >I am a knowledgeable computer engineer and experienced full-stack web developer with the skills and expertise needed to design and develop cutting-edge software solutions that meet the needs of modern businesses and organizations.</p>
-				        </div>
-				        <div class="col-lg-4 col-sm-6 pt-5">
-				          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-globe"></i></span>
-				            <h6>Front-End</h6>
-				            <p>Knowledgeable frontend developer with experience in creating dynamic and visually appealing websites that engage users and enhance their experience.</p>
-				          </div>
-				        </div>
-				        <div class="col-lg-4 col-sm-6 pt-5">
-				          <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-database"></i></span>
-				            <h6>Back-End</h6>
-				            <p>Expertise in building robust and scalable applications that handle complex data and backend processes, ensuring optimal website performance and functionality.</p>
-				          </div>
-				        </div>
-				        <div class="col-lg-4 col-sm-6 pt-5">
-				          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-code"></i></span>
-				            <h6>Full-Stack</h6>
-				            <p>Experience in both frontend and backend development, allowing me to create high-quality, end-to-end web solutions that meet client needs and exceed their expectations.</p>
-				          </div>
-				        </div>
-				        <div class="col-lg-4 col-sm-6">
-				          <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-shield"></i></span>
-				            <h6>Blockchain</h6>
-				            <p>Knowledgeable and experienced blockchain developer with expertise in building secure, decentralized applications that leverage blockchain technology.</p>
-				          </div>
-				        </div>
-				        <div class="col-lg-4 col-sm-6">
-				          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-user-secret"></i></span>
-				            <h6>Security Sytems</h6>
-				            <p>Experienced security systems expert with a deep understanding of the latest security trends and technologies, allowing me to design and implement secure systems.</p>
-				          </div>
-				        </div>
-				        <div class="col-lg-4 col-sm-6">
-				          <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-wrench"></i></span>
-				            <h6>Troubleshooting</h6>
-				            <p>Expertise in quickly diagnosing and resolving technical issues, ensuring optimal performance and minimizing downtime for businesses and organizations.</p>
-				          </div>
-				        </div>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-			</div>
-			</div>
-			<!-- Skills Section End -->
-				
-            <!-- Core Tools Section End -->
-			<div class="pt-5">
-			<div class="container-fluid px-0 text-center">
-				<div id="tools" class="container">
-				  <svg viewBox="0 0 760 300">
-				    <symbol id="s-text2">
-				      <text text-anchor="middle" x="50%" y="80%">TOOLS</text>
-				    </symbol>
-
-				    <g class = "g-ants">
-				      <use xlink:href="#s-text2" class="text-copy"></use>
-				      <use xlink:href="#s-text2" class="text-copy"></use>
-				      <use xlink:href="#s-text2" class="text-copy"></use>
-				      <use xlink:href="#s-text2" class="text-copy"></use>
-				      <use xlink:href="#s-text2" class="text-copy"></use>
-				    </g>
-				  </svg>
-				</div>
-				<div class="d-lg-flex justify-content-center card-body">
-					<div class="item">
-						<img class="img-fluid" width="100" src="images/logo-html5.png">
-						<div class="item-text">HTML5</div>
-					  </div>
-					  <div class="item">
-						<img class="img-fluid" width="100" src="images/logo-css3.png">
-						<div class="item-text">CSS3</div>
-					  </div>
-					  <div class="item">
-						<img class="img-fluid" width="100" src="images/logo-javascript.png">
-						<div class="item-text">JavaScript</div>
-					  </div>
-                	</div>
-
-					<div class="d-lg-flex justify-content-center card-body">
-							<div class="item">
-							  <img class="img-fluid" width="100" src="images/logo-mongodb.png">
-							  <div class="item-text">MongoDB</div>
-							</div>
-							<div class="item">
-							  <img class="img-fluid" width="100" src="images/logo-nodejs.png">
-							  <div class="item-text">Node.js</div>
-							</div>
-							<div class="item">
-							  <img class="img-fluid" width="100" src="images/logo-expressjs.png">
-							  <div class="item-text">Express.js</div>
-							</div>
-							<div class="item">
-							  <img class="img-fluid" width="100" src="images/logo-react.png">
-							  <div class="item-text">React</div>
-							</div>
-							<div class="item">
-							  <img class="img-fluid" width="100" src="images/logo-net.png">
-							  <div class="item-text">Heroku</div>
-							</div>
-						  </div>
-                    </div>
-
-					<div class="d-lg-flex justify-content-center card-body">
-							<div class="item">
-							  <img class="item-img" width="100" src="images/logo-git.png">
-							  <div class="item-text">Git</div>
-							</div>
-							<div class="item">
-							  <img class="item-img" width="100" src="images/logo-sublime-text-3.png">
-							  <div class="item-text">Sublime Text 3</div>
-							</div>
-							<div class="item">
-								<img class="item-img" width="100" src="images/logo-vsc.png">
-								<div class="item-text">VS Code</div>
-							</div>
-							<div class="item">
-								<img class="item-img" width="100" src="images/logo-postman.png">
-								<div class="item-text">Postman</div>
-							  </div>
-							<div class="item">
-								<img class="item-img" width="100" src="images/logo-vs.png">
-								<div class="item-text">VS 2022</div>
-							</div>
-							<div class="item">
-							  <img class="item-img" width="100" src="images/logo-gitlab-ci-cd.png">
-							  <div class="item-text">GitLab</div>
-							</div>
-						  </div>
-                    </div>
-                </div>
-				
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raychard Atienza — Full-Stack Developer | Laravel &amp; React</title>
+  <meta name="description" content="Raychard Atienza — Full-stack developer, Information System Analyst II at the National Commission on Indigenous Peoples (NCIP), CPMS, CASM, CPSCA. Builds responsive web apps and back-end APIs with Laravel, React, Node.js, Express.js, MySQL and MongoDB." />
+  <meta name="keywords" content="Raychard Atienza, Full-stack Developer, Laravel Developer, Front-end, Back-end, Back-end API, Responsive web app, Web Design, Git, HTML5, CSS3, Bootstrap, JavaScript, React.js, Node.js, Express.js, MongoDB, MySQL, Postman, Vercel, PHP, Information System Analyst, Certified Project Management Specialist, Certified Agile Scrum Master, CPMS, CASM, CPSCA, NCIP, Quezon City, Philippines" />
+  <meta name="author" content="Raychard E. Atienza" />
+  <meta name="theme-color" content="#05070f" />
+
+  <!-- SITE URL: if you deploy somewhere else (custom domain), replace https://raychardatienza.github.io/portfolio/ in this file, robots.txt and sitemap.xml -->
+  <link rel="canonical" href="https://raychardatienza.github.io/portfolio/" />
+
+  <!-- Link previews (LinkedIn, Facebook, Messenger, X) -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Raychard Atienza" />
+  <meta property="og:url" content="https://raychardatienza.github.io/portfolio/" />
+  <meta property="og:title" content="Raychard Atienza — Full-Stack Developer | Laravel & React" />
+  <meta property="og:description" content="Information System Analyst II at NCIP. I build government information systems with Laravel, React and MySQL. CPMS · CASM · CPSCA." />
+  <meta property="og:image" content="https://raychardatienza.github.io/portfolio/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Raychard Atienza — Full-Stack Developer, Laravel & React" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Raychard Atienza — Full-Stack Developer | Laravel & React" />
+  <meta name="twitter:description" content="Information System Analyst II at NCIP. I build government information systems with Laravel, React and MySQL." />
+  <meta name="twitter:image" content="https://raychardatienza.github.io/portfolio/assets/images/og-image.png" />
+
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="./assets/icons/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+
+  <!-- Structured data: tells search engines who this page is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Raychard E. Atienza",
+    "alternateName": "Raychard Atienza",
+    "url": "https://raychardatienza.github.io/portfolio/",
+    "image": "https://raychardatienza.github.io/portfolio/assets/images/profile.jpg",
+    "jobTitle": "Information System Analyst II",
+    "worksFor": { "@type": "GovernmentOrganization", "name": "National Commission on Indigenous Peoples" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "De La Salle Lipa" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Quezon City", "addressRegion": "Metro Manila", "addressCountry": "PH" },
+    "email": "mailto:raychardatienza@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/raychardatienza/",
+      "https://github.com/raychardatienza",
+      "https://gitlab.com/b279-atienza"
+    ],
+    "knowsAbout": ["Laravel", "PHP", "React.js", "Node.js", "Express.js", "MySQL", "MongoDB", "JavaScript", "Full-stack web development", "Back-end API", "Information systems", "Project management", "Agile Scrum"],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "Certified Project Management Specialist (CPMS)", "dateCreated": "2026-08-26" },
+      { "@type": "EducationalOccupationalCredential", "name": "Certified Agile Scrum Master (CASM)", "dateCreated": "2026-08-13" },
+      { "@type": "EducationalOccupationalCredential", "name": "Certified Project Scheduling and Controls Analyst (CPSCA)", "dateCreated": "2026-08-05" },
+      { "@type": "EducationalOccupationalCredential", "name": "Career Service Professional Eligibility", "dateCreated": "2024-08-11" }
+    ]
+  }
+  </script>
+
+  <!-- Dark by default; a saved "light" choice wins. Runs before paint to avoid a flash. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      if (saved !== 'light') root.classList.add('dark');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body class="relative font-sans">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-cyan-400 focus:px-4 focus:py-2 focus:text-void-950">Skip to content</a>
+
+  <!-- Fixed backdrop -->
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+    <div class="bg-grid absolute inset-0"></div>
+    <div id="blob-a" class="absolute -top-48 left-[5%]"><div class="drift-a h-[560px] w-[560px] rounded-full bg-cyan-300/30 blur-[130px] dark:bg-cyan-500/[0.13]"></div></div>
+    <div id="blob-b" class="absolute right-[-12%] top-[35%]"><div class="drift-b h-[600px] w-[600px] rounded-full bg-violet-300/25 blur-[140px] dark:bg-violet-600/[0.12]"></div></div>
+  </div>
+  <div id="cursor-glow" class="pointer-events-none fixed left-0 top-0 -z-[5] hidden h-[560px] w-[560px] rounded-full opacity-0 transition-opacity duration-500" style="background: radial-gradient(circle, rgb(34 211 238 / .10), rgb(139 92 246 / .05) 35%, transparent 62%)" aria-hidden="true"></div>
+
+  <div id="progress" class="fixed left-0 top-0 z-[60] h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-cyan-400 via-violet-500 to-laravel" aria-hidden="true"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4">
+    <nav class="glass mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-3 sm:px-4" aria-label="Primary">
+      <a href="#home" class="group flex items-center gap-2.5" aria-label="Raychard Atienza — back to top">
+        <span class="relative grid h-9 w-9 place-items-center rounded-lg border border-cyan-500/50 bg-cyan-500/10 font-mono text-[13px] font-semibold text-cyan-700 transition group-hover:shadow-[0_0_18px_rgba(34,211,238,0.6)] dark:text-cyan-300">RA</span>
+        <span class="hidden leading-tight sm:block">
+          <span class="block font-display text-[15px] font-bold text-slate-900 dark:text-ink">Raychard Atienza</span>
+          <span class="block font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">full-stack · laravel</span>
+        </span>
+      </a>
+
+      <ul class="hidden items-center md:flex">
+        <li><a class="nav-link" href="#about">about</a></li>
+        <li><a class="nav-link" href="#insights">insights</a></li>
+        <li><a class="nav-link" href="#stack">stack</a></li>
+        <li><a class="nav-link" href="#projects">projects</a></li>
+        <li><a class="nav-link" href="#experience">experience</a></li>
+        <li><a class="nav-link" href="#contact">contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" type="button" class="icon-btn h-9 w-9" aria-label="Toggle dark mode" aria-pressed="true">
+          <i data-icon="moon" class="h-[18px] w-[18px] dark:hidden"></i>
+          <i data-icon="sun" class="hidden h-[18px] w-[18px] dark:block"></i>
+        </button>
+        <a href="#contact" class="btn-primary btn-sm hidden md:inline-flex">Let's talk</a>
+        <button id="menu-btn" type="button" class="icon-btn h-9 w-9 md:hidden" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+          <i data-icon="menu" class="h-5 w-5" data-when="closed"></i>
+          <i data-icon="x" class="hidden h-5 w-5" data-when="open"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="glass mx-auto mt-2 hidden max-w-screen-2xl md:hidden">
+      <ul class="flex flex-col gap-1 p-3">
+        <li><a class="nav-link block text-sm" href="#about">about</a></li>
+        <li><a class="nav-link block text-sm" href="#insights">insights</a></li>
+        <li><a class="nav-link block text-sm" href="#stack">stack</a></li>
+        <li><a class="nav-link block text-sm" href="#projects">projects</a></li>
+        <li><a class="nav-link block text-sm" href="#experience">experience</a></li>
+        <li><a class="nav-link block text-sm" href="#contact">contact</a></li>
+        <li class="pt-2"><a class="btn-primary w-full" href="./assets/resume/Raychard-Atienza-Resume.pdf" download><i data-icon="download" class="h-4 w-4"></i>Download Resume</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="home" class="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pb-14 pt-28 sm:pt-32">
+      <canvas id="net" class="absolute inset-0 h-full w-full opacity-70 dark:opacity-100" aria-hidden="true"></canvas>
+
+      <div class="container-x relative grid items-center gap-14 lg:grid-cols-[1.45fr_1fr]">
+        <div class="reveal">
+          <p class="inline-flex items-center gap-2.5 rounded-lg border border-cyan-600/30 bg-cyan-50/80 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-cyan-800 dark:border-cyan-300/20 dark:bg-cyan-300/[0.06] dark:text-cyan-200">
+            <span class="relative flex h-2 w-2"><span class="ping-soft absolute inline-flex h-full w-full rounded-full bg-emerald-400"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+            online · Information System Analyst II @ NCIP
+          </p>
+
+          <h1 class="hero-title mt-6 text-4xl font-bold leading-[1.05] tracking-tight [perspective:800px] sm:text-5xl lg:text-[3.6rem] xl:text-[4.3rem] 2xl:text-[4.9rem]">
+            Building <span class="text-neon">digital public services</span> with Laravel &amp; React.
+          </h1>
+
+          <p class="mt-5 font-mono text-sm text-slate-700 dark:text-slate-300 sm:text-base" aria-live="off">
+            <span class="text-cyan-700 dark:text-cyan-300">&gt;</span> role: <span id="typer" class="text-slate-900 dark:text-ink">Full-Stack Developer</span><span class="caret text-cyan-600 dark:text-cyan-300">_</span>
+          </p>
+
+          <p class="mt-5 max-w-2xl text-base leading-relaxed sm:text-lg">
+            I'm <strong class="font-semibold text-slate-900 dark:text-ink">Raychard Atienza</strong>, a Computer Engineer who builds the in-house information systems of the
+            <strong class="font-semibold text-slate-900 dark:text-ink">National Commission on Indigenous Peoples</strong>. My work ranges from data repositories to single sign-on,
+            delivered as responsive web apps and back-end APIs that employees use every day.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="./assets/resume/Raychard-Atienza-Resume.pdf" download class="btn-primary magnetic">
+              <i data-icon="download" class="h-4 w-4"></i> Download Resume
+            </a>
+            <a href="#projects" class="btn-ghost magnetic">
+              View Projects <i data-icon="arrowRight" class="h-4 w-4"></i>
+            </a>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="https://github.com/raychardatienza" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub profile"><i data-icon="github" class="h-5 w-5"></i></a>
+            <a href="https://www.linkedin.com/in/raychardatienza/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn profile"><i data-icon="linkedin" class="h-5 w-5"></i></a>
+            <a href="https://gitlab.com/b279-atienza" target="_blank" rel="noopener" class="icon-btn" aria-label="GitLab profile"><i data-icon="gitlab" class="h-5 w-5"></i></a>
+            <a href="mailto:raychardatienza@gmail.com" class="icon-btn" aria-label="Send email"><i data-icon="mail" class="h-5 w-5"></i></a>
+            <span class="ml-1 inline-flex items-center gap-1.5 font-mono text-xs"><i data-icon="pin" class="h-4 w-4 text-cyan-600 dark:text-cyan-300"></i> Quezon City, PH</span>
+          </div>
+        </div>
+
+        <!-- Portrait -->
+        <div id="portrait" class="reveal relative mx-auto w-full max-w-[22rem] xl:max-w-[26rem] 2xl:max-w-[28rem]">
+          <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-cyan-400 via-violet-500 to-laravel opacity-20 blur-3xl dark:opacity-30" aria-hidden="true"></div>
+          <div class="ring-spin shadow-2xl shadow-cyan-900/20">
+            <div class="ring-inner scan bg-slate-200 dark:bg-void-800">
+              <img src="./assets/images/profile.jpg" alt="Portrait of Raychard Atienza" width="640" height="640" class="aspect-square w-full object-cover" fetchpriority="high" />
             </div>
-		</div>
-            <!-- Core Tools Section End -->
+          </div>
+          <span class="hud-corners" style="inset:-10px; border-radius:2.3rem" aria-hidden="true"></span>
+          <p class="mt-4 text-center font-mono text-[10.5px] uppercase tracking-[0.22em] text-slate-500">id: raychard.e.atienza // qc-ph</p>
 
-            <!-- Contact Me Section Start -->
-			<div class="pt-5"></div>
-            <div class="container-fluid px-0 text-center">
-				<div id="contact" class="container">
-				  <svg viewBox="0 0 760 300">
-				    <symbol id="s-text3">
-				      <text text-anchor="middle" x="50%" y="80%">CONTACT</text>
-				    </symbol>
+          <div class="float glass absolute left-2 top-[62%] flex items-center gap-3 px-3.5 py-2.5 sm:-left-10">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-laravel/15 font-display text-base font-bold text-laravel">L</span>
+            <span class="leading-tight">
+              <span class="block text-sm font-bold text-slate-900 dark:text-ink">Laravel 12</span>
+              <span class="block font-mono text-[10.5px]">+ react · mysql</span>
+            </span>
+          </div>
+          <div class="float float-delay glass absolute right-2 top-6 flex items-center gap-3 px-3.5 py-2.5 sm:-right-8">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-cyan-500/15 text-cyan-700 dark:text-cyan-300"><i data-icon="building" class="h-[18px] w-[18px]"></i></span>
+            <span class="leading-tight">
+              <span class="block text-sm font-bold text-slate-900 dark:text-ink">10 NCIP systems</span>
+              <span class="block font-mono text-[10.5px]">built · enhanced · deployed</span>
+            </span>
+          </div>
+          <div class="float float-delay-2 glass absolute right-2 top-[38%] hidden items-center gap-2.5 px-3 py-2 sm:-right-12 sm:flex">
+            <span class="grid h-8 w-8 place-items-center rounded-lg bg-violet-500/15 text-violet-700 dark:text-violet-300"><i data-icon="shield" class="h-4 w-4"></i></span>
+            <span class="font-mono text-[11px] font-semibold text-slate-800 dark:text-ink">CPMS · CASM · CPSCA</span>
+          </div>
+        </div>
+      </div>
 
-				    <g class = "g-ants">
-				      <use xlink:href="#s-text3" class="text-copy"></use>
-				      <use xlink:href="#s-text3" class="text-copy"></use>
-				      <use xlink:href="#s-text3" class="text-copy"></use>
-				      <use xlink:href="#s-text3" class="text-copy"></use>
-				      <use xlink:href="#s-text3" class="text-copy"></use>
-				    </g>
-				  </svg>
-				</div>
-			</div>
+      <!-- KPI row -->
+      <div class="container-x relative mt-16 sm:mt-20">
+        <dl class="reveal grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <div class="glass spot tilt relative p-5 transition-transform duration-200 sm:p-6">
+            <dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">NCIP systems</dt>
+            <dd class="mt-2 font-display text-4xl font-bold text-slate-900 dark:text-ink"><span data-count="10">10</span></dd>
+            <dd class="mt-1 text-xs">built, enhanced or deployed</dd>
+          </div>
+          <div class="glass spot tilt relative p-5 transition-transform duration-200 sm:p-6">
+            <dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Training</dt>
+            <dd class="mt-2 font-display text-4xl font-bold text-slate-900 dark:text-ink"><span data-count="780" data-suffix="+">780+</span><span class="ml-1 text-lg font-semibold">hrs</span></dd>
+            <dd class="mt-1 text-xs">training &amp; certification since 2023</dd>
+          </div>
+          <div class="glass spot tilt relative p-5 transition-transform duration-200 sm:p-6">
+            <dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">PM certifications</dt>
+            <dd class="mt-2 font-display text-4xl font-bold text-slate-900 dark:text-ink"><span data-count="3">3</span></dd>
+            <dd class="mt-1 text-xs">CPMS · CASM · CPSCA (2026)</dd>
+          </div>
+          <div class="glass spot tilt relative p-5 transition-transform duration-200 sm:p-6">
+            <dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Civil service</dt>
+            <dd class="mt-2 font-display text-4xl font-bold text-slate-900 dark:text-ink"><span data-count="82.03" data-decimals="2">82.03</span></dd>
+            <dd class="mt-1 text-xs">Career Service Professional</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-			
+    <!-- ============ TECH MARQUEE ============ -->
+    <section aria-label="Technologies I work with" class="relative border-y border-slate-200/70 bg-white/40 py-6 backdrop-blur-sm dark:border-cyan-300/10 dark:bg-void-900/30">
+      <div class="marquee" style="--dur:60s"><div id="mq-1" class="marquee-track"></div></div>
+      <div class="marquee reverse mt-3" style="--dur:70s"><div id="mq-2" class="marquee-track"></div></div>
+    </section>
 
-			<section class="contact-page-section">
-				<div class="container">
-					  <div class="inner-container">
-						<div class="row clearfix">
-						  
-							<!--Form Column-->
-							  <div class="form-column col-md-8 col-sm-12 col-xs-12">
-								<div class="inner-column">							
-									  <!--Contact Form-->
-									  <div class="contact-form">
-										  <form method="post" action="sendemail.php" id="contact-form">
-											  <div class="row clearfix">
-												  <div class="form-group col-md-6 col-sm-6 col-xs-12">
-													  <input type="text" name="name" value="" placeholder="Name" required>
-												  </div>
-												  <div class="form-group col-md-6 col-sm-6 co-xs-12">
-													  <input type="email" name="email" value="" placeholder="Email" required>
-												  </div>
-												  <div class="form-group col-md-6 col-sm-6 co-xs-12">
-													  <input type="text" name="subject" value="" placeholder="Subject" required>
-												  </div>
-												  <div class="form-group col-md-6 col-sm-6 co-xs-12">
-													  <input type="text" name="phone" value="" placeholder="Phone" required>
-												  </div>
-												  <div class="form-group col-md-12 col-sm-12 co-xs-12">
-													  <textarea name="message" placeholder="Message"></textarea>
-												  </div>
-												  <div class="form-group col-md-12 col-sm-12 co-xs-12">
-													  <button type="submit" class="theme-btn btn-style-one">Send Now</button>
-												  </div>
-											  </div>
-										  </form>
-									  </div>
-									  <!--End Contact Form-->
-									  
-								  </div>
-							  </div>
-							  
-							  <!--Info Column-->
-							  <div class="info-column col-md-4 col-sm-12 col-xs-12">
-								<div class="inner-column">
-									<h2>Contact Info</h2>
-									  <ul class="list-info">
-										<li class="mb-5"><i class="fa fa-map-marker "></i>Cuenca, Batangas Philippines 4222</li>
-										<li class="mb-5"><i class="fa fa-envelope"></i>araychard@gmail.com</li>
-										<li class="mb-5"><i class="fa fa-mobile"></i>+63-917-634-8553 <br> +63-976-568-4552</li>
-									  </ul>
-									  <ul class="social-icon-four">
-										  <li class="follow mb-3 mt-5">Follow on: </li>
-										  <a href="https://www.facebook.com/raychard.eiei/" target="_blank" class="logo-link"><i class="fa fa-facebook logo-white"></i></a>
-										  <a href="https://twitter.com/iamWittyCrypto" target="_blank" class="logo-link"><i class="fa fa-twitter logo-white"></i></a>
-										  <a href="https://www.linkedin.com/in/raychardatienza/" target="_blank" class="logo-link"><i class="fa fa-linkedin logo-white"></i></a>
-										  <a href="https://www.instagram.com/oooraychardeiei/" target="_blank" class="logo-link"><i class="fa fa-instagram logo-white"></i></a>
-										  <a href="https://gitlab.com/b279-atienza" target="_blank" class="logo-link"><i class="fa fa-gitlab logo-white"></i></a>
-									  </ul>
-								  </div>
-							  </div>
-							  
-						  </div>
-					  </div>
-				  </div>
-			  </section>
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container-x grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+        <div class="reveal">
+          <p class="eyebrow">[01] // about</p>
+          <h2 class="section-title">From security systems to <span class="text-neon">government software</span>.</h2>
+        </div>
+        <div class="reveal max-w-3xl space-y-5 text-base leading-relaxed sm:text-lg">
+          <p>
+            I started out in the field as a <strong class="font-semibold text-slate-900 dark:text-ink">Systems Engineer</strong>, deploying CCTV, access control
+            and network solutions with a 100% project completion record. That hands-on hardware background taught me to think about systems end-to-end, from the device to the user.
+          </p>
+          <p>
+            In 2023 I trained intensively in <strong class="font-semibold text-slate-900 dark:text-ink">full-stack web development</strong> (MERN, JavaScript OOP, unit testing, C#/ASP.NET),
+            then joined the NCIP Information and Communications Technology Division. Today, as an <strong class="font-semibold text-slate-900 dark:text-ink">Information System Analyst II</strong>,
+            I co-build the Commission's platforms with <strong class="font-semibold text-laravel">Laravel</strong>, React and MySQL. I gather requirements, write code, run QA, and train the people who use what we ship.
+          </p>
+          <p>
+            In 2026 I added project management credentials (<strong class="font-semibold text-slate-900 dark:text-ink">CPMS, CASM and CPSCA</strong>), so I can plan, schedule and run delivery as well as build.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="chip">System Analysis</span>
+            <span class="chip">Full-stack Development</span>
+            <span class="chip">UAT &amp; Quality Assurance</span>
+            <span class="chip">End-user Training</span>
+            <span class="chip">Technical Documentation</span>
+            <span class="chip">Procurement &amp; Deployment</span>
+            <span class="chip">Project Management</span>
+            <span class="chip">Agile Scrum</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ============ INSIGHTS (infographics) ============ -->
+    <section id="insights" class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[02] // insights</p>
+          <h2 class="section-title">My career, <span class="text-neon">in data</span>.</h2>
+          <p class="section-lead">Hover or tab through any chart for details. Every chart has a data table underneath.</p>
+        </div>
 
-			</div>
-			<!-- Footer Section Start -->
-			<footer class="footer-section">
-				<div class="container">
+        <!-- Career timeline -->
+        <article class="reveal viz card relative mt-12 p-5 sm:p-8" id="viz-career">
+          <span class="hud-corners" aria-hidden="true"></span>
+          <span class="border-spin" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h3 class="viz-title">Career timeline, 2015 → now</h3>
+              <p class="viz-sub">Roles and training on one time axis, with key milestones marked.</p>
+            </div>
+            <ul class="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[11px]" aria-label="Legend">
+              <li class="flex items-center gap-2"><span class="h-2.5 w-5 rounded-[3px]" style="background:var(--c-seq)"></span>Current role</li>
+              <li class="flex items-center gap-2"><span class="h-2.5 w-5 rounded-[3px]" style="background:var(--c-context)"></span>Past role</li>
+              <li class="flex items-center gap-2"><span class="h-2.5 w-5 rounded-[3px]" style="background:var(--c-web)"></span>Training</li>
+              <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 rotate-45 rounded-[2px] bg-slate-900 dark:bg-ink"></span>Milestone</li>
+            </ul>
+          </div>
+          <div id="career-chart" class="viz-plot mt-8"></div>
+          <div id="career-table"></div>
+        </article>
 
-					<div class="footer-content pt-5 pb-5">
-						<div class="row">
-							<div class="col-xl-4 col-lg-4 mb-50">
-								<div class="footer-widget">
-									<div class="footer-logo">
-										<a href="#landing" class="navbar-brand"><span>r.</span></a>
-									</div>
-									<div class="footer-text">
-										<p class="card-text1">Hello! I am a highly motivated individual with a strong educational background in <span>Computer Engineering</span> My passion lies in the realm of technology and innovation, where I constantly seek to explore new possibilities."</p>
-									</div>
+        <div class="mt-6 grid gap-6 lg:grid-cols-12">
+          <!-- Learning hours -->
+          <article class="reveal viz card relative p-5 sm:p-8 lg:col-span-7" id="viz-hours">
+            <h3 class="viz-title">Training hours by year</h3>
+            <p class="viz-sub"><span class="font-semibold text-slate-900 dark:text-ink" id="hours-total">789</span> hours of formal training and certification since 2023.</p>
+            <div id="hours-chart" class="viz-plot mt-8"></div>
+            <div id="hours-table"></div>
+          </article>
 
-								</div>
-							</div>
-							<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-								<div class="footer-widget">
-									<div class="footer-widget-heading">
-										<h3>Useful Links</h3>
-									</div>
-									<ul>
-										<li><a href="#landing">Home</a></li>
-										<li><a href="#projects">Projects</a></li>
-										<li><a href="#experience">Experience</a></li>
-										<li><a href="#contact">Contact Me</a></li>
-										<li><a href="#skills">Skills</a></li>
-										<li><a href="#tools">Tools</a></li>
-										<li><a href="#certificate">Certificates</a></li>
-										<li><a href="#about">About Me</a></li>
-										<li><a href="#about">Resume</a></li>
-										<li><a href="#landing">Latest News</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-								<div class="footer-widget">
-									<div class="footer-widget-heading">
-										<h3>Subscribe</h3>
-									</div>
+          <!-- Tech usage -->
+          <article class="reveal viz card relative p-5 sm:p-8 lg:col-span-5" id="viz-tech">
+            <h3 class="viz-title">Most-used technologies</h3>
+            <p class="viz-sub">How many of my projects use each one. <span class="font-semibold text-laravel">Laravel</span> is highlighted.</p>
+            <div id="tech-chart" class="viz-plot mt-7 space-y-3"></div>
+            <div id="tech-table"></div>
+          </article>
 
-									<div class="subscribe-form">
-										<form action="#">
-											<input type="text" placeholder="Email Address">
-										</form>
-									</div>
-								</div>
+          <!-- Portfolio composition -->
+          <article class="reveal viz card relative p-5 sm:p-8 lg:col-span-5" id="viz-mix">
+            <h3 class="viz-title">Portfolio by discipline</h3>
+            <p class="viz-sub"><span class="font-semibold text-slate-900 dark:text-ink" id="mix-total">24</span> projects across three disciplines.</p>
+            <div id="mix-chart" class="viz-plot mt-8"></div>
+            <div id="mix-table"></div>
+          </article>
 
-								<div class="footer-social-icon ">
-									<div class="footer-widget-heading">
-										<h3>Follow us</h3>
-									</div>
-									<a href="https://www.facebook.com/raychard.eiei/" target="_blank"><i class="fa fa-facebook"></i> </a>
-									<a href="https://twitter.com/iamWittyCrypto" target="_blank"> <i class="fa fa-twitter"></i> </a>
-									<a href="https://www.linkedin.com/in/raychardatienza/" target="_blank"><i class="fa fa-linkedin"></i> </a>
-									<a href="https://www.instagram.com/oooraychardeiei/" target="_blank"><i class="fa fa-instagram"></i> </a>
-									<a href="https://gitlab.com/b279-atienza" target="_blank"><i class="fa fa-gitlab"></i> </a>
+          <!-- Systems delivered -->
+          <article class="reveal viz card relative p-5 sm:p-8 lg:col-span-7" id="viz-systems">
+            <span class="hud-corners" aria-hidden="true"></span>
+            <h3 class="viz-title">NCIP systems delivered</h3>
+            <p class="viz-sub">Each node is a system I built, enhanced or deployed for the Commission.</p>
+            <div id="systems-chart" class="mt-8 grid gap-8 sm:grid-cols-2"></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="copyright-area">
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-6 col-lg-6 text-center text-lg-left">
-								<div class="copyright-text">
-									<p>Copyright &copy; 2023, All Right Reserved <a href="#about">Raychard Atienza</a></p>
-								</div>
-							</div>
-							<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-								<div class="footer-menu">
-									<ul>
-										<li><a href="#landing">Home</a></li>
-										<li><a href="#about">About Me</a></li>
-										<li><a href="#projects">Projects</a></li>
-										<li><a href="#experience">Experience</a></li>
-										<li><a href="#contact">Contact</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<!-- Footer Section End -->
+    <!-- ============ TECH STACK ============ -->
+    <section id="stack" class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[03] // stack</p>
+          <h2 class="section-title">Tools I use to <span class="text-neon">ship reliable systems</span>.</h2>
+          <p class="section-lead">Front-end to back-end API to database: the full stack, with Laravel as my daily driver.</p>
+        </div>
 
+        <!-- Laravel spotlight -->
+        <article class="reveal card card-hover spot relative mt-12 overflow-hidden p-6 sm:p-8">
+          <span class="hud-corners" style="--hud: rgb(255 45 32 / .8)" aria-hidden="true"></span>
+          <span class="border-spin" style="--s1:#ff2d20; --s2:#f97316" aria-hidden="true"></span>
+          <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-laravel/15 blur-3xl" aria-hidden="true"></div>
+          <div class="relative grid gap-6 lg:grid-cols-[auto_1fr] lg:items-center">
+            <div class="grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br from-laravel to-rose-700 font-display text-4xl font-bold text-white shadow-[0_0_40px_-6px_rgba(255,45,32,0.7)]">L</div>
+            <div>
+              <div class="flex flex-wrap items-center gap-3">
+                <h3 class="text-2xl font-bold">Laravel</h3>
+                <span class="rounded-md border border-laravel/40 bg-laravel/10 px-2.5 py-1 font-mono text-[10.5px] font-semibold uppercase tracking-[0.15em] text-laravel">primary stack</span>
+              </div>
+              <p class="mt-3 max-w-3xl leading-relaxed">
+                Laravel 12 + Inertia.js + React + Tailwind CSS on MySQL is the stack behind PDMIS and the 2026 NCIP platforms. I work with Eloquent ORM and migrations,
+                multi-level approval workflows, REST APIs secured with Sanctum tokens, digital document signing, PDF and Excel report generation, audit logging, and Pest tests.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="chip">Laravel 12</span><span class="chip">PHP 8.2</span><span class="chip">Eloquent ORM</span><span class="chip">Inertia.js</span>
+                <span class="chip">Sanctum (API auth)</span><span class="chip">Approval Workflows</span><span class="chip">DomPDF · PhpSpreadsheet</span><span class="chip">Pest</span><span class="chip">Vite</span>
+              </div>
+            </div>
+          </div>
+        </article>
 
-		<!-- Bootstrap JS Script -->
-		<script type="text/javascript" src="./index.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	</body>
-	</body>
+        <!-- Categories -->
+        <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal card card-hover spot tilt p-6">
+            <span class="grid h-11 w-11 place-items-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 dark:text-cyan-300"><i data-icon="layout" class="h-5 w-5"></i></span>
+            <h3 class="mt-4 text-lg font-bold">Front-end</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript (ES6+)</span><span class="chip">React.js</span>
+              <span class="chip">Bootstrap</span><span class="chip">Tailwind CSS</span><span class="chip">Inertia.js</span><span class="chip">Chart.js</span>
+            </div>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <span class="grid h-11 w-11 place-items-center rounded-xl border border-laravel/30 bg-laravel/10 text-laravel"><i data-icon="server" class="h-5 w-5"></i></span>
+            <h3 class="mt-4 text-lg font-bold">Back-end</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip !border-laravel/50 !text-laravel">Laravel</span><span class="chip">PHP</span><span class="chip">Node.js</span><span class="chip">Express.js</span>
+              <span class="chip">Back-end API (REST)</span><span class="chip">C#</span><span class="chip">ASP.NET</span>
+            </div>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <span class="grid h-11 w-11 place-items-center rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"><i data-icon="database" class="h-5 w-5"></i></span>
+            <h3 class="mt-4 text-lg font-bold">Databases</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Eloquent ORM</span><span class="chip">Mongoose</span><span class="chip">Data Modeling</span>
+            </div>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <span class="grid h-11 w-11 place-items-center rounded-xl border border-violet-500/30 bg-violet-500/10 text-violet-700 dark:text-violet-300"><i data-icon="wrench" class="h-5 w-5"></i></span>
+            <h3 class="mt-4 text-lg font-bold">Tools &amp; DevOps</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">Postman</span>
+              <span class="chip">Vercel</span><span class="chip">Heroku</span><span class="chip">Vite</span><span class="chip">VS Code</span><span class="chip">Visual Studio</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-6 grid gap-6 lg:grid-cols-2">
+          <article class="reveal card card-hover spot tilt p-6">
+            <h3 class="flex items-center gap-2 text-lg font-bold"><i data-icon="code" class="h-5 w-5 text-cyan-600 dark:text-cyan-300"></i> Development focus</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Full-stack</span><span class="chip">Front-end</span><span class="chip">Back-end</span><span class="chip">Back-end API</span>
+              <span class="chip">Responsive Web App</span><span class="chip">Web Design</span><span class="chip">Unit Testing</span><span class="chip">JavaScript OOP</span>
+            </div>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <h3 class="flex items-center gap-2 text-lg font-bold"><i data-icon="shield" class="h-5 w-5 text-cyan-600 dark:text-cyan-300"></i> Systems, data, security &amp; delivery</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Microsoft Power BI</span><span class="chip">PNPKI Digital Signatures</span><span class="chip">Data Privacy</span>
+              <span class="chip">Sophos Firewall</span><span class="chip">CCTV &amp; Access Control</span><span class="chip">Hardware Troubleshooting</span>
+              <span class="chip">Project Scheduling &amp; Controls</span><span class="chip">Agile Scrum</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[04] // projects</p>
+          <h2 class="section-title">Systems people <span class="text-neon">actually use</span>.</h2>
+          <p class="section-lead">Government platforms co-built at NCIP, full-stack web apps, and the engineering projects where it all started.</p>
+        </div>
+
+        <div class="reveal no-scrollbar -mx-4 mt-10 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Filter projects">
+          <button type="button" class="filter-btn" data-filter="featured" aria-pressed="true">featured</button>
+          <button type="button" class="filter-btn" data-filter="gov" aria-pressed="false">government</button>
+          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">web dev</button>
+          <button type="button" class="filter-btn" data-filter="all" aria-pressed="false">all</button>
+        </div>
+
+        <div id="project-grid" class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4" aria-live="polite"></div>
+
+        <!-- Archive: early engineering work, collapsed by default -->
+        <details class="reveal glass group/arc mt-12">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6 [&::-webkit-details-marker]:hidden">
+            <span>
+              <span class="block font-mono text-[11px] uppercase tracking-[0.2em] text-cyan-700 dark:text-cyan-300">archive</span>
+              <span class="mt-1 block font-display text-lg font-bold text-slate-900 dark:text-ink">Engineering, security &amp; IoT projects</span>
+              <span class="text-sm">College and early-career work, 2013–2018 · <span id="archive-count">11</span> projects</span>
+            </span>
+            <span class="icon-btn flex-none transition-transform group-open/arc:rotate-180"><i data-icon="chevron" class="h-5 w-5"></i></span>
+          </summary>
+          <div id="archive-grid" class="grid gap-3 border-t border-slate-200/70 p-5 dark:border-cyan-300/10 sm:grid-cols-2 sm:p-6 xl:grid-cols-3"></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[05] // experience</p>
+          <h2 class="section-title">The road <span class="text-neon">so far</span>.</h2>
+          <p class="section-lead">Roles, wins and turning points, most recent first.</p>
+        </div>
+
+        <div id="tl-wrap" class="relative mt-14">
+          <div id="tl-fill" class="absolute bottom-2 left-[19px] top-2 z-[1] w-[2px] origin-top scale-y-0 rounded-full bg-gradient-to-b from-cyan-400 via-violet-500 to-laravel shadow-[0_0_14px_rgba(34,211,238,0.85)] sm:left-[22.5px]" aria-hidden="true"></div>
+          <div class="bus absolute bottom-2 left-[19px] top-2 w-px bg-gradient-to-b from-cyan-400 via-slate-300 to-transparent dark:via-cyan-300/15 sm:left-[23px]" aria-hidden="true"></div>
+          <ol id="timeline" class="relative space-y-8"></ol>
+        </div>
+
+        <!-- Professional certifications -->
+        <div class="mt-20">
+          <div class="reveal">
+            <h3 class="flex items-center gap-2 text-xl font-bold"><i data-icon="shield" class="h-5 w-5 text-cyan-600 dark:text-cyan-300"></i> Professional certifications</h3>
+            <p class="mt-2 text-sm">Project management credentials earned in August 2026: 108 hours of instructor-led leadership and management training.</p>
+          </div>
+          <div class="mt-6 grid gap-6 md:grid-cols-3">
+            <article class="reveal card card-hover spot tilt flex flex-col p-6">
+              <div class="flex items-start justify-between gap-3">
+                <span class="grid h-12 place-items-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 px-3.5 font-mono text-sm font-semibold tracking-wide text-void-950 shadow-[0_0_24px_-6px_rgba(251,191,36,0.7)]">CPMS</span>
+                <span class="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 font-mono text-[10.5px] font-semibold text-emerald-700 dark:text-emerald-300">60 hrs</span>
+              </div>
+              <h4 class="mt-4 text-lg font-bold leading-snug">Certified Project Management Specialist</h4>
+              <p class="mt-1 text-sm">NievGen · Makati City · Aug 26, 2026</p>
+              <p class="mt-3 font-mono text-[11px]">credential_id: <span class="font-semibold text-slate-800 dark:text-ink">CPMS-082626001</span></p>
+              <div class="mt-auto flex flex-wrap gap-2 pt-5">
+                <a href="./assets/certificates/CPMS-082626001.pdf" target="_blank" rel="noopener" class="btn-ghost btn-sm"><i data-icon="award" class="h-3.5 w-3.5"></i> View certificate</a>
+                <a href="https://www.nievgen.com/VERIFY.html" target="_blank" rel="noopener" class="btn-ghost btn-sm"><i data-icon="check" class="h-3.5 w-3.5"></i> Verify</a>
+              </div>
+            </article>
+            <article class="reveal card card-hover spot tilt flex flex-col p-6">
+              <div class="flex items-start justify-between gap-3">
+                <span class="grid h-12 place-items-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 px-3.5 font-mono text-sm font-semibold tracking-wide text-void-950 shadow-[0_0_24px_-6px_rgba(52,211,153,0.7)]">CASM</span>
+                <span class="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 font-mono text-[10.5px] font-semibold text-emerald-700 dark:text-emerald-300">24 hrs</span>
+              </div>
+              <h4 class="mt-4 text-lg font-bold leading-snug">Certified Agile Scrum Master</h4>
+              <p class="mt-1 text-sm">NievGen · Makati City · Aug 13, 2026</p>
+              <p class="mt-3 font-mono text-[11px]">credential_id: <span class="font-semibold text-slate-800 dark:text-ink">CASM-081326001</span></p>
+              <div class="mt-auto flex flex-wrap gap-2 pt-5">
+                <a href="./assets/certificates/CASM-081326001.pdf" target="_blank" rel="noopener" class="btn-ghost btn-sm"><i data-icon="award" class="h-3.5 w-3.5"></i> View certificate</a>
+                <a href="https://www.nievgen.com/VERIFY.html" target="_blank" rel="noopener" class="btn-ghost btn-sm"><i data-icon="check" class="h-3.5 w-3.5"></i> Verify</a>
+              </div>
+            </article>
+            <article class="reveal card card-hover spot tilt flex flex-col p-6">
+              <div class="flex items-start justify-between gap-3">
+                <span class="grid h-12 place-items-center rounded-xl bg-gradient-to-br from-sky-400 to-cyan-500 px-3.5 font-mono text-sm font-semibold tracking-wide text-void-950 shadow-[0_0_24px_-6px_rgba(56,189,248,0.7)]">CPSCA</span>
+                <span class="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 font-mono text-[10.5px] font-semibold text-emerald-700 dark:text-emerald-300">24 hrs</span>
+              </div>
+              <h4 class="mt-4 text-lg font-bold leading-snug">Certified Project Scheduling and Controls Analyst</h4>
+              <p class="mt-1 text-sm">NievGen · Makati City · Aug 5, 2026</p>
+              <p class="mt-3 font-mono text-[11px]">credential_id: <span class="font-semibold text-slate-800 dark:text-ink">CPSCA-080526001</span></p>
+              <div class="mt-auto flex flex-wrap gap-2 pt-5">
+                <a href="./assets/certificates/CPSCA-080526001.pdf" target="_blank" rel="noopener" class="btn-ghost btn-sm"><i data-icon="award" class="h-3.5 w-3.5"></i> View certificate</a>
+                <a href="https://www.nievgen.com/VERIFY.html" target="_blank" rel="noopener" class="btn-ghost btn-sm"><i data-icon="check" class="h-3.5 w-3.5"></i> Verify</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Recognition & training -->
+        <div class="mt-6 grid gap-6 lg:grid-cols-[1fr_1.35fr]">
+          <article class="reveal card p-6 sm:p-8">
+            <h3 class="flex items-center gap-2 text-xl font-bold"><i data-icon="award" class="h-5 w-5 text-amber-500"></i> Recognition &amp; leadership</h3>
+            <ul class="mt-6 space-y-5">
+              <li class="flex gap-4">
+                <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-lg border border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-300"><i data-icon="star" class="h-4 w-4"></i></span>
+                <div><p class="font-semibold text-slate-900 dark:text-ink">Career Service Professional Eligibility</p><p class="text-sm">Civil Service Commission · Aug 2024 · Rating 82.03</p></div>
+              </li>
+              <li class="flex gap-4">
+                <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-lg border border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-300"><i data-icon="award" class="h-4 w-4"></i></span>
+                <div><p class="font-semibold text-slate-900 dark:text-ink">Merit for Student Leadership</p><p class="text-sm">De La Salle Lipa</p></div>
+              </li>
+              <li class="flex gap-4">
+                <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-lg border border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-300"><i data-icon="award" class="h-4 w-4"></i></span>
+                <div><p class="font-semibold text-slate-900 dark:text-ink">Merit of Volunteerism</p><p class="text-sm">De La Salle Lipa</p></div>
+              </li>
+              <li class="flex gap-4">
+                <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 dark:text-cyan-300"><i data-icon="users" class="h-4 w-4"></i></span>
+                <div><p class="font-semibold text-slate-900 dark:text-ink">Vice-President for Internal Affairs</p><p class="text-sm">Association of Computer Engineering Students, DLSL · 2014–2016</p></div>
+              </li>
+              <li class="flex gap-4">
+                <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 dark:text-cyan-300"><i data-icon="users" class="h-4 w-4"></i></span>
+                <div><p class="font-semibold text-slate-900 dark:text-ink">President</p><p class="text-sm">Discipline Marshals, DLSL · 2013–2014</p></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="reveal card p-6 sm:p-8">
+            <h3 class="flex items-center gap-2 text-xl font-bold"><i data-icon="book" class="h-5 w-5 text-cyan-600 dark:text-cyan-300"></i> Training</h3>
+            <ul id="training-list" class="mt-6 grid gap-x-6 gap-y-4 sm:grid-cols-2"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container-x grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+        <div class="reveal">
+          <p class="eyebrow">[06] // contact</p>
+          <h2 class="section-title">Let's build <span class="text-neon">something useful</span>.</h2>
+          <p class="section-lead">Have a project, a role, or an information system that needs work? Send a message and I'll get back to you.</p>
+
+          <ul class="mt-10 space-y-4">
+            <li>
+              <a href="mailto:raychardatienza@gmail.com" class="group -m-2 flex items-center gap-4 rounded-2xl p-2 transition hover:bg-white/60 dark:hover:bg-white/[0.03]">
+                <span class="grid h-12 w-12 place-items-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 transition group-hover:shadow-[0_0_20px_-4px_rgba(34,211,238,0.6)] dark:text-cyan-300"><i data-icon="mail" class="h-5 w-5"></i></span>
+                <span><span class="block font-mono text-[10.5px] uppercase tracking-[0.18em]">email</span><span class="font-semibold text-slate-900 group-hover:text-cyan-700 dark:text-ink dark:group-hover:text-cyan-300">raychardatienza@gmail.com</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/raychardatienza/" target="_blank" rel="noopener" class="group -m-2 flex items-center gap-4 rounded-2xl p-2 transition hover:bg-white/60 dark:hover:bg-white/[0.03]">
+                <span class="grid h-12 w-12 place-items-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 transition group-hover:shadow-[0_0_20px_-4px_rgba(34,211,238,0.6)] dark:text-cyan-300"><i data-icon="linkedin" class="h-5 w-5"></i></span>
+                <span><span class="block font-mono text-[10.5px] uppercase tracking-[0.18em]">linkedin</span><span class="font-semibold text-slate-900 group-hover:text-cyan-700 dark:text-ink dark:group-hover:text-cyan-300">in/raychardatienza</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/raychardatienza" target="_blank" rel="noopener" class="group -m-2 flex items-center gap-4 rounded-2xl p-2 transition hover:bg-white/60 dark:hover:bg-white/[0.03]">
+                <span class="grid h-12 w-12 place-items-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 transition group-hover:shadow-[0_0_20px_-4px_rgba(34,211,238,0.6)] dark:text-cyan-300"><i data-icon="github" class="h-5 w-5"></i></span>
+                <span><span class="block font-mono text-[10.5px] uppercase tracking-[0.18em]">github</span><span class="font-semibold text-slate-900 group-hover:text-cyan-700 dark:text-ink dark:group-hover:text-cyan-300">@raychardatienza</span></span>
+              </a>
+            </li>
+            <li class="flex items-center gap-4">
+              <span class="grid h-12 w-12 place-items-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 dark:text-cyan-300"><i data-icon="pin" class="h-5 w-5"></i></span>
+              <span><span class="block font-mono text-[10.5px] uppercase tracking-[0.18em]">based in</span><span class="font-semibold text-slate-900 dark:text-ink">Quezon City, Metro Manila, Philippines</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reveal card relative overflow-hidden">
+          <span class="hud-corners" aria-hidden="true"></span>
+          <span class="border-spin" aria-hidden="true"></span>
+          <div class="flex items-center gap-2 border-b border-slate-200/80 px-5 py-3 dark:border-cyan-300/10">
+            <span class="h-2.5 w-2.5 rounded-full bg-rose-400"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span><span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+            <span class="ml-2 font-mono text-[11px] text-slate-500">~/contact/send-message.sh</span>
+          </div>
+          <form id="contact-form" class="space-y-5 p-6 sm:p-8" novalidate>
+            <!-- Honeypot field for spam bots (Web3Forms) -->
+            <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="cf-name" class="label">name</label>
+                <input id="cf-name" name="name" type="text" class="field" placeholder="Juan Dela Cruz" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="cf-email" class="label">email</label>
+                <input id="cf-email" name="email" type="email" class="field" placeholder="you@example.com" autocomplete="email" required />
+              </div>
+            </div>
+            <div>
+              <label for="cf-subject" class="label">subject</label>
+              <input id="cf-subject" name="subject" type="text" class="field" placeholder="Project inquiry, job opportunity…" />
+            </div>
+            <div>
+              <label for="cf-message" class="label">message</label>
+              <textarea id="cf-message" name="message" rows="6" class="field resize-y" placeholder="Tell me a bit about what you need…" required minlength="10"></textarea>
+            </div>
+            <button id="cf-submit" type="submit" class="btn-primary w-full sm:w-auto">
+              <i data-icon="send" class="h-4 w-4"></i><span>Send message</span>
+            </button>
+            <p id="form-status" class="hidden rounded-xl px-4 py-3 text-sm" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-slate-200/80 py-10 dark:border-cyan-300/10">
+    <div class="container-x flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
+      <p class="font-mono text-xs">© <span id="year">2026</span> Raychard E. Atienza · <span class="text-emerald-600 dark:text-emerald-400">●</span> system status: online</p>
+      <div class="flex items-center gap-2">
+        <a href="https://github.com/raychardatienza" target="_blank" rel="noopener" class="icon-btn h-9 w-9" aria-label="GitHub"><i data-icon="github" class="h-4 w-4"></i></a>
+        <a href="https://www.linkedin.com/in/raychardatienza/" target="_blank" rel="noopener" class="icon-btn h-9 w-9" aria-label="LinkedIn"><i data-icon="linkedin" class="h-4 w-4"></i></a>
+        <a href="https://gitlab.com/b279-atienza" target="_blank" rel="noopener" class="icon-btn h-9 w-9" aria-label="GitLab"><i data-icon="gitlab" class="h-4 w-4"></i></a>
+        <a href="mailto:raychardatienza@gmail.com" class="icon-btn h-9 w-9" aria-label="Email"><i data-icon="mail" class="h-4 w-4"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="to-top" type="button" class="icon-btn pointer-events-none fixed bottom-5 right-5 z-40 h-11 w-11 translate-y-4 opacity-0 shadow-lg" aria-label="Back to top">
+    <i data-icon="arrowUp" class="h-5 w-5"></i>
+  </button>
+
+  <!-- Shared chart tooltip -->
+  <div id="viz-tip" role="tooltip" hidden class="glass pointer-events-none fixed left-0 top-0 z-[70] max-w-[280px] px-3.5 py-2.5 text-xs leading-relaxed shadow-xl"></div>
+
+  <script>
+    /* =====================================================================
+       CONFIG: edit these values
+       ===================================================================== */
+    // Get a free access key at https://web3forms.com (enter raychardatienza@gmail.com).
+    // Until a key is set, the form falls back to opening the visitor's email app.
+    const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+    const CONTACT_EMAIL = 'raychardatienza@gmail.com';
+    const GITLAB = 'https://gitlab.com/b279-atienza';
+    const ROLES = ['Full-Stack Developer', 'Laravel Developer', 'Information System Analyst', 'Certified Project Management Specialist', 'Certified Agile Scrum Master'];
+
+    /* =====================================================================
+       ICONS (Lucide-style strokes + brand marks)
+       ===================================================================== */
+    const STROKE = {
+      mail: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+      phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
+      pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+      download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/>',
+      sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>',
+      moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+      menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+      x: '<path d="M18 6 6 18M6 6l12 12"/>',
+      external: '<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+      code: '<path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>',
+      lock: '<rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+      star: '<path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>',
+      briefcase: '<rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+      award: '<circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/>',
+      cap: '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>',
+      book: '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
+      arrowUp: '<path d="m5 12 7-7 7 7M12 19V5"/>',
+      arrowRight: '<path d="M5 12h14M12 5l7 7-7 7"/>',
+      layout: '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/>',
+      server: '<rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/>',
+      database: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/>',
+      wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+      shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+      send: '<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',
+      building: '<rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/>',
+      users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+      check: '<path d="M20 6 9 17l-5-5"/>',
+      sparkle: '<path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3Z"/>',
+      target: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+      chevron: '<path d="m6 9 6 6 6-6"/>',
+    };
+    const FILLED = {
+      github: '<path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-1.96c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>',
+      linkedin: '<path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/>',
+      gitlab: '<path d="m23.6 9.59-.03-.09L20.3.98a.85.85 0 0 0-1.62.06l-2.2 6.75H7.53L5.32 1.04A.85.85 0 0 0 3.7.98L.43 9.5l-.03.09a6.07 6.07 0 0 0 2.01 7.01l.01.01.03.02 4.98 3.73 2.47 1.87 1.5 1.13a1.01 1.01 0 0 0 1.22 0l1.5-1.13 2.47-1.87 5.01-3.75.01-.01a6.08 6.08 0 0 0 2-7.01Z"/>',
+    };
+    function icon(name, cls = 'h-4 w-4') {
+      if (FILLED[name]) return `<svg class="${cls}" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${FILLED[name]}</svg>`;
+      return `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${STROKE[name] || ''}</svg>`;
+    }
+    function hydrateIcons(root = document) {
+      root.querySelectorAll('i[data-icon]').forEach((el) => {
+        const tpl = document.createElement('template');
+        tpl.innerHTML = icon(el.dataset.icon, el.className);
+        const svg = tpl.content.firstElementChild;
+        if (el.dataset.when) svg.dataset.when = el.dataset.when;
+        el.replaceWith(svg);
+      });
+    }
+    const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+    /* =====================================================================
+       PROJECTS: categories: gov | web | eng ; featured: true shows on default tab
+       links: [{ label, href, icon }]; leave empty for internal systems
+       ===================================================================== */
+    const PROJECTS = [
+      // ---------- NCIP / Government (2026) ----------
+      {
+        cat: 'gov', featured: true, acronym: 'DRIP', image: './assets/images/projects/drip.svg', accent: 'from-cyan-600 via-sky-700 to-indigo-800',
+        title: 'Data Repository on Indigenous Peoples',
+        org: 'NCIP · ICTD', year: '2026', role: 'Co-creator',
+        description: 'A centralized repository that consolidates Indigenous Peoples data gathered across NCIP offices into one structured, searchable system.',
+        impact: 'Gives the Commission a single, reliable source of IP data for planning, reporting and policy decisions.',
+        tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
+      },
+      {
+        cat: 'gov', featured: true, acronym: 'PDMIS', image: './assets/images/projects/pdmis.svg', accent: 'from-[#FF2D20] via-rose-700 to-fuchsia-900',
+        title: 'Project Development & Management Information System',
+        org: 'NCIP · ICTD', year: '2026', role: 'Co-creator',
+        description: 'Plans, tracks and monitors Commission projects end-to-end, including proposals, Work & Financial Plans (WFP) and PPMP, with dashboards, calendars and Excel/PDF reports.',
+        impact: 'Moves spreadsheet-driven planning into one workflow, with digital document signing through NCIP\'s iPLUMA e-signature service.',
+        tech: ['Laravel 12', 'Inertia.js', 'React.js', 'Tailwind CSS', 'MySQL', 'Sanctum', 'Chart.js', 'Pest'],
+        links: [{ label: 'Read case study', href: './case-studies/pdmis.html', icon: 'book', internal: true }],
+      },
+      {
+        cat: 'gov', featured: true, acronym: 'SSO', image: './assets/images/projects/sso.svg', accent: 'from-teal-500 via-cyan-700 to-slate-900',
+        title: 'IPSGSIS Single Sign-On Website',
+        org: 'NCIP · ICTD', year: '2026', role: 'Co-creator',
+        description: 'A Single Sign-On (SSO) website for the NCIP IPSGSIS. Users authenticate once and move securely between Commission systems.',
+        impact: 'Fewer passwords to manage, centralized access control, and one consistent login experience across NCIP platforms.',
+        tech: ['Laravel', 'Single Sign-On', 'MySQL'],
+      },
+      {
+        cat: 'gov', featured: true, acronym: 'COC', image: './assets/images/projects/coc.svg', accent: 'from-emerald-500 via-teal-700 to-cyan-900',
+        title: 'Certificate of Confirmation (COC) System',
+        org: 'NCIP · ICTD', year: '2026', role: 'Co-creator',
+        description: 'Digitizes the processing and issuance of Certificates of Confirmation, with QR-based verification built on the earlier QRAS authenticator.',
+        impact: 'Faster certificate processing, and partner agencies can confirm a COC\'s authenticity in seconds.',
+        tech: ['Laravel', 'PHP', 'MySQL', 'QR Code Verification'],
+      },
+      {
+        cat: 'gov', featured: true, acronym: 'IPS · IPO', image: './assets/images/projects/ips.svg', accent: 'from-violet-500 via-purple-700 to-indigo-900',
+        title: 'IPS & IPO Information System',
+        org: 'NCIP · ICTD', year: '2026', role: 'Co-creator',
+        description: 'Manages records of Indigenous Political Structures (IPS) and Indigenous Peoples Organizations (IPO), covering registration, profiles and status in one place.',
+        impact: 'Consistent IPS/IPO data that field and central offices can retrieve and report on quickly.',
+        tech: ['Laravel', 'PHP', 'MySQL', 'Responsive Web App'],
+      },
+      // ---------- NCIP / Government (2024–2025) ----------
+      {
+        cat: 'gov', acronym: 'DTS v2', image: './assets/images/projects/dts.svg', accent: 'from-slate-600 via-slate-800 to-cyan-900',
+        title: 'Document Tracking System v2',
+        org: 'NCIP · ICTD', year: '2024–2025', role: 'Co-developer & trainer',
+        description: 'Second version of NCIP\'s document tracking platform for routing and monitoring official documents across offices.',
+        impact: 'I conducted the end-user training for employees, which drove Commission-wide adoption.',
+        tech: ['Laravel', 'MySQL', 'JavaScript'],
+      },
+      {
+        cat: 'gov', acronym: 'QRAS', image: './assets/images/projects/qras.svg', accent: 'from-lime-500 via-emerald-700 to-teal-900',
+        title: 'Quick Response Authenticator System',
+        org: 'NCIP · ICTD', year: '2024', role: 'Co-developer',
+        description: 'A QR-code authenticator used to confirm the validity of COCs issued by the Commission.',
+        impact: 'Cut manual verification requests and laid the groundwork for the 2026 COC System.',
+        tech: ['Laravel', 'MySQL', 'QR Code'],
+      },
+      {
+        cat: 'gov', acronym: 'EAIS v3', image: './assets/images/projects/eais.svg', accent: 'from-amber-500 via-orange-700 to-rose-900',
+        title: 'Educational Assistance Information System v3',
+        org: 'NCIP · ICTD', year: '2024', role: 'Co-developer',
+        description: 'Enhancements to the system that manages NCIP\'s Educational Assistance Program for Indigenous Peoples students.',
+        impact: 'Smoother scholarship processing and better data handling for grantees and program staff.',
+        tech: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap'],
+      },
+      {
+        cat: 'gov', acronym: 'ABIS', image: './assets/images/projects/abis.svg', accent: 'from-blue-500 via-indigo-700 to-slate-900',
+        title: 'Accounting & Budget Information System',
+        org: 'NCIP · ICTD', year: '2024–Present', role: 'Focal person',
+        description: 'Documented requirements, evaluated vendors and technologies, and steered procurement of the Commission\'s accounting and budget system through to deployment.',
+        impact: 'Now the ABIS focal person, coordinating support, issues and user concerns.',
+        tech: ['Requirements Analysis', 'Procurement', 'UAT', 'Deployment'],
+      },
+
+      // ---------- Web development ----------
+      {
+        cat: 'web', featured: true, image: './assets/images/projects/capstone3.svg',
+        title: 'E-commerce Website (Full-stack Capstone)',
+        org: 'Zuitt Coding Bootcamp', year: '2023',
+        description: 'A full-stack online store with product catalog, user accounts, checkout and an admin dashboard for managing products.',
+        impact: 'End-to-end MERN build: REST API, token-based auth and a responsive React front-end.',
+        tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Bootstrap'],
+        links: [{ label: 'Code', href: GITLAB, icon: 'gitlab' }],
+      },
+      {
+        cat: 'web', image: './assets/images/projects/capstone2.svg',
+        title: 'E-commerce API (Back-end Capstone)',
+        org: 'Zuitt Coding Bootcamp', year: '2023',
+        description: 'RESTful back-end API for an online store covering users, products and orders, with authentication and admin-only routes.',
+        impact: 'Clean, Postman-tested endpoints that became the back end of the full-stack capstone.',
+        tech: ['Node.js', 'Express.js', 'MongoDB', 'Postman'],
+        links: [{ label: 'Code', href: GITLAB, icon: 'gitlab' }],
+      },
+      {
+        cat: 'web', image: './assets/images/projects/dianne.svg',
+        title: 'Architect Personal Portfolio',
+        org: 'Byte Brew Solutions · Freelance', year: '',
+        description: 'Portfolio website for an Italy-based architectural designer, with a clean, image-led layout that puts the work first.',
+        impact: 'Gave the client a professional online presence to share with international clients.',
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'Web Design'],
+      },
+      {
+        cat: 'web', image: './assets/images/projects/capstone1.svg',
+        title: 'Personal Portfolio (Front-end Capstone)',
+        org: 'Zuitt Coding Bootcamp', year: '2023',
+        description: 'My first responsive portfolio, hand-built with semantic HTML, custom CSS and the Bootstrap grid.',
+        impact: 'Foundation for the front-end skills behind this site.',
+        tech: ['HTML5', 'CSS3', 'Bootstrap', 'Responsive Web App'],
+        links: [{ label: 'Live site', href: 'https://raychardatienza.github.io/webportfolio/', icon: 'external' }],
+      },
+
+      // ---------- Engineering, security & IoT ----------
+      {
+        cat: 'eng', image: './assets/images/projects/fruit.svg',
+        title: 'Thesis: Automated Fruit Picking Machine',
+        org: 'De La Salle Lipa', year: '2016',
+        description: 'A machine that identifies ripe fruit and picks it while leaving unripe fruit on the plant.',
+        impact: 'Explored automation for agriculture, cutting manual sorting effort.',
+        tech: ['Embedded Systems', 'Sensors', 'Automation'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/cctv.svg',
+        title: 'CCTV & Video Surveillance',
+        org: 'Calvelo Engineered Systems', year: '2016–2018',
+        description: 'End-to-end analog and IP network video surveillance installation, configuration and support for clients across industries.',
+        impact: '100% project completion under my supervision, with satisfied customers.',
+        tech: ['IP CCTV', 'NVR / DVR', 'Networking'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/access.svg',
+        title: 'Access Control Systems',
+        org: 'Calvelo Engineered Systems', year: '2016–2018',
+        description: 'Standalone and PC-based access control (cards, readers, keypads, biometrics and locks) integrated with management software.',
+        impact: 'Secured client facilities with centrally managed entry.',
+        tech: ['Biometrics', 'Access Control Software', 'Hardware Integration'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/water.svg',
+        title: 'Water Leak Detection',
+        org: 'Calvelo Engineered Systems', year: '2016–2018',
+        description: 'Installation and configuration of leak-detection sensors and alarms for client facilities.',
+        impact: 'Early warning against water damage to critical rooms and equipment.',
+        tech: ['Sensors', 'Alarm Systems', 'Security Systems'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/advise.svg',
+        title: 'Automated Advising System',
+        org: 'De La Salle Lipa', year: '',
+        description: 'Manages Computer Engineering student data and turns it into usable advising information.',
+        impact: 'Faster, more consistent academic advising for students and faculty.',
+        tech: ['Database', 'Software Development'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/lighting.svg',
+        title: 'Room Lighting System',
+        org: 'De La Salle Lipa', year: '',
+        description: 'Adjusts room lighting automatically based on current light levels using servo-driven controls.',
+        impact: 'Demonstrated energy-aware automation with a desktop control GUI.',
+        tech: ['Arduino Uno', 'Servo Motors', 'MATLAB GUIDE'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/pp.svg',
+        title: 'Ping Pong on Arduino',
+        org: 'De La Salle Lipa', year: '',
+        description: 'A playable Pong game on an Arduino Uno driving an 8×8 monochrome LED matrix.',
+        impact: 'Real-time input handling and display multiplexing on constrained hardware.',
+        tech: ['Arduino Uno', 'C/C++', 'LED Matrix'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/burglar.svg',
+        title: 'Burglar Alarm Prototype',
+        org: 'De La Salle Lipa', year: '',
+        description: 'An infrared proximity alarm that sounds when the sensor beam is interrupted.',
+        impact: 'Early hands-on work in the security systems I later deployed professionally.',
+        tech: ['Infrared Sensors', 'Electronics'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/calculator.svg',
+        title: 'Assembly Language Calculator',
+        org: 'De La Salle Lipa', year: '',
+        description: 'A calculator supporting basic arithmetic, written in low-level assembly.',
+        impact: 'Deep understanding of registers, memory and instruction flow.',
+        tech: ['Assembly Language'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/pasystem.svg',
+        title: 'Public Address System',
+        org: 'De La Salle Lipa', year: '',
+        description: 'Amplifies sound by converting it to electrical signals and back to audio.',
+        impact: 'Applied analog circuit design and signal amplification.',
+        tech: ['Analog Electronics', 'Amplifiers'],
+      },
+      {
+        cat: 'eng', image: './assets/images/projects/dc.svg',
+        title: 'DC Power Supply',
+        org: 'De La Salle Lipa', year: '',
+        description: 'Converts 220V AC into selectable 3V, 6V, 9V and 12V DC through rectification, regulation and voltage division.',
+        impact: 'Fundamentals of power electronics and circuit safety.',
+        tech: ['Power Electronics', 'Voltage Regulation'],
+      },
+    ];
+
+    /* =====================================================================
+       EXPERIENCE TIMELINE: type: role | milestone
+       ===================================================================== */
+    const TIMELINE = [
+      {
+        type: 'milestone', date: '2026', icon: 'sparkle',
+        title: 'Co-created a new wave of NCIP platforms',
+        org: 'National Commission on Indigenous Peoples',
+        bullets: [
+          'Co-created and launched DRIP, the COC System, PDMIS, and the IPS & IPO Information System.',
+          'Built the Single Sign-On (SSO) website for the NCIP IPSGSIS, giving users one login across Commission systems.',
+        ],
+        tags: ['Laravel', 'React.js', 'MySQL', 'SSO'],
+      },
+      {
+        type: 'milestone', date: 'Aug 2026', icon: 'award',
+        title: 'Earned three project management certifications',
+        org: 'NievGen · Makati City',
+        bullets: [
+          'Certified Project Management Specialist (CPMS), Certified Agile Scrum Master (CASM) and Certified Project Scheduling and Controls Analyst (CPSCA): 108 hours of leadership and management training.',
+        ],
+        tags: ['Project Management', 'Agile Scrum', 'Scheduling & Controls'],
+      },
+      {
+        type: 'role', date: 'Jun 2025 – Present', current: true,
+        title: 'Information System Analyst II',
+        org: 'National Commission on Indigenous Peoples · ICT Division',
+        location: 'Quezon City, Metro Manila', status: 'Regular · Permanent',
+        bullets: [
+          'Co-develop the Data Repository on Indigenous Peoples (DRIP) and the Project Development and Management Information System (PDMIS).',
+          'Co-created the COC System, IPS & IPO Information System and the IPSGSIS SSO website (2026).',
+          'Focal person for the Accounting and Budget Information System (ABIS).',
+          'Conducted user training for employees on the Document Tracking System v2.',
+          'Develop, enhance and maintain other NCIP in-house information systems.',
+        ],
+        tags: ['Laravel', 'Inertia.js', 'React.js', 'MySQL', 'Tailwind CSS'],
+      },
+      {
+        type: 'milestone', date: 'Aug 2024', icon: 'award',
+        title: 'Passed the Career Service Professional Examination',
+        org: 'Civil Service Commission · Rating 82.03',
+      },
+      {
+        type: 'role', date: 'Jan 2024 – Jun 2025',
+        title: 'Project Development Officer II',
+        org: 'National Commission on Indigenous Peoples · ICT Division',
+        location: 'Quezon City, Metro Manila', status: 'Contract of Service',
+        bullets: [
+          'Co-developed the Document Tracking System v2 and the Quick Response Authenticator System (QRAS) for COC confirmation.',
+          'Enhanced the Educational Assistance Information System (EAIS) to version 3.',
+          'Took ABIS from requirements and vendor evaluation through procurement to deployment.',
+          'Planned and ran user orientations, technical trainings and workshops; provided end-user technical support.',
+          'Ran testing & QA on in-house systems; maintained documentation of configurations, procedures and troubleshooting.',
+        ],
+        tags: ['System Analysis', 'QA & UAT', 'User Training', 'Documentation'],
+      },
+      {
+        type: 'milestone', date: '2023', icon: 'cap',
+        title: 'Full-stack web development training',
+        org: 'Zuitt Coding Bootcamp · Udemy',
+        bullets: ['540+ hours across front-end, back-end and full-stack (MERN) development, JavaScript OOP, unit testing, C# and ASP.NET.'],
+        tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Postman'],
+      },
+      {
+        type: 'role', date: 'Dec 2016 – Apr 2018',
+        title: 'Systems Engineer',
+        org: 'Calvelo Engineered Systems Corp. · Security Systems Division',
+        location: 'Makati City, Metro Manila', status: 'Regular',
+        bullets: [
+          'Achieved 100% project completion under my supervision, resulting in customer satisfaction.',
+          'Trained and mentored technicians on company projects.',
+          'Delivered end-to-end analog & IP network video surveillance solutions for various industries.',
+          'Deployed standalone and PC-based access control (cards, readers, keypads, biometrics, locks) integrated with management software.',
+        ],
+        tags: ['CCTV', 'Access Control', 'Networking', 'Security Software'],
+      },
+      {
+        type: 'milestone', date: '2016', icon: 'cap',
+        title: 'BS Computer Engineering',
+        org: 'De La Salle Lipa',
+        bullets: ['Thesis: Automated Fruit Picking Machine. Merit for Student Leadership and Merit of Volunteerism.'],
+      },
+      {
+        type: 'role', date: 'Jan 2015 – Jan 2016',
+        title: 'Project Support Engineer (OJT)',
+        org: 'MG Exeo Network Inc.',
+        bullets: [
+          'Copper and fiber installation for PLDT home services.',
+          'Telephone cabinet troubleshooting following strict safety protocols.',
+        ],
+        tags: ['Fiber Optics', 'Troubleshooting'],
+      },
+    ];
+
+    const TRAINING = [
+      ['Business Intelligence Workshop using Microsoft Power BI', 'NCIP-ICTD · 2025'],
+      ['Training of Trainers on the DICT PNPKI Digital Signature', 'NCIP · 2025'],
+      ['HRIS User Acceptance Testing & Training', 'NCIP-ICTD · 2024'],
+      ['ICT Capacity Building: "Unleashing the Power of Data"', 'NCIP-ICTD · 2024'],
+      ['Data Privacy Training', 'NCIP-ICTD · 2024'],
+      ['Sophos Next-Gen Firewall & Ruijie Managed Switches', 'NCIP-ICTD · 2024'],
+      ['Full-Stack Web Development (88 hrs)', 'Zuitt Coding Bootcamp · 2023'],
+      ['Back-End Web Development (144 hrs)', 'Zuitt Coding Bootcamp · 2023'],
+      ['Front-End Web Development (104 hrs)', 'Zuitt Coding Bootcamp · 2023'],
+      ['Intro & Advanced JavaScript OOP', 'Zuitt Coding Bootcamp · 2023'],
+      ['Unit Testing · MySQL for MongoDB Developers', 'Zuitt Coding Bootcamp · 2023'],
+      ['Introduction to C# · Introduction to ASP.NET', 'Zuitt Coding Bootcamp · 2023'],
+      ['Web Development Bootcamp (85 hrs)', 'Udemy · Dr. Angela Yu · 2023'],
+    ];
+
+    /* =====================================================================
+       INFOGRAPHIC DATA (from the PDS L&D record and certificates)
+       ===================================================================== */
+    const CAREER = [
+      { label: 'Project Support Engineer (OJT)', org: 'MG Exeo Network Inc.', start: '2015-01', end: '2016-01', kind: 'past' },
+      { label: 'Systems Engineer', org: 'Calvelo Engineered Systems', start: '2016-12', end: '2018-04', kind: 'past' },
+      { label: 'Full-stack bootcamp', org: 'Zuitt Coding Bootcamp · Udemy', start: '2023-01', end: '2023-10', kind: 'training' },
+      { label: 'Project Development Officer II', org: 'NCIP · ICT Division', start: '2024-01', end: '2025-06', kind: 'past' },
+      { label: 'Information System Analyst II', org: 'NCIP · ICT Division', start: '2025-06', end: null, kind: 'current' },
+    ];
+    const CAREER_MILESTONES = [
+      { date: '2016-06', label: 'BS Computer Engineering', org: 'De La Salle Lipa' },
+      { date: '2024-08', label: 'Career Service Professional · 82.03', org: 'Civil Service Commission' },
+      { date: '2026-08', label: 'CPMS · CASM · CPSCA certified', org: 'NievGen, Makati City' },
+    ];
+    const TRAINING_HOURS = [
+      { year: '2023', hours: 541, items: [['Zuitt Coding Bootcamp (10 courses)', 456], ['Udemy Web Development Bootcamp', 85]] },
+      { year: '2024', hours: 88, items: [['HRIS UAT & Training', 40], ['ICT Capacity Building', 24], ['Data Privacy Training', 16], ['Sophos & Ruijie', 8]] },
+      { year: '2025', hours: 52, items: [['New Employees Orientation', 16], ['Paralegal Training', 16], ['Power BI Workshop', 12], ['PNPKI Trainer Training', 4], ['DAP Productivity', 4]] },
+      { year: '2026', hours: 108, items: [['CPMS', 60], ['CASM', 24], ['CPSCA', 24]] },
+    ];
+    const DISCIPLINES = [
+      { key: 'gov', label: 'Government systems', color: 'var(--c-gov)' },
+      { key: 'web', label: 'Web development', color: 'var(--c-web)' },
+      { key: 'eng', label: 'Engineering & IoT', color: 'var(--c-eng)' },
+    ];
+    const SYSTEM_ERAS = [
+      { era: '2024 – 2025', role: 'as Project Development Officer II', systems: ['DTS v2', 'QRAS', 'EAIS v3', 'ABIS'] },
+      { era: '2026', role: 'as Information System Analyst II', systems: ['DRIP', 'PDMIS', 'IPSGSIS SSO', 'COC System', 'IPS & IPO System'] },
+    ];
+
+    /* =====================================================================
+       RENDERING: projects, timeline, training
+       ===================================================================== */
+    const chip = (t) => `<span class="chip chip-sm">${t}</span>`;
+
+    function projectCard(p) {
+      const media = p.image
+        ? `<div class="relative aspect-[16/9] overflow-hidden bg-slate-200 dark:bg-void-800">
+             <img src="${p.image}" alt="${esc(p.title)}" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+             <div class="absolute inset-0 bg-gradient-to-t from-void-950/60 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+           </div>`
+        : `<div class="pattern-circuit relative flex aspect-[16/9] items-end overflow-hidden bg-gradient-to-br ${p.accent} p-5">
+             <span class="absolute right-4 top-4 inline-flex items-center gap-1 rounded-md border border-white/25 bg-white/10 px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-white backdrop-blur">${icon('building', 'h-3 w-3')} ncip</span>
+             <span class="font-display text-4xl font-bold tracking-tight text-white drop-shadow-[0_0_18px_rgba(255,255,255,0.35)] transition duration-500 group-hover:-translate-y-1 sm:text-5xl">${p.acronym}</span>
+           </div>`;
+
+      const actions = [
+        ...(p.links || []).map((l) => `<a href="${l.href}" ${l.internal ? '' : 'target="_blank" rel="noopener"'} class="btn-ghost btn-sm">${icon(l.icon || 'external', 'h-3.5 w-3.5')} ${l.label}</a>`),
+        p.cat === 'gov' ? `<span class="inline-flex items-center gap-1.5 font-mono text-[11px] text-slate-500">${icon('lock', 'h-3.5 w-3.5')} internal government system</span>` : '',
+      ].join('');
+
+      const meta = [p.org, p.year].filter(Boolean).join(' · ');
+      return `
+        <article class="group reveal card card-hover spot tilt flex flex-col overflow-hidden" data-cat="${p.cat}">
+          ${media}
+          <div class="flex flex-1 flex-col p-6">
+            <div class="flex flex-wrap items-center gap-2 font-mono text-[11px]">
+              <span class="text-cyan-700 dark:text-cyan-300">${meta}</span>
+              ${p.role ? `<span class="rounded border border-slate-300/70 px-1.5 py-0.5 text-slate-600 dark:border-slate-700 dark:text-slate-300">${p.role}</span>` : ''}
+            </div>
+            <h3 class="mt-2 text-lg font-bold leading-snug">${p.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed">${p.description}</p>
+            ${p.impact ? `<p class="mt-4 flex gap-2 rounded-xl border border-cyan-600/15 bg-cyan-50/70 p-3 text-sm leading-relaxed text-slate-700 dark:border-cyan-300/10 dark:bg-cyan-300/[0.04] dark:text-slate-300">
+                <span class="mt-0.5 flex-none text-cyan-700 dark:text-cyan-300">${icon('target', 'h-4 w-4')}</span><span><span class="font-semibold text-slate-900 dark:text-ink">Impact: </span>${p.impact}</span></p>` : ''}
+            <div class="mt-4 flex flex-wrap gap-1.5">${p.tech.map(chip).join('')}</div>
+            ${actions ? `<div class="mt-auto flex flex-wrap items-center gap-2 pt-6">${actions}</div>` : ''}
+          </div>
+        </article>`;
+    }
+
+    function renderProjects(filter) {
+      const grid = document.getElementById('project-grid');
+      const list = PROJECTS.filter((p) => p.cat !== 'eng' && (filter === 'all' || (filter === 'featured' ? p.featured : p.cat === filter)));
+      grid.innerHTML = list.map(projectCard).join('');
+      observeReveals(grid);
+    }
+
+    function renderArchive() {
+      const items = PROJECTS.filter((p) => p.cat === 'eng');
+      document.getElementById('archive-count').textContent = items.length;
+      document.getElementById('archive-grid').innerHTML = items.map((p) => `
+        <article class="flex gap-4 rounded-xl border border-slate-200/70 bg-white/50 p-3 transition hover:border-cyan-500/40 dark:border-cyan-300/10 dark:bg-white/[0.02] dark:hover:border-cyan-300/30">
+          <img src="${p.image}" alt="" loading="lazy" decoding="async" class="h-16 w-24 flex-none rounded-lg object-cover" />
+          <div class="min-w-0">
+            <p class="font-mono text-[10.5px] text-cyan-700 dark:text-cyan-300">${[p.org, p.year].filter(Boolean).join(' · ')}</p>
+            <h4 class="text-sm font-bold leading-snug">${p.title}</h4>
+            <p class="mt-0.5 line-clamp-2 text-xs leading-relaxed">${p.description}</p>
+          </div>
+        </article>`).join('');
+    }
+
+    function timelineItem(t) {
+      const isRole = t.type === 'role';
+      const dot = isRole
+        ? `<span class="relative z-10 grid h-10 w-10 flex-none place-items-center rounded-xl border border-slate-300/80 bg-white text-cyan-700 shadow-sm dark:border-cyan-300/20 dark:bg-void-900 dark:text-cyan-300 sm:h-12 sm:w-12">${icon('briefcase', 'h-5 w-5')}</span>`
+        : `<span class="relative z-10 grid h-10 w-10 flex-none place-items-center rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 text-white shadow-[0_0_24px_-4px_rgba(34,211,238,0.7)] sm:h-12 sm:w-12">${icon(t.icon || 'star', 'h-5 w-5')}</span>`;
+
+      const bullets = t.bullets && t.bullets.length
+        ? `<ul class="mt-4 space-y-2 text-sm leading-relaxed">${t.bullets.map((b) => `<li class="flex gap-2.5"><span class="mt-1 flex-none text-cyan-600 dark:text-cyan-300">${icon('check', 'h-3.5 w-3.5')}</span><span>${b}</span></li>`).join('')}</ul>`
+        : '';
+      const tags = t.tags ? `<div class="mt-4 flex flex-wrap gap-1.5">${t.tags.map(chip).join('')}</div>` : '';
+      const sub = [t.location, t.status].filter(Boolean).join(' · ');
+
+      return `
+        <li class="reveal relative flex gap-4 sm:gap-6">
+          ${dot}
+          <div class="${isRole ? 'card card-hover spot p-5 sm:p-6' : 'rounded-2xl border border-dashed border-cyan-600/40 bg-cyan-50/50 p-5 dark:border-cyan-300/25 dark:bg-cyan-300/[0.03] sm:p-6'} flex-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-mono text-[11px] font-medium uppercase tracking-wider text-cyan-700 dark:text-cyan-300">${t.date}</span>
+              ${t.current ? '<span class="rounded border border-emerald-500/40 bg-emerald-500/10 px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase text-emerald-700 dark:text-emerald-300">current</span>' : ''}
+              ${!isRole ? '<span class="rounded border border-violet-500/40 bg-violet-500/10 px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase text-violet-700 dark:text-violet-300">milestone</span>' : ''}
+            </div>
+            <h3 class="mt-2 text-lg font-bold sm:text-xl">${t.title}</h3>
+            <p class="mt-1 text-sm font-medium text-slate-700 dark:text-slate-300">${t.org}</p>
+            ${sub ? `<p class="mt-0.5 text-xs">${sub}</p>` : ''}
+            ${bullets}
+            ${tags}
+          </div>
+        </li>`;
+    }
+
+    function renderTimeline() {
+      const el = document.getElementById('timeline');
+      el.innerHTML = TIMELINE.map(timelineItem).join('');
+      observeReveals(el);
+
+      document.getElementById('training-list').innerHTML = TRAINING.map(([title, by]) => `
+        <li class="flex gap-3">
+          <span class="mt-0.5 flex-none text-cyan-600 dark:text-cyan-300">${icon('check', 'h-4 w-4')}</span>
+          <span><span class="block text-sm font-semibold leading-snug text-slate-900 dark:text-ink">${title}</span><span class="font-mono text-[11px]">${by}</span></span>
+        </li>`).join('');
+    }
+
+    /* =====================================================================
+       RENDERING: infographics
+       ===================================================================== */
+    const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const parseYM = (s) => { const [y, m] = s.split('-').map(Number); return { y, m }; };
+    const nowYM = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`; };
+    const fmtYM = (s) => { const { y, m } = parseYM(s); return `${MONTHS[m - 1]} ${y}`; };
+    const monthsBetween = (a, b) => { const A = parseYM(a), B = parseYM(b); return (B.y - A.y) * 12 + (B.m - A.m); };
+    const fmtDuration = (mo) => {
+      const y = Math.floor(mo / 12), m = mo % 12;
+      return [y ? `${y} yr${y > 1 ? 's' : ''}` : '', m ? `${m} mo${m > 1 ? 's' : ''}` : ''].filter(Boolean).join(' ') || '< 1 mo';
+    };
+    const tipAttrs = (title, body) => `tabindex="0" data-tip-title="${esc(title)}" data-tip-body="${esc(body)}" aria-label="${esc(title + '. ' + body)}"`;
+    const dataTable = (caption, head, rows) => `
+      <details class="mt-6 border-t border-slate-200/70 pt-4 dark:border-cyan-300/10">
+        <summary class="cursor-pointer select-none font-mono text-[11px] uppercase tracking-wider text-slate-500 hover:text-cyan-700 dark:hover:text-cyan-300">view data table</summary>
+        <div class="mt-3 overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <caption class="sr-only">${caption}</caption>
+            <thead><tr>${head.map((h, i) => `<th scope="col" class="py-1.5 pr-4 font-mono font-medium uppercase tracking-wider text-slate-500 ${i ? 'text-right' : ''}">${h}</th>`).join('')}</tr></thead>
+            <tbody>${rows.map((r) => `<tr class="border-t border-slate-200/60 dark:border-white/5">${r.map((c, i) => `<td class="py-1.5 pr-4 ${i ? 'text-right font-mono' : 'text-slate-800 dark:text-slate-200'}" style="font-variant-numeric: tabular-nums">${c}</td>`).join('')}</tr>`).join('')}</tbody>
+          </table>
+        </div>
+      </details>`;
+
+    // 1) Career timeline (Gantt) — emphasis form: current role highlighted, past roles as context
+    function renderCareer() {
+      const startY = 2015;
+      const endY = Math.max(2027, new Date().getFullYear() + 1);
+      const span = (endY - startY) * 12;
+      const pos = (s) => { const { y, m } = parseYM(s); return (((y - startY) * 12 + (m - 1)) / span) * 100; };
+      const now = nowYM();
+      const color = { past: 'var(--c-context)', current: 'var(--c-seq)', training: 'var(--c-web)' };
+
+      const years = [];
+      for (let y = startY; y <= endY; y++) years.push(y);
+      const gridLines = years.map((y) => `<span class="absolute inset-y-0 w-px" style="left:${pos(`${y}-01`)}%; background:var(--grid)"></span>`).join('');
+      const axis = years.map((y, i) => `<span class="axis absolute -translate-x-1/2 ${i % 2 ? 'max-sm:hidden' : ''}" style="left:${pos(`${y}-01`)}%">${y}</span>`).join('');
+
+      const rows = CAREER.map((r, i) => {
+        const end = r.end || now;
+        const left = pos(r.start), width = Math.max(pos(end) - left, 0.8);
+        const dur = fmtDuration(monthsBetween(r.start, end));
+        const body = `${r.org} · ${fmtYM(r.start)} – ${r.end ? fmtYM(r.end) : 'Present'} · ${dur}`;
+        const glow = r.kind === 'current' ? 'box-shadow: 0 0 18px -2px rgb(34 211 238 / .7);' : '';
+        return `
+          <div class="grid items-center gap-x-4 gap-y-1.5 sm:grid-cols-[210px_1fr]">
+            <div class="min-w-0 leading-tight">
+              <span class="block truncate text-[13px] font-semibold text-slate-900 dark:text-ink">${r.label}</span>
+              <span class="block truncate font-mono text-[10.5px] text-slate-500">${r.org}</span>
+            </div>
+            <div class="relative h-6">
+              <span class="hit mark-hover grow-x absolute inset-y-1 rounded-[4px]" style="left:${left}%; width:${width}%; background:${color[r.kind]}; --d:${i * 140}ms; ${glow}" ${tipAttrs(r.label, body)}></span>
+            </div>
+          </div>`;
+      }).join('');
+
+      const ms = CAREER_MILESTONES.map((m, i) => `
+        <span class="hit mark-hover fade absolute top-1/2 -translate-x-1/2 -translate-y-1/2" style="left:${pos(m.date)}%; --d:${700 + i * 160}ms" ${tipAttrs(m.label, `${m.org} · ${fmtYM(m.date)}`)}>
+          <span class="block h-3 w-3 rotate-45 rounded-[2px] bg-slate-900 dark:bg-ink" style="box-shadow: 0 0 0 2px var(--surface)"></span>
+        </span>`).join('');
+
+      document.getElementById('career-chart').innerHTML = `
+        <div class="relative">
+          <div class="pointer-events-none absolute inset-y-0 left-0 right-0 sm:left-[226px]" aria-hidden="true">
+            ${gridLines}
+            <span class="absolute inset-y-0 w-px bg-cyan-500 dark:bg-cyan-300" style="left:${pos(now)}%; box-shadow: 0 0 10px rgb(34 211 238 / .9)"></span>
+            <span class="absolute -top-5 -translate-x-1/2 font-mono text-[10px] font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-300" style="left:${pos(now)}%">now</span>
+          </div>
+          <div class="relative space-y-3">
+            ${rows}
+            <div class="grid items-center gap-x-4 gap-y-1.5 border-t border-dashed pt-3 sm:grid-cols-[210px_1fr]" style="border-color:var(--baseline)">
+              <span class="font-mono text-[10.5px] uppercase tracking-wider text-slate-500">milestones</span>
+              <div class="relative h-6">${ms}</div>
+            </div>
+          </div>
+          <div class="relative mt-3 h-4 sm:ml-[226px]">${axis}</div>
+        </div>`;
+
+      document.getElementById('career-table').innerHTML = dataTable('Career timeline',
+        ['Role / milestone', 'Start', 'End', 'Duration'],
+        [
+          ...CAREER.map((r) => [`${r.label} — ${r.org}`, fmtYM(r.start), r.end ? fmtYM(r.end) : 'Present', fmtDuration(monthsBetween(r.start, r.end || now))]),
+          ...CAREER_MILESTONES.map((m) => [`◆ ${m.label} — ${m.org}`, fmtYM(m.date), '', '']),
+        ]);
+    }
+
+    // 2) Training hours by year — single-hue columns, one axis, value labels on top
+    function renderHours() {
+      const max = 600, ticks = [0, 200, 400, 600];
+      const total = TRAINING_HOURS.reduce((s, d) => s + d.hours, 0);
+      document.getElementById('hours-total').textContent = total;
+
+      const grid = ticks.map((t) => `
+        <div class="absolute inset-x-0 flex items-center" style="bottom:${(t / max) * 100}%">
+          <span class="axis w-9 -translate-y-1/2 pr-2 text-right" style="font-variant-numeric: tabular-nums">${t}</span>
+          <span class="h-px flex-1 -translate-y-1/2" style="background:${t === 0 ? 'var(--baseline)' : 'var(--grid)'}"></span>
+        </div>`).join('');
+
+      const cols = TRAINING_HOURS.map((d, i) => {
+        const h = (d.hours / max) * 100;
+        const body = d.items.map(([n, v]) => `${n}: ${v} hrs`).join(' · ');
+        return `
+          <div class="mark-hover group relative flex h-full flex-1 items-end justify-center" ${tipAttrs(`${d.year}: ${d.hours} hours`, body)}>
+            <span class="fade absolute font-mono text-xs font-semibold text-slate-900 dark:text-ink" style="bottom:calc(${h}% + 6px); --d:${500 + i * 120}ms; font-variant-numeric: tabular-nums">${d.hours}</span>
+            <span class="grow-y block w-full max-w-[64px] rounded-t-[4px]" style="height:${h}%; background:linear-gradient(to top, var(--c-seq), color-mix(in srgb, var(--c-seq) 70%, #fff)); --d:${i * 120}ms; box-shadow: 0 0 22px -6px var(--c-seq)"></span>
+          </div>`;
+      }).join('');
+
+      document.getElementById('hours-chart').innerHTML = `
+        <div class="relative h-56">
+          ${grid}
+          <div class="absolute bottom-0 left-9 right-0 top-0 flex items-end gap-4 px-2 sm:gap-6 sm:px-4">${cols}</div>
+        </div>
+        <div class="ml-9 mt-2 flex gap-4 px-2 sm:gap-6 sm:px-4">${TRAINING_HOURS.map((d) => `<span class="axis flex-1 text-center">${d.year}</span>`).join('')}</div>`;
+
+      document.getElementById('hours-table').innerHTML = dataTable('Training hours by year', ['Year', 'Hours', 'Breakdown'],
+        TRAINING_HOURS.map((d) => [d.year, d.hours, d.items.map(([n, v]) => `${n} ${v}`).join('; ')]));
+    }
+
+    // 3) Most-used technologies — ranked horizontal bars, Laravel emphasized, rest as context
+    function renderTech() {
+      const normalize = (t) => t.replace(/\s+\d+(\.\d+)?$/, '').replace(/^Socialite.*/, 'Socialite').trim();
+      const SKIP = new Set(['Requirements Analysis', 'Procurement', 'UAT', 'Deployment', 'Responsive Web App', 'Web Design']);
+      const counts = new Map();
+      PROJECTS.forEach((p) => new Set(p.tech.map(normalize)).forEach((t) => { if (!SKIP.has(t)) counts.set(t, (counts.get(t) || 0) + 1); }));
+      const top = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
+      const max = top[0][1];
+
+      document.getElementById('tech-chart').innerHTML = top.map(([name, n], i) => {
+        const emph = name === 'Laravel';
+        return `
+          <div class="grid grid-cols-[92px_1fr_24px] items-center gap-3">
+            <span class="truncate text-right font-mono text-[11.5px] ${emph ? 'font-semibold text-slate-900 dark:text-ink' : ''}">${name}</span>
+            <div class="relative h-4">
+              <span class="hit mark-hover grow-x absolute inset-y-0 left-0 rounded-r-[4px]" style="width:${(n / max) * 100}%; background:${emph ? 'var(--c-emph)' : 'var(--c-context)'}; --d:${i * 90}ms; ${emph ? 'box-shadow: 0 0 18px -3px var(--c-emph);' : ''}" ${tipAttrs(name, `Used in ${n} of ${PROJECTS.length} projects`)}></span>
+            </div>
+            <span class="fade font-mono text-xs font-semibold text-slate-900 dark:text-ink" style="--d:${400 + i * 90}ms; font-variant-numeric: tabular-nums">${n}</span>
+          </div>`;
+      }).join('');
+
+      document.getElementById('tech-table').innerHTML = dataTable('Most-used technologies', ['Technology', 'Projects'], top.map(([n, c]) => [n, c]));
+    }
+
+    // 4) Portfolio by discipline — tall segmented bar (one whole, three parts) + legend
+    function renderMix() {
+      const parts = DISCIPLINES.map((d) => ({ ...d, n: PROJECTS.filter((p) => p.cat === d.key).length }));
+      const total = parts.reduce((s, p) => s + p.n, 0);
+      document.getElementById('mix-total').textContent = total;
+
+      const segs = parts.map((p, i) => `
+        <span class="hit mark-hover grow-x relative flex items-center justify-center rounded-[4px] font-display text-lg font-bold text-white" style="flex:${p.n} 1 0%; background:${p.color}; --d:${i * 160}ms; box-shadow: 0 0 22px -8px ${p.color}" ${tipAttrs(p.label, `${p.n} of ${total} projects · ${Math.round((p.n / total) * 100)}%`)}>${p.n}</span>`).join('');
+
+      document.getElementById('mix-chart').innerHTML = `
+        <div class="flex h-16 gap-[2px]">${segs}</div>
+        <ul class="mt-5 space-y-2.5" aria-label="Legend">
+          ${parts.map((p) => `
+            <li class="flex items-center gap-3 text-sm">
+              <span class="h-3 w-3 flex-none rounded-[3px]" style="background:${p.color}"></span>
+              <span class="flex-1 text-slate-800 dark:text-slate-200">${p.label}</span>
+              <span class="font-mono text-xs text-slate-500" style="font-variant-numeric: tabular-nums">${p.n} · ${Math.round((p.n / total) * 100)}%</span>
+            </li>`).join('')}
+        </ul>`;
+
+      document.getElementById('mix-table').innerHTML = dataTable('Portfolio by discipline', ['Discipline', 'Projects', 'Share'],
+        parts.map((p) => [p.label, p.n, `${Math.round((p.n / total) * 100)}%`]));
+    }
+
+    // 5) Systems delivered — circuit "bus" per era, nodes light up in sequence
+    function renderSystems() {
+      let k = 0;
+      document.getElementById('systems-chart').innerHTML = SYSTEM_ERAS.map((e, ei) => `
+        <div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-5xl font-bold text-slate-900 dark:text-ink" data-count="${e.systems.length}">${e.systems.length}</span>
+            <span class="leading-tight">
+              <span class="block font-mono text-xs font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-300">${e.era}</span>
+              <span class="block text-xs">${e.role}</span>
+            </span>
+          </div>
+          <div class="relative mt-5 pl-6">
+            <span class="bus absolute bottom-3 left-[7px] top-3 w-[2px] rounded-full" style="background:var(--baseline)" aria-hidden="true"></span>
+            <ul class="space-y-2.5">
+              ${e.systems.map((s) => `
+                <li class="fade relative" style="--d:${(k++) * 110}ms">
+                  <span class="absolute -left-[22px] top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full ${ei === SYSTEM_ERAS.length - 1 ? 'bg-cyan-500 shadow-[0_0_12px_rgba(34,211,238,0.9)] dark:bg-cyan-300' : 'bg-slate-400 dark:bg-slate-500'}"></span>
+                  <span class="block rounded-lg border border-slate-200/80 bg-white/70 px-3 py-2 font-mono text-xs font-medium text-slate-800 transition hover:border-cyan-500/50 dark:border-cyan-300/10 dark:bg-white/[0.03] dark:text-slate-200 dark:hover:border-cyan-300/40">${s}</span>
+                </li>`).join('')}
+            </ul>
+          </div>
+        </div>`).join('');
+    }
+
+    /* =====================================================================
+       INTERACTIONS
+       ===================================================================== */
+    const hasIO = 'IntersectionObserver' in window;
+
+    const revealObserver = hasIO
+      ? new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { finishReveal(e.target); revealObserver.unobserve(e.target); } });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' })
+      : null;
+    // Stagger siblings, then drop the reveal class so hover transitions run at normal speed
+    function finishReveal(el) {
+      const delay = parseInt(el.style.getPropertyValue('--rd') || '0', 10);
+      el.classList.add('is-visible');
+      setTimeout(() => { el.classList.remove('reveal', 'is-visible'); el.style.removeProperty('--rd'); }, delay + 950);
+    }
+    function observeReveals(root = document) {
+      root.querySelectorAll('.reveal:not(.is-visible)').forEach((el) => {
+        const sibs = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
+        el.style.setProperty('--rd', `${(Math.max(sibs.indexOf(el), 0) % 6) * 90}ms`);
+        revealObserver ? revealObserver.observe(el) : finishReveal(el);
+      });
+    }
+
+    // Charts animate in once, and their counters count up
+    function animateCount(el) {
+      const target = parseFloat(el.dataset.count);
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+      const suffix = el.dataset.suffix || '';
+      const t0 = performance.now(), dur = 1400;
+      const step = (t) => {
+        const p = Math.min((t - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (target * eased).toFixed(decimals) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+    function setupInView() {
+      const targets = [...document.querySelectorAll('.viz, [data-count]')];
+      if (!hasIO) { targets.forEach((el) => el.classList.add('in')); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('in');
+          if (e.target.dataset.count) animateCount(e.target);
+          io.unobserve(e.target);
+        });
+      }, { threshold: 0.25 });
+      targets.forEach((el) => io.observe(el));
+    }
+
+    // Shared tooltip for every chart mark (hover + keyboard focus)
+    function setupTooltips() {
+      const tip = document.getElementById('viz-tip');
+      let active = null;
+      const place = (x, y) => {
+        const r = tip.getBoundingClientRect();
+        let left = x + 14, top = y + 16;
+        if (left + r.width > innerWidth - 8) left = x - r.width - 14;
+        if (top + r.height > innerHeight - 8) top = y - r.height - 14;
+        tip.style.transform = `translate(${Math.max(8, left)}px, ${Math.max(8, top)}px)`;
+      };
+      const show = (el, x, y) => {
+        active = el;
+        tip.innerHTML = `<p class="font-semibold text-slate-900 dark:text-ink">${esc(el.dataset.tipTitle)}</p><p class="mt-0.5 text-slate-600 dark:text-slate-300">${esc(el.dataset.tipBody || '')}</p>`;
+        tip.hidden = false;
+        place(x, y);
+      };
+      const hide = () => { active = null; tip.hidden = true; };
+      document.addEventListener('pointerover', (e) => { const el = e.target.closest('[data-tip-title]'); if (el) show(el, e.clientX, e.clientY); });
+      document.addEventListener('pointermove', (e) => { if (active) place(e.clientX, e.clientY); });
+      document.addEventListener('pointerout', (e) => { const el = e.target.closest('[data-tip-title]'); if (el && !el.contains(e.relatedTarget)) hide(); });
+      document.addEventListener('focusin', (e) => { const el = e.target.closest('[data-tip-title]'); if (el) { const r = el.getBoundingClientRect(); show(el, r.left + r.width / 2, r.bottom); } });
+      document.addEventListener('focusout', hide);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hide(); });
+      window.addEventListener('scroll', () => { if (active && document.activeElement !== active) hide(); }, { passive: true });
+    }
+
+    // Pointer spotlight on .spot cards
+    function setupSpotlight() {
+      if (!window.matchMedia('(hover: hover)').matches) return;
+      document.addEventListener('pointermove', (e) => {
+        const card = e.target.closest && e.target.closest('.spot');
+        if (!card) return;
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        card.style.setProperty('--my', `${e.clientY - r.top}px`);
+      }, { passive: true });
+    }
+
+    // Hero particle network ("circuit constellation")
+    function setupNetwork() {
+      const canvas = document.getElementById('net');
+      const ctx = canvas.getContext('2d');
+      const hero = document.getElementById('home');
+      let w = 0, h = 0, pts = [], running = false, raf = 0;
+      const mouse = { x: -9999, y: -9999 };
+
+      function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        w = canvas.clientWidth; h = canvas.clientHeight;
+        canvas.width = w * dpr; canvas.height = h * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const n = Math.min(90, Math.floor((w * h) / 15000));
+        pts = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3 }));
+      }
+      function draw(move) {
+        const dark = document.documentElement.classList.contains('dark');
+        const dotC = dark ? '34,211,238' : '8,145,178';
+        const lineC = dark ? '34,211,238' : '71,85,105';
+        ctx.clearRect(0, 0, w, h);
+        for (const p of pts) {
+          if (move) {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+          }
+        }
+        const R = 130;
+        for (let i = 0; i < pts.length; i++) {
+          const a = pts[i];
+          for (let j = i + 1; j < pts.length; j++) {
+            const b = pts[j], dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy;
+            if (d2 < R * R) {
+              ctx.strokeStyle = `rgba(${lineC},${(1 - Math.sqrt(d2) / R) * (dark ? 0.28 : 0.18)})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+            }
+          }
+          const mx = a.x - mouse.x, my = a.y - mouse.y, md = Math.sqrt(mx * mx + my * my);
+          if (md < 170) {
+            ctx.strokeStyle = `rgba(139,92,246,${(1 - md / 170) * 0.55})`;
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+          }
+          ctx.fillStyle = `rgba(${dotC},${dark ? 0.75 : 0.55})`;
+          ctx.beginPath(); ctx.arc(a.x, a.y, 1.6, 0, Math.PI * 2); ctx.fill();
+        }
+      }
+      function loop() { draw(true); if (running) raf = requestAnimationFrame(loop); }
+      function start() { if (!running && !document.hidden) { running = true; raf = requestAnimationFrame(loop); } }
+      function stop() { running = false; cancelAnimationFrame(raf); }
+
+      resize(); draw(false);
+      let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { resize(); draw(false); }, 150); });
+      hero.addEventListener('pointermove', (e) => { const r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+      hero.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
+      document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+      document.getElementById('theme-toggle').addEventListener('click', () => { if (!running) draw(false); });
+      if (hasIO) new IntersectionObserver(([e]) => (e.isIntersecting ? start() : stop())).observe(hero);
+      else start();
+    }
+
+    // Hero headline: wrap each word (and the gradient phrase as one unit) for a staggered entrance
+    function splitHeadline() {
+      const h1 = document.querySelector('.hero-title');
+      let i = 0;
+      const wrap = (node) => { const s = document.createElement('span'); s.className = 'word'; s.style.setProperty('--wd', `${250 + i++ * 85}ms`); node.replaceWith(s); s.appendChild(node); };
+      [...h1.childNodes].forEach((n) => {
+        if (n.nodeType === Node.ELEMENT_NODE) return wrap(n);
+        if (n.nodeType !== Node.TEXT_NODE) return;
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach((part) => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) return frag.appendChild(document.createTextNode(' '));
+          const s = document.createElement('span');
+          s.className = 'word'; s.textContent = part; s.style.setProperty('--wd', `${250 + i++ * 85}ms`);
+          frag.appendChild(s);
+        });
+        n.replaceWith(frag);
+      });
+    }
+
+    // Two-row infinite tech marquee (content duplicated for a seamless loop)
+    const MARQUEE = [
+      ['Laravel', 'PHP', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Inertia.js', 'C# / ASP.NET'],
+      ['Full-stack', 'Front-end', 'Back-end', 'Back-end API', 'Responsive Web App', 'Web Design', 'Git', 'GitHub', 'GitLab', 'Postman', 'Vercel', 'Heroku', 'Agile Scrum', 'Project Management'],
+    ];
+    function renderMarquee() {
+      MARQUEE.forEach((row, r) => {
+        const items = row.map((t) => {
+          const hot = t === 'Laravel';
+          return `<span class="mr-3 inline-flex items-center gap-2 whitespace-nowrap rounded-lg border px-4 py-2 font-mono text-sm ${hot
+            ? 'border-laravel/50 bg-laravel/10 font-semibold text-laravel shadow-[0_0_20px_-6px_rgba(255,45,32,0.7)]'
+            : 'border-slate-200/80 bg-white/60 text-slate-700 dark:border-cyan-300/10 dark:bg-white/[0.03] dark:text-slate-300'}">
+            <span class="${hot ? 'text-laravel' : 'text-cyan-600 dark:text-cyan-300'}" aria-hidden="true">◆</span>${t}</span>`;
+        }).join('');
+        document.getElementById(`mq-${r + 1}`).innerHTML = `<div class="flex">${items}</div><div class="flex" aria-hidden="true">${items}</div>`;
+      });
+    }
+
+    // Section labels decode in like a terminal
+    function setupScramble() {
+      if (!hasIO) return;
+      const glyphs = '!<>-_\\/[]{}=+*^?#01';
+      const run = (el) => {
+        const final = el.dataset.text, t0 = performance.now(), dur = 900;
+        const step = (t) => {
+          const p = Math.min((t - t0) / dur, 1), n = Math.floor(p * final.length);
+          el.textContent = final.slice(0, n) + [...final.slice(n)].map((c) => (c === ' ' ? ' ' : glyphs[(Math.random() * glyphs.length) | 0])).join('');
+          if (p < 1) requestAnimationFrame(step); else el.textContent = final;
+        };
+        requestAnimationFrame(step);
+      };
+      const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { io.unobserve(e.target); run(e.target); } }), { threshold: 0.6 });
+      document.querySelectorAll('.eyebrow').forEach((el) => { el.dataset.text = el.textContent; io.observe(el); });
+    }
+
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    // 3D tilt toward the pointer on .tilt cards
+    function setupTilt() {
+      if (!finePointer) return;
+      let cur = null;
+      const reset = () => { if (cur) { cur.style.transform = ''; cur = null; } };
+      document.addEventListener('pointermove', (e) => {
+        const el = e.target.closest ? e.target.closest('.tilt') : null;
+        if (cur && cur !== el) reset();
+        if (!el) return;
+        cur = el;
+        const r = el.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = `perspective(1000px) rotateX(${(-py * 5).toFixed(2)}deg) rotateY(${(px * 7).toFixed(2)}deg) translateY(-4px)`;
+      }, { passive: true });
+      document.documentElement.addEventListener('pointerleave', reset);
+    }
+
+    // Buttons lean toward the cursor
+    function setupMagnetic() {
+      if (!finePointer) return;
+      document.querySelectorAll('.magnetic').forEach((el) => {
+        el.addEventListener('pointermove', (e) => {
+          const r = el.getBoundingClientRect();
+          el.style.transform = `translate(${((e.clientX - r.left - r.width / 2) * 0.22).toFixed(1)}px, ${((e.clientY - r.top - r.height / 2) * 0.35).toFixed(1)}px)`;
+        });
+        el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+      });
+    }
+
+    // Soft glow that trails the cursor across the page
+    function setupCursorGlow() {
+      if (!finePointer) return;
+      const glow = document.getElementById('cursor-glow');
+      glow.classList.remove('hidden');
+      let x = 0, y = 0, tx = 0, ty = 0, raf = 0;
+      const loop = () => {
+        x += (tx - x) * 0.12; y += (ty - y) * 0.12;
+        glow.style.transform = `translate(${x - 280}px, ${y - 280}px)`;
+        raf = Math.abs(tx - x) + Math.abs(ty - y) > 0.5 ? requestAnimationFrame(loop) : 0;
+      };
+      document.addEventListener('pointermove', (e) => {
+        tx = e.clientX; ty = e.clientY;
+        glow.classList.remove('opacity-0');
+        if (!raf) raf = requestAnimationFrame(loop);
+      }, { passive: true });
+      document.documentElement.addEventListener('pointerleave', () => glow.classList.add('opacity-0'));
+    }
+
+    // Typewriter role line
+    function setupTyper() {
+      const el = document.getElementById('typer');
+      let r = 0, i = ROLES[0].length, deleting = true;
+      const tick = () => {
+        const word = ROLES[r];
+        i += deleting ? -1 : 1;
+        el.textContent = word.slice(0, i);
+        let delay = deleting ? 35 : 70;
+        if (!deleting && i === word.length) { deleting = true; delay = 2200; }
+        else if (deleting && i === 0) { deleting = false; r = (r + 1) % ROLES.length; delay = 300; }
+        setTimeout(tick, delay);
+      };
+      setTimeout(tick, 2600);
+    }
+
+    // Theme toggle (dark by default, persisted)
+    function setupTheme() {
+      const btn = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const sync = () => btn.setAttribute('aria-pressed', String(root.classList.contains('dark')));
+      sync();
+      btn.addEventListener('click', () => {
+        root.classList.toggle('dark');
+        try { localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); } catch (e) {}
+        sync();
+      });
+    }
+
+    // Mobile menu
+    function setupMenu() {
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const setOpen = (open) => {
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        btn.querySelector('[data-when="closed"]').classList.toggle('hidden', open);
+        btn.querySelector('[data-when="open"]').classList.toggle('hidden', !open);
+      };
+      btn.addEventListener('click', () => setOpen(btn.getAttribute('aria-expanded') !== 'true'));
+      menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setOpen(false); btn.focus(); }
+      });
+      window.matchMedia('(min-width: 768px)').addEventListener?.('change', (e) => { if (e.matches) setOpen(false); });
+    }
+
+    // Scroll progress, parallax, timeline fill, back-to-top
+    const progress = document.getElementById('progress');
+    const toTop = document.getElementById('to-top');
+    const portrait = document.getElementById('portrait');
+    const blobA = document.getElementById('blob-a');
+    const blobB = document.getElementById('blob-b');
+    const tlWrap = document.getElementById('tl-wrap');
+    const tlFill = document.getElementById('tl-fill');
+    function onScroll() {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+
+      if (scrollY < innerHeight * 1.5) portrait.style.translate = `0 ${(scrollY * 0.09).toFixed(1)}px`;
+      blobA.style.translate = `0 ${(scrollY * -0.12).toFixed(1)}px`;
+      blobB.style.translate = `0 ${(scrollY * -0.06).toFixed(1)}px`;
+      const r = tlWrap.getBoundingClientRect();
+      const p = Math.min(Math.max((innerHeight * 0.65 - r.top) / r.height, 0), 1);
+      tlFill.style.transform = `scaleY(${p.toFixed(3)})`;
+
+      const showTop = scrollY > 700;
+      toTop.classList.toggle('opacity-0', !showTop);
+      toTop.classList.toggle('translate-y-4', !showTop);
+      toTop.classList.toggle('pointer-events-none', !showTop);
+    }
+
+    // Scrollspy for nav links
+    function setupScrollSpy() {
+      const links = [...document.querySelectorAll('.nav-link[href^="#"]')];
+      if (!hasIO) return;
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const id = '#' + e.target.id;
+          links.forEach((l) => {
+            const active = l.getAttribute('href') === id;
+            l.classList.toggle('is-active', active);
+            active ? l.setAttribute('aria-current', 'true') : l.removeAttribute('aria-current');
+          });
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      ['home', 'about', 'insights', 'stack', 'projects', 'experience', 'contact'].forEach((id) => spy.observe(document.getElementById(id)));
+    }
+
+    // Project filters
+    function setupFilters() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const counts = {
+        featured: PROJECTS.filter((p) => p.featured).length,
+        gov: PROJECTS.filter((p) => p.cat === 'gov').length,
+        web: PROJECTS.filter((p) => p.cat === 'web').length,
+        all: PROJECTS.filter((p) => p.cat !== 'eng').length,
+      };
+      buttons.forEach((b) => {
+        b.insertAdjacentHTML('beforeend', ` <span class="opacity-60">${String(counts[b.dataset.filter]).padStart(2, '0')}</span>`);
+        b.addEventListener('click', () => {
+          buttons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+          renderProjects(b.dataset.filter);
+        });
+      });
+      renderProjects('featured');
+    }
+
+    // Contact form (Web3Forms, with mailto fallback)
+    function setupContactForm() {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      const submit = document.getElementById('cf-submit');
+      const label = submit.querySelector('span');
+
+      const show = (msg, kind) => {
+        const styles = {
+          success: 'border border-emerald-500/30 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300',
+          error: 'border border-rose-500/30 bg-rose-500/10 text-rose-800 dark:text-rose-300',
+          info: 'border border-cyan-500/30 bg-cyan-500/10 text-cyan-800 dark:text-cyan-200',
+        };
+        status.className = `rounded-xl px-4 py-3 text-sm ${styles[kind]}`;
+        status.innerHTML = msg;
+      };
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        const data = Object.fromEntries(new FormData(form));
+        if (data.botcheck) return; // bot filled the honeypot
+
+        const subject = data.subject || `Portfolio inquiry from ${data.name}`;
+        const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`${data.message}\n\n— ${data.name} (${data.email})`)}`;
+
+        if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.startsWith('YOUR_')) {
+          window.location.href = mailto;
+          show('Opening your email app to send this message…', 'info');
+          return;
+        }
+
+        submit.disabled = true;
+        submit.classList.add('opacity-70', 'cursor-wait');
+        label.textContent = 'Sending…';
+
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({
+              access_key: WEB3FORMS_ACCESS_KEY,
+              subject: `[Portfolio] ${subject}`,
+              from_name: 'Raychard Atienza Portfolio',
+              name: data.name,
+              email: data.email,
+              message: data.message,
+            }),
+          });
+          const json = await res.json();
+          if (!res.ok || !json.success) throw new Error(json.message || 'Request failed');
+          form.reset();
+          show('Thanks! Your message was sent. I\'ll reply as soon as I can.', 'success');
+        } catch (err) {
+          show(`Sorry, the message couldn't be sent. Please <a class="font-semibold underline" href="${mailto}">email me directly</a>.`, 'error');
+        } finally {
+          submit.disabled = false;
+          submit.classList.remove('opacity-70', 'cursor-wait');
+          label.textContent = 'Send message';
+        }
+      });
+    }
+
+    /* =====================================================================
+       INIT
+       ===================================================================== */
+    hydrateIcons();
+    splitHeadline();
+    renderMarquee();
+    setupTheme();
+    setupMenu();
+    setupFilters();
+    renderArchive();
+    renderTimeline();
+    renderCareer();
+    renderHours();
+    renderTech();
+    renderMix();
+    renderSystems();
+    setupInView();
+    setupTooltips();
+    setupSpotlight();
+    setupNetwork();
+    setupTyper();
+    setupScramble();
+    setupTilt();
+    setupMagnetic();
+    setupCursorGlow();
+    setupScrollSpy();
+    setupContactForm();
+    observeReveals();
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

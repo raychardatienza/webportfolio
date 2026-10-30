@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.74" cy="0.48" r="0.55"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.30"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M340 270v-48l22-12 22 12v48z" stroke="#38bdf8"/><path d="M352 234h6M366 234h6M352 248h6M366 248h6M358 270v-10h8v10" stroke="#38bdf8" stroke-width="2"/><path d="M460 156v-48l22-12 22 12v48z" stroke="#38bdf8"/><path d="M472 120h6M486 120h6M472 134h6M486 134h6M478 156v-10h8v10" stroke="#38bdf8" stroke-width="2"/><path d="M566 270v-48l22-12 22 12v48z" stroke="#38bdf8"/><path d="M578 234h6M592 234h6M578 248h6M592 248h6M584 270v-10h8v10" stroke="#38bdf8" stroke-width="2"/>
+      <path d="M384 238C420 238 420 150 456 140M508 140C548 150 560 200 566 230" stroke="#a78bfa" stroke-dasharray="5 7"/>
+      <path d="M404 166h28l10 10v36h-38z" stroke="#e6f1ff"/><path d="M432 166v10h10M412 186h22M412 196h16" stroke="#e6f1ff" stroke-width="2"/>
+      <path d="M546 156a12 12 0 0 1 12 12c0 9-12 20-12 20s-12-11-12-20a12 12 0 0 1 12-12z" stroke="#fbbf24"/><circle cx="546" cy="168" r="4" stroke="#fbbf24"/></g>
+
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// document routing &amp; tracking</text>
+  <rect x="552" y="18" width="68" height="24" rx="6" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".3"/>
+  <text x="586" y="34" font-family="Consolas,'Courier New',monospace" font-size="12" font-weight="700" fill="#e6f1ff" fill-opacity="1" text-anchor="middle">NCIP</text>
+  <text x="28" y="322" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="60" font-weight="800" fill="#ffffff" filter="url(#neon)" letter-spacing="-1">DTS v2</text>
+<rect x="0" y="356" width="640" height="4" fill="#38bdf8" fill-opacity="0.85"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050813"/><stop offset="1" stop-color="#0c1226"/></linearGradient>
+  <radialGradient id="glow" cx="0.74" cy="0.48" r="0.55"><stop offset="0" stop-color="#fbbf24" stop-opacity="0.30"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)"/>
+<rect width="640" height="360" fill="url(#glow)"/>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M470 70l84 32-84 32-84-32z" stroke="#fbbf24"/>
+      <path d="M418 116v34c0 18 104 18 104 0v-34" stroke="#fbbf24"/><path d="M554 102v52" stroke="#fbbf24"/><circle cx="554" cy="160" r="5" stroke="#fbbf24"/>
+      <path d="M380 222c30-12 60-12 90 4 30-16 60-16 90-4v62c-30-12-60-12-90 4-30-16-60-16-90-4z" stroke="#e6f1ff" stroke-opacity=".85"/><path d="M470 226v62" stroke="#e6f1ff" stroke-opacity=".85"/>
+      <path d="M396 244h56M396 258h46M488 244h56M488 258h40" stroke="#64748b" stroke-width="2"/>
+      <path d="M352 200l26-22 20 10 28-30" stroke="#22d3ee"/><path d="M414 158h12v12" stroke="#22d3ee"/></g>
+
+<text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// educational assistance</text>
+  <rect x="552" y="18" width="68" height="24" rx="6" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".3"/>
+  <text x="586" y="34" font-family="Consolas,'Courier New',monospace" font-size="12" font-weight="700" fill="#e6f1ff" fill-opacity="1" text-anchor="middle">NCIP</text>
+  <text x="28" y="322" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="800" fill="#ffffff" filter="url(#neon)" letter-spacing="-1">EAIS v3</text>
+<rect x="0" y="356" width="640" height="4" fill="#fbbf24" fill-opacity="0.85"/>
+</svg>

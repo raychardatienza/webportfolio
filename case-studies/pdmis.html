@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PDMIS Case Study — Raychard Atienza</title>
+  <meta name="description" content="Case study: PDMIS, the Project Development and Management Information System of the National Commission on Indigenous Peoples, built with Laravel 12, Inertia.js, React and MySQL." />
+  <meta name="author" content="Raychard E. Atienza" />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="canonical" href="https://raychardatienza.github.io/portfolio/case-studies/pdmis.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="PDMIS Case Study — Raychard Atienza" />
+  <meta property="og:description" content="How NCIP's project planning, approval, signing and procurement-planning workflow was built on Laravel 12 + React." />
+  <meta property="og:url" content="https://raychardatienza.github.io/portfolio/case-studies/pdmis.html" />
+  <meta property="og:image" content="https://raychardatienza.github.io/portfolio/assets/images/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/icons/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png" />
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      if (saved !== 'light') root.classList.add('dark');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body class="relative font-sans">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-cyan-400 focus:px-4 focus:py-2 focus:text-void-950">Skip to content</a>
+
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+    <div class="bg-grid absolute inset-0"></div>
+    <div class="absolute -top-48 left-[5%]"><div class="drift-a h-[560px] w-[560px] rounded-full bg-cyan-300/30 blur-[130px] dark:bg-cyan-500/[0.13]"></div></div>
+    <div class="absolute right-[-12%] top-[35%]"><div class="drift-b h-[600px] w-[600px] rounded-full bg-violet-300/25 blur-[140px] dark:bg-violet-600/[0.12]"></div></div>
+  </div>
+
+  <header class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4">
+    <nav class="glass mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-3 sm:px-4" aria-label="Primary">
+      <a href="../index.html#projects" class="btn-ghost btn-sm">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to portfolio
+      </a>
+      <span class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500 sm:block">case study · pdmis</span>
+      <button id="theme-toggle" type="button" class="icon-btn h-9 w-9" aria-label="Toggle dark mode" aria-pressed="true">
+        <svg class="h-[18px] w-[18px] dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <svg class="hidden h-[18px] w-[18px] dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="relative pb-12 pt-32 sm:pt-40">
+      <div class="container-x">
+        <div class="reveal max-w-4xl">
+          <p class="eyebrow">[case study] // pdmis</p>
+          <h1 class="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            Project Development &amp; Management <span class="text-neon">Information System</span>
+          </h1>
+          <p class="mt-6 max-w-3xl text-base leading-relaxed sm:text-lg">
+            PDMIS moves the National Commission on Indigenous Peoples' project planning onto one system:
+            proposals, activity designs, work and financial plans and procurement plans, each with a traceable
+            review, recommendation, approval and digital-signing trail.
+          </p>
+        </div>
+
+        <dl class="reveal mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Role</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Co-creator, NCIP-ICTD dev team</dd></div>
+          <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Year</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">2026</dd></div>
+          <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Type</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Internal government web app</dd></div>
+          <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Stack</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Laravel 12 · Inertia · React · MySQL</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ BY THE NUMBERS ============ -->
+    <section class="relative py-10" aria-labelledby="numbers-title">
+      <div class="container-x">
+        <h2 id="numbers-title" class="sr-only">PDMIS by the numbers</h2>
+        <dl class="reveal grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div class="glass spot p-5"><dd class="font-display text-3xl font-bold text-slate-900 dark:text-ink" data-count="268">268</dd><dt class="mt-1 text-xs">application routes</dt></div>
+          <div class="glass spot p-5"><dd class="font-display text-3xl font-bold text-slate-900 dark:text-ink" data-count="90">90</dd><dt class="mt-1 text-xs">controllers</dt></div>
+          <div class="glass spot p-5"><dd class="font-display text-3xl font-bold text-slate-900 dark:text-ink" data-count="75">75</dd><dt class="mt-1 text-xs">Eloquent models</dt></div>
+          <div class="glass spot p-5"><dd class="font-display text-3xl font-bold text-slate-900 dark:text-ink" data-count="93">93</dd><dt class="mt-1 text-xs">database migrations</dt></div>
+          <div class="glass spot p-5"><dd class="font-display text-3xl font-bold text-slate-900 dark:text-ink" data-count="21">21</dd><dt class="mt-1 text-xs">reference-data libraries</dt></div>
+          <div class="glass spot p-5"><dd class="font-display text-3xl font-bold text-slate-900 dark:text-ink" data-count="7">7</dd><dt class="mt-1 text-xs">step proposal wizard</dt></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section">
+      <div class="container-x grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+        <div class="reveal">
+          <p class="eyebrow">[01] // the problem</p>
+          <h2 class="section-title">Planning documents that <span class="text-neon">travel between offices</span>.</h2>
+        </div>
+        <div class="reveal max-w-3xl space-y-5 text-base leading-relaxed sm:text-lg">
+          <p>
+            A Commission project passes through several documents before money is spent: a <strong class="font-semibold text-slate-900 dark:text-ink">Mother Project Proposal (MPP)</strong>,
+            <strong class="font-semibold text-slate-900 dark:text-ink">Activity Designs</strong>, <strong class="font-semibold text-slate-900 dark:text-ink">Work and Financial Plans (WFP)</strong> at agency, regional and program level,
+            a <strong class="font-semibold text-slate-900 dark:text-ink">Project Procurement Management Plan (PPMP)</strong> and the consolidated <strong class="font-semibold text-slate-900 dark:text-ink">Annual Procurement Plan (APP)</strong>.
+          </p>
+          <p>
+            Each one is reviewed, commented on, returned for revision, recommended, approved and signed by different people.
+            When that happens in spreadsheets, email and paper, nobody can see where a document is, who last touched it, or whether a printed copy is genuine.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORKFLOW ============ -->
+    <section class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[02] // the workflow</p>
+          <h2 class="section-title">One path from <span class="text-neon">draft to signed plan</span>.</h2>
+          <p class="section-lead">Every document follows the same state machine, so users learn it once and every step leaves an audit trail.</p>
+        </div>
+
+        <div class="reveal card relative mt-12 overflow-hidden p-6 sm:p-10">
+          <span class="hud-corners" aria-hidden="true"></span>
+          <span class="border-spin" aria-hidden="true"></span>
+          <ol class="relative grid gap-4 lg:grid-cols-6">
+            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">01 · draft</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">7-step wizard</p>
+              <p class="mt-1 text-xs leading-relaxed">Proponents build the proposal step by step, with library-driven fields.</p>
+            </li>
+            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">02 · review</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Send for review</p>
+              <p class="mt-1 text-xs leading-relaxed">Reviewers comment in context; office users are notified.</p>
+            </li>
+            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">03 · recommend</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Recommendation</p>
+              <p class="mt-1 text-xs leading-relaxed">Recommending officials set suggested amounts or return it for revision.</p>
+            </li>
+            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">04 · approve</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Approval</p>
+              <p class="mt-1 text-xs leading-relaxed">Approve, reject, or send back, each action logged with its comment.</p>
+            </li>
+            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">05 · sign</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Digital signature</p>
+              <p class="mt-1 text-xs leading-relaxed">The generated PDF is signed through NCIP's iPLUMA e-signature service.</p>
+            </li>
+            <li class="flow-step relative rounded-xl border border-cyan-500/50 bg-cyan-50/80 p-4 shadow-[0_0_30px_-10px_rgba(34,211,238,0.7)] dark:border-cyan-300/40 dark:bg-cyan-300/[0.06]">
+              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">06 · plan</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">WFP → PPMP → APP</p>
+              <p class="mt-1 text-xs leading-relaxed">Approved work feeds the financial and procurement plans.</p>
+            </li>
+          </ol>
+          <div class="relative mt-6 flex items-center gap-3 rounded-xl border border-dashed border-amber-500/50 bg-amber-500/[0.06] px-4 py-3 text-sm">
+            <svg class="h-5 w-5 flex-none text-amber-600 dark:text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+            <span><strong class="font-semibold text-slate-900 dark:text-ink">Return-for-revision loop:</strong> any reviewer can send a document back to the proponent with comments. It then re-enters the flow with its full history intact.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MODULES ============ -->
+    <section class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[03] // what's inside</p>
+          <h2 class="section-title">The <span class="text-neon">modules</span>.</h2>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="reveal card card-hover spot tilt p-6">
+            <h3 class="text-lg font-bold">Mother Project Proposals</h3>
+            <p class="mt-2 text-sm leading-relaxed">A 7-step guided wizard, review queues per role, comments, return for revision, recommendation with suggested amounts, approval, version history with statistics, and printable zero drafts.</p>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <h3 class="text-lg font-bold">Activity Designs</h3>
+            <p class="mt-2 text-sm leading-relaxed">Multi-step activity designs linked to their proposal, submitted for review, rendered to PDF, signed, and verifiable through a public link with its approval trail.</p>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <h3 class="text-lg font-bold">Work &amp; Financial Plans</h3>
+            <p class="mt-2 text-sm leading-relaxed">WFPs at agency, regional and program level, a merged agency-wide view, approval, and export for reporting.</p>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <h3 class="text-lg font-bold">Procurement planning</h3>
+            <p class="mt-2 text-sm leading-relaxed">PPMP creation, review, approval and revision tracking, with the Annual Procurement Plan generated and grouped from approved PPMPs.</p>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <h3 class="text-lg font-bold">Security &amp; administration</h3>
+            <p class="mt-2 text-sm leading-relaxed">Roles and privileges, account lockout and unlock, forced change of default passwords, user activation, audit logs, maintenance mode, system notifications and in-app issue reports.</p>
+          </article>
+          <article class="reveal card card-hover spot tilt p-6">
+            <h3 class="text-lg font-bold">Integrations &amp; reference data</h3>
+            <p class="mt-2 text-sm leading-relaxed">Sanctum API tokens with revocation and usage analytics, a document-tracking (DOTS) integration, and 21 reference libraries such as PSGC locations, UACS codes, KPIs, funding sources and signatories.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARCHITECTURE ============ -->
+    <section class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[04] // architecture</p>
+          <h2 class="section-title">A modern monolith, <span class="text-neon">no separate SPA</span>.</h2>
+          <p class="section-lead">Inertia.js lets React pages be served by Laravel routes and controllers, giving a single-page-app feel without maintaining a separate API for the UI.</p>
+        </div>
+
+        <div class="reveal card relative mt-12 p-6 sm:p-10">
+          <span class="hud-corners" aria-hidden="true"></span>
+          <div class="grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1.3fr_auto_1fr]">
+            <div class="rounded-xl border border-slate-200/80 bg-white/70 p-5 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+              <p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">browser</p>
+              <p class="mt-1 font-display text-lg font-bold text-slate-900 dark:text-ink">React 18 + Inertia</p>
+              <ul class="mt-3 space-y-1 text-xs"><li>Tailwind CSS · MUI · Headless UI</li><li>Chart.js dashboards · FullCalendar</li><li>ExcelJS / xlsx exports</li><li>Vite build · Vitest</li></ul>
+            </div>
+            <div class="flex items-center justify-center font-mono text-xs text-cyan-700 dark:text-cyan-300" aria-hidden="true"><span class="lg:hidden">↕</span><span class="hidden lg:inline">⇄</span></div>
+            <div class="rounded-xl border border-laravel/40 bg-laravel/[0.05] p-5 shadow-[0_0_30px_-12px_rgba(255,45,32,0.6)]">
+              <p class="font-mono text-[10.5px] uppercase tracking-wider text-laravel">server</p>
+              <p class="mt-1 font-display text-lg font-bold text-slate-900 dark:text-ink">Laravel 12 · PHP 8.2</p>
+              <ul class="mt-3 space-y-1 text-xs"><li>Controllers per workflow stage, services for signing &amp; notifications</li><li>Policies, roles &amp; privileges</li><li>Sanctum API tokens</li><li>DomPDF · FPDF · PhpSpreadsheet</li><li>Hashids for public document links</li><li>Pest tests</li></ul>
+            </div>
+            <div class="flex items-center justify-center font-mono text-xs text-cyan-700 dark:text-cyan-300" aria-hidden="true"><span class="lg:hidden">↕</span><span class="hidden lg:inline">⇄</span></div>
+            <div class="grid gap-3">
+              <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">data</p><p class="font-semibold text-slate-900 dark:text-ink">MySQL</p><p class="text-xs">93 migrations · 75 models</p></div>
+              <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">signing</p><p class="font-semibold text-slate-900 dark:text-ink">iPLUMA e-signature</p><p class="text-xs">via proxy controller + signing service</p></div>
+              <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">integrations</p><p class="font-semibold text-slate-900 dark:text-ink">Mail · DOTS · API clients</p><p class="text-xs">notifications, tracking, token-based access</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DECISIONS ============ -->
+    <section class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[05] // engineering decisions</p>
+          <h2 class="section-title">Choices that <span class="text-neon">made it work</span>.</h2>
+        </div>
+        <div class="mt-12 grid gap-6 lg:grid-cols-2">
+          <article class="reveal card p-6 sm:p-8">
+            <p class="font-mono text-xs text-cyan-700 dark:text-cyan-300">01</p>
+            <h3 class="mt-1 text-lg font-bold">Signing that can't block the workflow</h3>
+            <p class="mt-2 text-sm leading-relaxed">Signed PDFs come back from the iPLUMA service through a server-side proxy, are validated, and are stored against the document. Each approval stage also has an explicit "skip signature" path, so an outage of an external service never stalls approvals.</p>
+          </article>
+          <article class="reveal card p-6 sm:p-8">
+            <p class="font-mono text-xs text-cyan-700 dark:text-cyan-300">02</p>
+            <h3 class="mt-1 text-lg font-bold">Verifiable documents without exposing IDs</h3>
+            <p class="mt-2 text-sm leading-relaxed">Activity designs get a public PDF and approval-trail link built on Hashids, not raw database IDs. Anyone holding a printed copy can confirm it's genuine, and internal record numbers stay private.</p>
+          </article>
+          <article class="reveal card p-6 sm:p-8">
+            <p class="font-mono text-xs text-cyan-700 dark:text-cyan-300">03</p>
+            <h3 class="mt-1 text-lg font-bold">Reference libraries instead of free text</h3>
+            <p class="mt-2 text-sm leading-relaxed">Locations (PSGC), account codes (UACS), KPIs, funding sources, procurement modes and signatories live in 21 maintained libraries. Forms pick from them, which keeps data consistent enough to consolidate into agency-wide plans.</p>
+          </article>
+          <article class="reveal card p-6 sm:p-8">
+            <p class="font-mono text-xs text-cyan-700 dark:text-cyan-300">04</p>
+            <h3 class="mt-1 text-lg font-bold">Operational safety built in</h3>
+            <p class="mt-2 text-sm leading-relaxed">Audit logs record who did what. Accounts lock after repeated failures and can be unlocked by admins. Default passwords must be changed on first login. A maintenance mode with an admin bypass lets administrators take the system offline for updates while still checking it themselves.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROLE / OUTCOME ============ -->
+    <!-- TODO (Raychard): add real numbers here when available, e.g. offices onboarded, proposals processed, users trained, approval time before vs after. -->
+    <section class="section">
+      <div class="container-x grid gap-6 lg:grid-cols-2">
+        <article class="reveal card relative p-6 sm:p-8">
+          <span class="hud-corners" aria-hidden="true"></span>
+          <p class="eyebrow">[06] // my role</p>
+          <p class="text-sm leading-relaxed sm:text-base">
+            I co-created PDMIS as part of the NCIP Information and Communications Technology Division development team in 2026. I worked across development,
+            requirements gathering with end users, testing and QA, and user onboarding, the same responsibilities I carry across NCIP's other in-house systems.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="chip">Laravel 12</span><span class="chip">Inertia.js</span><span class="chip">React.js</span><span class="chip">Tailwind CSS</span><span class="chip">MySQL</span><span class="chip">Sanctum</span><span class="chip">Chart.js</span><span class="chip">Pest</span><span class="chip">Vitest</span>
+          </div>
+        </article>
+        <article class="reveal card relative p-6 sm:p-8">
+          <p class="eyebrow">[07] // outcome</p>
+          <ul class="space-y-3 text-sm leading-relaxed sm:text-base">
+            <li class="flex gap-3"><span class="mt-1 text-cyan-600 dark:text-cyan-300">◆</span>One system from proposal to procurement plan, replacing documents passed around by hand.</li>
+            <li class="flex gap-3"><span class="mt-1 text-cyan-600 dark:text-cyan-300">◆</span>Every review, comment, return and approval is traceable in the audit trail.</li>
+            <li class="flex gap-3"><span class="mt-1 text-cyan-600 dark:text-cyan-300">◆</span>Digitally signed, publicly verifiable documents instead of wet-ink-only copies.</li>
+            <li class="flex gap-3"><span class="mt-1 text-cyan-600 dark:text-cyan-300">◆</span>Consistent reference data, so regional and program plans roll up into agency-wide views.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="pb-24">
+      <div class="container-x">
+        <div class="reveal glass flex flex-col items-start justify-between gap-6 p-6 sm:flex-row sm:items-center sm:p-8">
+          <p class="max-w-2xl text-sm">
+            <strong class="font-semibold text-slate-900 dark:text-ink">Why no screenshots?</strong> PDMIS is an internal government system that holds real agency data,
+            so its interface is not shown publicly. I'm happy to walk through it in an interview.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="../index.html#projects" class="btn-ghost">More projects</a>
+            <a href="../index.html#contact" class="btn-primary">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200/80 py-10 dark:border-cyan-300/10">
+    <div class="container-x font-mono text-xs">© <span id="year">2026</span> Raychard E. Atienza · <a class="underline-offset-4 hover:text-cyan-700 hover:underline dark:hover:text-cyan-300" href="../index.html">back to portfolio</a></div>
+  </footer>
+
+  <script>
+    // Theme toggle (shared preference with the main page)
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle');
+    const syncTheme = () => themeBtn.setAttribute('aria-pressed', String(root.classList.contains('dark')));
+    syncTheme();
+    themeBtn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      try { localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); } catch (e) {}
+      syncTheme();
+    });
+
+    // Staggered scroll reveal + count-up numbers
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        el.classList.add('is-visible');
+        // Drop the reveal transition afterwards so hover effects stay snappy
+        setTimeout(() => el.classList.remove('reveal', 'is-visible'), parseInt(el.style.getPropertyValue('--rd') || '0', 10) + 950);
+        el.querySelectorAll('[data-count]').forEach((n) => {
+          const target = +n.dataset.count, t0 = performance.now();
+          const step = (t) => { const p = Math.min((t - t0) / 1200, 1); n.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
+          requestAnimationFrame(step);
+        });
+        io.unobserve(el);
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => {
+      const sibs = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
+      el.style.setProperty('--rd', `${(Math.max(sibs.indexOf(el), 0) % 6) * 90}ms`);
+      io.observe(el);
+    });
+
+    // Pointer spotlight + tilt on cards
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      document.addEventListener('pointermove', (e) => {
+        const card = e.target.closest && e.target.closest('.spot');
+        document.querySelectorAll('.tilt').forEach((t) => { if (t !== card) t.style.transform = ''; });
+        if (!card) return;
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        card.style.setProperty('--my', `${e.clientY - r.top}px`);
+        if (card.classList.contains('tilt')) {
+          const px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(1000px) rotateX(${(-py * 5).toFixed(2)}deg) rotateY(${(px * 7).toFixed(2)}deg) translateY(-4px)`;
+        }
+      }, { passive: true });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

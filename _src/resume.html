@@ -1,0 +1,173 @@
+<!doctype html>
+<!--
+  Resume source. Regenerate the PDF after editing (from the Portfolio folder):
+  "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --no-pdf-header-footer --print-to-pdf="assets\resume\Raychard-Atienza-Resume.pdf" "_src\resume.html"
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Raychard E. Atienza — Resume</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ink: #0b1220; --ink-2: #334155; --ink-3: #64748b; --accent: #0e7490; --line: #dbe3ec; --laravel: #e5352b; }
+    body { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; color: var(--ink-2); font-size: 9.3pt; line-height: 1.38; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 210mm; min-height: 297mm; padding: 12mm 15mm 12mm; position: relative; }
+    .page + .page { page-break-before: always; }
+    .page::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5mm; background: linear-gradient(#22d3ee, #8b5cf6 60%, #ff2d20); }
+
+    header { display: flex; gap: 16px; align-items: center; padding-bottom: 12px; border-bottom: 1.5px solid var(--ink); }
+    header img { width: 84px; height: 84px; border-radius: 14px; object-fit: cover; border: 2px solid #22d3ee; }
+    h1 { font-size: 22pt; letter-spacing: -.01em; color: var(--ink); line-height: 1.05; }
+    h1 small { font-size: 10pt; font-weight: 600; color: var(--accent); letter-spacing: .08em; margin-left: 6px; }
+    .role { font-size: 11pt; font-weight: 600; color: var(--ink); margin-top: 3px; }
+    .contact { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 8.6pt; color: var(--ink-2); }
+    .contact a { color: inherit; text-decoration: none; }
+    .contact b { color: var(--accent); font-weight: 600; }
+
+    h2 { font-size: 9pt; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin: 11px 0 6px; display: flex; align-items: center; gap: 8px; }
+    h2::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+    p.summary { color: var(--ink-2); }
+
+    .skills { display: grid; grid-template-columns: 92px 1fr; gap: 3px 10px; }
+    .skills dt { font-weight: 700; color: var(--ink); }
+    .hl { color: var(--laravel); font-weight: 700; }
+
+    .job { margin-bottom: 7px; break-inside: avoid; }
+    .job-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+    .job h3 { font-size: 10.6pt; color: var(--ink); }
+    .when { font-size: 8.6pt; font-weight: 600; color: var(--accent); white-space: nowrap; }
+    .org { font-size: 8.8pt; color: var(--ink-3); margin-bottom: 3px; }
+    ul { padding-left: 14px; }
+    li { margin: 1px 0; }
+    li::marker { color: #22d3ee; }
+
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+    .item { margin-bottom: 6px; break-inside: avoid; }
+    .item b { color: var(--ink); }
+    .muted { color: var(--ink-3); font-size: 8.6pt; }
+    .tag { display: inline-block; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; font-size: 8pt; margin: 1px 2px 1px 0; color: var(--ink-2); }
+    footer { position: absolute; bottom: 8mm; left: 15mm; right: 15mm; font-size: 7.6pt; color: var(--ink-3); display: flex; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <!-- ======================= PAGE 1 ======================= -->
+  <section class="page">
+    <header>
+      <img src="./photo-formal.jpg" alt="" />
+      <div>
+        <h1>Raychard E. Atienza<small>CPMS · CASM · CPSCA</small></h1>
+        <p class="role">Full-Stack Developer · Information System Analyst II</p>
+        <div class="contact">
+          <span>Quezon City, Metro Manila, PH</span>
+          <a href="mailto:raychardatienza@gmail.com"><b>✉</b> raychardatienza@gmail.com</a>
+          <span><b>☏</b> +63 976 568 4552</span>
+          <a href="https://www.linkedin.com/in/raychardatienza/"><b>in</b> linkedin.com/in/raychardatienza</a>
+          <a href="https://github.com/raychardatienza"><b>gh</b> github.com/raychardatienza</a>
+          <a href="https://raychardatienza.github.io/portfolio/"><b>↗</b> raychardatienza.github.io/portfolio</a>
+        </div>
+      </div>
+    </header>
+
+    <h2>Profile</h2>
+    <p class="summary">
+      Full-stack developer and Information System Analyst II at the National Commission on Indigenous Peoples (NCIP), where I co-create the agency's
+      in-house information systems with <span class="hl">Laravel</span>, React and MySQL, from requirements and development through testing, deployment and user training.
+      Computer Engineering graduate with a field background in security systems, 780+ hours of technical training, and 2026 certifications in
+      project management, Agile Scrum, and project scheduling and controls. Career Service Professional eligible.
+    </p>
+
+    <h2>Technical Skills</h2>
+    <dl class="skills">
+      <dt>Back-end</dt><dd><span class="hl">Laravel</span>, PHP, Node.js, Express.js, Back-end API (REST), Laravel Sanctum, C# / ASP.NET</dd>
+      <dt>Front-end</dt><dd>HTML5, CSS3, JavaScript (ES6+), React.js, Inertia.js, Tailwind CSS, Bootstrap, Responsive Web App, Web Design</dd>
+      <dt>Databases</dt><dd>MySQL, MongoDB, Eloquent ORM, Mongoose</dd>
+      <dt>Tools</dt><dd>Git, GitHub, GitLab, Postman, Vercel, Heroku, Vite, Pest, VS Code, Visual Studio, Microsoft Power BI</dd>
+      <dt>Practice</dt><dd>Full-stack development, system analysis, UAT &amp; QA, technical documentation, end-user training, project management, Agile Scrum</dd>
+    </dl>
+
+    <h2>Experience</h2>
+    <div class="job">
+      <div class="job-head"><h3>Information System Analyst II</h3><span class="when">Jun 2025 – Present</span></div>
+      <p class="org">National Commission on Indigenous Peoples · Information and Communications Technology Division · Quezon City</p>
+      <ul>
+        <li>Co-created NCIP systems launched in 2026: the Data Repository on Indigenous Peoples (DRIP), the Project Development and Management Information System (PDMIS), the COC system, the IPS and IPO system, and the Single Sign-On (SSO) website of the IPSGSIS.</li>
+        <li>PDMIS (Laravel 12, Inertia.js, React, MySQL): multi-level review, recommendation and approval workflows with return-for-revision, iPLUMA digital signing, PDF/Excel reporting, Sanctum API tokens and audit logging.</li>
+        <li>Focal person for the Accounting and Budget Information System (ABIS).</li>
+        <li>Conducted user training for employees on the Document Tracking System Version 2.</li>
+        <li>Develop, enhance and maintain other NCIP in-house information systems.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3>Project Development Officer II</h3><span class="when">Jan 2024 – Jun 2025</span></div>
+      <p class="org">National Commission on Indigenous Peoples · Information and Communications Technology Division · Contract of Service</p>
+      <ul>
+        <li>Collaborated on the development of the Document Tracking System Version 2 and the Quick Response Authenticator System (QRAS) for COC confirmation.</li>
+        <li>Collaborated on enhancing the Educational Assistance Information System (EAIS) Version 3.</li>
+        <li>Facilitated ABIS from requirements documentation and vendor and technology evaluation through procurement to deployment.</li>
+        <li>Planned and conducted end-user orientations, technical trainings and workshops, and provided technical support.</li>
+        <li>Performed testing and quality assurance; maintained documentation of system configurations, procedures and troubleshooting; monitored in-house systems.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3>Systems Engineer</h3><span class="when">Dec 2016 – Apr 2018</span></div>
+      <p class="org">Calvelo Engineered Systems Corp. · Security Systems Division · Makati City</p>
+      <ul>
+        <li>Achieved 100% project completion under my supervision, resulting in customer satisfaction; trained and mentored technicians.</li>
+        <li>Delivered standalone and PC-based access control (cards, readers, keypads, biometrics, locks) integrated with management software.</li>
+        <li>Delivered end-to-end network video surveillance solutions and installed security software systems for various industries.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3>Project Support Engineer (OJT)</h3><span class="when">Jan 2015 – Jan 2016</span></div>
+      <p class="org">MG Exeo Network Inc.</p>
+      <ul>
+        <li>Copper and fiber installation for PLDT home services; telephone cabinet troubleshooting following safety protocols.</li>
+      </ul>
+    </div>
+    <footer><span>Raychard E. Atienza · Resume</span><span>1 / 2</span></footer>
+  </section>
+
+  <!-- ======================= PAGE 2 ======================= -->
+  <section class="page">
+    <h2 style="margin-top:0">Certifications &amp; Eligibility</h2>
+    <div class="two">
+      <div class="item"><b>Certified Project Management Specialist (CPMS)</b><br /><span class="muted">NievGen · Aug 2026 · 60 hrs · ID CPMS-082626001</span></div>
+      <div class="item"><b>Certified Agile Scrum Master (CASM)</b><br /><span class="muted">NievGen · Aug 2026 · 24 hrs · ID CASM-081326001</span></div>
+      <div class="item"><b>Certified Project Scheduling and Controls Analyst (CPSCA)</b><br /><span class="muted">NievGen · Aug 2026 · 24 hrs · ID CPSCA-080526001</span></div>
+      <div class="item"><b>Career Service Professional Eligibility</b><br /><span class="muted">Civil Service Commission · Aug 2024 · Rating 82.03</span></div>
+    </div>
+
+    <h2>Selected Projects</h2>
+    <div class="item"><b>PDMIS: Project Development &amp; Management Information System</b> <span class="muted">· NCIP · 2026</span><br />
+      Proposals (7-step wizard), activity designs, work and financial plans, PPMP and APP in one approval and signing workflow.
+      <br /><span class="tag">Laravel 12</span><span class="tag">Inertia.js</span><span class="tag">React.js</span><span class="tag">Tailwind CSS</span><span class="tag">MySQL</span><span class="tag">Sanctum</span><span class="tag">Pest</span></div>
+    <div class="item"><b>DRIP: Data Repository on Indigenous Peoples</b> <span class="muted">· NCIP · 2026</span><br />Centralized repository consolidating Indigenous Peoples data from NCIP offices.</div>
+    <div class="item"><b>IPSGSIS Single Sign-On website · COC system · IPS and IPO system</b> <span class="muted">· NCIP · 2026</span><br />One login across Commission systems, plus certificate and registry systems.</div>
+    <div class="item"><b>Document Tracking System v2 · QRAS · EAIS v3</b> <span class="muted">· NCIP · 2024–2025</span><br />Document routing and monitoring, QR authentication for COC confirmation, and educational assistance management.</div>
+    <div class="item"><b>E-commerce Website &amp; API (full-stack capstone)</b> <span class="muted">· Zuitt Coding Bootcamp · 2023</span><br />Online store with REST API, authentication and admin dashboard.
+      <br /><span class="tag">MongoDB</span><span class="tag">Express.js</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Postman</span></div>
+
+    <h2>Education</h2>
+    <div class="item"><b>BS Computer Engineering</b> · De La Salle Lipa <span class="muted">· 2011 – 2016</span><br />
+      Thesis: Automated Fruit Picking Machine · Merit for Student Leadership · Merit of Volunteerism<br />
+      <span class="muted">Vice-President for Internal Affairs, Association of Computer Engineering Students (2014–2016) · President, Discipline Marshals (2013–2014)</span></div>
+
+    <h2>Training</h2>
+    <div class="two">
+      <div class="item"><b>Zuitt Coding Bootcamp</b> <span class="muted">· 2023 · 456 hrs</span><br />Full-Stack (88h), Back-End (144h) and Front-End (104h) Web Development; Intro &amp; Advanced JavaScript OOP; Unit Testing; MySQL for MongoDB Developers; Introduction to C#; Introduction to ASP.NET</div>
+      <div class="item"><b>Web Development Bootcamp</b> <span class="muted">· Udemy · 2023 · 85 hrs</span></div>
+      <div class="item"><b>Business Intelligence Workshop using Microsoft Power BI</b> <span class="muted">· NCIP-ICTD · 2025</span></div>
+      <div class="item"><b>Training of Trainers on the DICT PNPKI Digital Signature</b> <span class="muted">· NCIP · 2025</span></div>
+      <div class="item"><b>HRIS User Acceptance Testing and Training</b> <span class="muted">· NCIP-ICTD · 2024 · 40 hrs</span></div>
+      <div class="item"><b>ICT Capacity Building: "Unleashing the Power of Data"</b> <span class="muted">· NCIP-ICTD · 2024</span></div>
+      <div class="item"><b>Data Privacy Training</b> <span class="muted">· NCIP-ICTD · 2024</span></div>
+      <div class="item"><b>Sophos Next-Gen Firewall &amp; Ruijie Managed Switches</b> <span class="muted">· NCIP-ICTD · 2024</span></div>
+    </div>
+
+    <h2>References</h2>
+    <p class="muted">Available upon request.</p>
+    <footer><span>Raychard E. Atienza · Resume</span><span>2 / 2</span></footer>
+  </section>
+</body>
+</html>
