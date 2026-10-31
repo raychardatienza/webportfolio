@@ -151,6 +151,24 @@ const ART = {
     overlay: text(400, 101, '₱', { size: 26, fill: C.amber, font: SANS, weight: 700, anchor: 'middle' }),
   }),
 
+  // ===== Live demo =====
+  approval: frame({
+    label: 'live demo · laravel 12 · try it', accent: C.cyan,
+    art: `
+      ${['draft', 'review', 'approved', 'signed'].map((s, i) => `<rect x="${84 + i * 118}" y="70" width="96" height="34" rx="8" stroke="${i === 3 ? C.green : C.cyan}" ${i === 3 ? `fill="${C.green}" fill-opacity=".12"` : ''}/>`).join('')}
+      <path d="M180 87h22M298 87h22M416 87h22" stroke="${C.dim}"/>
+      <path d="M298 70C286 40 196 40 180 70" stroke="${C.amber}" stroke-dasharray="5 6"/><path d="M174 62l6 8 7-7" stroke="${C.amber}"/>
+      <rect x="120" y="140" width="250" height="176" rx="10" stroke="${C.ink}" stroke-opacity=".8"/>
+      <path d="M142 170h150M142 190h110" stroke="${C.ink}" stroke-width="3"/>
+      <path d="M142 222h200M142 240h200M142 258h140" stroke="${C.dim}" stroke-width="2"/>
+      <path d="M142 296c10-14 20 8 30-4s18 6 28-2" stroke="${C.violet}"/>
+      ${qr(410, 168, 110, C.green, 19)}
+      <path d="M402 222h126" stroke="${C.cyan}" stroke-width="3"/>
+      <circle cx="532" cy="150" r="16" stroke="${C.green}"/><path d="M525 150l5 5 9-10" stroke="${C.green}"/>`,
+    overlay: ['draft', 'in review', 'approved', 'signed'].map((s, i) => text(132 + i * 118, 92, s, { size: 12, fill: i === 3 ? C.green : C.ink, anchor: 'middle' })).join('') +
+      text(142, 160, 'CERTIFICATE OF APPROVAL', { size: 10, fill: C.dim }) + text(465, 300, 'scan to verify', { size: 11, fill: C.green, anchor: 'middle' }),
+  }),
+
   // ===== Web development =====
   capstone3: frame({
     label: 'mern e-commerce', accent: C.violet,

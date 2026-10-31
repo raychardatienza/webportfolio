@@ -59,6 +59,15 @@ To add an illustration for a new project, add an entry in `_src/project-art.js`,
 - **Page transitions** between the portfolio and the case study use the browser View Transitions API. Browsers without it just navigate normally.
 - **Scroll-driven case study:** on desktop, the PDMIS workflow document moves through each step as you scroll.
 
+## Personal touches
+
+- **Personalized links:** send `…/portfolio/?for=Acme` and the hero greets "Acme", the page title names them, and the contact subject is pre-filled. Add `&focus=react` (or any tech, `gov` or `web`) to put matching projects first.
+- **English / Filipino:** the `FIL` / `EN` button in the nav switches the hero, About, "why this work" and Contact text. The Filipino strings are in `I18N_FIL` in `assets/js/main.js`; have a native speaker review them, and add an element by giving it `data-i18n="key"` plus a matching entry.
+- **Terminal `ask`:** visitors can type questions like `ask why public sector`. Answers and their keywords are in `ANSWERS` in `main.js`.
+- **Impact numbers:** fill `IMPACT` in `main.js` (value, suffix, label, note) and a "Results, in numbers" section appears above Insights.
+- **Live demo card:** the Laravel demo lives in `Desktop/approval-workflow-demo`. After deploying it or pushing it to GitHub, set `DEMO_LINKS` in `main.js`, and it appears first in Selected work.
+- **Design system:** `design-system.html` documents the colors, type, components and motion rules, linked from the footer. To bring it into Figma, open it in Chrome and use the Figma Chrome extension or the html.to.design plugin.
+
 ## Before you deploy
 
 1. **Contact form:** get a free access key at <https://web3forms.com> using `raychardatienza@gmail.com`, then paste it into `WEB3FORMS_ACCESS_KEY` at the top of `assets/js/main.js`. Until then, the form opens the visitor's email app.

@@ -279,6 +279,26 @@ const PROJECTS = [
 ];
 
 /* =====================================================================
+   LIVE DEMO (Desktop/approval-workflow-demo). Set either link after deploying
+   or pushing to GitHub, and the project appears first in Selected work.
+   ===================================================================== */
+const DEMO_LINKS = { live: '', repo: '' };
+if (DEMO_LINKS.live || DEMO_LINKS.repo) {
+  PROJECTS.unshift({
+    cat: 'web', featured: true, image: './assets/images/projects/approval.svg',
+    title: 'approval.flow: Live Approval Workflow',
+    org: 'Open source · live demo', year: '2026', role: 'Builder',
+    description: 'Pick a role and move a document from draft through review, return-for-revision and approval to a digitally signed certificate with a QR verification page.',
+    impact: 'The workflow pattern from my public-sector work, rebuilt with demo data so anyone can try it and read the code.',
+    tech: ['Laravel 12', 'PHP 8.4', 'Tailwind CSS', 'SQLite', 'Pest', 'QR Code'],
+    links: [
+      DEMO_LINKS.live && { label: 'Try it live', href: DEMO_LINKS.live, icon: 'external' },
+      DEMO_LINKS.repo && { label: 'Code', href: DEMO_LINKS.repo, icon: 'github' },
+    ].filter(Boolean),
+  });
+}
+
+/* =====================================================================
    EXPERIENCE TIMELINE: type: role | milestone
    ===================================================================== */
 const TIMELINE = [
@@ -318,7 +338,7 @@ const TIMELINE = [
   {
     type: 'milestone', date: 'Aug 2024', icon: 'award',
     title: 'Passed the Career Service Professional Examination',
-    org: 'Civil Service Commission · Rating 82.03',
+    org: 'Civil Service Commission',
   },
   {
     type: 'role', date: 'Jan 2024 – Jun 2025',
@@ -422,7 +442,7 @@ const CAREER = [
 ];
 const CAREER_MILESTONES = [
   { date: '2016-06', label: 'BS Computer Engineering', org: 'De La Salle Lipa' },
-  { date: '2024-08', label: 'Career Service Professional · 82.03', org: 'Civil Service Commission' },
+  { date: '2024-08', label: 'Career Service Professional eligibility', org: 'Civil Service Commission' },
   { date: '2026-08', label: 'CPMS · CASM · CPSCA certified', org: 'NievGen, Makati City' },
 ];
 const TRAINING_HOURS = [
@@ -1217,7 +1237,7 @@ function setupTerminal() {
       `${c('whoami')}        who I am`, `${c('about')}         short bio`, `${c('skills')}        tech stack`,
       `${c('projects')}      list projects`, `${c('open')} &lt;n|name&gt;   open a project (try: open pdmis)`,
       `${c('experience')}    roles and dates`, `${c('certs')}         certifications`, `${c('resume')}        download my resume`,
-      `${c('notes')}         technical write-ups`, `${c('contact')}       ways to reach me`, `${c('socials')}       github, linkedin, gitlab`, `${c('goto')} &lt;section&gt;  about · insights · stack · projects · experience · notes · contact`,
+      `${c('ask')} &lt;question&gt;  ask me anything (try: ask why public sector)`, `${c('notes')}         technical write-ups`, `${c('contact')}       ways to reach me`, `${c('socials')}       github, linkedin, gitlab`, `${c('goto')} &lt;section&gt;  about · insights · stack · projects · experience · notes · contact`,
       `${c('theme')} [dark|light]`, `${c('clear')}         clear the screen`, `${c('exit')}          close the terminal`,
     ].join('<br>')),
     whoami: () => print('Raychard E. Atienza, CPMS · CASM · CPSCA<br>Full-stack developer · Laravel × React · Quezon City, PH'),
@@ -1233,7 +1253,7 @@ function setupTerminal() {
       if (link) { print(`opening ${link.label.toLowerCase()}…`); setTimeout(() => (link.internal ? (location.href = link.href) : window.open(link.href, '_blank', 'noopener')), 500); }
     },
     experience: () => print(TIMELINE.filter((t) => t.type === 'role').map((t) => `${c(t.date.padEnd(20, ' ').replace(/ /g, '&nbsp;'))}${t.title}`).join('<br>')),
-    certs: () => print('CPMS  Certified Project Management Specialist · 2026<br>CASM  Certified Agile Scrum Master · 2026<br>CPSCA Certified Project Scheduling and Controls Analyst · 2026<br>CSE   Career Service Professional · 82.03 · 2024'),
+    certs: () => print('CPMS  Certified Project Management Specialist · 2026<br>CASM  Certified Agile Scrum Master · 2026<br>CPSCA Certified Project Scheduling and Controls Analyst · 2026<br>CSE   Career Service Professional eligibility · 2024'),
     resume: () => { print('downloading resume…'); const a = document.createElement('a'); a.href = './assets/resume/Raychard-Atienza-Resume.pdf'; a.download = ''; a.click(); },
     contact: () => print(`email   <a class="underline" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a><br>or type ${c('goto contact')} for the form`),
     socials: () => print('<a class="underline" target="_blank" rel="noopener" href="https://github.com/raychardatienza">github.com/raychardatienza</a><br><a class="underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/raychardatienza/">linkedin.com/in/raychardatienza</a><br><a class="underline" target="_blank" rel="noopener" href="https://gitlab.com/b279-atienza">gitlab.com/b279-atienza</a>'),
@@ -1242,6 +1262,11 @@ function setupTerminal() {
       const root = document.documentElement, want = arg === 'light' ? false : arg === 'dark' ? true : !root.classList.contains('dark');
       if (root.classList.contains('dark') !== want) document.getElementById('theme-toggle').click();
       print(`theme: ${want ? 'dark' : 'light'}`);
+    },
+    ask: (arg) => {
+      const a = answer(arg);
+      if (a === null) return print(`try: ${c("ask what is your strongest stack")} · ${c("ask where are you based")} · ${c("ask why public sector")}`);
+      print(a || `I don't have a prepared answer for that yet. Email me: ${CONTACT_EMAIL}`);
     },
     notes: () => print(NOTES.map((n, i) => `${c(String(i + 1))}  <a class="underline" href="${n.href}">${n.title}</a> <span class="text-slate-500">· ${n.read}</span>`).join('<br>')),
     clear: () => { out.innerHTML = ''; },
@@ -1489,9 +1514,114 @@ function setupContactForm() {
     } finally {
       submit.disabled = false;
       submit.classList.remove('opacity-70', 'cursor-wait');
-      label.textContent = 'Send message';
+      label.textContent = label.dataset.orig || 'Send message';
     }
   });
+}
+
+/* =====================================================================
+   IMPACT: real numbers from your work. The section appears once this has entries.
+   { value: 120, suffix: '+', label: 'employees trained', note: 'Document Tracking System v2' }
+   ===================================================================== */
+const IMPACT = [];
+
+function renderImpact() {
+  if (!IMPACT.length) return;
+  document.getElementById('impact').classList.remove('hidden');
+  document.getElementById('impact-grid').innerHTML = IMPACT.map((m) => `
+    <div class="glass relative p-5 sm:p-6">
+      <dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">${esc(m.label)}</dt>
+      <dd class="mt-2 font-display text-4xl font-bold text-slate-900 dark:text-ink"><span data-count="${Number(m.value)}" data-suffix="${esc(m.suffix || '')}">${Number(m.value)}${esc(m.suffix || '')}</span></dd>
+      ${m.note ? `<dd class="mt-1 text-xs">${esc(m.note)}</dd>` : ''}
+    </div>`).join('');
+}
+
+/* =====================================================================
+   PERSONALIZED LINKS
+   …/portfolio/?for=Acme             greets "Acme" and pre-fills the contact subject
+   …/portfolio/?for=Acme&focus=react  also puts matching projects first
+   ===================================================================== */
+function setupPersonalization() {
+  const q = new URLSearchParams(location.search);
+  const who = (q.get('for') || '').replace(/[^\p{L}\p{N} .&'-]/gu, '').trim().slice(0, 40);
+  const focus = (q.get('focus') || '').toLowerCase().replace(/[^a-z0-9.+# -]/g, '').trim().slice(0, 30);
+  if (focus) {
+    const score = (p) => (p.cat === focus ? 2 : 0) + (p.tech.some((t) => t.toLowerCase().includes(focus)) ? 3 : 0) + (p.title.toLowerCase().includes(focus) ? 1 : 0);
+    PROJECTS.sort((a, b) => score(b) - score(a)); // stable: ties keep their original order
+    PROJECTS.forEach((p) => { if (score(p) >= 3 && p.cat !== 'eng') p.featured = true; });
+  }
+  if (!who) return;
+  const badge = document.getElementById('hero-badge');
+  badge.removeAttribute('data-i18n');
+  badge.textContent = `hi, ${who} team 👋 · thanks for stopping by`;
+  document.title = `Raychard Atienza — for ${who}`;
+  const subject = document.getElementById('cf-subject');
+  if (subject && !subject.value) subject.value = `Opportunity at ${who}`;
+}
+
+/* =====================================================================
+   ENGLISH / FILIPINO
+   English text is read from the page; Filipino lives here. Keys match data-i18n attributes.
+   ===================================================================== */
+const I18N_FIL = {
+  badge: 'online · laravel × react · lungsod quezon',
+  h1: 'Bumubuo ng mga sistemang <span class="text-neon">maaasahan</span>, gamit ang Laravel at React.',
+  bio: 'Ako si <strong class="font-semibold text-slate-900 dark:text-ink">Raychard Atienza</strong>, isang Computer Engineer at full-stack developer. Gumagawa ako ng mga data platform, approval workflow, single sign-on at mga API sa likod ng mga ito, at tinuturuan ko ang mga taong gumagamit nito araw-araw.',
+  'cta-resume': 'I-download ang Resume',
+  'cta-work': 'Tingnan ang mga Gawa',
+  about: 'Gumagawa ako ng software na <span class="text-neon">inaasahan ng mga tao araw-araw</span>, at hindi ako umaalis hangga\'t hindi nila ito natututunang gamitin.',
+  why: 'Tahimik ang mahusay na software sa gobyerno. Napapatunayan ang isang sertipiko sa loob ng ilang segundo sa halip na ilang araw, naaaprubahan ang isang plano nang walang patong-patong na papel, at naipoproseso sa tamang oras ang tulong para sa isang estudyante. Iyan ang epektong gusto kong maibigay ng aking code.',
+  'contact-title': 'Bumuo tayo ng <span class="text-neon">isang bagay na makabuluhan</span>.',
+  'contact-lead': 'May proyekto, trabaho, o information system na kailangang ayusin? Magpadala ng mensahe at babalikan kita.',
+  send: 'Ipadala ang mensahe',
+};
+const I18N_EN = {};
+
+function setupLanguage() {
+  const btn = document.getElementById('lang-toggle');
+  document.querySelectorAll('[data-i18n]').forEach((el) => { I18N_EN[el.dataset.i18n] = el.innerHTML; });
+  let lang = 'en';
+  try { lang = localStorage.getItem('lang') === 'fil' ? 'fil' : 'en'; } catch (e) {}
+  const apply = (l, resplit) => {
+    const dict = l === 'fil' ? I18N_FIL : I18N_EN;
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const v = dict[el.dataset.i18n];
+      if (v != null) { el.innerHTML = v; el.dataset.orig = el.textContent; }
+    });
+    document.documentElement.lang = l === 'fil' ? 'fil' : 'en';
+    btn.textContent = l === 'fil' ? 'EN' : 'FIL';
+    btn.setAttribute('aria-label', l === 'fil' ? 'Switch language to English' : 'Lumipat sa Filipino');
+    if (resplit) { splitHeadline(); document.querySelector('.hero-title').classList.add('play'); }
+  };
+  if (lang === 'fil') apply('fil', false);
+  btn.addEventListener('click', () => {
+    lang = lang === 'fil' ? 'en' : 'fil';
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+    apply(lang, true);
+  });
+}
+
+/* =====================================================================
+   TERMINAL "ask": prepared answers, matched by keywords
+   ===================================================================== */
+const ANSWERS = [
+  { k: ['stack', 'tech', 'strongest', 'framework', 'laravel', 'language', 'skills', 'tools'], a: 'Laravel is my daily driver: Laravel 12 + Inertia.js + React + Tailwind CSS on MySQL. I also build Node.js / Express APIs with MongoDB, and I test with Pest.' },
+  { k: ['where', 'based', 'location', 'remote', 'hybrid', 'onsite', 'relocate'], a: 'I\'m based in Quezon City, Philippines. Happy to talk about remote, hybrid or on-site setups.' },
+  { k: ['experience', 'years', 'background', 'career', 'history'], a: 'In tech since 2015: systems engineering (CCTV, access control, networks), on-call hardware and system maintenance, then full-stack development. I\'ve built public-sector platforms since 2024.' },
+  { k: ['project', 'proud', 'pdmis', 'built', 'case study'], a: 'PDMIS: proposals, activity designs, work and financial plans, and procurement plans in one review → approval → digital-signing workflow. Read the case study: <a class="underline" href="./case-studies/pdmis.html">case-studies/pdmis</a>' },
+  { k: ['why', 'public', 'government', 'motivat', 'mission'], a: 'Good public-sector software is quiet: certificates verified in seconds, plans approved without paper stacks, assistance processed on time. That\'s the impact I want my code to have.' },
+  { k: ['cert', 'pm', 'project management', 'scrum', 'agile', 'qualif'], a: 'CPMS (Certified Project Management Specialist), CASM (Certified Agile Scrum Master) and CPSCA (Certified Project Scheduling and Controls Analyst), all 2026, plus Career Service Professional eligibility.' },
+  { k: ['school', 'education', 'degree', 'college', 'study', 'studied'], a: 'BS Computer Engineering, De La Salle Lipa (2016), plus 540+ hours of full-stack training at Zuitt Coding Bootcamp and Udemy in 2023.' },
+  { k: ['team', 'lead', 'manage', 'train', 'mentor', 'collaborat'], a: 'I work across the whole delivery: requirements with end users, development, QA and UAT, and training. I mentored technicians as a systems engineer and train employees on every system we launch.' },
+  { k: ['salary', 'rate', 'pay', 'compensation', 'price'], a: 'Happy to discuss once we\'ve talked about the role. Email me at ' + 'raychardatienza@gmail.com' + '.' },
+  { k: ['hire', 'available', 'availability', 'open to', 'freelance', 'contact', 'reach'], a: 'The fastest way is email (raychardatienza@gmail.com) or the contact form. Try <span class="text-cyan-300">sudo hire raychard</span>.' },
+];
+
+function answer(question) {
+  const q = (question || '').toLowerCase();
+  if (!q.trim()) return null;
+  const best = ANSWERS.map((x) => ({ x, s: x.k.filter((k) => q.includes(k)).length })).sort((a, b) => b.s - a.s)[0];
+  return best && best.s ? best.x.a : '';
 }
 
 /* =====================================================================
@@ -1499,14 +1629,17 @@ function setupContactForm() {
    ===================================================================== */
 runBoot();
 hydrateIcons();
+setupLanguage();
 splitHeadline();
 renderMarquee();
 setupTheme();
 setupMenu();
+setupPersonalization();
 renderWork();
 setupFilters();
 renderArchive();
 renderTestimonials();
+renderImpact();
 renderNotes();
 renderTimeline();
 renderCareer();
