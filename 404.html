@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 · Route not found — Raychard Atienza</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#05070f" />
+  <!-- Self-contained on purpose: GitHub Pages serves this file at any URL depth, so relative asset paths would break. -->
+  <style>
+    :root { color-scheme: dark; --cyan: #22d3ee; --violet: #8b5cf6; --red: #ff2d20; --ink: #e6f1ff; --dim: #64748b; }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body { display: grid; place-items: center; padding: 24px; background: #05070f; color: #94a3b8; font: 15px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; overflow: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(to right, rgb(34 211 238 / .06) 1px, transparent 1px), linear-gradient(to bottom, rgb(34 211 238 / .06) 1px, transparent 1px); background-size: 48px 48px; -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); }
+    body::after { content: ''; position: fixed; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgb(34 211 238 / .16), rgb(139 92 246 / .1) 40%, transparent 70%); filter: blur(30px); animation: drift 14s ease-in-out infinite; }
+    @keyframes drift { 50% { transform: translate(60px, -40px) scale(1.1); } }
+    main { position: relative; z-index: 1; width: min(560px, 100%); }
+    .code { font: 700 clamp(84px, 22vw, 150px)/0.9 "Segoe UI", system-ui, sans-serif; letter-spacing: -0.04em; background: linear-gradient(100deg, var(--cyan), var(--violet) 55%, var(--red)); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 30px rgb(34 211 238 / .35)); }
+    .glitch { animation: glitch 3.2s steps(1) infinite; }
+    @keyframes glitch { 0%, 92%, 100% { transform: none; } 93% { transform: translate(-3px, 1px) skewX(-6deg); } 95% { transform: translate(3px, -1px) skewX(4deg); } 97% { transform: translate(-1px, 0); } }
+    .term { margin-top: 28px; border: 1px solid rgb(34 211 238 / .25); border-radius: 14px; background: rgb(6 10 22 / .9); overflow: hidden; box-shadow: 0 30px 80px -30px rgb(34 211 238 / .45); }
+    .bar { display: flex; gap: 6px; padding: 10px 14px; border-bottom: 1px solid rgb(34 211 238 / .1); }
+    .bar i { width: 10px; height: 10px; border-radius: 50%; } .bar i:nth-child(1) { background: #fb7185; } .bar i:nth-child(2) { background: #fbbf24; } .bar i:nth-child(3) { background: #34d399; }
+    pre { padding: 16px 18px; font: 13px/1.7 Consolas, "Courier New", monospace; white-space: pre-wrap; color: #cbd5e1; }
+    .c { color: var(--cyan); } .r { color: #fb7185; } .d { color: var(--dim); }
+    .caret { display: inline-block; width: .6em; animation: blink 1s steps(1) infinite; color: var(--cyan); } @keyframes blink { 50% { opacity: 0; } }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    a.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 12px; font-weight: 600; font-size: 14px; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+    a.primary { background: var(--cyan); color: #05070f; box-shadow: 0 0 28px -4px rgb(34 211 238 / .6); }
+    a.ghost { border: 1px solid rgb(34 211 238 / .3); color: var(--ink); }
+    a.btn:hover { transform: translateY(-2px); }
+    a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="code glitch" aria-hidden="true">404</p>
+    <h1 style="margin-top:8px;color:var(--ink);font-size:22px">This route isn't on the map.</h1>
+    <div class="term" role="img" aria-label="Terminal: the requested path was not found">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <pre><span class="c">raychard@portfolio:~$</span> cd <span id="path">/somewhere</span>
+<span class="r">error:</span> no such route
+<span class="d"># maybe it moved, or the link has a typo.</span>
+<span class="c">raychard@portfolio:~$</span> <span class="caret">_</span></pre>
+    </div>
+    <div class="actions">
+      <a class="btn primary" id="home" href="/">← Back to portfolio</a>
+      <a class="btn ghost" id="work" href="/#projects">See projects</a>
+    </div>
+  </main>
+  <script>
+    // Works both at a domain root (Hostinger) and under a GitHub Pages project path (/portfolio/)
+    var seg = location.pathname.split('/').filter(Boolean)[0];
+    var base = location.hostname.endsWith('github.io') && seg ? '/' + seg + '/' : '/';
+    document.getElementById('home').href = base;
+    document.getElementById('work').href = base + '#projects';
+    document.getElementById('path').textContent = location.pathname || '/';
+  </script>
+</body>
+</html>

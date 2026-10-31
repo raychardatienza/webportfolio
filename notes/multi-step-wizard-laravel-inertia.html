@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Building a multi-step form wizard with Laravel, Inertia and React — Raychard Atienza</title>
+  <meta name="description" content="A practical pattern for long, multi-step forms in Laravel + Inertia + React: one record, per-step validation, no skipping ahead, drafts that survive a closed tab, and Pest tests." />
+  <meta name="author" content="Raychard E. Atienza" />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="canonical" href="https://raychardatienza.github.io/portfolio/notes/multi-step-wizard-laravel-inertia.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Building a multi-step form wizard with Laravel, Inertia and React" />
+  <meta property="og:description" content="One record, per-step validation, no skipping ahead, and drafts that survive a closed tab." />
+  <meta property="og:image" content="https://raychardatienza.github.io/portfolio/assets/images/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png" />
+  <script>
+    (function () {
+      var root = document.documentElement, saved = null;
+      root.classList.add('js');
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      if (saved !== 'light') root.classList.add('dark');
+    })();
+  </script>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body class="relative font-sans">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-cyan-400 focus:px-4 focus:py-2 focus:text-void-950">Skip to content</a>
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+    <div class="bg-grid absolute inset-0"></div>
+    <div class="absolute -top-48 left-[5%]"><div class="drift-a h-[560px] w-[560px] rounded-full bg-cyan-300/30 blur-[130px] dark:bg-cyan-500/[0.13]"></div></div>
+  </div>
+
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4">
+    <nav class="glass mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-3 sm:px-4" aria-label="Primary">
+      <a href="../index.html#notes" class="btn-ghost btn-sm">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        All notes
+      </a>
+      <span class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500 sm:block">notes · laravel × inertia</span>
+      <button id="theme-toggle" type="button" class="icon-btn h-9 w-9" aria-label="Toggle dark mode" aria-pressed="true">
+        <svg class="h-[18px] w-[18px] dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <svg class="hidden h-[18px] w-[18px] dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="pb-24 pt-32 sm:pt-40">
+    <article class="container-x">
+      <header class="mx-auto max-w-3xl">
+        <p class="eyebrow">[note] // laravel · inertia · react</p>
+        <h1 class="text-3xl font-bold leading-[1.1] tracking-tight sm:text-5xl">Building a multi-step form wizard with <span class="text-neon">Laravel, Inertia and React</span></h1>
+        <p class="mt-5 text-lg leading-relaxed">Long government forms are easier to finish in steps. Here is the pattern I use: one record, validation per step, no skipping ahead, and drafts that survive a closed browser tab.</p>
+        <p class="mt-5 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">Raychard Atienza · Oct 2026 · 6 min read</p>
+      </header>
+
+      <div class="prose-note mx-auto mt-12 max-w-3xl">
+        <h2>The idea</h2>
+        <p>A proposal form might have seven sections: basics, objectives, beneficiaries, budget, schedule, attachments and review. Put all of that on one page and people abandon it. Split it into steps and you get three wins: smaller validation errors, progress people can see, and drafts saved after every step.</p>
+        <p>The core decisions:</p>
+        <ul>
+          <li><strong>One database record</strong> holds the whole form. Each step fills in part of it, and a <code>current_step</code> column remembers the furthest step completed.</li>
+          <li><strong>The server is the source of truth.</strong> Every "Next" saves to the database, so closing the tab loses nothing.</li>
+          <li><strong>Validation per step.</strong> Each step only checks its own fields.</li>
+          <li><strong>No skipping ahead.</strong> Visiting step 5 before finishing step 2 redirects you back.</li>
+        </ul>
+
+        <h2>Routes</h2>
+<pre><code>// routes/web.php
+Route::middleware('auth')->group(function () {
+    Route::get('/proposals/{proposal}/step/{step}', [ProposalWizardController::class, 'show'])
+        ->whereNumber('step')->name('proposals.wizard');
+    Route::put('/proposals/{proposal}/step/{step}', [ProposalWizardController::class, 'update'])
+        ->whereNumber('step')->name('proposals.wizard.update');
+});</code></pre>
+
+        <h2>The controller</h2>
+<pre><code>class ProposalWizardController extends Controller
+{
+    private const STEPS = 7;
+
+    public function show(Proposal $proposal, int $step)
+    {
+        $this->authorize('update', $proposal);
+        abort_unless($step &gt;= 1 &amp;&amp; $step &lt;= self::STEPS, 404);
+
+        // Don't let anyone jump ahead of the furthest completed step
+        if ($step &gt; $proposal-&gt;current_step + 1) {
+            return to_route('proposals.wizard', [$proposal, $proposal-&gt;current_step + 1]);
+        }
+
+        return Inertia::render('Proposals/Wizard', [
+            'proposal'   =&gt; $proposal,
+            'step'       =&gt; $step,
+            'totalSteps' =&gt; self::STEPS,
+        ]);
+    }
+
+    public function update(Request $request, Proposal $proposal, int $step)
+    {
+        $this->authorize('update', $proposal);
+        $data = $request-&gt;validate($this-&gt;rulesFor($step));
+
+        $proposal-&gt;fill($data);
+        $proposal-&gt;current_step = max($proposal-&gt;current_step, $step);
+        $proposal-&gt;save();
+
+        return $step &lt; self::STEPS
+            ? to_route('proposals.wizard', [$proposal, $step + 1])
+            : to_route('proposals.show', $proposal)-&gt;with('success', 'Proposal submitted for review.');
+    }
+
+    private function rulesFor(int $step): array
+    {
+        return match ($step) {
+            1 =&gt; ['title' =&gt; ['required', 'string', 'max:255'], 'program_id' =&gt; ['required', 'exists:programs,id']],
+            2 =&gt; ['objectives' =&gt; ['required', 'string', 'min:30']],
+            3 =&gt; ['beneficiaries' =&gt; ['required', 'array', 'min:1']],
+            // … one entry per step
+            default =&gt; [],
+        };
+    }
+}</code></pre>
+        <p>Keeping the rules in one <code>match</code> makes each step's requirements easy to read. When a step grows, move its rules into a dedicated Form Request.</p>
+
+        <h2>The React page</h2>
+        <p>Inertia's <code>useForm</code> keeps field state, the submitting flag and validation errors in one place. The <code>route()</code> helper comes from Ziggy.</p>
+<pre><code>import { useForm, Link } from '@inertiajs/react';
+
+export default function Wizard({ proposal, step, totalSteps }) {
+  const { data, setData, put, processing, errors } = useForm({
+    title: proposal.title ?? '',
+    program_id: proposal.program_id ?? '',
+    objectives: proposal.objectives ?? '',
+  });
+
+  const next = (e) =&gt; {
+    e.preventDefault();
+    put(route('proposals.wizard.update', [proposal.id, step]), { preserveScroll: true });
+  };
+
+  return (
+    &lt;form onSubmit={next}&gt;
+      &lt;progress value={step} max={totalSteps} aria-label={`Step ${step} of ${totalSteps}`} /&gt;
+      {step === 1 &amp;&amp; &lt;BasicsStep data={data} setData={setData} errors={errors} /&gt;}
+      {step === 2 &amp;&amp; &lt;ObjectivesStep data={data} setData={setData} errors={errors} /&gt;}
+      {/* … */}
+      {step &gt; 1 &amp;&amp; &lt;Link href={route('proposals.wizard', [proposal.id, step - 1])}&gt;Back&lt;/Link&gt;}
+      &lt;button disabled={processing}&gt;{step &lt; totalSteps ? 'Save &amp; continue' : 'Submit'}&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}</code></pre>
+        <p>"Back" is a plain link, not a submit, so people can review earlier steps without tripping that step's validation.</p>
+
+        <h2>Test the rules that matter</h2>
+<pre><code>it('does not let users skip ahead', function () {
+    $user = User::factory()-&gt;create();
+    $proposal = Proposal::factory()-&gt;for($user)-&gt;create(['current_step' =&gt; 1]);
+
+    $this-&gt;actingAs($user)
+        -&gt;get(route('proposals.wizard', [$proposal, 5]))
+        -&gt;assertRedirect(route('proposals.wizard', [$proposal, 2]));
+});
+
+it('validates only the current step', function () {
+    $user = User::factory()-&gt;create();
+    $proposal = Proposal::factory()-&gt;for($user)-&gt;create(['current_step' =&gt; 1]);
+
+    $this-&gt;actingAs($user)
+        -&gt;put(route('proposals.wizard.update', [$proposal, 2]), ['objectives' =&gt; ''])
+        -&gt;assertSessionHasErrors('objectives')
+        -&gt;assertSessionDoesntHaveErrors('title');
+});</code></pre>
+
+        <h2>Small things users notice</h2>
+        <ul>
+          <li>Show "Step 3 of 7" in words, not just a bar. It's clearer and screen readers announce it.</li>
+          <li>Use <code>preserveScroll</code> so a validation error doesn't jump the page to the top.</li>
+          <li>On the last step, show a read-only summary of every section with "Edit" links back to each step.</li>
+          <li>Train users once. Even a good wizard gets adopted faster after a 20-minute walkthrough.</li>
+        </ul>
+      </div>
+
+      <footer class="mx-auto mt-16 flex max-w-3xl flex-col items-start justify-between gap-6 border-t border-slate-200/80 pt-8 dark:border-cyan-300/10 sm:flex-row sm:items-center">
+        <p class="text-sm">Questions or a project like this? I'd like to hear about it.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="./public-document-links-hashids.html" class="btn-ghost btn-sm">Next note →</a>
+          <a href="../index.html#contact" class="btn-primary btn-sm">Get in touch</a>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    const root = document.documentElement, themeBtn = document.getElementById('theme-toggle');
+    const sync = () => themeBtn.setAttribute('aria-pressed', String(root.classList.contains('dark')));
+    sync();
+    themeBtn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      try { localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); } catch (e) {}
+      sync();
+    });
+  </script>
+</body>
+</html>

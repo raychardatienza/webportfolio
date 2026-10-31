@@ -40,7 +40,7 @@ function qr(x, y, size, color, seed = 7) {
 function frame({ label, accent, art, overlay = '', acronym = '', glowX = 0.5 }) {
   const ncip = acronym ? `
   <rect x="552" y="18" width="68" height="24" rx="6" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".3"/>
-  ${text(586, 34, 'NCIP', { size: 12, fill: C.ink, anchor: 'middle', weight: 700 })}
+  ${text(586, 34, 'GOV', { size: 12, fill: C.ink, anchor: 'middle', weight: 700 })}
   <text x="28" y="322" font-family="${SANS}" font-size="${acronym.length > 6 ? 50 : 60}" font-weight="800" fill="#ffffff" filter="url(#neon)" letter-spacing="-1">${acronym}</text>` : '';
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
 <defs>

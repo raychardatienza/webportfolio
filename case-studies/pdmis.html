@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PDMIS Case Study — Raychard Atienza</title>
-  <meta name="description" content="Case study: PDMIS, the Project Development and Management Information System of the National Commission on Indigenous Peoples, built with Laravel 12, Inertia.js, React and MySQL." />
+  <meta name="description" content="Case study: PDMIS, the Project Development and Management Information System of a Philippine national government agency, built with Laravel 12, Inertia.js, React and MySQL." />
   <meta name="author" content="Raychard E. Atienza" />
   <meta name="theme-color" content="#05070f" />
   <link rel="canonical" href="https://raychardatienza.github.io/portfolio/case-studies/pdmis.html" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PDMIS Case Study — Raychard Atienza" />
-  <meta property="og:description" content="How NCIP's project planning, approval, signing and procurement-planning workflow was built on Laravel 12 + React." />
+  <meta property="og:description" content="How a government agency's project planning, approval, signing and procurement-planning workflow was built on Laravel 12 + React." />
   <meta property="og:url" content="https://raychardatienza.github.io/portfolio/case-studies/pdmis.html" />
   <meta property="og:image" content="https://raychardatienza.github.io/portfolio/assets/images/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -28,9 +28,8 @@
     })();
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 
@@ -67,14 +66,14 @@
             Project Development &amp; Management <span class="text-neon">Information System</span>
           </h1>
           <p class="mt-6 max-w-3xl text-base leading-relaxed sm:text-lg">
-            PDMIS moves the National Commission on Indigenous Peoples' project planning onto one system:
+            PDMIS moves a national government agency's project planning onto one system:
             proposals, activity designs, work and financial plans and procurement plans, each with a traceable
             review, recommendation, approval and digital-signing trail.
           </p>
         </div>
 
         <dl class="reveal mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Role</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Co-creator, NCIP-ICTD dev team</dd></div>
+          <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Role</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Co-creator, in-house dev team</dd></div>
           <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Year</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">2026</dd></div>
           <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Type</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Internal government web app</dd></div>
           <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Stack</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Laravel 12 · Inertia · React · MySQL</dd></div>
@@ -106,7 +105,7 @@
         </div>
         <div class="reveal max-w-3xl space-y-5 text-base leading-relaxed sm:text-lg">
           <p>
-            A Commission project passes through several documents before money is spent: a <strong class="font-semibold text-slate-900 dark:text-ink">Mother Project Proposal (MPP)</strong>,
+            An agency project passes through several documents before money is spent: a <strong class="font-semibold text-slate-900 dark:text-ink">Mother Project Proposal (MPP)</strong>,
             <strong class="font-semibold text-slate-900 dark:text-ink">Activity Designs</strong>, <strong class="font-semibold text-slate-900 dark:text-ink">Work and Financial Plans (WFP)</strong> at agency, regional and program level,
             a <strong class="font-semibold text-slate-900 dark:text-ink">Project Procurement Management Plan (PPMP)</strong> and the consolidated <strong class="font-semibold text-slate-900 dark:text-ink">Annual Procurement Plan (APP)</strong>.
           </p>
@@ -118,7 +117,7 @@
       </div>
     </section>
 
-    <!-- ============ WORKFLOW ============ -->
+    <!-- ============ WORKFLOW (scroll-driven on desktop) ============ -->
     <section class="section">
       <div class="container-x">
         <div class="reveal max-w-2xl">
@@ -127,44 +126,59 @@
           <p class="section-lead">Every document follows the same state machine, so users learn it once and every step leaves an audit trail.</p>
         </div>
 
-        <div class="reveal card relative mt-12 overflow-hidden p-6 sm:p-10">
-          <span class="hud-corners" aria-hidden="true"></span>
-          <span class="border-spin" aria-hidden="true"></span>
-          <ol class="relative grid gap-4 lg:grid-cols-6">
-            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
-              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">01 · draft</span>
-              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">7-step wizard</p>
-              <p class="mt-1 text-xs leading-relaxed">Proponents build the proposal step by step, with library-driven fields.</p>
-            </li>
-            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
-              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">02 · review</span>
-              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Send for review</p>
-              <p class="mt-1 text-xs leading-relaxed">Reviewers comment in context; office users are notified.</p>
-            </li>
-            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
-              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">03 · recommend</span>
-              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Recommendation</p>
-              <p class="mt-1 text-xs leading-relaxed">Recommending officials set suggested amounts or return it for revision.</p>
-            </li>
-            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
-              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">04 · approve</span>
-              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Approval</p>
-              <p class="mt-1 text-xs leading-relaxed">Approve, reject, or send back, each action logged with its comment.</p>
-            </li>
-            <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]">
-              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">05 · sign</span>
-              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Digital signature</p>
-              <p class="mt-1 text-xs leading-relaxed">The generated PDF is signed through NCIP's iPLUMA e-signature service.</p>
-            </li>
-            <li class="flow-step relative rounded-xl border border-cyan-500/50 bg-cyan-50/80 p-4 shadow-[0_0_30px_-10px_rgba(34,211,238,0.7)] dark:border-cyan-300/40 dark:bg-cyan-300/[0.06]">
-              <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">06 · plan</span>
-              <p class="mt-1 font-semibold text-slate-900 dark:text-ink">WFP → PPMP → APP</p>
-              <p class="mt-1 text-xs leading-relaxed">Approved work feeds the financial and procurement plans.</p>
-            </li>
-          </ol>
-          <div class="relative mt-6 flex items-center gap-3 rounded-xl border border-dashed border-amber-500/50 bg-amber-500/[0.06] px-4 py-3 text-sm">
-            <svg class="h-5 w-5 flex-none text-amber-600 dark:text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
-            <span><strong class="font-semibold text-slate-900 dark:text-ink">Return-for-revision loop:</strong> any reviewer can send a document back to the proponent with comments. It then re-enters the flow with its full history intact.</span>
+        <div id="flow-scroller" class="relative mt-12 lg:h-[230vh]">
+          <div class="lg:sticky lg:top-28">
+            <div class="card relative overflow-hidden p-6 sm:p-10">
+              <span class="hud-corners" aria-hidden="true"></span>
+              <span class="border-spin" aria-hidden="true"></span>
+
+              <!-- Track with a document that travels as you scroll -->
+              <div class="relative mb-6 hidden h-12 lg:block" aria-hidden="true">
+                <div class="absolute left-[8%] right-[8%] top-1/2 h-px -translate-y-1/2 bg-slate-300 dark:bg-white/10"></div>
+                <div id="flow-fill" class="absolute left-[8%] top-1/2 h-[2px] w-0 -translate-y-1/2 bg-gradient-to-r from-cyan-400 via-violet-500 to-laravel shadow-[0_0_12px_rgba(34,211,238,0.8)]"></div>
+                <div id="flow-doc" class="absolute left-[8%] top-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <svg class="h-10 w-8 text-cyan-600 drop-shadow-[0_0_10px_rgba(34,211,238,0.8)] dark:text-cyan-300" viewBox="0 0 24 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 2h12l6 6v20H3z" fill="currentColor" fill-opacity=".12"/><path d="M15 2v6h6M7 14h10M7 18h10M7 22h6"/></svg>
+                </div>
+              </div>
+
+              <ol id="flow-steps" class="relative grid gap-4 lg:grid-cols-6">
+                <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 transition duration-300 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+                  <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">01 · draft</span>
+                  <p class="mt-1 font-semibold text-slate-900 dark:text-ink">7-step wizard</p>
+                  <p class="mt-1 text-xs leading-relaxed">Proponents build the proposal step by step, with library-driven fields.</p>
+                </li>
+                <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 transition duration-300 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+                  <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">02 · review</span>
+                  <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Send for review</p>
+                  <p class="mt-1 text-xs leading-relaxed">Reviewers comment in context; office users are notified.</p>
+                </li>
+                <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 transition duration-300 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+                  <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">03 · recommend</span>
+                  <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Recommendation</p>
+                  <p class="mt-1 text-xs leading-relaxed">Recommending officials set suggested amounts or return it for revision.</p>
+                </li>
+                <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 transition duration-300 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+                  <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">04 · approve</span>
+                  <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Approval</p>
+                  <p class="mt-1 text-xs leading-relaxed">Approve, reject, or send back, each action logged with its comment.</p>
+                </li>
+                <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 transition duration-300 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+                  <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">05 · sign</span>
+                  <p class="mt-1 font-semibold text-slate-900 dark:text-ink">Digital signature</p>
+                  <p class="mt-1 text-xs leading-relaxed">The generated PDF is signed through an external e-signature service.</p>
+                </li>
+                <li class="flow-step relative rounded-xl border border-slate-200/80 bg-white/70 p-4 transition duration-300 dark:border-cyan-300/15 dark:bg-white/[0.03]">
+                  <span class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">06 · plan</span>
+                  <p class="mt-1 font-semibold text-slate-900 dark:text-ink">WFP → PPMP → APP</p>
+                  <p class="mt-1 text-xs leading-relaxed">Approved work feeds the financial and procurement plans.</p>
+                </li>
+              </ol>
+              <div class="relative mt-6 flex items-center gap-3 rounded-xl border border-dashed border-amber-500/50 bg-amber-500/[0.06] px-4 py-3 text-sm">
+                <svg class="h-5 w-5 flex-none text-amber-600 dark:text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+                <span><strong class="font-semibold text-slate-900 dark:text-ink">Return-for-revision loop:</strong> any reviewer can send a document back to the proponent with comments. It then re-enters the flow with its full history intact.</span>
+              </div>
+              <p class="mt-4 hidden font-mono text-[11px] text-slate-500 lg:block">scroll ↓ to move the document through the workflow</p>
+            </div>
           </div>
         </div>
       </div>
@@ -232,7 +246,7 @@
             <div class="flex items-center justify-center font-mono text-xs text-cyan-700 dark:text-cyan-300" aria-hidden="true"><span class="lg:hidden">↕</span><span class="hidden lg:inline">⇄</span></div>
             <div class="grid gap-3">
               <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">data</p><p class="font-semibold text-slate-900 dark:text-ink">MySQL</p><p class="text-xs">93 migrations · 75 models</p></div>
-              <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">signing</p><p class="font-semibold text-slate-900 dark:text-ink">iPLUMA e-signature</p><p class="text-xs">via proxy controller + signing service</p></div>
+              <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">signing</p><p class="font-semibold text-slate-900 dark:text-ink">E-signature service</p><p class="text-xs">via proxy controller + signing service</p></div>
               <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">integrations</p><p class="font-semibold text-slate-900 dark:text-ink">Mail · DOTS · API clients</p><p class="text-xs">notifications, tracking, token-based access</p></div>
             </div>
           </div>
@@ -251,7 +265,7 @@
           <article class="reveal card p-6 sm:p-8">
             <p class="font-mono text-xs text-cyan-700 dark:text-cyan-300">01</p>
             <h3 class="mt-1 text-lg font-bold">Signing that can't block the workflow</h3>
-            <p class="mt-2 text-sm leading-relaxed">Signed PDFs come back from the iPLUMA service through a server-side proxy, are validated, and are stored against the document. Each approval stage also has an explicit "skip signature" path, so an outage of an external service never stalls approvals.</p>
+            <p class="mt-2 text-sm leading-relaxed">Signed PDFs come back from the external e-signature service through a server-side proxy, are validated, and are stored against the document. Each approval stage also has an explicit "skip signature" path, so an outage of an external service never stalls approvals.</p>
           </article>
           <article class="reveal card p-6 sm:p-8">
             <p class="font-mono text-xs text-cyan-700 dark:text-cyan-300">02</p>
@@ -280,8 +294,8 @@
           <span class="hud-corners" aria-hidden="true"></span>
           <p class="eyebrow">[06] // my role</p>
           <p class="text-sm leading-relaxed sm:text-base">
-            I co-created PDMIS as part of the NCIP Information and Communications Technology Division development team in 2026. I worked across development,
-            requirements gathering with end users, testing and QA, and user onboarding, the same responsibilities I carry across NCIP's other in-house systems.
+            I co-created PDMIS as part of an in-house government development team in 2026. I worked across development,
+            requirements gathering with end users, testing and QA, and user onboarding, the same responsibilities I carry across the agency's other in-house systems.
           </p>
           <div class="mt-5 flex flex-wrap gap-2">
             <span class="chip">Laravel 12</span><span class="chip">Inertia.js</span><span class="chip">React.js</span><span class="chip">Tailwind CSS</span><span class="chip">MySQL</span><span class="chip">Sanctum</span><span class="chip">Chart.js</span><span class="chip">Pest</span><span class="chip">Vitest</span>
@@ -368,6 +382,25 @@
         }
       }, { passive: true });
     }
+
+    // Scroll-driven workflow: the document travels through the steps as the section scrolls (desktop)
+    const scroller = document.getElementById('flow-scroller');
+    const flowDoc = document.getElementById('flow-doc'), flowFill = document.getElementById('flow-fill');
+    const steps = [...document.querySelectorAll('.flow-step')];
+    const desktop = matchMedia('(min-width: 1024px)');
+    function updateFlow() {
+      if (!desktop.matches) { steps.forEach((s) => s.classList.remove('is-on')); return; }
+      const r = scroller.getBoundingClientRect();
+      const p = Math.min(Math.max(-r.top / Math.max(r.height - innerHeight, 1), 0), 1);
+      const pos = 8 + p * 84; // track spans 8%..92%
+      flowDoc.style.left = `${pos}%`;
+      flowFill.style.width = `${p * 84}%`;
+      const active = Math.min(steps.length - 1, Math.floor(p * steps.length));
+      steps.forEach((s, i) => s.classList.toggle('is-on', i <= active));
+    }
+    addEventListener('scroll', updateFlow, { passive: true });
+    addEventListener('resize', updateFlow);
+    updateFlow();
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
