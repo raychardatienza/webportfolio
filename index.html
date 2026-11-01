@@ -160,8 +160,8 @@
   <main id="main">
     <!-- ============ HERO ============ -->
     <section id="home" class="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pb-14 pt-28 sm:pt-32">
-      <div class="container-x relative grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-14">
-        <div class="reveal">
+      <div class="container-x relative grid items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
+        <div class="reveal relative z-10">
           <p class="inline-flex items-center gap-2.5 rounded-lg border border-cyan-600/30 bg-cyan-50/80 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-cyan-800 dark:border-cyan-300/20 dark:bg-cyan-300/[0.06] dark:text-cyan-200">
             <span class="relative flex h-2 w-2"><span class="ping-soft absolute inline-flex h-full w-full rounded-full bg-emerald-400"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
             <span id="hero-badge" data-i18n="badge">online · laravel × react · quezon city, ph</span>
@@ -201,23 +201,23 @@
         </div>
 
         <!-- Signature: the archipelago as a live data network -->
-        <div id="map-wrap" class="reveal relative mx-auto h-[420px] w-full max-w-[34rem] sm:h-[520px] lg:h-[min(76vh,680px)]">
+        <div id="map-wrap" class="reveal relative mx-auto w-full max-lg:pointer-events-none max-lg:absolute max-lg:inset-x-0 max-lg:-top-6 max-lg:h-[92svh] max-lg:opacity-30 lg:h-[min(86vh,780px)]">
           <canvas id="archipelago" class="absolute inset-0 h-full w-full" role="img" aria-label="Map of the Philippines drawn as a glowing data network, with Quezon City highlighted as home base"></canvas>
-          <p class="pointer-events-none absolute left-0 top-0 font-mono text-[10.5px] uppercase tracking-[0.2em] text-slate-500">ph // 7,641 islands · one network</p>
-          <div id="map-pin" class="pointer-events-none absolute -translate-y-1/2 opacity-0 transition-opacity duration-700">
+          <p class="pointer-events-none absolute left-0 top-0 font-mono text-[10.5px] uppercase tracking-[0.2em] text-slate-500 max-lg:hidden">ph // 7,641 islands · one network</p>
+          <div id="map-pin" class="pointer-events-none absolute -translate-y-1/2 opacity-0 transition-opacity duration-700 max-lg:hidden">
             <span class="ml-4 inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-cyan-500/40 bg-white/80 px-2 py-1 font-mono text-[10.5px] text-cyan-800 backdrop-blur dark:bg-void-900/80 dark:text-cyan-200">
               <span class="h-1.5 w-1.5 rounded-full bg-cyan-500 dark:bg-cyan-300"></span>quezon city · home base
             </span>
           </div>
 
-          <div class="float glass absolute bottom-6 left-0 flex items-center gap-3 px-3.5 py-2.5 sm:bottom-10">
-            <span class="grid h-9 w-9 place-items-center rounded-lg bg-laravel/15 font-display text-base font-bold text-laravel">L</span>
+          <div class="float glass absolute bottom-[8%] left-0 flex items-center gap-3 px-3.5 py-2.5 max-lg:hidden">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-laravel/15"><i data-tech="Laravel" class="h-5 w-5"></i></span>
             <span class="leading-tight">
               <span class="block text-sm font-bold text-slate-900 dark:text-ink">Laravel 12</span>
               <span class="block font-mono text-[10.5px]">+ react · mysql</span>
             </span>
           </div>
-          <div class="float float-delay glass absolute bottom-24 right-0 flex items-center gap-3 px-3.5 py-2.5 sm:bottom-28">
+          <div class="float float-delay glass absolute right-0 top-[14%] flex items-center gap-3 px-3.5 py-2.5 max-lg:hidden">
             <span class="grid h-9 w-9 place-items-center rounded-lg bg-cyan-500/15 text-cyan-700 dark:text-cyan-300"><i data-icon="building" class="h-[18px] w-[18px]"></i></span>
             <span class="leading-tight">
               <span class="block text-sm font-bold text-slate-900 dark:text-ink">10 public-sector systems</span>
@@ -261,12 +261,12 @@
     </section>
 
     <!-- ============ ABOUT (editorial + sticky portrait) ============ -->
-    <section id="about" class="section">
+    <section id="about" class="section overflow-x-clip">
       <div class="container-x grid gap-14 lg:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)] lg:gap-20">
         <div id="portrait" class="reveal relative mx-auto w-full max-w-[22rem] lg:sticky lg:top-28 lg:mx-0 lg:max-w-none lg:self-start">
           <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-cyan-400 via-violet-500 to-laravel opacity-20 blur-3xl dark:opacity-30" aria-hidden="true"></div>
           <div class="ring-spin shadow-2xl shadow-cyan-900/20">
-            <div class="ring-inner scan bg-slate-200 dark:bg-void-800">
+            <div class="ring-inner scan duotone bg-slate-200 dark:bg-void-800">
               <picture>
                 <source srcset="./assets/images/profile.webp" type="image/webp" />
                 <img src="./assets/images/profile.jpg" alt="Portrait of Raychard Atienza" width="640" height="640" loading="lazy" decoding="async" class="aspect-square w-full object-cover" />
@@ -414,7 +414,7 @@
           <span class="border-spin" style="--s1:#ff2d20; --s2:#f97316" aria-hidden="true"></span>
           <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-laravel/15 blur-3xl" aria-hidden="true"></div>
           <div class="relative grid gap-6 lg:grid-cols-[auto_1fr] lg:items-center">
-            <div class="grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br from-laravel to-rose-700 font-display text-4xl font-bold text-white shadow-[0_0_40px_-6px_rgba(255,45,32,0.7)]">L</div>
+            <div class="grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br from-laravel to-rose-700 shadow-[0_0_40px_-6px_rgba(255,45,32,0.7)]"><i data-tech="Laravel" data-color="#ffffff" class="h-11 w-11"></i></div>
             <div>
               <div class="flex flex-wrap items-center gap-3">
                 <h3 class="text-2xl font-bold">Laravel</h3>
@@ -429,6 +429,22 @@
                 <span class="chip">Sanctum (API auth)</span><span class="chip">Approval Workflows</span><span class="chip">DomPDF · PhpSpreadsheet</span><span class="chip">Pest</span><span class="chip">Vite</span>
               </div>
             </div>
+          </div>
+        </article>
+
+        <!-- Constellation: which technologies power which projects -->
+        <article id="constellation" class="reveal card relative mt-6 p-6 sm:p-8">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold">How my stack connects to my work</h3>
+              <p class="mt-1 text-sm">Hover or tap a technology to light up the projects that use it, or a project to see its stack.</p>
+            </div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500"><span id="c-count">0</span> links</p>
+          </div>
+          <div id="constellation-graph" class="relative mt-8 grid grid-cols-[minmax(0,1fr)] gap-x-24 gap-y-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">
+            <svg id="constellation-lines" class="pointer-events-none absolute inset-0 h-full w-full max-lg:hidden" aria-hidden="true"></svg>
+            <div id="c-tech" class="relative flex flex-wrap content-start gap-2 lg:flex-col lg:items-end"></div>
+            <div id="c-proj" class="relative flex flex-col gap-2"></div>
           </div>
         </article>
 
@@ -567,7 +583,7 @@
           <div class="mt-6 grid gap-6 md:grid-cols-3">
             <article class="reveal card card-hover spot tilt flex flex-col p-6">
               <div class="flex items-start justify-between gap-3">
-                <span class="grid h-12 place-items-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 px-3.5 font-mono text-sm font-semibold tracking-wide text-void-950 shadow-[0_0_24px_-6px_rgba(251,191,36,0.7)]">CPMS</span>
+                <span class="holo-badge holo-amber" aria-hidden="true">CPMS</span>
                 <span class="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 font-mono text-[10.5px] font-semibold text-emerald-700 dark:text-emerald-300">60 hrs</span>
               </div>
               <h4 class="mt-4 text-lg font-bold leading-snug">Certified Project Management Specialist</h4>
@@ -580,7 +596,7 @@
             </article>
             <article class="reveal card card-hover spot tilt flex flex-col p-6">
               <div class="flex items-start justify-between gap-3">
-                <span class="grid h-12 place-items-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 px-3.5 font-mono text-sm font-semibold tracking-wide text-void-950 shadow-[0_0_24px_-6px_rgba(52,211,153,0.7)]">CASM</span>
+                <span class="holo-badge holo-emerald" aria-hidden="true">CASM</span>
                 <span class="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 font-mono text-[10.5px] font-semibold text-emerald-700 dark:text-emerald-300">24 hrs</span>
               </div>
               <h4 class="mt-4 text-lg font-bold leading-snug">Certified Agile Scrum Master</h4>
@@ -593,7 +609,7 @@
             </article>
             <article class="reveal card card-hover spot tilt flex flex-col p-6">
               <div class="flex items-start justify-between gap-3">
-                <span class="grid h-12 place-items-center rounded-xl bg-gradient-to-br from-sky-400 to-cyan-500 px-3.5 font-mono text-sm font-semibold tracking-wide text-void-950 shadow-[0_0_24px_-6px_rgba(56,189,248,0.7)]">CPSCA</span>
+                <span class="holo-badge holo-sky" aria-hidden="true">CPSCA</span>
                 <span class="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 font-mono text-[10.5px] font-semibold text-emerald-700 dark:text-emerald-300">24 hrs</span>
               </div>
               <h4 class="mt-4 text-lg font-bold leading-snug">Certified Project Scheduling and Controls Analyst</h4>
@@ -739,6 +755,24 @@
             </div>
             <p id="form-status" class="hidden rounded-xl px-4 py-3 text-sm" role="status" aria-live="polite"></p>
           </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING CTA ============ -->
+    <section id="cta" class="section overflow-hidden">
+      <div class="container-x relative">
+        <div class="reveal relative overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-gradient-to-br from-white/80 via-cyan-50/60 to-violet-50/60 px-6 py-16 text-center dark:border-cyan-300/15 dark:from-void-900/80 dark:via-cyan-950/40 dark:to-violet-950/40 sm:px-12 sm:py-24">
+          <span class="border-spin" aria-hidden="true"></span>
+          <div class="radar pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="eyebrow relative justify-center">[end] // thanks for scrolling</p>
+          <h2 class="relative mx-auto max-w-4xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl">Let's build something <span class="text-neon">people rely on</span>.</h2>
+          <p class="relative mx-auto mt-6 max-w-2xl text-base leading-relaxed sm:text-lg">A role, a project, or a system that needs fixing: I reply to every message.</p>
+          <div class="relative mt-10 flex flex-wrap items-center justify-center gap-3">
+            <a href="mailto:raychardatienza@gmail.com" class="btn-primary magnetic"><i data-icon="mail" class="h-4 w-4"></i> raychardatienza@gmail.com</a>
+            <a href="./assets/resume/Raychard-Atienza-Resume.pdf" download class="btn-ghost magnetic"><i data-icon="download" class="h-4 w-4"></i> Resume</a>
+            <button type="button" data-open-terminal class="btn-ghost"><span aria-hidden="true">›_</span> Open terminal</button>
+          </div>
         </div>
       </div>
     </section>

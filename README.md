@@ -59,6 +59,20 @@ To add an illustration for a new project, add an entry in `_src/project-art.js`,
 - **Page transitions** between the portfolio and the case study use the browser View Transitions API. Browsers without it just navigate normally.
 - **Scroll-driven case study:** on desktop, the PDMIS workflow document moves through each step as you scroll.
 
+## Graphics and design details
+
+- **Tech logos:** official brand marks from Simple Icons (CC0), stored as `TECH_ICONS` in `main.js` (`[color, svgPath]`). Every skill chip, the marquee and the Laravel spotlight pick them up automatically through `techIcon()` and `decorateTech()`. To add a logo, copy its path from <https://simpleicons.org> into `TECH_ICONS` under the exact name used in `PROJECTS` (or add a spelling to `TECH_ALIASES`). In the HTML, `<i data-tech="Laravel" class="h-6 w-6"></i>` becomes the logo.
+- **Stack constellation:** the "How my stack connects to my work" graph is built from `PROJECTS` by `renderConstellation()`, so new projects and techs appear on their own. Hover or tab a tech to light up its projects, or a project to light up its stack.
+- **Holo certificate badges:** the hexagons use `.holo-badge` plus `holo-amber`, `holo-emerald` or `holo-sky` in `_src/input.css`.
+- **Animated illustrations:** each project SVG has its own motion (data flowing, documents moving, signals pulsing), defined in the `ANIMS` map in `_src/project-art.js`. The animation is built into the SVG file, so it plays even inside an `<img>`. Regenerate with `node _src/project-art.js`.
+- **Chart notes:** the small violet labels on the charts ("← pivot to software", "full-stack bootcamp") come from the `note` field in `CAREER` and `TRAINING_HOURS`.
+- **One job per color:** cyan is for actions and links, violet for labels and milestones, red is reserved for Laravel, and emerald means status or "done". Keep to this when adding sections.
+- **Light mode** has its own art direction (paper texture, soft shadows, deeper accent colors) rather than inverted dark colors. The rules are under "Light mode" in `_src/input.css`.
+- **Section dividers:** each `.section` gets a glowing line with a moving sweep. Remove the `section` class from a block to drop it.
+- **Closing call to action:** the `#cta` section above the footer.
+- **Photo duotone:** the About portrait has a cyan tint that clears on hover (`.duotone` in `_src/input.css`). It works best with a well-lit photo on a plain background.
+- **Case study:** `case-studies/pdmis.html` has an animated architecture diagram (dashed lines show requests flowing) and a before/after comparison.
+
 ## Personal touches
 
 - **Personalized links:** send `…/portfolio/?for=Acme` and the hero greets "Acme", the page title names them, and the contact subject is pre-filled. Add `&focus=react` (or any tech, `gov` or `web`) to put matching projects first.
@@ -84,8 +98,8 @@ To add an illustration for a new project, add an entry in `_src/project-art.js`,
     { quote: 'Raychard …', name: 'Full Name', role: 'Position, Organization' },
   ];
   ```
-- **A higher-resolution formal photo** to replace `assets/images/profile.jpg` and `profile.webp`. Use a square image, at least 800×800, with no signature. Then regenerate the preview image.
-- **A public Laravel demo project** on GitHub, so recruiters can see your code. Add it to `PROJECTS` with `featured: true` and a live link.
+- **A higher-resolution professional photo** to replace `assets/images/profile.jpg` and `profile.webp`. Use a square image, at least 800×800, with no signature, ideally a plain light or dark background so the duotone looks clean. Then regenerate the preview image.
+- **Deploy the Laravel demo** (`Desktop/approval-workflow-demo`) and set `DEMO_LINKS` so its card appears.
 - **A DRIP case study:** copy `case-studies/pdmis.html` as a template.
 - **Booking link (optional):** create a free Cal.com (or Calendly) page and set `BOOKING_URL` at the top of `assets/js/main.js`. A "Book a call" button appears in Contact.
 - **Custom domain (optional):** buy one (for example `raychard.dev`), point it at GitHub Pages or Hostinger, then replace the site URL as described above. A matching address like `hello@raychard.dev` looks more established than Gmail.

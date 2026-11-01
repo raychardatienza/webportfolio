@@ -226,30 +226,89 @@
         <div class="reveal max-w-2xl">
           <p class="eyebrow">[04] // architecture</p>
           <h2 class="section-title">A modern monolith, <span class="text-neon">no separate SPA</span>.</h2>
-          <p class="section-lead">Inertia.js lets React pages be served by Laravel routes and controllers, giving a single-page-app feel without maintaining a separate API for the UI.</p>
+          <p class="section-lead">Inertia.js lets React pages be served by Laravel routes and controllers, giving a single-page-app feel without maintaining a separate API for the UI. The dashed lines show requests flowing.</p>
         </div>
 
-        <div class="reveal card relative mt-12 p-6 sm:p-10">
+        <div class="reveal card relative mt-12 p-4 sm:p-8">
           <span class="hud-corners" aria-hidden="true"></span>
-          <div class="grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1.3fr_auto_1fr]">
-            <div class="rounded-xl border border-slate-200/80 bg-white/70 p-5 dark:border-cyan-300/15 dark:bg-white/[0.03]">
-              <p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">browser</p>
-              <p class="mt-1 font-display text-lg font-bold text-slate-900 dark:text-ink">React 18 + Inertia</p>
-              <ul class="mt-3 space-y-1 text-xs"><li>Tailwind CSS · MUI · Headless UI</li><li>Chart.js dashboards · FullCalendar</li><li>ExcelJS / xlsx exports</li><li>Vite build · Vitest</li></ul>
-            </div>
-            <div class="flex items-center justify-center font-mono text-xs text-cyan-700 dark:text-cyan-300" aria-hidden="true"><span class="lg:hidden">↕</span><span class="hidden lg:inline">⇄</span></div>
-            <div class="rounded-xl border border-laravel/40 bg-laravel/[0.05] p-5 shadow-[0_0_30px_-12px_rgba(255,45,32,0.6)]">
-              <p class="font-mono text-[10.5px] uppercase tracking-wider text-laravel">server</p>
-              <p class="mt-1 font-display text-lg font-bold text-slate-900 dark:text-ink">Laravel 12 · PHP 8.2</p>
-              <ul class="mt-3 space-y-1 text-xs"><li>Controllers per workflow stage, services for signing &amp; notifications</li><li>Policies, roles &amp; privileges</li><li>Sanctum API tokens</li><li>DomPDF · FPDF · PhpSpreadsheet</li><li>Hashids for public document links</li><li>Pest tests</li></ul>
-            </div>
-            <div class="flex items-center justify-center font-mono text-xs text-cyan-700 dark:text-cyan-300" aria-hidden="true"><span class="lg:hidden">↕</span><span class="hidden lg:inline">⇄</span></div>
-            <div class="grid gap-3">
-              <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">data</p><p class="font-semibold text-slate-900 dark:text-ink">MySQL</p><p class="text-xs">93 migrations · 75 models</p></div>
-              <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">signing</p><p class="font-semibold text-slate-900 dark:text-ink">E-signature service</p><p class="text-xs">via proxy controller + signing service</p></div>
-              <div class="rounded-xl border border-slate-200/80 bg-white/70 p-4 dark:border-cyan-300/15 dark:bg-white/[0.03]"><p class="font-mono text-[10.5px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300">integrations</p><p class="font-semibold text-slate-900 dark:text-ink">Mail · DOTS · API clients</p><p class="text-xs">notifications, tracking, token-based access</p></div>
-            </div>
+          <div class="overflow-x-auto">
+            <svg viewBox="0 0 1000 420" class="min-w-[720px]" role="img" aria-label="Architecture: the browser runs React with Inertia and talks to Laravel 12; Laravel reads and writes MySQL, sends PDFs to an external e-signature service through a proxy, and connects to mail, document tracking and API clients.">
+              <defs>
+                <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#22d3ee"/></marker>
+              </defs>
+              <g fill="none" stroke-width="2" stroke-linecap="round">
+                <path class="flow-dash" d="M244 190H376" stroke="#22d3ee" marker-end="url(#arr)"/>
+                <path class="flow-dash" d="M376 240H244" stroke="#a78bfa" marker-end="url(#arr)" style="animation-direction: reverse"/>
+                <path class="flow-dash" d="M624 170C690 170 690 85 756 85" stroke="#22d3ee" marker-end="url(#arr)"/>
+                <path class="flow-dash" d="M624 210H756" stroke="#22d3ee" marker-end="url(#arr)"/>
+                <path class="flow-dash" d="M624 250C690 250 690 335 756 335" stroke="#22d3ee" marker-end="url(#arr)"/>
+              </g>
+              <g stroke-width="1.5">
+                <rect x="40" y="140" width="200" height="140" rx="16" class="fill-white stroke-slate-300 dark:fill-[#0f1629] dark:stroke-cyan-300/40"/>
+                <rect x="380" y="100" width="240" height="220" rx="18" class="fill-white dark:fill-[#1a0f14]" stroke="#ff2d20"/>
+                <rect x="760" y="40" width="200" height="90" rx="14" class="fill-white stroke-slate-300 dark:fill-[#0f1629] dark:stroke-cyan-300/40"/>
+                <rect x="760" y="165" width="200" height="90" rx="14" class="fill-white stroke-slate-300 dark:fill-[#0f1629] dark:stroke-cyan-300/40"/>
+                <rect x="760" y="290" width="200" height="90" rx="14" class="fill-white stroke-slate-300 dark:fill-[#0f1629] dark:stroke-cyan-300/40"/>
+              </g>
+              <g font-family="'JetBrains Mono', monospace" font-size="12" class="fill-cyan-700 dark:fill-cyan-300">
+                <text x="60" y="168">BROWSER</text><text x="400" y="128" fill="#ff2d20">SERVER</text><text x="780" y="66">DATA</text><text x="780" y="191">SIGNING</text><text x="780" y="316">INTEGRATIONS</text>
+              </g>
+              <g font-family="'Space Grotesk', sans-serif" font-weight="700" class="fill-slate-900 dark:fill-[#e6f1ff]">
+                <text x="60" y="200" font-size="22">React 18</text><text x="60" y="226" font-size="16" font-weight="500">+ Inertia.js</text>
+                <text x="400" y="162" font-size="26">Laravel 12</text>
+                <text x="780" y="98" font-size="20">MySQL</text>
+                <text x="780" y="223" font-size="18">E-signature</text>
+                <text x="780" y="348" font-size="18">Mail · DOTS · API</text>
+              </g>
+              <g font-family="Inter, sans-serif" font-size="13" class="fill-slate-500 dark:fill-slate-400">
+                <text x="60" y="256">Tailwind · Chart.js · Vitest</text>
+                <text x="400" y="196">Controllers per workflow stage</text>
+                <text x="400" y="220">Services: signing, notifications</text>
+                <text x="400" y="244">Policies, roles, Sanctum tokens</text>
+                <text x="400" y="268">DomPDF · PhpSpreadsheet</text>
+                <text x="400" y="292">Hashids · Pest</text>
+                <text x="780" y="118">93 migrations · 75 models</text>
+                <text x="780" y="243">via proxy + signing service</text>
+                <text x="780" y="368">notices, tracking, tokens</text>
+              </g>
+              <g font-family="'JetBrains Mono', monospace" font-size="11" class="fill-slate-500 dark:fill-slate-400">
+                <text x="262" y="182">Inertia visit</text><text x="262" y="262">props + page</text>
+              </g>
+            </svg>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER ============ -->
+    <section class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[05] // before → after</p>
+          <h2 class="section-title">What <span class="text-neon">changed</span> for the people using it.</h2>
+        </div>
+        <div class="mt-12 grid gap-6 lg:grid-cols-2">
+          <article class="reveal card relative p-6 sm:p-8">
+            <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500">before</p>
+            <h3 class="mt-2 text-xl font-bold">Paper, email and spreadsheets</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed sm:text-base">
+              <li class="flex gap-3"><span class="mt-0.5 flex-none text-rose-500">✕</span>Proposals and plans passed between offices by hand and email</li>
+              <li class="flex gap-3"><span class="mt-0.5 flex-none text-rose-500">✕</span>No single place to see where a document was or who had it</li>
+              <li class="flex gap-3"><span class="mt-0.5 flex-none text-rose-500">✕</span>Comments and revisions scattered across copies</li>
+              <li class="flex gap-3"><span class="mt-0.5 flex-none text-rose-500">✕</span>Printed copies hard to verify as genuine</li>
+            </ul>
+          </article>
+          <article class="reveal card relative border-cyan-500/30 p-6 sm:p-8">
+            <span class="border-spin" aria-hidden="true"></span>
+            <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-cyan-700 dark:text-cyan-300">after</p>
+            <h3 class="mt-2 text-xl font-bold">One workflow in PDMIS</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed sm:text-base">
+              <li class="flex gap-3"><span class="mt-0.5 flex-none text-emerald-500">✓</span>Every document follows the same draft → review → approve → sign path</li>
+              <li class="flex gap-3"><span class="mt-0.5 flex-none text-emerald-500">✓</span>Status and history visible to everyone involved</li>
+              <li class="flex gap-3"><span class="mt-0.5 flex-none text-emerald-500">✓</span>Comments and returns recorded in one audit trail</li>
+              <li class="flex gap-3"><span class="mt-0.5 flex-none text-emerald-500">✓</span>Digitally signed PDFs with a public verification link</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -258,7 +317,7 @@
     <section class="section">
       <div class="container-x">
         <div class="reveal max-w-2xl">
-          <p class="eyebrow">[05] // engineering decisions</p>
+          <p class="eyebrow">[06] // engineering decisions</p>
           <h2 class="section-title">Choices that <span class="text-neon">made it work</span>.</h2>
         </div>
         <div class="mt-12 grid gap-6 lg:grid-cols-2">
@@ -292,7 +351,7 @@
       <div class="container-x grid gap-6 lg:grid-cols-2">
         <article class="reveal card relative p-6 sm:p-8">
           <span class="hud-corners" aria-hidden="true"></span>
-          <p class="eyebrow">[06] // my role</p>
+          <p class="eyebrow">[07] // my role</p>
           <p class="text-sm leading-relaxed sm:text-base">
             I co-created PDMIS as part of an in-house government development team in 2026. I worked across development,
             requirements gathering with end users, testing and QA, and user onboarding, the same responsibilities I carry across the agency's other in-house systems.
@@ -302,7 +361,7 @@
           </div>
         </article>
         <article class="reveal card relative p-6 sm:p-8">
-          <p class="eyebrow">[07] // outcome</p>
+          <p class="eyebrow">[08] // outcome</p>
           <ul class="space-y-3 text-sm leading-relaxed sm:text-base">
             <li class="flex gap-3"><span class="mt-1 text-cyan-600 dark:text-cyan-300">◆</span>One system from proposal to procurement plan, replacing documents passed around by hand.</li>
             <li class="flex gap-3"><span class="mt-1 text-cyan-600 dark:text-cyan-300">◆</span>Every review, comment, return and approval is traceable in the audit trail.</li>

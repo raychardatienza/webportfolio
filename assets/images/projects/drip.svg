@@ -4,7 +4,7 @@
   <radialGradient id="glow" cx="0.74" cy="0.48" r="0.55"><stop offset="0" stop-color="#22d3ee" stop-opacity="0.30"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
   <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
   <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
+<linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0.13"/></linearGradient></defs>
 <rect width="640" height="360" fill="url(#bg)"/>
 <rect width="640" height="360" fill="url(#grid)"/>
 <rect width="640" height="360" fill="url(#glow)"/>
@@ -20,5 +20,6 @@
   <rect x="552" y="18" width="68" height="24" rx="6" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".3"/>
   <text x="586" y="34" font-family="Consolas,'Courier New',monospace" font-size="12" font-weight="700" fill="#e6f1ff" fill-opacity="1" text-anchor="middle">GOV</text>
   <text x="28" y="322" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="60" font-weight="800" fill="#ffffff" filter="url(#neon)" letter-spacing="-1">DRIP</text>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round"><circle r="3.5" fill="#a78bfa"><animateMotion path="M366 92C392 92 400 108 420 118" dur="2.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite" begin="0s"/></circle><circle r="3.5" fill="#a78bfa"><animateMotion path="M352 176C380 176 396 178 420 178" dur="2.4s" begin="0.7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite" begin="0.7s"/></circle><circle r="3.5" fill="#a78bfa"><animateMotion path="M374 252C396 252 404 240 420 236" dur="2.4s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite" begin="1.4s"/></circle></g><rect x="0" y="-80" width="640" height="80" fill="url(#scanG)"><animate attributeName="y" values="-80;360" dur="6s" repeatCount="indefinite" /></rect>
 <rect x="0" y="356" width="640" height="4" fill="#22d3ee" fill-opacity="0.85"/>
 </svg>

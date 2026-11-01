@@ -370,6 +370,46 @@ const ART = {
   }),
 };
 
+/* ---------- motion (SMIL, so it plays even when the SVG is used as an <img>) ---------- */
+const loop = (attr, values, dur, extra = '') => `<animate attributeName="${attr}" values="${values}" dur="${dur}" repeatCount="indefinite" ${extra}/>`;
+const travel = (d, color, dur = '2.6s', begin = '0s', r = 4) => `<circle r="${r}" fill="${color}"><animateMotion path="${d}" dur="${dur}" begin="${begin}" repeatCount="indefinite"/>${loop('opacity', '0;1;1;0', dur, `begin="${begin}"`)}</circle>`;
+const ring = (cx, cy, r0, r1, color, dur = '2.6s') => `<circle cx="${cx}" cy="${cy}" r="${r0}" fill="none" stroke="${color}">${loop('r', `${r0};${r1}`, dur)}${loop('opacity', '.9;0', dur)}</circle>`;
+const sweepBar = (x, y0, y1, w, color, dur = '2.4s') => `<rect x="${x}" y="${y0}" width="${w}" height="3" fill="${color}">${loop('y', `${y0};${y1};${y0}`, dur)}</rect>`;
+const blink = (shape, dur = '1.2s') => shape.replace('/>', `>${loop('opacity', '1;0.15;1', dur)}</${shape.match(/^<(\w+)/)[1]}>`);
+
+const ANIMS = {
+  drip: ['M366 92C392 92 400 108 420 118', 'M352 176C380 176 396 178 420 178', 'M374 252C396 252 404 240 420 236'].map((d, i) => travel(d, C.violet, '2.4s', `${i * 0.7}s`, 3.5)).join(''),
+  pdmis: travel('M335 132H600', C.cyan, '3.2s', '0s', 5),
+  sso: ring(480, 160, 24, 90, C.teal),
+  coc: sweepBar(508, 112, 204, 104, C.cyan),
+  ips: ring(480, 92, 16, 60, C.violet, '3s'),
+  dts: travel('M384 238C420 238 420 150 456 140', C.amber, '2.4s') + travel('M508 140C548 150 560 200 566 230', C.amber, '2.4s', '1.2s'),
+  qras: sweepBar(482, 120, 206, 96, C.cyan, '2.2s') + ring(530, 250, 16, 34, C.green, '2s'),
+  eais: travel('M352 200l26-22 20 10 28-30', C.cyan, '2.2s'),
+  abis: travel('M375 190L425 150 475 168 525 108 575 126', C.amber, '3s'),
+  approval: sweepBar(404, 168, 276, 122, C.cyan, '2.6s') + ring(532, 150, 16, 40, C.green, '2.4s'),
+  capstone3: ring(616, 128, 12, 30, C.red, '1.8s'),
+  capstone2: blink(`<rect x="392" y="274" width="9" height="16" fill="${C.green}"/>`, '1s'),
+  fruit: ring(428, 158, 18, 40, C.red, '2.2s'),
+  cctv: blink(`<circle cx="226" cy="116" r="5" fill="${C.red}"/>`, '1.1s') + `<path d="M332 116L580 52V236Z" fill="${C.cyan}" fill-opacity=".06">${loop('fill-opacity', '.03;.14;.03', '3s')}</path>`,
+  access: blink(`<path d="M440 150a28 28 0 0 1 0 40M452 140a44 44 0 0 1 0 60" stroke="${C.cyan}" fill="none"/>`, '1.4s'),
+  water: `<circle cx="330" r="5" fill="${C.sky}">${loop('cy', '150;282', '1.6s')}${loop('opacity', '1;1;0', '1.6s')}</circle>` + ring(455, 254, 12, 50, C.amber, '2s'),
+  lighting: `<circle cx="320" cy="104" r="56" fill="${C.amber}" fill-opacity=".08">${loop('fill-opacity', '.04;.22;.04', '2.4s')}</circle>`,
+  pp: `<circle r="7" fill="${C.amber}">${loop('cx', '266;376;266', '2.4s')}${loop('cy', '114;158;114', '2.4s')}</circle>`,
+  burglar: blink(`<path d="M218 193H282M346 193H402" stroke="${C.red}" stroke-dasharray="6 5"/>`, '0.8s') + ring(500, 120, 20, 70, C.amber, '1.6s'),
+  calculator: blink(`<rect x="256" y="92" width="8" height="22" fill="${C.green}"/>`, '1s'),
+  pasystem: ring(470, 170, 30, 110, C.cyan, '2.2s'),
+  dc: travel('M90 180c15-50 30-50 45 0s30 50 45 0 30-50 45 0', C.cyan, '2s', '0s', 4),
+};
+
 fs.mkdirSync(OUT, { recursive: true });
-for (const [name, svg] of Object.entries(ART)) fs.writeFileSync(path.join(OUT, `${name}.svg`), svg);
+for (const [name, base] of Object.entries(ART)) {
+  const accent = (base.match(/<rect x="0" y="356" width="640" height="4" fill="(#[0-9a-fA-F]+)"/) || [])[1] || C.cyan;
+  const scanDef = `<linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${accent}" stop-opacity="0"/><stop offset="1" stop-color="${accent}" stop-opacity="0.13"/></linearGradient>`;
+  const scan = `<rect x="0" y="-80" width="640" height="80" fill="url(#scanG)">${loop('y', '-80;360', '6s')}</rect>`;
+  const svg = base
+    .replace('</defs>', `${scanDef}</defs>`)
+    .replace('<rect x="0" y="356"', `<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round">${ANIMS[name] || ''}</g>${scan}\n<rect x="0" y="356"`);
+  fs.writeFileSync(path.join(OUT, `${name}.svg`), svg);
+}
 console.log(`wrote ${Object.keys(ART).length} illustrations to ${OUT}`);

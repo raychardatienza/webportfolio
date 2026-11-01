@@ -4,7 +4,7 @@
   <radialGradient id="glow" cx="0.5" cy="0.48" r="0.55"><stop offset="0" stop-color="#a78bfa" stop-opacity="0.30"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
   <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/></pattern>
   <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
+<linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a78bfa" stop-opacity="0"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.13"/></linearGradient></defs>
 <rect width="640" height="360" fill="url(#bg)"/>
 <rect width="640" height="360" fill="url(#grid)"/>
 <rect width="640" height="360" fill="url(#glow)"/>
@@ -19,5 +19,6 @@
       <path d="M440 150a28 28 0 0 1 0 40M452 140a44 44 0 0 1 0 60" stroke="#22d3ee"/></g>
 
 <text x="24" y="34" font-family="Consolas,'Courier New',monospace" font-size="13" font-weight="400" fill="#22d3ee" fill-opacity="0.8" text-anchor="start">// access control system</text>
+<g filter="url(#neon)" fill="none" stroke-width="2.5" stroke-linecap="round"><path d="M440 150a28 28 0 0 1 0 40M452 140a44 44 0 0 1 0 60" stroke="#22d3ee" fill="none"><animate attributeName="opacity" values="1;0.15;1" dur="1.4s" repeatCount="indefinite" /></path></g><rect x="0" y="-80" width="640" height="80" fill="url(#scanG)"><animate attributeName="y" values="-80;360" dur="6s" repeatCount="indefinite" /></rect>
 <rect x="0" y="356" width="640" height="4" fill="#a78bfa" fill-opacity="0.85"/>
 </svg>
