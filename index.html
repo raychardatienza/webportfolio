@@ -110,15 +110,25 @@
   <!-- ============ NAVIGATION ============ -->
   <header id="site-header" class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4">
     <nav class="glass mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-3 sm:px-4" aria-label="Primary">
-      <a href="#home" class="group flex items-center gap-2.5" aria-label="Raychard Atienza — back to top">
-        <span class="relative grid h-9 w-9 place-items-center rounded-lg border border-cyan-500/50 bg-cyan-500/10 font-mono text-[13px] font-semibold text-cyan-700 transition group-hover:shadow-[0_0_18px_rgba(34,211,238,0.6)] dark:text-cyan-300">RA</span>
+      <a href="#home" class="group flex items-center gap-3" aria-label="Raychard Atienza — back to top">
+        <span class="relative flex h-9 w-9 items-center justify-center rounded-xl border border-cyan-500/40 bg-gradient-to-br from-cyan-500/15 via-violet-500/10 to-transparent font-mono text-[13px] font-bold text-cyan-700 transition-all duration-300 group-hover:scale-105 group-hover:border-cyan-400 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.45)] dark:border-cyan-400/40 dark:text-cyan-300">
+          RA
+          <span class="absolute -right-1 -top-1 flex h-2.5 w-2.5">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_6px_#10b981]"></span>
+          </span>
+        </span>
         <span class="hidden leading-tight sm:block">
-          <span class="block font-display text-[15px] font-bold text-slate-900 dark:text-ink">Raychard Atienza</span>
-          <span class="block font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">full-stack · laravel</span>
+          <span class="block font-display text-[15px] font-bold tracking-tight text-slate-900 transition-colors group-hover:text-cyan-600 dark:text-ink dark:group-hover:text-cyan-300">Raychard Atienza</span>
+          <span class="flex items-center gap-1.5 font-mono text-[9.5px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
+            LEAD DEV // QC-PH
+          </span>
         </span>
       </a>
 
-      <ul class="hidden items-center md:flex">
+      <!-- Recessed Capsule Dock -->
+      <ul class="hidden items-center gap-1 rounded-full border border-slate-200/80 bg-slate-100/70 p-1 backdrop-blur-md dark:border-white/[0.08] dark:bg-void-950/70 dark:shadow-[inset_0_1px_2px_rgba(0,0,0,0.6)] lg:flex">
         <li><a class="nav-link" href="#about">about</a></li>
         <li><a class="nav-link" href="#insights">insights</a></li>
         <li><a class="nav-link" href="#stack">stack</a></li>
@@ -128,31 +138,46 @@
         <li><a class="nav-link" href="#contact">contact</a></li>
       </ul>
 
+      <!-- Action Cluster -->
       <div class="flex items-center gap-2">
-        <button type="button" data-open-terminal class="icon-btn h-9 w-9 font-mono text-xs font-semibold" aria-label="Open terminal (press /)" title="Terminal ( / )">›_</button>
-        <button id="lang-toggle" type="button" class="icon-btn h-9 w-auto px-2.5 font-mono text-[11px] font-semibold" aria-label="Lumipat sa Filipino" title="English / Filipino">FIL</button>
-        <button id="theme-toggle" type="button" class="icon-btn h-9 w-9" aria-label="Toggle dark mode" aria-pressed="true">
-          <i data-icon="moon" class="h-[18px] w-[18px] dark:hidden"></i>
-          <i data-icon="sun" class="hidden h-[18px] w-[18px] dark:block"></i>
+        <button type="button" id="cmd-btn" class="hidden sm:inline-flex items-center gap-2 rounded-xl border border-slate-200/80 bg-slate-100/70 px-2.5 py-1.5 font-mono text-[11px] font-medium text-slate-600 transition-all duration-200 hover:border-cyan-500/50 hover:text-cyan-700 dark:border-white/[0.08] dark:bg-void-950/70 dark:text-slate-400 dark:hover:border-cyan-400/40 dark:hover:text-cyan-300 dark:hover:shadow-[0_0_15px_-3px_rgba(34,211,238,0.25)]" aria-label="Open Command Palette (press ⌘K or Ctrl+K)" title="Command Palette (Ctrl+K)">
+          <span class="text-[11px] font-sans">Search</span>
+          <kbd class="flex items-center gap-0.5 rounded border border-slate-300/80 bg-white px-1.5 py-0.5 font-mono text-[10px] font-semibold text-slate-600 shadow-xs dark:border-white/[0.1] dark:bg-white/[0.06] dark:text-slate-300">
+            <span class="text-cyan-600 dark:text-cyan-400 font-bold">⌘</span>K
+          </kbd>
         </button>
-        <a href="#contact" class="btn-primary btn-sm hidden md:inline-flex">Let's talk</a>
-        <button id="menu-btn" type="button" class="icon-btn h-9 w-9 md:hidden" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+
+        <div class="flex items-center gap-0.5 rounded-xl border border-slate-200/80 bg-slate-100/70 p-0.5 backdrop-blur-md dark:border-white/[0.08] dark:bg-void-950/70 dark:shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]">
+          <button id="sound-toggle" type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 transition hover:bg-white hover:text-cyan-600 dark:text-slate-400 dark:hover:bg-white/[0.08] dark:hover:text-cyan-300" aria-label="Toggle procedural audio haptics" title="Toggle audio haptics (Muted by default)" aria-pressed="false">
+            <span class="soundwave" aria-hidden="true"><span class="soundwave-bar"></span><span class="soundwave-bar"></span><span class="soundwave-bar"></span><span class="soundwave-bar"></span></span>
+          </button>
+          <button type="button" data-open-terminal class="inline-flex h-8 w-8 items-center justify-center rounded-lg font-mono text-xs font-semibold text-slate-500 transition hover:bg-white hover:text-cyan-600 dark:text-slate-400 dark:hover:bg-white/[0.08] dark:hover:text-cyan-300" aria-label="Open terminal (press /)" title="Terminal ( / )">›_</button>
+          <button id="lang-toggle" type="button" class="inline-flex h-8 w-auto px-2 items-center justify-center rounded-lg font-mono text-[11px] font-semibold text-slate-500 transition hover:bg-white hover:text-cyan-600 dark:text-slate-400 dark:hover:bg-white/[0.08] dark:hover:text-cyan-300" aria-label="Lumipat sa Filipino" title="English / Filipino">FIL</button>
+          <button id="theme-toggle" type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 transition hover:bg-white hover:text-cyan-600 dark:text-slate-400 dark:hover:bg-white/[0.08] dark:hover:text-cyan-300" aria-label="Toggle dark mode" aria-pressed="true">
+            <i data-icon="moon" class="h-4 w-4 dark:hidden"></i>
+            <i data-icon="sun" class="hidden h-4 w-4 dark:block"></i>
+          </button>
+        </div>
+
+        <a href="#contact" class="btn-primary btn-sm hidden sm:inline-flex font-mono text-xs shadow-md">Let's talk</a>
+        <button id="menu-btn" type="button" class="icon-btn h-9 w-9 lg:hidden" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
           <i data-icon="menu" class="h-5 w-5" data-when="closed"></i>
           <i data-icon="x" class="hidden h-5 w-5" data-when="open"></i>
         </button>
       </div>
     </nav>
 
-    <div id="mobile-menu" class="glass mx-auto mt-2 hidden max-w-screen-2xl md:hidden">
-      <ul class="flex flex-col gap-1 p-3">
-        <li><a class="nav-link block text-sm" href="#about">about</a></li>
-        <li><a class="nav-link block text-sm" href="#insights">insights</a></li>
-        <li><a class="nav-link block text-sm" href="#stack">stack</a></li>
-        <li><a class="nav-link block text-sm" href="#projects">projects</a></li>
-        <li><a class="nav-link block text-sm" href="#experience">experience</a></li>
-        <li><a class="nav-link block text-sm" href="#notes">notes</a></li>
-        <li><a class="nav-link block text-sm" href="#contact">contact</a></li>
-        <li class="pt-2"><a class="btn-primary w-full" href="./assets/resume/Raychard-Atienza-Resume.pdf" download><i data-icon="download" class="h-4 w-4"></i>Download Resume</a></li>
+    <!-- Mobile / Tablet Drawer -->
+    <div id="mobile-menu" class="glass mx-auto mt-2 hidden max-w-screen-2xl overflow-hidden rounded-2xl border border-slate-200/90 bg-white/95 p-3 shadow-2xl backdrop-blur-2xl dark:border-white/[0.09] dark:bg-void-950/95 dark:shadow-[0_24px_60px_rgba(0,0,0,0.85),inset_0_1px_0_rgba(255,255,255,0.08)] lg:hidden">
+      <ul class="flex flex-col gap-1">
+        <li><a class="nav-link block rounded-xl px-4 py-2.5 text-sm" href="#about">about</a></li>
+        <li><a class="nav-link block rounded-xl px-4 py-2.5 text-sm" href="#insights">insights</a></li>
+        <li><a class="nav-link block rounded-xl px-4 py-2.5 text-sm" href="#stack">stack</a></li>
+        <li><a class="nav-link block rounded-xl px-4 py-2.5 text-sm" href="#projects">projects</a></li>
+        <li><a class="nav-link block rounded-xl px-4 py-2.5 text-sm" href="#experience">experience</a></li>
+        <li><a class="nav-link block rounded-xl px-4 py-2.5 text-sm" href="#notes">notes</a></li>
+        <li><a class="nav-link block rounded-xl px-4 py-2.5 text-sm" href="#contact">contact</a></li>
+        <li class="pt-2"><a class="btn-primary w-full justify-center" href="./assets/resume/Raychard-Atienza-Resume.pdf" download><i data-icon="download" class="h-4 w-4"></i>Download Resume</a></li>
       </ul>
     </div>
   </header>
@@ -198,6 +223,45 @@
               <span aria-hidden="true">›_</span> press <kbd class="rounded border border-current px-1">/</kbd> to open the terminal
             </button>
           </div>
+
+          <!-- Quick Interactive Utilities -->
+          <div class="mt-4 flex flex-wrap items-center gap-2 font-mono text-xs">
+            <button type="button" id="open-telemetry-btn" class="inline-flex items-center gap-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-1.5 text-[11px] font-semibold text-cyan-700 transition hover:bg-cyan-500/20 dark:border-cyan-400/30 dark:text-cyan-300">
+              <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping"></span>
+              ⚡ Request Telemetry
+            </button>
+            <button type="button" id="open-vcard-btn" class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white/70 px-2.5 py-1.5 text-[11px] font-medium text-slate-700 transition hover:border-cyan-500 hover:text-cyan-800 dark:border-white/10 dark:bg-void-950/60 dark:text-slate-300 dark:hover:text-cyan-200">
+              📲 Connect &amp; QR
+            </button>
+            <button type="button" id="print-dossier-btn" class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white/70 px-2.5 py-1.5 text-[11px] font-medium text-slate-700 transition hover:border-cyan-500 hover:text-cyan-800 dark:border-white/10 dark:bg-void-950/60 dark:text-slate-300 dark:hover:text-cyan-200">
+              📄 1-Page Dossier
+            </button>
+          </div>
+
+          <!-- Tailored Persona Lens -->
+          <div class="mt-8 pt-6 border-t border-slate-200/80 dark:border-white/[0.08]">
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <span class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                <span class="inline-flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                Tailored Recruiter Lens:
+              </span>
+              <span id="lens-status" class="hidden sm:inline font-mono text-[10.5px] text-cyan-600 dark:text-cyan-400">Viewing full-profile perspective</span>
+            </div>
+            <div id="lens-dock" class="inline-flex flex-wrap gap-1 p-1 rounded-xl border border-slate-200/80 bg-slate-100/70 backdrop-blur-md dark:border-white/[0.08] dark:bg-void-950/70" role="group" aria-label="Portfolio persona lens switcher">
+              <button type="button" class="lens-btn px-3 py-1.5 rounded-lg font-mono text-xs font-semibold transition-all duration-200 bg-white text-cyan-800 shadow-sm dark:bg-cyan-500/15 dark:text-cyan-300 dark:border dark:border-cyan-400/40" data-lens="all" aria-pressed="true">
+                ✨ All-Rounder
+              </button>
+              <button type="button" class="lens-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all duration-200" data-lens="dev" aria-pressed="false">
+                💻 Full-Stack Dev
+              </button>
+              <button type="button" class="lens-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all duration-200" data-lens="sec" aria-pressed="false">
+                🛡️ Systems &amp; Security
+              </button>
+              <button type="button" class="lens-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all duration-200" data-lens="pm" aria-pressed="false">
+                📊 Project Manager
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Signature: the archipelago as a live data network -->
@@ -208,6 +272,22 @@
             <span class="ml-4 inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-cyan-500/40 bg-white/80 px-2 py-1 font-mono text-[10.5px] text-cyan-800 backdrop-blur dark:bg-void-900/80 dark:text-cyan-200">
               <span class="h-1.5 w-1.5 rounded-full bg-cyan-500 dark:bg-cyan-300"></span>quezon city · home base
             </span>
+          </div>
+
+          <!-- Real-time hub telemetry overlay (updates on hub hover/click) -->
+          <div id="hub-telemetry" class="pointer-events-none absolute bottom-4 right-4 z-20 hidden rounded-xl border border-slate-200/90 bg-white/90 p-3.5 backdrop-blur-md shadow-xl transition-all duration-300 dark:border-white/10 dark:bg-void-900/90 max-lg:hidden font-mono text-xs w-64">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-2 dark:border-white/10">
+              <span class="flex items-center gap-1.5 text-cyan-700 dark:text-cyan-300 font-bold">
+                <span class="h-2 w-2 rounded-full bg-cyan-500 animate-ping"></span>
+                <span id="telemetry-hub-name">Quezon City Hub</span>
+              </span>
+              <span id="telemetry-ping" class="text-emerald-600 dark:text-emerald-400 text-[11px] font-semibold">● 4ms</span>
+            </div>
+            <div class="space-y-1 text-[11px] text-slate-600 dark:text-slate-400">
+              <div class="flex justify-between"><span>Throughput:</span><span id="telemetry-stat1" class="text-slate-900 dark:text-slate-200 font-medium">10 Gbps</span></div>
+              <div class="flex justify-between"><span>Connected:</span><span id="telemetry-stat2" class="text-slate-900 dark:text-slate-200 font-medium">PDMIS · DRIP · SSO</span></div>
+              <div class="flex justify-between"><span>Security:</span><span class="text-cyan-700 dark:text-cyan-300 font-medium">DICT PNPKI + Sanctum</span></div>
+            </div>
           </div>
 
           <div class="float glass absolute bottom-[8%] left-0 flex items-center gap-3 px-3.5 py-2.5 max-lg:hidden">
@@ -266,7 +346,7 @@
         <div id="portrait" class="reveal relative mx-auto w-full max-w-[22rem] lg:sticky lg:top-28 lg:mx-0 lg:max-w-none lg:self-start">
           <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-cyan-400 via-violet-500 to-laravel opacity-20 blur-3xl dark:opacity-30" aria-hidden="true"></div>
           <div class="ring-spin shadow-2xl shadow-cyan-900/20">
-            <div class="ring-inner scan duotone bg-slate-200 dark:bg-void-800">
+            <div class="ring-inner bg-slate-200 dark:bg-void-800">
               <picture>
                 <source srcset="./assets/images/profile.webp" type="image/webp" />
                 <img src="./assets/images/profile.jpg" alt="Portrait of Raychard Atienza" width="640" height="640" loading="lazy" decoding="async" class="aspect-square w-full object-cover" />
@@ -353,10 +433,10 @@
               <p class="viz-sub">Roles and training on one time axis, with key milestones marked.</p>
             </div>
             <ul class="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[11px]" aria-label="Legend">
-              <li class="flex items-center gap-2"><span class="h-2.5 w-5 rounded-[3px]" style="background:var(--c-seq)"></span>Current role</li>
-              <li class="flex items-center gap-2"><span class="h-2.5 w-5 rounded-[3px]" style="background:var(--c-context)"></span>Past role</li>
-              <li class="flex items-center gap-2"><span class="h-2.5 w-5 rounded-[3px]" style="background:var(--c-web)"></span>Training</li>
-              <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 rotate-45 rounded-[2px] bg-slate-900 dark:bg-ink"></span>Milestone</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-4 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-300 shadow-[0_0_8px_rgba(34,211,238,0.7)]"></span>Current role</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-4 rounded-full bg-slate-500/60 dark:bg-slate-600/80 border border-white/10"></span>Past role</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-4 rounded-full bg-gradient-to-r from-violet-600 to-purple-400 shadow-[0_0_8px_rgba(168,85,247,0.5)]"></span>Training</li>
+              <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 rotate-45 rounded-[2px] bg-gradient-to-tr from-cyan-400 to-white shadow-[0_0_8px_rgba(34,211,238,0.9)]"></span>Milestone</li>
             </ul>
           </div>
           <div id="career-chart" class="viz-plot mt-8"></div>
@@ -462,7 +542,7 @@
             <span class="grid h-11 w-11 place-items-center rounded-xl border border-laravel/30 bg-laravel/10 text-laravel"><i data-icon="server" class="h-5 w-5"></i></span>
             <h3 class="mt-4 text-lg font-bold">Back-end</h3>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="chip !border-laravel/50 !text-laravel">Laravel</span><span class="chip">PHP</span><span class="chip">Node.js</span><span class="chip">Express.js</span>
+              <span class="chip !border-laravel/50 !text-laravel">Laravel</span><span class="chip">PHP</span><span class="chip">CodeIgniter</span><span class="chip">Node.js</span><span class="chip">Express.js</span>
               <span class="chip">Back-end API (REST)</span><span class="chip">C#</span><span class="chip">ASP.NET</span>
             </div>
           </article>
@@ -509,8 +589,218 @@
         <div class="reveal max-w-2xl">
           <p class="eyebrow">[04] // projects</p>
           <h2 class="section-title">Systems people <span class="text-neon">actually use</span>.</h2>
-          <p class="section-lead">Public-sector platforms I co-built, full-stack web apps, and the engineering work where it all started.</p>
+          <p class="section-lead">Public-sector platforms I led and engineered, full-stack web apps, and the technical work where it all started.</p>
         </div>
+      </div>
+
+      <!-- PLAYABLE PROOF OF WORK: Live Interactive Approval Workflow Sandbox -->
+      <div class="container-x mt-10">
+        <article id="workflow-sandbox" class="reveal card relative overflow-hidden p-6 sm:p-8 border border-slate-200/90 dark:border-white/10 shadow-2xl">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-4 dark:border-white/10">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="inline-flex h-2 w-2 rounded-full bg-cyan-500 dark:bg-cyan-400 animate-pulse"></span>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300 font-semibold">Playable Architecture Demo · Laravel 12 State Machine</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">PDMIS Project Approval &amp; Digital-Signing Sandbox</h3>
+              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Step through the live 4-stage approval state machine powering nationwide public-sector project proposals.</p>
+            </div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span id="wf-status-badge" class="px-2.5 py-1 rounded-md font-mono text-xs font-bold border border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                STATE 1 / 4 · PROPOSAL DRAFT
+              </span>
+              <a href="./case-studies/pdmis.html" class="btn-ghost btn-sm">Full Case Study →</a>
+              <a href="./case-studies/pdmis.html#screencast-walkthrough" class="btn-primary btn-sm inline-flex items-center gap-1.5 shadow-sm">
+                <svg class="h-3 w-3 fill-current text-void-950 dark:text-cyan-400" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>30s Walkthrough</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Step Progression Track -->
+          <div class="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 font-mono text-xs">
+            <div id="wf-step-1" class="wf-node p-3.5 rounded-xl border border-cyan-500 bg-cyan-500/10 text-cyan-800 dark:text-cyan-200 is-active">
+              <div class="flex items-center justify-between">
+                <span class="font-bold">01. INITIATION</span>
+                <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-semibold">ACTIVE</span>
+              </div>
+              <p class="mt-2 text-[11px] font-sans text-slate-600 dark:text-slate-300">Activity design &amp; line-item budget input</p>
+            </div>
+            <div id="wf-step-2" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400">
+              <div class="flex items-center justify-between">
+                <span class="font-bold">02. TECH REVIEW</span>
+                <span class="text-[10px] opacity-60">PENDING</span>
+              </div>
+              <p class="mt-2 text-[11px] font-sans text-slate-600 dark:text-slate-400">Planning &amp; Budget Division compliance</p>
+            </div>
+            <div id="wf-step-3" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400">
+              <div class="flex items-center justify-between">
+                <span class="font-bold">03. BAC CLEARANCE</span>
+                <span class="text-[10px] opacity-60">PENDING</span>
+              </div>
+              <p class="mt-2 text-[11px] font-sans text-slate-600 dark:text-slate-400">Bids &amp; Awards Committee procurement trail</p>
+            </div>
+            <div id="wf-step-4" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400">
+              <div class="flex items-center justify-between">
+                <span class="font-bold">04. PNPKI SIGNING</span>
+                <span class="text-[10px] opacity-60">PENDING</span>
+              </div>
+              <p class="mt-2 text-[11px] font-sans text-slate-600 dark:text-slate-400">DICT cryptographic token seal &amp; release</p>
+            </div>
+          </div>
+
+          <!-- Active Simulation Console -->
+          <div class="mt-6 rounded-xl border border-slate-200/80 bg-slate-50/70 p-4 font-mono text-xs dark:border-white/10 dark:bg-void-950/80">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/60 pb-2 text-[11px] text-slate-500 dark:border-white/10">
+              <span class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                <span>EVENT LOG // PROPOSAL #2026-PH-0089: Regional IP Center Modernization</span>
+              </span>
+              <span id="wf-timestamp">TIMESTAMP: 21:27:00</span>
+            </div>
+            <div id="wf-description" class="mt-3 text-sm font-sans text-slate-800 dark:text-slate-200 font-medium">
+              Regional Focal submitted proposal draft. 7 activity line items entered. Automated validation: zero budget discrepancies detected.
+            </div>
+            <div id="wf-sql-drawer" class="mt-3 rounded-lg border border-slate-200 bg-white p-3 text-[11.5px] text-slate-700 dark:border-white/10 dark:bg-[#070b14] dark:text-cyan-300">
+              <span class="text-slate-400 dark:text-slate-500">/* Eloquent Query &amp; Audit Log */</span><br />
+              <code id="wf-sql-code">Proposal::where('uuid', $id)-&gt;with(['activities', 'budgetItems'])-&gt;firstOrFail(); // 0.62ms</code>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex flex-wrap items-center gap-3">
+              <button id="wf-advance-btn" type="button" class="btn-primary btn-sm flex items-center gap-2">
+                <span id="wf-btn-text">Advance to Technical Review →</span>
+              </button>
+              <button id="wf-reset-btn" type="button" class="btn-ghost btn-sm">
+                Reset Simulator
+              </button>
+            </div>
+            <div class="font-mono text-[11px] text-slate-500 flex items-center gap-2">
+              <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+              <span>Sanctum Token Verified · Eloquent ORM · DICT PNPKI Compliant</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Architecture Impact // Before & After Refactoring Differ -->
+      <div class="container-x mt-8">
+        <article id="refactoring-differ" class="reveal card relative overflow-hidden p-6 sm:p-8">
+          <span class="hud-corners" aria-hidden="true"></span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-4 dark:border-white/10">
+            <div>
+              <span class="eyebrow !mb-1 text-cyan-600 dark:text-cyan-400">Architecture Impact // Before &amp; After</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">From Fragmented Spreadsheets to Event-Driven State Machine</h3>
+              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Comparing the legacy paper routing flow against the modern Laravel 12 state machine.</p>
+            </div>
+            <div class="flex gap-1.5 p-1 rounded-xl border border-slate-200/80 bg-slate-100/70 dark:border-white/10 dark:bg-void-950/70" role="tablist">
+              <button type="button" class="diff-tab-btn active px-3 py-1.5 rounded-lg font-mono text-xs font-semibold bg-white text-cyan-800 shadow-sm dark:bg-cyan-500/15 dark:text-cyan-300" data-tab="process">
+                Process Metrics
+              </button>
+              <button type="button" class="diff-tab-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 dark:text-slate-400" data-tab="code">
+                Query &amp; Code Diff
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab 1: Process Metrics Diff -->
+          <div id="diff-process" class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="rounded-xl border border-rose-500/30 bg-rose-500/[0.04] p-5">
+              <span class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-rose-600 dark:text-rose-400">
+                <span>✕</span> BEFORE: Legacy Paper &amp; Spreadsheets
+              </span>
+              <ul class="mt-3 space-y-2.5 text-xs text-slate-600 dark:text-slate-300 font-sans">
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Turnaround:</strong> 2 to 3 weeks average per document routing cycle.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Visibility:</strong> Zero real-time tracking; manual phone follow-ups across regional offices.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Discrepancies:</strong> Formula calculation errors and budget ceiling mismatches caught late.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Verification:</strong> Physical wet signatures vulnerable to alteration without audit log.</span></li>
+              </ul>
+            </div>
+            <div class="rounded-xl border border-emerald-500/30 bg-emerald-500/[0.04] p-5">
+              <span class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                <span>✓</span> AFTER: PDMIS Laravel 12 Monolith
+              </span>
+              <ul class="mt-3 space-y-2.5 text-xs text-slate-600 dark:text-slate-300 font-sans">
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Turnaround:</strong> Under 4 hours for multi-stage technical reviews.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Visibility:</strong> Live status indicators and automated email/in-app notification queues.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Discrepancies:</strong> Zero budget discrepancies with real-time UACS validation rules.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Verification:</strong> DICT PNPKI digital signatures with immutable SHA-256 audit log.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 2: Code Diff (Refactoring N+1 queries to optimized Eloquent pipeline) -->
+          <div id="diff-code" class="mt-6 hidden rounded-xl border border-slate-200/80 bg-[#070b14] p-4 font-mono text-xs text-slate-300 dark:border-white/10 shadow-inner">
+            <div class="flex items-center justify-between border-b border-white/10 pb-2 text-[11px] text-slate-400">
+              <span>ProposalReviewController.php — Performance Refactor</span>
+              <span class="text-emerald-400">N+1 Eliminated · 84% Latency Drop</span>
+            </div>
+            <pre class="mt-3 overflow-x-auto text-[11.5px] leading-relaxed">
+<span class="diff-del block px-2 py-0.5">- // Legacy: N+1 query loop fetching activities for each proposal (142 queries, 210ms)</span>
+<span class="diff-del block px-2 py-0.5">- $proposals = Proposal::where('region_id', $regId)-&gt;get();</span>
+<span class="diff-del block px-2 py-0.5">- foreach ($proposals as $p) { $p-&gt;items = BudgetItem::where('proposal_id', $p-&gt;id)-&gt;get(); }</span>
+<span class="diff-context block px-2 py-0.5"> </span>
+<span class="diff-add block px-2 py-0.5">+ // Refactored: Eager-loaded relations with subquery constraints (2 queries, 1.2ms)</span>
+<span class="diff-add block px-2 py-0.5">+ return Proposal::where('region_id', $regId)</span>
+<span class="diff-add block px-2 py-0.5">+     -&gt;with(['activities:id,proposal_id,title', 'budgetItems:id,proposal_id,amount,uacs_code'])</span>
+<span class="diff-add block px-2 py-0.5">+     -&gt;withSum('budgetItems', 'amount')</span>
+<span class="diff-add block px-2 py-0.5">+     -&gt;paginate(25);</span>
+            </pre>
+          </div>
+        </article>
+      </div>
+
+      <!-- Interactive REST API Sandbox & Mock Explorer -->
+      <div class="container-x mt-8">
+        <article id="api-sandbox" class="reveal card relative overflow-hidden p-6 sm:p-8">
+          <span class="hud-corners" aria-hidden="true"></span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-4 dark:border-white/10">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="inline-flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300 font-semibold">Live RESTful API Sandbox · Laravel Sanctum</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">Interactive API Endpoint Explorer</h3>
+              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Execute mock requests against public-sector API endpoints with simulated Sanctum bearer authentication.</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="chip font-mono text-xs">v1.2.0 · REST JSON</span>
+            </div>
+          </div>
+
+          <!-- Request Bar -->
+          <div class="mt-6 flex flex-col sm:flex-row gap-2 font-mono text-xs">
+            <select id="api-method" class="field !py-2 w-full sm:w-28 font-bold text-cyan-600 dark:text-cyan-400">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+            </select>
+            <select id="api-endpoint" class="field !py-2 flex-1">
+              <option value="/api/v1/proposals?status=recommended">/api/v1/proposals?status=recommended</option>
+              <option value="/api/v1/proposals/89/pnpki-sign">/api/v1/proposals/89/pnpki-sign</option>
+              <option value="/api/v1/reference/psgc/regions">/api/v1/reference/psgc/regions</option>
+              <option value="/api/v1/system/telemetry">/api/v1/system/telemetry</option>
+            </select>
+            <button type="button" id="api-send-btn" class="btn-primary btn-sm flex items-center justify-center gap-2 font-mono text-xs whitespace-nowrap">
+              <span>Send Request ⚡</span>
+            </button>
+          </div>
+
+          <!-- Response Console -->
+          <div class="mt-5 rounded-xl border border-slate-200/80 bg-[#070b14] p-4 font-mono text-xs text-slate-300 dark:border-white/10 shadow-inner">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-2.5 text-[11px] text-slate-400">
+              <div class="flex items-center gap-2">
+                <span id="api-status-pill" class="rounded px-2 py-0.5 font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">200 OK</span>
+                <span id="api-latency" class="text-slate-400">Latency: 8.4ms</span>
+                <span class="text-slate-600">·</span>
+                <span class="text-cyan-400">Sanctum Token Valid</span>
+              </div>
+              <button type="button" id="api-copy-btn" class="hover:text-cyan-300 transition-colors">Copy JSON</button>
+            </div>
+            <pre id="api-response-body" class="mt-3 overflow-x-auto text-[11.5px] leading-relaxed text-cyan-300 max-h-72 overflow-y-auto"><code>Loading response...</code></pre>
+          </div>
+        </article>
       </div>
 
       <!-- Selected work: horizontal scroll gallery -->
@@ -526,12 +816,26 @@
       </div>
 
       <div class="container-x">
-        <div class="reveal mt-14 flex flex-wrap items-end justify-between gap-4">
-          <h3 class="text-xl font-bold">All projects</h3>
-          <div class="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0" role="group" aria-label="Filter projects">
-            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">all</button>
-            <button type="button" class="filter-btn" data-filter="gov" aria-pressed="false">government</button>
-            <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">web dev</button>
+        <div class="reveal mt-14 flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-bold">All projects</h3>
+            <p id="project-search-count" class="mt-1 font-mono text-xs text-slate-500">Showing all projects</p>
+          </div>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <!-- Instant Search Input -->
+            <div class="relative w-full sm:w-72">
+              <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                <i data-icon="search" class="h-4 w-4"></i>
+              </span>
+              <input type="search" id="project-search" placeholder="Search tech, keyword..." autocomplete="off" spellcheck="false" class="field !py-2 h-10 w-full pl-9 pr-8 text-xs font-mono" aria-label="Search projects by tech, keyword, or title" />
+              <button type="button" id="project-search-clear" class="absolute inset-y-0 right-0 hidden items-center pr-3 text-xs text-slate-400 hover:text-cyan-500 focus:outline-none" aria-label="Clear search">✕</button>
+            </div>
+            <!-- Category Filter Pills -->
+            <div class="no-scrollbar -mx-4 flex gap-1.5 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0" role="group" aria-label="Filter projects">
+              <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">all</button>
+              <button type="button" class="filter-btn" data-filter="gov" aria-pressed="false">government</button>
+              <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">web dev</button>
+            </div>
           </div>
         </div>
 
@@ -812,11 +1116,193 @@
     </div>
   </div>
 
+  <!-- Universal Command Palette (⌘K / Ctrl+K) -->
+  <div id="cmd-palette" class="fixed inset-0 z-[100] hidden items-start justify-center bg-void-950/70 p-3 pt-16 sm:p-6 sm:pt-24" role="dialog" aria-modal="true" aria-labelledby="cmd-input">
+    <div class="relative flex w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white/95 shadow-2xl dark:border-white/10 dark:bg-void-900/95">
+      <div class="flex items-center gap-3 border-b border-slate-200/80 px-4 py-3.5 dark:border-white/10">
+        <svg class="h-5 w-5 text-cyan-600 dark:text-cyan-400 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <input id="cmd-input" type="text" class="flex-1 bg-transparent text-sm text-slate-900 placeholder-slate-400 outline-none dark:text-ink dark:placeholder-slate-500" placeholder="Type a command, project, skill or credential... (ESC to close)" autocomplete="off" spellcheck="false" />
+        <span class="rounded bg-slate-200/80 px-1.5 py-0.5 font-mono text-[10px] text-slate-600 dark:bg-white/10 dark:text-slate-400">ESC</span>
+      </div>
+      <div id="cmd-results" class="max-h-[58vh] overflow-y-auto p-2 font-sans space-y-1">
+        <!-- Dynamically rendered by setupCommandPalette() -->
+      </div>
+      <div class="flex items-center justify-between border-t border-slate-200/80 px-4 py-2.5 font-mono text-[11px] text-slate-500 dark:border-white/10">
+        <div class="flex items-center gap-3">
+          <span><kbd class="rounded border border-slate-300 bg-slate-100 px-1 dark:border-white/10 dark:bg-white/5">↑↓</kbd> navigate</span>
+          <span><kbd class="rounded border border-slate-300 bg-slate-100 px-1 dark:border-white/10 dark:bg-white/5">↵</kbd> select</span>
+        </div>
+        <span class="hidden sm:inline">raychard atienza · full-stack developer</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Shared chart tooltip -->
   <div id="viz-tip" role="tooltip" hidden class="glass pointer-events-none fixed left-0 top-0 z-[70] max-w-[280px] px-3.5 py-2.5 text-xs leading-relaxed shadow-xl"></div>
 
   <!-- Toast for small confirmations (e.g. "Email copied") -->
   <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed bottom-6 left-1/2 z-[80] -translate-x-1/2 translate-y-4 rounded-xl border border-cyan-400/40 bg-void-900/95 px-4 py-2.5 font-mono text-xs text-cyan-200 opacity-0 shadow-[0_0_30px_-8px_rgba(34,211,238,0.7)] transition duration-300"></div>
+
+  <!-- Live Request Inspector & Telemetry HUD Drawer -->
+  <div id="telemetry-drawer" class="fixed inset-0 z-[95] hidden items-center justify-end bg-void-950/70 p-0 backdrop-blur-sm sm:p-4" role="dialog" aria-modal="true" aria-labelledby="telemetry-title">
+    <div class="relative flex h-full sm:h-[92vh] w-full max-w-xl flex-col overflow-hidden rounded-none sm:rounded-2xl border border-cyan-400/30 bg-[#070b14]/98 p-5 text-xs font-mono text-slate-300 shadow-[0_25px_80px_rgba(0,0,0,0.9)]">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="h-2.5 w-2.5 rounded-full bg-cyan-400 animate-ping"></span>
+          <h2 id="telemetry-title" class="font-bold text-sm text-cyan-300">PDMIS Live Request Inspector &amp; Telemetry</h2>
+        </div>
+        <button type="button" id="telemetry-close" class="rounded px-2 py-1 text-slate-400 hover:text-white hover:bg-white/10">✕ Close</button>
+      </div>
+
+      <div class="mt-4 grid grid-cols-3 gap-2 text-center text-[11px]">
+        <div class="rounded-lg border border-white/10 bg-white/[0.02] p-2.5">
+          <span class="block text-slate-500 uppercase tracking-wider">Avg Latency</span>
+          <span id="tel-avg-latency" class="block font-bold text-emerald-400 text-sm mt-0.5">8.4ms</span>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-white/[0.02] p-2.5">
+          <span class="block text-slate-500 uppercase tracking-wider">OPcache Hit</span>
+          <span class="block font-bold text-cyan-400 text-sm mt-0.5">99.4%</span>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-white/[0.02] p-2.5">
+          <span class="block text-slate-500 uppercase tracking-wider">N+1 Queries</span>
+          <span class="block font-bold text-emerald-400 text-sm mt-0.5">0 Detected</span>
+        </div>
+      </div>
+
+      <div class="mt-4 flex-1 overflow-y-auto space-y-3 pr-1">
+        <div>
+          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">Live Endpoints Activity Trace</p>
+          <div id="tel-trace-list" class="space-y-1.5 font-mono text-[11px]">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-3">
+          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">MySQL Execution Plan (EXPLAIN)</p>
+          <pre class="rounded-lg border border-white/10 bg-black/50 p-2.5 text-[10.5px] leading-relaxed text-cyan-300 overflow-x-auto"><code>id: 1 | select_type: SIMPLE | table: proposals | type: const | key: PRIMARY | key_len: 8 | ref: const | rows: 1 | filtered: 100.00 | Extra: NULL</code></pre>
+        </div>
+
+        <div class="border-t border-white/10 pt-3">
+          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">Sanctum Auth &amp; DICT Root CA Chain</p>
+          <div class="rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-2.5 text-[10.5px] space-y-1 text-emerald-300">
+            <div>✓ Token: <span class="text-white">Bearer 89|sanctum_token_valid</span> (Capabilities: [*])</div>
+            <div>✓ DICT PNPKI Root CA: <span class="text-white">GovPH Root CA 2026 (SHA-256)</span></div>
+            <div>✓ Tamper Check: <span class="text-white">Pass (0 byte discrepancy)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 border-t border-white/10 pt-3 flex justify-between items-center text-[11px] text-slate-500">
+        <span>PHP 8.3.10 · Laravel 12.0 · MySQL 8.0</span>
+        <button type="button" id="tel-ping-btn" class="btn-ghost btn-sm !py-1 text-[11px]">Simulate Ping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile vCard & Networking QR Badge Modal -->
+  <div id="vcard-modal" class="fixed inset-0 z-[95] hidden items-center justify-center bg-void-950/70 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="vcard-title">
+    <div class="relative flex w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-cyan-400/30 bg-[#070b14]/98 p-6 text-center text-xs font-mono text-slate-300 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <span class="font-bold text-sm text-cyan-300">Connect with Raychard</span>
+        <button type="button" id="vcard-close" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+
+      <!-- QR Code Display (SVG) -->
+      <div class="mt-5 flex justify-center">
+        <div class="rounded-xl border border-white/10 bg-white p-3 shadow-lg">
+          <svg id="vcard-qr-svg" width="160" height="160" viewBox="0 0 100 100" class="mx-auto" aria-label="QR Code to Raychard's Portfolio and Contact"></svg>
+        </div>
+      </div>
+
+      <p class="mt-4 font-display text-base font-bold text-white">Raychard E. Atienza</p>
+      <p class="text-slate-400 text-[11px]">Lead Developer · CPMS · CASM · CPSCA</p>
+      <p class="text-cyan-400 text-[11px] mt-0.5">Quezon City, Metro Manila, PH</p>
+
+      <div class="mt-5 flex flex-col gap-2">
+        <button type="button" id="download-vcard-btn" class="btn-primary w-full justify-center !py-2 text-xs">
+          💾 Download Contact (.VCF)
+        </button>
+        <button type="button" id="copy-share-link" class="btn-ghost w-full justify-center !py-2 text-xs">
+          🔗 Copy Portfolio Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Executive 1-Page Print Dossier (Visible ONLY during print) -->
+  <div id="print-dossier" class="print-dossier hidden print:block font-sans text-slate-900 p-6 max-w-4xl mx-auto">
+    <div class="border-b-2 border-slate-900 pb-3 flex justify-between items-start">
+      <div>
+        <h1 class="text-2xl font-bold uppercase tracking-tight text-slate-900">Raychard E. Atienza</h1>
+        <p class="font-mono text-xs uppercase tracking-widest text-slate-700 font-semibold mt-0.5">Lead Developer · Computer Engineer · CPMS · CASM · CPSCA</p>
+        <p class="text-xs text-slate-600 mt-0.5">Quezon City, Metro Manila, Philippines · Career Service Professional (CSE)</p>
+      </div>
+      <div class="text-right text-xs space-y-0.5">
+        <p><strong>Email:</strong> raychardatienza@gmail.com</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/raychardatienza</p>
+        <p><strong>GitHub:</strong> github.com/raychardatienza</p>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-0.5">Executive Summary</h2>
+      <p class="mt-1.5 text-xs leading-relaxed text-slate-700">
+        Lead Full-Stack Developer and Computer Engineer with enterprise expertise architecting high-concurrency public-sector platforms, approval state machines, and REST APIs. Led the nationwide engineering of PDMIS (268 routes, 75 Eloquent models, 93 migrations, DICT PNPKI digital signatures), QRAS (CodeIgniter), and COC. Certified Project Management Specialist (CPMS), Certified Agile Scrum Master (CASM), and Certified Project Scheduling &amp; Controls Analyst (CPSCA).
+      </p>
+    </div>
+
+    <div class="mt-3">
+      <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-0.5">Core Enterprise Systems (Lead Developer)</h2>
+      <div class="mt-1.5 grid grid-cols-2 gap-2 text-xs">
+        <div class="border border-slate-300 p-2 rounded">
+          <p class="font-bold text-slate-900">PDMIS · Project Dev &amp; Management Information System</p>
+          <p class="text-slate-600 text-[10.5px]">Stack: Laravel 12 · React · Inertia · MySQL · DICT PNPKI</p>
+          <p class="text-slate-700 mt-0.5 text-[10.5px]">National project planning system: 268 routes, 90 controllers, 75 models, 93 migrations, 7-step wizard with cryptographic signing.</p>
+        </div>
+        <div class="border border-slate-300 p-2 rounded">
+          <p class="font-bold text-slate-900">QRAS · Quick Response Appraisal System</p>
+          <p class="text-slate-600 text-[10.5px]">Stack: CodeIgniter · PHP · MySQL · Bootstrap</p>
+          <p class="text-slate-700 mt-0.5 text-[10.5px]">Real-time appraisal tracking and response coordination for regional offices across 17 Philippine regions.</p>
+        </div>
+        <div class="border border-slate-300 p-2 rounded">
+          <p class="font-bold text-slate-900">COC · Certificate of Confirmation System</p>
+          <p class="text-slate-600 text-[10.5px]">Stack: Laravel · MySQL · Automated PDF Generation Engine</p>
+          <p class="text-slate-700 mt-0.5 text-[10.5px]">Automated indigenous certificate issuance with tamper-proof QR validation and centralized registry.</p>
+        </div>
+        <div class="border border-slate-300 p-2 rounded">
+          <p class="font-bold text-slate-900">SSO Gateway &amp; Document Tracking (DOTS)</p>
+          <p class="text-slate-600 text-[10.5px]">Stack: Laravel Sanctum · CodeIgniter · MySQL</p>
+          <p class="text-slate-700 mt-0.5 text-[10.5px]">Centralized authentication gateway and cross-system document routing and tracking across agency applications.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-0.5">Certifications &amp; Professional Education</h2>
+      <div class="mt-1.5 grid grid-cols-3 gap-2 text-xs">
+        <div>
+          <p class="font-bold text-slate-900">CPMS (60 hrs)</p>
+          <p class="text-slate-600 text-[10px]">Certified Project Management Specialist</p>
+          <p class="text-slate-500 text-[10px]">NievGen · 2026</p>
+        </div>
+        <div>
+          <p class="font-bold text-slate-900">CASM (24 hrs)</p>
+          <p class="text-slate-600 text-[10px]">Certified Agile Scrum Master</p>
+          <p class="text-slate-500 text-[10px]">NievGen · 2026</p>
+        </div>
+        <div>
+          <p class="font-bold text-slate-900">CPSCA (24 hrs)</p>
+          <p class="text-slate-600 text-[10px]">Certified Project Scheduling &amp; Controls</p>
+          <p class="text-slate-500 text-[10px]">NievGen · 2026</p>
+        </div>
+      </div>
+      <div class="mt-2 text-xs border-t border-slate-200 pt-1 flex justify-between text-slate-600">
+        <span><strong>BS Computer Engineering:</strong> De La Salle Lipa (2016)</span>
+        <span><strong>Full-Stack Bootcamp:</strong> Zuitt (540+ hrs)</span>
+        <span><strong>Eligibility:</strong> Career Service Professional (CSE, 2024)</span>
+      </div>
+    </div>
+  </div>
 
   <script src="./assets/js/main.js"></script>
 </body>

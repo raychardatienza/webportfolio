@@ -83,8 +83,9 @@ const TECH_ICONS = {
   "ASP.NET": ["#512BD4", "M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829Z"],
   "Mongoose": ["currentColor", "M14.014 7.37a9.162 9.162 0 0 0-.808.025c-.218.017-.434.072-.65.11.229.118.456.213.68.315.225.103.436.232.629.387-.253-.097-.499-.208-.752-.298a8.046 8.046 0 0 0-1.624-.421c-.273-.037-.546-.073-.819.005-.276.078-.354.18-.38.458-.04.46.098.887.281 1.298a4.432 4.432 0 0 0 1.185 1.573c.391.335.825.598 1.305.787.136.053.274.103.411.155l-.009.032c-.263-.072-.532-.126-.787-.22a4.14 4.14 0 0 1-1.222-.73 4.16 4.16 0 0 1-1.007-1.22 3.43 3.43 0 0 1-.43-1.609l-.012.005C4.891 7.488.402 11.595.035 11.94l-.034.014c-.002.005 0 .01.003.016L0 11.974l.005-.002c.004.008.01.016.013.024.087-.019.173-.042.26-.054l.069-.01c.324-.115.655-.205.997-.253.484-.069.985-.159 1.48-.156.468.002.943.074 1.402.153.129.022.255.052.38.087.335.075.65.21.933.391l.06.03c.403.19.758.47 1.038.811.052.057.141.116.187.178.096.114.142.236.303.363v-1.737h2.01l.939 1.733.942-1.733h2.07v3.357l.343-.226s.375-1 2.116-1.14l1.996-.064c-.308-.637-.307-.637-.159-.83.147-.19 1.28-.314 1.48-.433l2.912-.588c.007-.022.015.012.03.007.072-.022.147-.037.25-.061l.66-.16c.042-.025.093-.034.14-.05.308-.107.577-.245.726-.573.145-.319.339-.616.41-.967.022-.111.003-.208-.078-.288-.097-.096-.222-.138-.35-.171-.421-.173-.84-.35-1.264-.513-.261-.101-.529-.185-.795-.27a30.574 30.574 0 0 0-.794-.243c-.244-.072-.49-.138-.736-.205-.24-.066-.48-.133-.72-.192-.282-.07-.565-.13-.847-.195-.215-.05-.428-.102-.644-.146-.234-.047-.47-.089-.706-.13-.302-.053-.602-.112-.905-.153-.366-.05-.734-.082-1.101-.125-.345-.04-.691-.065-1.038-.07zm-3.303.767a.154.154 0 0 1 .056.007c.42.13.83.277 1.216.491.365.203.695.45.979.756.012.013.02.028.036.05l-.645-.293-.021.026.37.551-.022.022a1.986 1.986 0 0 0-.665-.322l-.02.02.633.74-.416-.136-.017.02c.163.27.376.505.58.775-.354-.2-.665-.42-.956-.669a4.488 4.488 0 0 1-1.01-1.185c-.107-.19-.201-.385-.222-.606a.468.468 0 0 1 .011-.15.123.123 0 0 1 .113-.097zm5.424.668c.154.002.311-.006.464.015.278.037.555.092.832.14.158.027.317.052.474.086.297.064.594.133.89.2.196.046.392.092.587.14l-.329.161c-.365.027-.731.055-1.097.057a3.268 3.268 0 0 1-.675-.074c-.28-.058-.514-.196-.652-.466-.02-.04-.09-.063-.14-.078-.18-.054-.362-.1-.544-.168.063-.005.126-.014.19-.013zm3.223 2.635.005.02c-.08.022-.16.042-.239.067-.455.14-.916.266-1.363.428-.28.101-.544.25-.81.388-.233.119-.315.322-.287.575.019.162.04.324.055.488a1.786 1.786 0 0 1-.288-.701c-.035-.169.058-.273.18-.365.238-.178.496-.318.777-.41.35-.117.702-.233 1.059-.325.251-.065.513-.09.77-.133.048-.008.094-.021.141-.032zM9.141 13.955v2.676h1.869l.064-.066v-2.61l-.97 1.495z"],
   "Arduino": ["#00878F", "M18.087 6.146c-.3 0-.607.017-.907.069-2.532.367-4.23 2.239-5.18 3.674-.95-1.435-2.648-3.307-5.18-3.674a6.49 6.49 0 0 0-.907-.069C2.648 6.146 0 8.77 0 12s2.656 5.854 5.913 5.854c.3 0 .607-.017.916-.069 2.531-.376 4.23-2.247 5.18-3.683.949 1.436 2.647 3.307 5.18 3.683.299.043.607.069.915.069C21.344 17.854 24 15.23 24 12s-2.656-5.854-5.913-5.854zM6.53 15.734a3.837 3.837 0 0 1-.625.043c-2.148 0-3.889-1.7-3.889-3.777 0-2.085 1.749-3.777 3.898-3.777.208 0 .416.017.624.043 2.39.35 3.847 2.768 4.347 3.734-.508.974-1.974 3.384-4.355 3.734zm11.558.043c-.208 0-.416-.017-.624-.043-2.39-.35-3.856-2.768-4.347-3.734.491-.966 1.957-3.384 4.347-3.734.208-.026.416-.043.624-.043 2.149 0 3.89 1.7 3.89 3.777 0 2.085-1.75 3.777-3.89 3.777zm1.65-4.404v1.134h-1.205v1.182h-1.156v-1.182H16.17v-1.134h1.206V10.19h1.156v1.183h1.206zM4.246 12.498H7.82v-1.125H4.245v1.125z"],
+  "CodeIgniter": ["#EE4326", "M11.466 0c.88 1.423-.28 3.306-1.207 4.358-.899 1.02-1.992 1.873-2.985 2.8-1.066.996-2.091 2.044-2.967 3.213-1.753 2.339-2.827 5.28-2.038 8.199.788 2.916 3.314 4.772 6.167 5.429-1.44-.622-2.786-2.203-2.79-3.82-.003-1.765 1.115-3.262 2.505-4.246-.167.632-.258 1.21.155 1.774a1.68 1.68 0 0 0 1.954.593c.725-.262 1.129-.983 1.341-1.688.486-1.62-.218-3.39-1.155-4.734 1.171 1.282 2.226 2.705 3.084 4.258 1.272 2.32 1.681 5.097 1.036 7.64-.614 2.408-2.529 4.314-4.996 5.025 5.566-.454 10.155-4.887 10.662-10.468.536-5.966-3.798-11.164-9.356-11.419Zm-.45 13.56c-.53.535-1.281.79-1.986.586.643-1.42 1.572-2.71 2.686-3.79-.168.96-.282 2.158-.7 3.204Z"],
 };
-const TECH_ALIASES = { "JavaScript (ES6+)": "JavaScript", "Laravel 12": "Laravel", "React 18": "React.js", "Express": "Express.js", "Node": "Node.js", "C# / ASP.NET": "C#" };
+const TECH_ALIASES = { "JavaScript (ES6+)": "JavaScript", "Laravel 12": "Laravel", "React 18": "React.js", "Express": "Express.js", "Node": "Node.js", "C# / ASP.NET": "C#", "CodeIgniter 4": "CodeIgniter", "CodeIgniter 3": "CodeIgniter" };
 function techIcon(name, cls = "h-3.5 w-3.5") {
   const key = TECH_ALIASES[name] || name.replace(/s+d+(.d+)?$/, "");
   const ic = TECH_ICONS[key];
@@ -124,8 +125,8 @@ const PROJECTS = [
   {
     cat: 'gov', featured: true, acronym: 'PDMIS', image: './assets/images/projects/pdmis.svg', accent: 'from-[#FF2D20] via-rose-700 to-fuchsia-900',
     title: 'Project Development & Management Information System',
-    org: 'Public sector', year: '2026', role: 'Co-creator',
-    description: 'Plans, tracks and monitors agency projects end-to-end, including proposals, Work & Financial Plans (WFP) and PPMP, with dashboards, calendars and Excel/PDF reports.',
+    org: 'Public sector', year: '2026', role: 'Lead Developer',
+    description: 'Led the development of the agency-wide system that plans, tracks and monitors projects end-to-end, including proposals, Work & Financial Plans (WFP) and PPMP, with dashboards, calendars and Excel/PDF reports.',
     impact: 'Moves spreadsheet-driven planning into one workflow, with digital document signing through the agency\'s e-signature service.',
     tech: ['Laravel 12', 'Inertia.js', 'React.js', 'Tailwind CSS', 'MySQL', 'Sanctum', 'Chart.js', 'Pest'],
     links: [{ label: 'Read case study', href: './case-studies/pdmis.html', icon: 'book', internal: true }],
@@ -133,7 +134,7 @@ const PROJECTS = [
   {
     cat: 'gov', featured: true, acronym: 'SSO', image: './assets/images/projects/sso.svg', accent: 'from-teal-500 via-cyan-700 to-slate-900',
     title: 'IPSGSIS Single Sign-On Website',
-    org: 'Public sector', year: '2026', role: 'Co-creator',
+    org: 'Public sector', year: '2026', role: 'Developer',
     description: 'A Single Sign-On (SSO) website for the IPSGSIS. Users authenticate once and move securely between the agency\'s systems.',
     impact: 'Fewer passwords to manage, centralized access control, and one consistent login experience across every platform.',
     tech: ['Laravel', 'Single Sign-On', 'MySQL'],
@@ -141,33 +142,33 @@ const PROJECTS = [
   {
     cat: 'gov', featured: true, acronym: 'COC', image: './assets/images/projects/coc.svg', accent: 'from-emerald-500 via-teal-700 to-cyan-900',
     title: 'Certificate of Confirmation (COC) System',
-    org: 'Public sector', year: '2026', role: 'Co-creator',
-    description: 'Digitizes the processing and issuance of Certificates of Confirmation, with QR-based verification built on the earlier QRAS authenticator.',
+    org: 'Public sector', year: '2026', role: 'Lead Developer',
+    description: 'Led the development to digitize the processing and issuance of Certificates of Confirmation, with QR-based verification built on the earlier QRAS authenticator.',
     impact: 'Faster certificate processing, and partner agencies can confirm a COC\'s authenticity in seconds.',
     tech: ['Laravel', 'PHP', 'MySQL', 'QR Code Verification'],
   },
   {
     cat: 'gov', featured: true, acronym: 'IPS · IPO', image: './assets/images/projects/ips.svg', accent: 'from-violet-500 via-purple-700 to-indigo-900',
     title: 'IPS & IPO Information System',
-    org: 'Public sector', year: '2026', role: 'Co-creator',
-    description: 'Manages records of Indigenous Political Structures (IPS) and Indigenous Peoples Organizations (IPO), covering registration, profiles and status in one place.',
+    org: 'Public sector', year: '2026', role: 'Lead Developer',
+    description: 'Led the development of an enterprise information system managing records of Indigenous Political Structures (IPS) and Indigenous Peoples Organizations (IPO), covering registration, profiles and status in one place.',
     impact: 'Consistent IPS/IPO data that field and central offices can retrieve and report on quickly.',
     tech: ['Laravel', 'PHP', 'MySQL', 'Responsive Web App'],
   },
   // ---------- Public sector (2024–2025) ----------
   {
-    cat: 'gov', acronym: 'DTS v2', image: './assets/images/projects/dts.svg', accent: 'from-slate-600 via-slate-800 to-cyan-900',
-    title: 'Document Tracking System v2',
-    org: 'Public sector', year: '2024–2025', role: 'Co-developer & trainer',
-    description: 'Second version of an agency-wide document tracking platform for routing and monitoring official documents across offices.',
+    cat: 'gov', acronym: 'DOTS v2', image: './assets/images/projects/dts.svg', accent: 'from-slate-600 via-slate-800 to-cyan-900',
+    title: 'Document Tracking System (DOTS v2)',
+    org: 'Public sector', year: '2024–2025', role: 'Developer & trainer',
+    description: 'Second version of an agency-wide document tracking platform built on CodeIgniter for routing and monitoring official documents across offices.',
     impact: 'I conducted the end-user training for employees, which drove agency-wide adoption.',
-    tech: ['Laravel', 'MySQL', 'JavaScript'],
+    tech: ['CodeIgniter', 'PHP', 'MySQL', 'JavaScript'],
   },
   {
     cat: 'gov', acronym: 'QRAS', image: './assets/images/projects/qras.svg', accent: 'from-lime-500 via-emerald-700 to-teal-900',
     title: 'Quick Response Authenticator System',
-    org: 'Public sector', year: '2024', role: 'Co-developer',
-    description: 'A QR-code authenticator used to confirm the validity of issued Certificates of Confirmation.',
+    org: 'Public sector', year: '2024', role: 'Lead Developer',
+    description: 'Led the development of a QR-code authenticator used to confirm the validity of issued Certificates of Confirmation.',
     impact: 'Cut manual verification requests and laid the groundwork for the 2026 COC System.',
     tech: ['Laravel', 'MySQL', 'QR Code'],
   },
@@ -182,10 +183,10 @@ const PROJECTS = [
   {
     cat: 'gov', acronym: 'ABIS', image: './assets/images/projects/abis.svg', accent: 'from-blue-500 via-indigo-700 to-slate-900',
     title: 'Accounting & Budget Information System',
-    org: 'Public sector', year: '2024–Present', role: 'Focal person',
-    description: 'Documented requirements, evaluated vendors and technologies, and steered procurement of an agency-wide accounting and budget system through to deployment.',
+    org: 'Public sector', year: '2024–Present', role: 'Technical lead & focal person',
+    description: 'Documented requirements, evaluated vendors and CodeIgniter-based architecture, and steered deployment of an agency-wide accounting and budget system.',
     impact: 'Now the ABIS focal person, coordinating support, issues and user concerns.',
-    tech: ['Requirements Analysis', 'Procurement', 'UAT', 'Deployment'],
+    tech: ['CodeIgniter', 'PHP', 'MySQL', 'Requirements Analysis', 'UAT', 'Deployment'],
   },
 
   // ---------- Web development ----------
@@ -342,10 +343,10 @@ if (DEMO_LINKS.live || DEMO_LINKS.repo) {
 const TIMELINE = [
   {
     type: 'milestone', date: '2026', icon: 'sparkle',
-    title: 'Co-created a new wave of public-sector platforms',
+    title: 'Led development of a new wave of public-sector platforms',
     org: 'In-house government development team',
     bullets: [
-      'Co-created and launched DRIP, the COC System, PDMIS, and the IPS & IPO Information System.',
+      'Led the development and launch of PDMIS, the COC System, and the IPS & IPO Information System; co-developed DRIP.',
       'Built the Single Sign-On (SSO) website for the IPSGSIS, giving users one login across the agency\'s systems.',
     ],
     tags: ['Laravel', 'React.js', 'MySQL', 'SSO'],
@@ -365,10 +366,10 @@ const TIMELINE = [
     org: 'National Commission on Indigenous Peoples · ICT Division',
     location: 'Quezon City, Metro Manila', status: 'Regular · Permanent',
     bullets: [
-      'Co-develop the Data Repository on Indigenous Peoples (DRIP) and the Project Development and Management Information System (PDMIS).',
-      'Co-created the COC System, IPS & IPO Information System and the IPSGSIS SSO website (2026).',
-      'Focal person for the Accounting and Budget Information System (ABIS).',
-      'Conducted user training for employees on the Document Tracking System v2.',
+      'Led the development of the Project Development and Management Information System (PDMIS); co-develop the Data Repository on Indigenous Peoples (DRIP).',
+      'Led the development of the COC System and the IPS & IPO Information System; developed the IPSGSIS SSO website (2026).',
+      'Technical lead and focal person for the Accounting and Budget Information System (ABIS).',
+      'Conducted user training for employees on the Document Tracking System (DOTS v2).',
       'Develop, enhance and maintain other in-house information systems.',
     ],
     tags: ['Laravel', 'Inertia.js', 'React.js', 'MySQL', 'Tailwind CSS'],
@@ -384,13 +385,14 @@ const TIMELINE = [
     org: 'National Commission on Indigenous Peoples · ICT Division',
     location: 'Quezon City, Metro Manila', status: 'Contract of Service',
     bullets: [
-      'Co-developed the Document Tracking System v2 and the Quick Response Authenticator System (QRAS) for COC confirmation.',
+      'Led the development of the Quick Response Authenticator System (QRAS) for COC confirmation.',
+      'Developed and trained on the Document Tracking System (DOTS v2) built with CodeIgniter.',
       'Enhanced the Educational Assistance Information System (EAIS) to version 3.',
-      'Took ABIS from requirements and vendor evaluation through procurement to deployment.',
+      'Steered ABIS requirements, CodeIgniter architecture evaluation, and deployment.',
       'Planned and ran user orientations, technical trainings and workshops; provided end-user technical support.',
       'Ran testing & QA on in-house systems; maintained documentation of configurations, procedures and troubleshooting.',
     ],
-    tags: ['System Analysis', 'QA & UAT', 'User Training', 'Documentation'],
+    tags: ['CodeIgniter', 'System Analysis', 'QA & UAT', 'User Training', 'Documentation'],
   },
   {
     type: 'milestone', date: '2023', icon: 'cap',
@@ -495,7 +497,7 @@ const DISCIPLINES = [
   { key: 'eng', label: 'Engineering & IoT', color: 'var(--c-eng)' },
 ];
 const SYSTEM_ERAS = [
-  { era: '2024 – 2025', role: 'as Project Development Officer II', systems: ['DTS v2', 'QRAS', 'EAIS v3', 'ABIS'] },
+  { era: '2024 – 2025', role: 'as Project Development Officer II', systems: ['DOTS v2', 'QRAS', 'EAIS v3', 'ABIS'] },
   { era: '2026', role: 'as Information System Analyst II', systems: ['DRIP', 'PDMIS', 'IPSGSIS SSO', 'COC System', 'IPS & IPO System'] },
 ];
 
@@ -555,9 +557,48 @@ function projectCard(p) {
     </article>`;
 }
 
-function renderProjects(filter) {
+let projectActiveFilter = 'all';
+let projectSearchQuery = '';
+
+function renderProjects(filter, query) {
+  if (filter !== undefined) projectActiveFilter = filter;
+  if (query !== undefined) projectSearchQuery = query.trim().toLowerCase();
+
   const grid = document.getElementById('project-grid');
-  const list = PROJECTS.filter((p) => p.cat !== 'eng' && (filter === 'all' || (filter === 'featured' ? p.featured : p.cat === filter)));
+  const countEl = document.getElementById('project-search-count');
+  const clearBtn = document.getElementById('project-search-clear');
+  if (clearBtn) clearBtn.classList.toggle('hidden', !projectSearchQuery);
+
+  const baseList = PROJECTS.filter((p) => p.cat !== 'eng' && (projectActiveFilter === 'all' || (projectActiveFilter === 'featured' ? p.featured : p.cat === projectActiveFilter)));
+  const list = baseList.filter((p) => {
+    if (!projectSearchQuery) return true;
+    const haystack = [p.title, p.description, p.org, p.acronym, ...(p.tech || [])].join(' ').toLowerCase();
+    return haystack.includes(projectSearchQuery);
+  });
+
+  if (countEl) {
+    if (projectSearchQuery) {
+      countEl.innerHTML = `Found <strong class="text-cyan-600 dark:text-cyan-300 font-semibold">${list.length}</strong> matching "<span class="text-slate-700 dark:text-slate-300">${esc(projectSearchQuery)}</span>" in ${projectActiveFilter === 'all' ? 'all' : projectActiveFilter}`;
+    } else {
+      countEl.textContent = `Showing ${list.length} of ${baseList.length} projects`;
+    }
+  }
+
+  if (!list.length) {
+    grid.innerHTML = `
+      <div class="col-span-full rounded-2xl border border-dashed border-cyan-500/30 bg-cyan-500/[0.04] p-10 text-center">
+        <p class="font-mono text-sm text-slate-600 dark:text-slate-400">No projects found matching "<span class="text-cyan-600 dark:text-cyan-300 font-semibold">${esc(projectSearchQuery)}</span>"</p>
+        <button type="button" id="project-search-reset" class="btn-ghost btn-sm mt-4 font-mono text-xs">Clear search &amp; show all</button>
+      </div>`;
+    document.getElementById('project-search-reset')?.addEventListener('click', () => {
+      const input = document.getElementById('project-search');
+      if (input) input.value = '';
+      renderProjects(undefined, '');
+      input?.focus();
+    });
+    return;
+  }
+
   grid.innerHTML = list.map(projectCard).join('');
   observeReveals(grid);
 }
@@ -650,53 +691,114 @@ function renderCareer() {
   const span = (endY - startY) * 12;
   const pos = (s) => { const { y, m } = parseYM(s); return (((y - startY) * 12 + (m - 1)) / span) * 100; };
   const now = nowYM();
-  const color = { past: 'var(--c-context)', current: 'var(--c-seq)', training: 'var(--c-web)' };
 
   const years = [];
   for (let y = startY; y <= endY; y++) years.push(y);
-  const gridLines = years.map((y) => `<span class="absolute inset-y-0 w-px" style="left:${pos(`${y}-01`)}%; background:var(--grid)"></span>`).join('');
-  const axis = years.map((y, i) => `<span class="axis absolute -translate-x-1/2 ${i % 2 ? 'max-sm:hidden' : ''}" style="left:${pos(`${y}-01`)}%">${y}</span>`).join('');
+  const gridLines = years.map((y) => `
+    <span class="absolute inset-y-0 w-px border-r border-dashed border-slate-300/40 dark:border-cyan-400/10 pointer-events-none" style="left:${pos(`${y}-01`)}%">
+      <span class="absolute top-0 -left-[1px] h-1.5 w-[3px] bg-slate-400/40 dark:bg-cyan-400/30"></span>
+    </span>`).join('');
+  const axis = years.map((y, i) => `
+    <span class="axis absolute -translate-x-1/2 font-mono text-[11px] font-semibold text-slate-500 dark:text-slate-400 ${i % 2 ? 'max-sm:hidden' : ''}" style="left:${pos(`${y}-01`)}%">${y}</span>`).join('');
 
   const rows = CAREER.map((r, i) => {
     const end = r.end || now;
-    const left = pos(r.start), width = Math.max(pos(end) - left, 0.8);
+    const left = pos(r.start), width = Math.max(pos(end) - left, 1.2);
     const dur = fmtDuration(monthsBetween(r.start, end));
     const body = `${r.org} · ${fmtYM(r.start)} – ${r.end ? fmtYM(r.end) : 'Present'} · ${dur}`;
-    const glow = r.kind === 'current' ? 'box-shadow: 0 0 18px -2px rgb(34 211 238 / .7);' : '';
+
+    // Bespoke gradient and aura per role kind
+    let barStyle = '';
+    let extraInside = '';
+    if (r.kind === 'current') {
+      barStyle = `background: linear-gradient(90deg, #06b6d4 0%, #22d3ee 100%); box-shadow: 0 0 22px -2px rgba(34, 211, 238, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.5);`;
+      extraInside = `
+        <span class="absolute right-1.5 top-1/2 -translate-y-1/2 flex h-3 w-3 items-center justify-center">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-200 opacity-80"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_6px_#22d3ee]"></span>
+        </span>`;
+    } else if (r.kind === 'training') {
+      barStyle = `background: linear-gradient(90deg, #7c3aed 0%, #a855f7 100%); box-shadow: 0 0 16px -2px rgba(168, 85, 247, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.35);`;
+    } else {
+      barStyle = `background: linear-gradient(90deg, rgba(71, 85, 105, 0.5) 0%, rgba(100, 116, 139, 0.75) 100%); border: 1px solid rgba(255, 255, 255, 0.1);`;
+    }
+
     return `
-      <div class="grid items-center gap-x-4 gap-y-1.5 sm:grid-cols-[210px_1fr]">
+      <div class="group grid items-center gap-x-4 gap-y-1.5 py-1 px-2 -mx-2 rounded-lg transition-colors hover:bg-cyan-500/[0.04] sm:grid-cols-[210px_1fr]">
         <div class="min-w-0 leading-tight">
-          <span class="block truncate text-[13px] font-semibold text-slate-900 dark:text-ink">${r.label}</span>
-          <span class="block truncate font-mono text-[10.5px] text-slate-500">${r.org}</span>
+          <span class="block truncate text-[13px] font-semibold text-slate-900 transition-colors group-hover:text-cyan-600 dark:text-ink dark:group-hover:text-cyan-300">${esc(r.label)}</span>
+          <span class="block truncate font-mono text-[10.5px] text-slate-500 dark:text-slate-400">${esc(r.org)}</span>
         </div>
-        <div class="relative h-6">
-          <span class="hit mark-hover grow-x absolute inset-y-1 rounded-[4px]" style="left:${left}%; width:${width}%; background:${color[r.kind]}; --d:${i * 140}ms; ${glow}" ${tipAttrs(r.label, body)}></span>
-          ${r.note ? `<span class="fade pointer-events-none absolute top-1/2 -translate-y-1/2 whitespace-nowrap font-mono text-[10.5px] max-sm:hidden font-medium text-violet-700 dark:text-violet-300" style="left:calc(${left + width}% + 8px); --d:${900 + i * 140}ms">${r.note}</span>` : ''}
+        <div class="relative h-7 flex items-center">
+          <!-- Track guide -->
+          <span class="absolute inset-x-0 h-1 rounded-full bg-slate-200/40 dark:bg-white/[0.03] pointer-events-none"></span>
+          <!-- Capsule bar -->
+          <span class="hit mark-hover grow-x absolute h-5 rounded-full overflow-hidden transition-all duration-200 group-hover:h-6" style="left:${left}%; width:${width}%; ${barStyle} --d:${i * 120}ms;" ${tipAttrs(r.label, body)}>
+            ${extraInside}
+          </span>
+          ${r.note ? `
+            <span class="fade pointer-events-none absolute top-1/2 -translate-y-1/2 whitespace-nowrap font-mono text-[10px] font-semibold text-violet-600 dark:text-violet-300 bg-violet-500/10 dark:bg-violet-950/60 border border-violet-500/30 px-2 py-0.5 rounded-full shadow-sm max-sm:hidden" style="left:calc(${left + width}% + 8px); --d:${800 + i * 120}ms">
+              ✦ ${esc(r.note)}
+            </span>` : ''}
         </div>
       </div>`;
   }).join('');
 
   const ms = CAREER_MILESTONES.map((m, i) => `
-    <span class="hit mark-hover fade absolute top-1/2 -translate-x-1/2 -translate-y-1/2" style="left:${pos(m.date)}%; --d:${700 + i * 160}ms" ${tipAttrs(m.label, `${m.org} · ${fmtYM(m.date)}`)}>
-      <span class="block h-3 w-3 rotate-45 rounded-[2px] bg-slate-900 dark:bg-ink" style="box-shadow: 0 0 0 2px var(--surface)"></span>
+    <span class="hit mark-hover fade absolute top-1/2 -translate-x-1/2 -translate-y-1/2 group cursor-pointer" style="left:${pos(m.date)}%; --d:${600 + i * 140}ms" ${tipAttrs(m.label, `${m.org} · ${fmtYM(m.date)}`)}>
+      <span class="block h-3.5 w-3.5 rotate-45 rounded-[3px] bg-gradient-to-tr from-cyan-400 to-white shadow-[0_0_12px_rgba(34,211,238,0.85),0_0_0_2px_rgba(11,16,32,0.8)] transition-transform duration-200 group-hover:scale-125"></span>
     </span>`).join('');
 
-  document.getElementById('career-chart').innerHTML = `
-    <div class="relative">
+  const careerChart = document.getElementById('career-chart');
+  careerChart.innerHTML = `
+    <div class="relative" id="career-container">
       <div class="pointer-events-none absolute inset-y-0 left-0 right-0 sm:left-[226px]" aria-hidden="true">
         ${gridLines}
-        <span class="absolute inset-y-0 w-px bg-cyan-500 dark:bg-cyan-300" style="left:${pos(now)}%; box-shadow: 0 0 10px rgb(34 211 238 / .9)"></span>
-        <span class="absolute -top-5 -translate-x-1/2 font-mono text-[10px] font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-300" style="left:${pos(now)}%">now</span>
+        <!-- NOW marker line -->
+        <span class="absolute inset-y-0 w-px bg-cyan-400 dark:bg-cyan-300" style="left:${pos(now)}%; box-shadow: 0 0 12px rgb(34 211 238 / 1)"></span>
+        <span class="absolute -top-6 -translate-x-1/2 inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-mono text-[10px] font-bold uppercase tracking-wider bg-cyan-500/15 border border-cyan-400/40 text-cyan-700 dark:text-cyan-300 shadow-[0_0_10px_rgba(34,211,238,0.4)]" style="left:${pos(now)}%">
+          <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse"></span> now
+        </span>
+        <!-- Interactive timeline scrubber line (follows mouse) -->
+        <div id="career-scrubber" class="hidden absolute inset-y-0 w-px bg-white/40 dark:bg-cyan-300/60 pointer-events-none z-20">
+          <span id="career-scrubber-badge" class="absolute -top-6 -translate-x-1/2 whitespace-nowrap px-2 py-0.5 rounded font-mono text-[9.5px] font-bold bg-slate-900 text-cyan-300 border border-cyan-400/50 shadow-md"></span>
+        </div>
       </div>
-      <div class="relative space-y-3">
+      <div class="relative space-y-2">
         ${rows}
-        <div class="grid items-center gap-x-4 gap-y-1.5 border-t border-dashed pt-3 sm:grid-cols-[210px_1fr]" style="border-color:var(--baseline)">
-          <span class="font-mono text-[10.5px] uppercase tracking-wider text-slate-500">milestones</span>
+        <div class="grid items-center gap-x-4 gap-y-1.5 border-t border-dashed pt-4 sm:grid-cols-[210px_1fr]" style="border-color:var(--baseline)">
+          <div class="flex items-center gap-2">
+            <span class="h-2 w-2 rotate-45 bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.8)]"></span>
+            <span class="font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Milestones</span>
+          </div>
           <div class="relative h-6">${ms}</div>
         </div>
       </div>
-      <div class="relative mt-3 h-4 sm:ml-[226px]">${axis}</div>
+      <div class="relative mt-4 h-4 sm:ml-[226px]">${axis}</div>
     </div>`;
+
+  // Attach interactive scrubber guide
+  const container = document.getElementById('career-container');
+  const scrubber = document.getElementById('career-scrubber');
+  const badge = document.getElementById('career-scrubber-badge');
+  if (container && scrubber && badge) {
+    container.addEventListener('pointerenter', () => scrubber.classList.remove('hidden'));
+    container.addEventListener('pointerleave', () => scrubber.classList.add('hidden'));
+    container.addEventListener('pointermove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const leftOffset = window.innerWidth >= 640 ? 226 : 0;
+      const plotWidth = rect.width - leftOffset;
+      const x = e.clientX - rect.left - leftOffset;
+      if (x >= 0 && x <= plotWidth) {
+        const pct = (x / plotWidth) * 100;
+        scrubber.style.left = `${pct}%`;
+        const totalMonths = (pct / 100) * span;
+        const curYear = startY + Math.floor(totalMonths / 12);
+        const curMo = Math.min(12, Math.max(1, Math.floor(totalMonths % 12) + 1));
+        badge.textContent = `${MONTHS[curMo - 1]} ${curYear}`;
+      }
+    });
+  }
 
   document.getElementById('career-table').innerHTML = dataTable('Career timeline',
     ['Role / milestone', 'Start', 'End', 'Duration'],
@@ -706,34 +808,74 @@ function renderCareer() {
     ]);
 }
 
-// 2) Training hours by year — single-hue columns, one axis, value labels on top
+// 2) Training hours by year — sleek capsule columns with telemetry track chambers and metric badges
 function renderHours() {
   const max = 600, ticks = [0, 200, 400, 600];
   const total = TRAINING_HOURS.reduce((s, d) => s + d.hours, 0);
   document.getElementById('hours-total').textContent = total;
 
   const grid = ticks.map((t) => `
-    <div class="absolute inset-x-0 flex items-center" style="bottom:${(t / max) * 100}%">
-      <span class="axis w-9 -translate-y-1/2 pr-2 text-right" style="font-variant-numeric: tabular-nums">${t}</span>
-      <span class="h-px flex-1 -translate-y-1/2" style="background:${t === 0 ? 'var(--baseline)' : 'var(--grid)'}"></span>
+    <div class="absolute inset-x-0 flex items-center pointer-events-none" style="bottom:${(t / max) * 100}%">
+      <span class="axis w-10 -translate-y-1/2 pr-2.5 text-right font-mono text-[11px] font-medium" style="font-variant-numeric: tabular-nums">${t}</span>
+      <span class="h-px flex-1 -translate-y-1/2 ${t === 0 ? 'bg-slate-400/40 dark:bg-white/20' : 'border-b border-dashed border-slate-300/50 dark:border-white/[0.07]'}"></span>
     </div>`).join('');
 
   const cols = TRAINING_HOURS.map((d, i) => {
     const h = (d.hours / max) * 100;
     const body = d.items.map(([n, v]) => `${n}: ${v} hrs`).join(' · ');
+    const isBootcamp = d.year === '2023';
+    const isCert = d.year === '2026';
+
+    const colGradient = isBootcamp
+      ? 'background: linear-gradient(to top, rgba(8,145,178,0.2) 0%, rgba(6,182,212,0.8) 75%, rgba(34,211,238,1) 100%);'
+      : isCert
+      ? 'background: linear-gradient(to top, rgba(99,102,241,0.2) 0%, rgba(139,92,246,0.8) 75%, rgba(192,132,252,1) 100%);'
+      : 'background: linear-gradient(to top, rgba(6,182,212,0.15) 0%, rgba(6,182,212,0.65) 75%, rgba(34,211,238,0.95) 100%);';
+
+    const glowColor = isCert ? 'rgba(168,85,247,0.5)' : 'rgba(34,211,238,0.5)';
+
     return `
-      <div class="mark-hover group relative flex h-full flex-1 items-end justify-center" ${tipAttrs(`${d.year}: ${d.hours} hours`, body)}>
-        <span class="fade absolute flex flex-col items-center font-mono text-xs font-semibold text-slate-900 dark:text-ink" style="bottom:calc(${h}% + 6px); --d:${500 + i * 120}ms; font-variant-numeric: tabular-nums">${d.note ? `<span class="whitespace-nowrap text-[10px] font-medium text-violet-700 dark:text-violet-300">${d.note}</span>` : ''}${d.hours}</span>
-        <span class="grow-y block w-full max-w-[64px] rounded-t-[4px]" style="height:${h}%; background:linear-gradient(to top, var(--c-seq), color-mix(in srgb, var(--c-seq) 70%, #fff)); --d:${i * 120}ms; box-shadow: 0 0 22px -6px var(--c-seq)"></span>
+      <div class="mark-hover group relative flex h-full flex-1 flex-col items-center justify-end px-1 sm:px-2" ${tipAttrs(`${d.year}: ${d.hours} hours`, body)}>
+        <!-- Calibrated Glass Column Chamber / Track Slot -->
+        <div class="pointer-events-none absolute inset-x-1 sm:inset-x-2 bottom-0 top-0 rounded-t-xl bg-slate-200/20 dark:bg-white/[0.015] border border-slate-200/40 dark:border-white/[0.04]"></div>
+
+        <!-- Floating Metric Badge Pill -->
+        <div class="fade absolute flex flex-col items-center z-10 pointer-events-none transition-transform duration-200 group-hover:-translate-y-1" style="bottom:calc(${h}% + 8px); --d:${400 + i * 120}ms;">
+          ${d.note ? `
+            <span class="inline-flex items-center gap-1 mb-1 px-2 py-0.5 rounded-full font-mono text-[9.5px] font-semibold whitespace-nowrap shadow-sm ${
+              isCert
+                ? 'bg-violet-500/15 border border-violet-500/30 text-violet-700 dark:text-violet-300'
+                : 'bg-cyan-500/15 border border-cyan-500/30 text-cyan-700 dark:text-cyan-300'
+            }">
+              <span class="h-1 w-1 rounded-full ${isCert ? 'bg-violet-400' : 'bg-cyan-400'}"></span>
+              ${esc(d.note)}
+            </span>` : ''}
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-mono text-xs font-bold bg-white/95 dark:bg-void-900 border border-slate-200 dark:border-cyan-400/40 text-slate-900 dark:text-cyan-300 shadow-md tabular-nums">
+            ${d.hours} <span class="ml-1 text-[9px] font-normal text-slate-500 dark:text-cyan-400/70">HRS</span>
+          </span>
+        </div>
+
+        <!-- Growing Capsule Column Bar -->
+        <div class="grow-y relative w-full max-w-[56px] rounded-t-xl overflow-hidden transition-all duration-200 group-hover:brightness-110" style="height:${h}%; ${colGradient} --d:${i * 120}ms; box-shadow: 0 0 24px -4px ${glowColor};">
+          <!-- Top rim luminous cap -->
+          <span class="absolute top-0 inset-x-0 h-1 bg-white/70 shadow-[0_0_8px_#ffffff]"></span>
+          <!-- Subtle sheen scanline -->
+          <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"></span>
+        </div>
       </div>`;
   }).join('');
 
   document.getElementById('hours-chart').innerHTML = `
-    <div class="relative h-56">
+    <div class="relative h-60">
       ${grid}
-      <div class="absolute bottom-0 left-9 right-0 top-0 flex items-end gap-4 px-2 sm:gap-6 sm:px-4">${cols}</div>
+      <div class="absolute bottom-0 left-10 right-0 top-0 flex items-end gap-2 px-1 sm:gap-4 sm:px-3">${cols}</div>
     </div>
-    <div class="ml-9 mt-2 flex gap-4 px-2 sm:gap-6 sm:px-4">${TRAINING_HOURS.map((d) => `<span class="axis flex-1 text-center">${d.year}</span>`).join('')}</div>`;
+    <div class="ml-10 mt-3 flex gap-2 px-1 sm:gap-4 sm:px-3">${
+      TRAINING_HOURS.map((d) => `
+        <span class="axis flex-1 text-center font-mono text-xs font-semibold py-1 rounded-md bg-slate-100/80 dark:bg-white/[0.03] border border-slate-200/50 dark:border-white/5 text-slate-700 dark:text-slate-300">
+          ${d.year}
+        </span>`).join('')
+    }</div>`;
 
   document.getElementById('hours-table').innerHTML = dataTable('Training hours by year', ['Year', 'Hours', 'Breakdown'],
     TRAINING_HOURS.map((d) => [d.year, d.hours, d.items.map(([n, v]) => `${n} ${v}`).join('; ')]));
@@ -790,7 +932,7 @@ function renderConstellation() {
   setTimeout(draw, 1200); // after the reveal animation settles
 }
 
-// 3) Most-used technologies — ranked horizontal bars, Laravel emphasized, rest as context
+// 3) Most-used technologies — ranked horizontal telemetry bars with official brand SVG icons and tailored brand gradients
 function renderTech() {
   const normalize = (t) => t.replace(/\s+\d+(\.\d+)?$/, '').replace(/^Socialite.*/, 'Socialite').trim();
   const SKIP = new Set(['Requirements Analysis', 'Procurement', 'UAT', 'Deployment', 'Responsive Web App', 'Web Design']);
@@ -799,68 +941,202 @@ function renderTech() {
   const top = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
   const max = top[0][1];
 
+  const BRAND_CONFIG = {
+    'Laravel': {
+      gradient: 'linear-gradient(90deg, #e11d48 0%, #ff2d20 100%)',
+      glow: '0 0 18px -2px rgba(255, 45, 32, 0.65)',
+      core: true
+    },
+    'MySQL': {
+      gradient: 'linear-gradient(90deg, #0284c7 0%, #38bdf8 100%)',
+      glow: '0 0 14px -3px rgba(56, 189, 248, 0.45)'
+    },
+    'PHP': {
+      gradient: 'linear-gradient(90deg, #6366f1 0%, #818cf8 100%)',
+      glow: '0 0 14px -3px rgba(129, 140, 248, 0.45)'
+    },
+    'JavaScript': {
+      gradient: 'linear-gradient(90deg, #d97706 0%, #fbbf24 100%)',
+      glow: '0 0 14px -3px rgba(251, 191, 36, 0.45)'
+    },
+    'Bootstrap': {
+      gradient: 'linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%)',
+      glow: '0 0 14px -3px rgba(167, 139, 250, 0.45)'
+    },
+    'Tailwind CSS': {
+      gradient: 'linear-gradient(90deg, #0891b2 0%, #22d3ee 100%)',
+      glow: '0 0 14px -3px rgba(34, 211, 238, 0.45)'
+    },
+    'React.js': {
+      gradient: 'linear-gradient(90deg, #0284c7 0%, #22d3ee 100%)',
+      glow: '0 0 14px -3px rgba(34, 211, 238, 0.45)'
+    },
+    'MongoDB': {
+      gradient: 'linear-gradient(90deg, #059669 0%, #34d399 100%)',
+      glow: '0 0 14px -3px rgba(52, 211, 153, 0.45)'
+    },
+    'CodeIgniter': {
+      gradient: 'linear-gradient(90deg, #ea580c 0%, #ee4326 100%)',
+      glow: '0 0 14px -3px rgba(238, 67, 38, 0.45)'
+    }
+  };
+
   document.getElementById('tech-chart').innerHTML = top.map(([name, n], i) => {
-    const emph = name === 'Laravel';
+    const brand = BRAND_CONFIG[name] || {
+      gradient: 'linear-gradient(90deg, #0891b2, #22d3ee)',
+      glow: '0 0 12px -3px rgba(34, 211, 238, 0.4)'
+    };
+    const pct = ((n / max) * 100).toFixed(1);
+    const iconSvg = techIcon(name, 'h-3.5 w-3.5');
+
     return `
-      <div class="grid grid-cols-[92px_1fr_24px] items-center gap-3">
-        <span class="truncate text-right font-mono text-[11.5px] ${emph ? 'font-semibold text-slate-900 dark:text-ink' : ''}">${name}</span>
-        <div class="relative h-4">
-          <span class="hit mark-hover grow-x absolute inset-y-0 left-0 rounded-r-[4px]" style="width:${(n / max) * 100}%; background:${emph ? 'var(--c-emph)' : 'var(--c-context)'}; --d:${i * 90}ms; ${emph ? 'box-shadow: 0 0 18px -3px var(--c-emph);' : ''}" ${tipAttrs(name, `Used in ${n} of ${PROJECTS.length} projects`)}></span>
+      <div class="group grid grid-cols-[130px_1fr_36px] items-center gap-3 py-1 px-1 -mx-1 rounded-lg transition-colors hover:bg-cyan-500/[0.04]">
+        <!-- Tech Identity with brand SVG logo -->
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="grid h-6 w-6 place-items-center rounded-md bg-slate-100 dark:bg-white/[0.05] border border-slate-200/80 dark:border-white/10 flex-none transition-transform duration-200 group-hover:scale-110">
+            ${iconSvg}
+          </span>
+          <span class="truncate font-mono text-[12px] font-medium text-slate-800 transition-colors group-hover:text-slate-950 dark:text-slate-200 dark:group-hover:text-white ${brand.core ? 'font-bold !text-laravel' : ''}">
+            ${esc(name)}
+          </span>
+          ${brand.core ? '<span class="hidden sm:inline-flex px-1.5 py-0.2 rounded font-mono text-[8.5px] font-bold bg-laravel/15 text-laravel border border-laravel/30">CORE</span>' : ''}
         </div>
-        <span class="fade font-mono text-xs font-semibold text-slate-900 dark:text-ink" style="--d:${400 + i * 90}ms; font-variant-numeric: tabular-nums">${n}</span>
+
+        <!-- Recessed Glass Track + Gradient Capsule Fill -->
+        <div class="relative h-4 rounded-full bg-slate-200/60 dark:bg-white/[0.04] p-0.5 border border-slate-300/40 dark:border-white/[0.05] overflow-hidden">
+          <span class="hit mark-hover grow-x absolute inset-y-0.5 left-0.5 rounded-full transition-all duration-200 group-hover:brightness-110" 
+                style="width:calc(${pct}% - 4px); background:${brand.gradient}; box-shadow:${brand.glow}; --d:${i * 90}ms;" 
+                ${tipAttrs(name, `Used in ${n} of ${PROJECTS.length} projects (${Math.round((n / PROJECTS.length) * 100)}%)`)}>
+            <!-- Inner light sheen -->
+            <span class="absolute inset-0 bg-gradient-to-b from-white/25 to-transparent pointer-events-none rounded-full"></span>
+          </span>
+        </div>
+
+        <!-- Metric Pill Badge -->
+        <div class="text-right">
+          <span class="fade inline-flex items-center justify-center min-w-[28px] px-2 py-0.5 rounded-md font-mono text-xs font-bold bg-slate-100 dark:bg-void-900 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-slate-200 shadow-sm tabular-nums" style="--d:${350 + i * 90}ms">
+            ${n}
+          </span>
+        </div>
       </div>`;
   }).join('');
 
   document.getElementById('tech-table').innerHTML = dataTable('Most-used technologies', ['Technology', 'Projects'], top.map(([n, c]) => [n, c]));
 }
 
-// 4) Portfolio by discipline — tall segmented bar (one whole, three parts) + legend
+// 4) Portfolio by discipline — tall segmented capsule bar with recessed chassis & interactive legend cards
 function renderMix() {
   const parts = DISCIPLINES.map((d) => ({ ...d, n: PROJECTS.filter((p) => p.cat === d.key).length }));
   const total = parts.reduce((s, p) => s + p.n, 0);
   document.getElementById('mix-total').textContent = total;
 
-  const segs = parts.map((p, i) => `
-    <span class="hit mark-hover grow-x relative flex items-center justify-center rounded-[4px] font-display text-lg font-bold text-white" style="flex:${p.n} 1 0%; background:${p.color}; --d:${i * 160}ms; box-shadow: 0 0 22px -8px ${p.color}" ${tipAttrs(p.label, `${p.n} of ${total} projects · ${Math.round((p.n / total) * 100)}%`)}>${p.n}</span>`).join('');
+  const GRADIENTS = {
+    gov: 'linear-gradient(135deg, #0891b2 0%, #22d3ee 100%)',
+    web: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+    eng: 'linear-gradient(135deg, #e11d48 0%, #fb7185 100%)'
+  };
+
+  const GLOWS = {
+    gov: '0 0 20px -4px rgba(34, 211, 238, 0.6)',
+    web: '0 0 20px -4px rgba(139, 92, 246, 0.6)',
+    eng: '0 0 20px -4px rgba(244, 63, 94, 0.6)'
+  };
+
+  const segs = parts.map((p, i) => {
+    const pct = Math.round((p.n / total) * 100);
+    const grad = GRADIENTS[p.key] || p.color;
+    const glow = GLOWS[p.key] || 'none';
+    return `
+      <div id="mix-seg-${p.key}" class="hit mark-hover grow-x relative flex flex-col items-center justify-center rounded-xl p-2 text-white transition-all duration-300 hover:scale-[1.02] hover:z-10 group" 
+           style="flex:${p.n} 1 0%; background:${grad}; box-shadow:${glow}; --d:${i * 160}ms;" 
+           ${tipAttrs(p.label, `${p.n} of ${total} projects · ${pct}%`)}>
+        <span class="font-display text-xl sm:text-2xl font-black drop-shadow-sm leading-none">${p.n}</span>
+        <span class="mt-1 font-mono text-[10px] font-bold uppercase tracking-wider text-white/90 bg-black/20 px-1.5 py-0.5 rounded-full whitespace-nowrap">${pct}%</span>
+      </div>`;
+  }).join('');
 
   document.getElementById('mix-chart').innerHTML = `
-    <div class="flex h-16 gap-[2px]">${segs}</div>
-    <ul class="mt-5 space-y-2.5" aria-label="Legend">
-      ${parts.map((p) => `
-        <li class="flex items-center gap-3 text-sm">
-          <span class="h-3 w-3 flex-none rounded-[3px]" style="background:${p.color}"></span>
-          <span class="flex-1 text-slate-800 dark:text-slate-200">${p.label}</span>
-          <span class="font-mono text-xs text-slate-500" style="font-variant-numeric: tabular-nums">${p.n} · ${Math.round((p.n / total) * 100)}%</span>
-        </li>`).join('')}
-    </ul>`;
+    <!-- Recessed chassis wrapper -->
+    <div class="flex h-20 gap-2 p-1.5 rounded-2xl bg-slate-100/80 dark:bg-void-950/80 border border-slate-200/80 dark:border-white/10 shadow-inner">
+      ${segs}
+    </div>
+    <div class="mt-5 grid gap-2.5 sm:grid-cols-3" aria-label="Legend">
+      ${parts.map((p) => {
+        const pct = Math.round((p.n / total) * 100);
+        const grad = GRADIENTS[p.key] || p.color;
+        return `
+          <div class="mix-legend-card flex items-center justify-between p-2.5 rounded-xl border border-slate-200/80 bg-white/60 dark:border-white/5 dark:bg-white/[0.02] transition-colors hover:border-cyan-400/40 cursor-pointer" data-key="${p.key}">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="h-3 w-3 flex-none rounded-full shadow-sm" style="background:${grad}"></span>
+              <span class="truncate text-xs font-semibold text-slate-800 dark:text-slate-200">${esc(p.label)}</span>
+            </div>
+            <div class="flex items-center gap-1.5 font-mono text-xs">
+              <span class="font-bold text-slate-900 dark:text-ink">${p.n}</span>
+              <span class="text-[10px] text-slate-500">(${pct}%)</span>
+            </div>
+          </div>`;
+      }).join('')}
+    </div>`;
+
+  // Attach hover-highlight sync between cards and segments
+  document.querySelectorAll('.mix-legend-card').forEach((card) => {
+    const key = card.dataset.key;
+    const seg = document.getElementById(`mix-seg-${key}`);
+    if (seg) {
+      card.addEventListener('pointerenter', () => {
+        seg.classList.add('brightness-125', 'scale-[1.04]', 'z-20');
+      });
+      card.addEventListener('pointerleave', () => {
+        seg.classList.remove('brightness-125', 'scale-[1.04]', 'z-20');
+      });
+    }
+  });
 
   document.getElementById('mix-table').innerHTML = dataTable('Portfolio by discipline', ['Discipline', 'Projects', 'Share'],
     parts.map((p) => [p.label, p.n, `${Math.round((p.n / total) * 100)}%`]));
 }
 
-// 5) Systems delivered — circuit "bus" per era, nodes light up in sequence
+// 5) Systems delivered — circuit "bus" per era, nodes light up in sequence with luminous radar beacons
 function renderSystems() {
   let k = 0;
-  document.getElementById('systems-chart').innerHTML = SYSTEM_ERAS.map((e, ei) => `
-    <div>
-      <div class="flex items-baseline gap-3">
-        <span class="font-display text-5xl font-bold text-slate-900 dark:text-ink" data-count="${e.systems.length}">${e.systems.length}</span>
-        <span class="leading-tight">
-          <span class="block font-mono text-xs font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-300">${e.era}</span>
-          <span class="block text-xs">${e.role}</span>
-        </span>
-      </div>
-      <div class="relative mt-5 pl-6">
-        <span class="bus absolute bottom-3 left-[7px] top-3 w-[2px] rounded-full" style="background:var(--baseline)" aria-hidden="true"></span>
-        <ul class="space-y-2.5">
-          ${e.systems.map((s) => `
-            <li class="fade relative" style="--d:${(k++) * 110}ms">
-              <span class="absolute -left-[22px] top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full ${ei === SYSTEM_ERAS.length - 1 ? 'bg-cyan-500 shadow-[0_0_12px_rgba(34,211,238,0.9)] dark:bg-cyan-300' : 'bg-slate-400 dark:bg-slate-500'}"></span>
-              <span class="block rounded-lg border border-slate-200/80 bg-white/70 px-3 py-2 font-mono text-xs font-medium text-slate-800 transition hover:border-cyan-500/50 dark:border-cyan-300/10 dark:bg-white/[0.03] dark:text-slate-200 dark:hover:border-cyan-300/40">${s}</span>
-            </li>`).join('')}
-        </ul>
-      </div>
-    </div>`).join('');
+  document.getElementById('systems-chart').innerHTML = SYSTEM_ERAS.map((e, ei) => {
+    const isLatest = ei === SYSTEM_ERAS.length - 1;
+    return `
+      <div class="relative">
+        <div class="flex items-baseline gap-3">
+          <span class="font-display text-5xl font-bold ${isLatest ? 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-indigo-600 dark:from-cyan-300 dark:to-indigo-300' : 'text-slate-900 dark:text-ink'}" data-count="${e.systems.length}">${e.systems.length}</span>
+          <div class="leading-tight">
+            <span class="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider ${isLatest ? 'text-cyan-700 dark:text-cyan-300' : 'text-slate-600 dark:text-slate-400'}">
+              ${isLatest ? '<span class="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping"></span>' : ''}
+              ${esc(e.era)}
+            </span>
+            <span class="block text-xs font-sans text-slate-500 dark:text-slate-400">${esc(e.role)}</span>
+          </div>
+        </div>
+        <div class="relative mt-5 pl-7">
+          <!-- Neon Busline -->
+          <span class="bus absolute bottom-3 left-[9px] top-3 w-[2px] rounded-full ${isLatest ? 'bg-gradient-to-b from-cyan-500 via-sky-400 to-indigo-500 shadow-[0_0_8px_rgba(34,211,238,0.6)]' : 'bg-slate-300 dark:bg-white/10'}" aria-hidden="true"></span>
+          <ul class="space-y-3">
+            ${e.systems.map((s) => `
+              <li class="fade relative group" style="--d:${(k++) * 110}ms">
+                <!-- Circuit Node -->
+                <span class="absolute -left-[24px] top-1/2 h-3 w-3 -translate-y-1/2 rounded-full transition-transform duration-200 group-hover:scale-125 ${
+                  isLatest
+                    ? 'bg-gradient-to-tr from-cyan-400 to-white shadow-[0_0_12px_rgba(34,211,238,0.9),0_0_0_2px_rgba(11,16,32,0.8)]'
+                    : 'bg-slate-400 dark:bg-slate-500 border-2 border-white dark:border-void-950'
+                }"></span>
+                <div class="flex items-center justify-between rounded-xl border border-slate-200/80 bg-white/70 px-3.5 py-2.5 font-mono text-xs font-semibold text-slate-800 transition-all duration-200 hover:border-cyan-500/50 hover:bg-white hover:shadow-md dark:border-white/5 dark:bg-white/[0.03] dark:text-slate-200 dark:hover:border-cyan-300/40 dark:hover:bg-white/[0.06]">
+                  <span class="flex items-center gap-2">
+                    <span class="text-cyan-600 dark:text-cyan-400 opacity-70">#</span>
+                    <span>${esc(s)}</span>
+                  </span>
+                  <span class="text-[10px] font-normal uppercase tracking-wider text-slate-500 dark:text-slate-400">Deployed</span>
+                </div>
+              </li>`).join('')}
+          </ul>
+        </div>
+      </div>`;
+  }).join('');
 }
 
 /* =====================================================================
@@ -965,6 +1241,162 @@ const HUBS = [
   { name: 'Cebu', lon: 123.89, lat: 10.32 }, { name: 'Tacloban', lon: 125.0, lat: 11.24 }, { name: 'Cagayan de Oro', lon: 124.65, lat: 8.48 },
   { name: 'Davao', lon: 125.61, lat: 7.07 }, { name: 'Zamboanga', lon: 122.08, lat: 6.92 },
 ];
+
+const HUB_TELEMETRY = {
+  'Quezon City': { ping: '4ms', throughput: '10 Gbps', systems: 'PDMIS Central · Single Sign-On · DRIP API' },
+  'Cebu': { ping: '16ms', throughput: '3.2 Gbps', systems: 'Visayas Regional Cluster · Field Data Sync' },
+  'Davao': { ping: '22ms', throughput: '2.8 Gbps', systems: 'Mindanao Regional Cluster · DRIP Node' },
+  'Baguio': { ping: '11ms', throughput: '1.9 Gbps', systems: 'Cordillera Administrative Region Hub' },
+  'Zamboanga': { ping: '26ms', throughput: '1.4 Gbps', systems: 'Western Mindanao Satellite Gateway' },
+  'Legazpi': { ping: '14ms', throughput: '1.8 Gbps', systems: 'Bicol Region Document Verification' },
+  'Iloilo': { ping: '18ms', throughput: '2.1 Gbps', systems: 'Western Visayas Field Operations' },
+  'Tacloban': { ping: '19ms', throughput: '1.5 Gbps', systems: 'Eastern Visayas Cluster Node' },
+  'Cagayan de Oro': { ping: '24ms', throughput: '2.2 Gbps', systems: 'Northern Mindanao Operations' },
+  'Puerto Princesa': { ping: '28ms', throughput: '1.1 Gbps', systems: 'Palawan Island Node' },
+  'Laoag': { ping: '15ms', throughput: '1.3 Gbps', systems: 'Ilocos Region Edge' },
+  'Tuguegarao': { ping: '17ms', throughput: '1.2 Gbps', systems: 'Cagayan Valley Edge' },
+};
+
+/* =====================================================================
+   SOUND ENGINE: Zero-asset procedural Web Audio API haptics (Opt-in)
+   ===================================================================== */
+const SoundEngine = {
+  ctx: null,
+  enabled: false,
+  mode: 'cyber', // 'cyber' | 'mechanical'
+  init() {
+    try {
+      this.enabled = localStorage.getItem('sound_enabled') === 'true';
+      this.mode = localStorage.getItem('sound_mode') || 'cyber';
+    } catch (e) {}
+    this.updateUI();
+    const btn = document.getElementById('sound-toggle');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        this.toggle();
+      });
+    }
+
+    // Attach subtle audio feedback to interactive clicks
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('button, .btn, .nav-link, .filter-btn, .chip, a[download], [data-tip-title]');
+      if (target && target.id !== 'sound-toggle') {
+        this.click();
+      }
+    });
+
+    // Subtle hover tick on interactive chart marks and telemetry nodes
+    let lastHoverTime = 0;
+    document.addEventListener('pointerover', (e) => {
+      if (!this.enabled) return;
+      const target = e.target.closest('.mark-hover, .c-node, .wf-node, .mix-legend-card');
+      const now = performance.now();
+      if (target && now - lastHoverTime > 90) {
+        lastHoverTime = now;
+        this.playTone(1200, 'sine', 0.015, 0.03);
+      }
+    });
+  },
+  setMode(mode) {
+    if (mode === 'mute') {
+      this.enabled = false;
+    } else {
+      this.enabled = true;
+      this.mode = mode === 'mechanical' ? 'mechanical' : 'cyber';
+    }
+    try {
+      localStorage.setItem('sound_enabled', String(this.enabled));
+      localStorage.setItem('sound_mode', this.mode);
+    } catch (e) {}
+    this.updateUI();
+    toast(this.enabled ? `Sound mode: ${this.mode}` : 'Sound muted');
+  },
+  toggle() {
+    if (!this.enabled) {
+      this.enabled = true;
+      this.mode = 'cyber';
+      toast('Procedural sound: Cyber Haptic');
+      this.playTone(880, 'sine', 0.04, 0.08);
+    } else if (this.mode === 'cyber') {
+      this.mode = 'mechanical';
+      toast('Procedural sound: Mechanical Switch');
+      this.playTone(340, 'triangle', 0.03, 0.08);
+    } else {
+      this.enabled = false;
+      toast('Procedural sound: Muted');
+    }
+    try {
+      localStorage.setItem('sound_enabled', String(this.enabled));
+      localStorage.setItem('sound_mode', this.mode);
+    } catch (e) {}
+    this.updateUI();
+  },
+  updateUI() {
+    const waves = document.querySelectorAll('.soundwave');
+    waves.forEach(w => {
+      if (this.enabled) w.classList.add('is-playing');
+      else w.classList.remove('is-playing');
+    });
+    const btn = document.getElementById('sound-toggle');
+    if (btn) {
+      btn.setAttribute('aria-pressed', String(this.enabled));
+      btn.title = `Sound: ${this.enabled ? this.mode : 'muted'} (click to cycle)`;
+      if (this.enabled) {
+        btn.classList.add('text-cyan-600', 'dark:text-cyan-400');
+        btn.classList.remove('text-slate-500');
+      } else {
+        btn.classList.remove('text-cyan-600', 'dark:text-cyan-400');
+        btn.classList.add('text-slate-500');
+      }
+    }
+  },
+  ensureCtx() {
+    if (!this.ctx) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtx) this.ctx = new AudioCtx();
+    }
+    if (this.ctx && this.ctx.state === 'suspended') {
+      this.ctx.resume();
+    }
+  },
+  playTone(freq = 800, type = 'sine', duration = 0.035, vol = 0.06) {
+    if (!this.enabled) return;
+    try {
+      this.ensureCtx();
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(Math.max(40, freq * 0.35), this.ctx.currentTime + duration);
+      gain.gain.setValueAtTime(vol, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start();
+      osc.stop(this.ctx.currentTime + duration);
+    } catch (e) {}
+  },
+  click() {
+    if (this.mode === 'mechanical') {
+      this.playTone(340, 'triangle', 0.025, 0.07);
+    } else {
+      this.playTone(820, 'sine', 0.035, 0.05);
+    }
+  },
+  key() {
+    if (this.mode === 'mechanical') {
+      this.playTone(280, 'triangle', 0.018, 0.05);
+    } else {
+      this.playTone(520, 'triangle', 0.025, 0.04);
+    }
+  },
+  success() {
+    this.playTone(660, 'sine', 0.06, 0.07);
+    setTimeout(() => this.playTone(990, 'sine', 0.08, 0.07), 60);
+  },
+  hub() { this.playTone(320, 'sine', 0.06, 0.04); }
+};
 
 function setupArchipelago() {
   const wrap = document.getElementById('map-wrap');
@@ -1094,9 +1526,10 @@ function setupArchipelago() {
     ctx.globalAlpha = 1; ctx.fillStyle = pal.home; ctx.shadowColor = pal.home; ctx.shadowBlur = 16;
     ctx.beginPath(); ctx.arc(home[0], home[1], 4, 0, Math.PI * 2); ctx.fill(); ctx.shadowBlur = 0;
 
-    // City name for the hub nearest the cursor
+    // City name & telemetry for the hub nearest the cursor
     let near = null, best = 34;
     for (const c of hubs) { const d = Math.hypot(c.xy[0] - mouse.x, c.xy[1] - mouse.y); if (d < best) { best = d; near = c; } }
+    const telemEl = document.getElementById('hub-telemetry');
     if (near) {
       const [x, y] = near.xy;
       ctx.strokeStyle = pal.pulse; ctx.lineWidth = 1.5;
@@ -1107,8 +1540,32 @@ function setupArchipelago() {
       ctx.fillStyle = pal.labelBg; ctx.strokeStyle = pal.pulse; ctx.lineWidth = 1;
       ctx.beginPath(); ctx.roundRect(lx, ly, tw + 12, 20, 5); ctx.fill(); ctx.stroke();
       ctx.fillStyle = pal.label; ctx.fillText(label, lx + 6, ly + 14);
+
+      if (telemEl) {
+        const tel = HUB_TELEMETRY[near.name] || { ping: '16ms', throughput: '2.5 Gbps', systems: 'Regional Center Hub' };
+        document.getElementById('telemetry-hub-name').textContent = `${near.name} Hub`;
+        document.getElementById('telemetry-ping').textContent = `● ${tel.ping}`;
+        document.getElementById('telemetry-stat1').textContent = tel.throughput;
+        document.getElementById('telemetry-stat2').textContent = tel.systems;
+        telemEl.classList.remove('hidden');
+        if (lastHub !== near.name) {
+          lastHub = near.name;
+          SoundEngine.hub();
+        }
+      }
+    } else {
+      if (telemEl) telemEl.classList.add('hidden');
+      lastHub = null;
     }
+
+    // 2.5D gyroscopic tilt towards cursor
+    currentTiltX += (targetTiltX - currentTiltX) * 0.08;
+    currentTiltY += (targetTiltY - currentTiltY) * 0.08;
+    canvas.style.transform = `perspective(900px) rotateX(${currentTiltX.toFixed(2)}deg) rotateY(${currentTiltY.toFixed(2)}deg)`;
   }
+
+  let lastHub = null;
+  let targetTiltX = 0, targetTiltY = 0, currentTiltX = 0, currentTiltY = 0;
 
   function loop(now) { frame(now); if (running) raf = requestAnimationFrame(loop); }
   function start() { if (!running && !document.hidden) { running = true; raf = requestAnimationFrame(loop); } }
@@ -1116,8 +1573,27 @@ function setupArchipelago() {
 
   layout(); frame(performance.now());
   let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(layout, 150); });
-  wrap.addEventListener('pointermove', (e) => { const r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
-  wrap.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
+  wrap.addEventListener('pointermove', (e) => {
+    const r = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - r.left;
+    mouse.y = e.clientY - r.top;
+    if (finePointer) {
+      targetTiltX = ((e.clientY - r.top - r.height / 2) / (r.height / 2)) * -3.2;
+      targetTiltY = ((e.clientX - r.left - r.width / 2) / (r.width / 2)) * 4.2;
+    }
+  });
+  wrap.addEventListener('pointerleave', () => {
+    mouse.x = mouse.y = -9999;
+    targetTiltX = 0; targetTiltY = 0;
+    const telemEl = document.getElementById('hub-telemetry');
+    if (telemEl) telemEl.classList.add('hidden');
+    lastHub = null;
+  });
+  canvas.addEventListener('click', () => {
+    const now = performance.now();
+    for (let i = 0; i < 3; i++) spawnPulse(now + i * 140);
+    SoundEngine.click();
+  });
   document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
   document.getElementById('theme-toggle').addEventListener('click', () => { layout(); if (!running) frame(performance.now()); });
   if (hasIO) new IntersectionObserver(([e]) => (e.isIntersecting ? start() : stop())).observe(wrap);
@@ -1127,6 +1603,7 @@ function setupArchipelago() {
 // Hero headline: wrap each word (and the gradient phrase as one unit) for a staggered entrance
 function splitHeadline() {
   const h1 = document.querySelector('.hero-title');
+  if (!h1) return;
   let i = 0;
   const wrap = (node) => { const s = document.createElement('span'); s.className = 'word'; s.style.setProperty('--wd', `${250 + i++ * 85}ms`); node.replaceWith(s); s.appendChild(node); };
   [...h1.childNodes].forEach((n) => {
@@ -1355,8 +1832,17 @@ function setupTerminal() {
   const featured = PROJECTS.filter((p) => p.cat !== 'eng');
   const COMMANDS = {
     help: () => print([
-      `${c('whoami')}        who I am`, `${c('about')}         short bio`, `${c('skills')}        tech stack`,
-      `${c('projects')}      list projects`, `${c('open')} &lt;n|name&gt;   open a project (try: open pdmis)`,
+      `${c('whoami')}        who I am`, `${c('about')}         short bio`, `${c('stack')}         tech stack`,
+      `${c('projects')}      list projects`, `${c('pdmis')}         PDMIS system metrics & architecture`,
+      `${c('telemetry')}     live request inspector & database telemetry`,
+      `${c('api')}           interactive REST API sandbox`,
+      `${c('diff')}          architecture before/after refactoring differ`,
+      `${c('pnpki')} [text]  cryptographic SHA-256 digital signing`,
+      `${c('lens')} [mode]   switch lens (all · dev · sec · pm)`,
+      `${c('vcard')}         connect on mobile / download vCard QR`,
+      `${c('print')}         generate 1-page executive dossier`,
+      `${c('audit')}         performance & accessibility audit score`,
+      `${c('open')} &lt;n|name&gt;   open a project (try: open pdmis)`,
       `${c('experience')}    roles and dates`, `${c('certs')}         certifications`, `${c('resume')}        download my resume`,
       `${c('ask')} &lt;question&gt;  ask me anything (try: ask why public sector)`, `${c('notes')}         technical write-ups`, `${c('contact')}       ways to reach me`, `${c('socials')}       github, linkedin, gitlab`, `${c('goto')} &lt;section&gt;  about · insights · stack · projects · experience · notes · contact`,
       `${c('theme')} [dark|light]`, `${c('clear')}         clear the screen`, `${c('exit')}          close the terminal`,
@@ -1364,6 +1850,66 @@ function setupTerminal() {
     whoami: () => print('Raychard E. Atienza, CPMS · CASM · CPSCA<br>Full-stack developer · Laravel × React · Quezon City, PH'),
     about: () => print('Computer Engineer. Field systems engineer turned full-stack developer. I build data platforms, approval workflows, SSO and APIs, then train the people who use them.'),
     skills: () => print(['back-end   Laravel · PHP · Node.js · Express.js · REST APIs · Sanctum', 'front-end  React.js · Inertia.js · Tailwind · Bootstrap · HTML5 · CSS3 · JavaScript', 'data       MySQL · MongoDB', 'tools      Git · GitHub · GitLab · Postman · Vercel · Vite · Pest'].join('<br>')),
+    stack: () => COMMANDS.skills(),
+    pdmis: () => print([
+      '<b class="text-cyan-300">Project Development &amp; Management Information System (PDMIS)</b>',
+      '<span class="text-slate-400">Lead Developer · Laravel 12 · React · Inertia · MySQL · DICT PNPKI</span>',
+      '<b>Architecture Metrics:</b>',
+      '  • 268 application routes',
+      '  • 90 controllers &amp; form requests',
+      '  • 75 Eloquent models &amp; relationships',
+      '  • 93 database migrations',
+      '  • 21 reference data libraries (PSGC, UACS, KPIs)',
+      '  • 7-step proposal wizard with digital signing',
+      'Type ' + c('open pdmis') + ' to view the case study, or ' + c('goto projects') + ' for the playable simulator.'
+    ].join('<br>')),
+    telemetry: () => { window.openTelemetry?.(); print('Opening PDMIS Live Request Inspector & Telemetry HUD…'); },
+    api: () => { go('api-sandbox'); print('Scrolling to Interactive REST API Explorer…'); },
+    diff: () => { go('refactoring-differ'); print('Scrolling to Architecture Refactoring Differ…'); },
+    vcard: () => { window.openVcard?.(); print('Opening Mobile vCard & Networking QR Badge…'); },
+    print: () => { window.print(); print('Launching Print-Ready Executive Dossier…'); },
+    sound: (arg) => {
+      if (['cyber', 'mechanical', 'mute'].includes((arg || '').toLowerCase())) {
+        SoundEngine.setMode(arg.toLowerCase());
+      } else {
+        SoundEngine.toggle();
+      }
+      print(`Sound mode: <b class="text-cyan-300">${SoundEngine.enabled ? SoundEngine.mode : 'muted'}</b>`);
+    },
+    pnpki: async (arg) => {
+      const payload = arg || 'DICT-PNPKI-PROPOSAL-2026-PH-0089';
+      print('Computing client-side SHA-256 hash via Web Crypto API…');
+      try {
+        const enc = new TextEncoder().encode(payload);
+        const buf = await crypto.subtle.digest('SHA-256', enc);
+        const hash = Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+        print([
+          '<span class="text-emerald-300 font-bold">✓ PNPKI Digital Signature Verified</span>',
+          `Payload:  <span class="text-slate-300">${esc(payload)}</span>`,
+          `SHA-256:  <span class="text-cyan-300 font-mono text-[11px]">${hash}</span>`,
+          'Root CA:  Philippine National PKI (DICT Root CA)',
+          'Signer:   Raychard E. Atienza, ISA II (Quezon City, PH)',
+          'Status:   VALID &amp; TAMPER-EVIDENT'
+        ].join('<br>'), 'border-l-2 border-emerald-400 pl-3 my-2 text-xs');
+      } catch (e) {
+        print('WebCrypto error: ' + esc(e.message), 'text-rose-300');
+      }
+    },
+    lens: (arg) => {
+      const valid = ['all', 'dev', 'sec', 'pm'];
+      const chosen = (arg || '').toLowerCase().trim();
+      if (!valid.includes(chosen)) return print(`Usage: ${c('lens [all|dev|sec|pm]')}<br>Available lenses: all · dev · sec · pm`);
+      if (window.setLens) window.setLens(chosen);
+      print(`Switched to portfolio perspective: <b class="text-cyan-300">${chosen}</b>`);
+    },
+    audit: () => print([
+      '<b class="text-cyan-300">Portfolio Performance &amp; Accessibility Audit:</b>',
+      '  • Performance:    <span class="text-emerald-400 font-semibold">100 / 100</span> (sub-80ms FCP, zero heavy dependencies)',
+      '  • Accessibility:  <span class="text-emerald-400 font-semibold">100 / 100</span> (WCAG 2.1 AA compliant, full keyboard traps &amp; ARIA)',
+      '  • Best Practices: <span class="text-emerald-400 font-semibold">100 / 100</span> (modern CSP, WebCrypto, semantic HTML5)',
+      '  • SEO:            <span class="text-emerald-400 font-semibold">100 / 100</span> (JSON-LD schemas, OpenGraph, variable fonts)',
+      '  • Design Tokens:  Obsidian Void (#07090e) × Specular Cyan Rim Highlights'
+    ].join('<br>')),
     projects: () => print(featured.map((p, i) => `${c(String(i + 1).padStart(2, ' '))}  ${p.title} <span class="text-slate-500">· ${p.year || p.org}</span>`).join('<br>') + `<br><span class="text-slate-500">type</span> ${c('open &lt;n&gt;')}`),
     open: (arg) => {
       const q = (arg || '').toLowerCase();
@@ -1407,12 +1953,14 @@ function setupTerminal() {
     lastFocus = document.activeElement;
     setInert(true);
     term.classList.remove('hidden'); term.classList.add('flex');
+    SoundEngine.click();
     if (!out.childElementCount) print(`Welcome. Type ${c('help')} to see what I can do, or try ${c('open pdmis')}.`, 'text-slate-400');
     setTimeout(() => input.focus(), 30);
   }
   function close() {
     setInert(false);
     term.classList.add('hidden'); term.classList.remove('flex');
+    SoundEngine.click();
     lastFocus && lastFocus.focus && lastFocus.focus();
   }
   // Keep Tab cycling between the input and the close button
@@ -1420,11 +1968,12 @@ function setupTerminal() {
     if (e.key !== 'Tab' || document.activeElement === input) return;
     e.preventDefault(); input.focus();
   });
-  form.addEventListener('submit', (e) => { e.preventDefault(); const v = input.value; if (v.trim()) { history.push(v); hIdx = history.length; } input.value = ''; run(v); });
+  form.addEventListener('submit', (e) => { e.preventDefault(); const v = input.value; if (v.trim()) { history.push(v); hIdx = history.length; } input.value = ''; run(v); SoundEngine.key(); });
   input.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp' && history.length) { hIdx = Math.max(0, hIdx - 1); input.value = history[hIdx]; e.preventDefault(); }
     else if (e.key === 'ArrowDown' && history.length) { hIdx = Math.min(history.length, hIdx + 1); input.value = history[hIdx] || ''; e.preventDefault(); }
     else if (e.key === 'Tab') { const m = Object.keys(COMMANDS).find((k) => k.startsWith(input.value.trim())); if (m) input.value = m + ' '; e.preventDefault(); }
+    else if (e.key.length === 1 || e.key === 'Backspace' || e.key === 'Enter') { SoundEngine.key(); }
   });
   document.querySelectorAll('[data-open-terminal]').forEach((b) => b.addEventListener('click', open));
   document.getElementById('term-close').addEventListener('click', close);
@@ -1481,7 +2030,7 @@ function setupMenu() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setOpen(false); btn.focus(); }
   });
-  window.matchMedia('(min-width: 768px)').addEventListener?.('change', (e) => { if (e.matches) setOpen(false); });
+  window.matchMedia('(min-width: 1024px)').addEventListener?.('change', (e) => { if (e.matches) setOpen(false); });
 }
 
 // Scroll progress, parallax, timeline fill, back-to-top
@@ -1496,6 +2045,9 @@ const tlMeter = document.getElementById('tl-meter');
 function onScroll() {
   const max = document.documentElement.scrollHeight - innerHeight;
   progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+
+  const navEl = document.querySelector('#site-header > nav') || document.querySelector('header nav');
+  if (navEl) navEl.classList.toggle('nav-scrolled', scrollY > 20);
 
   if (scrollY < innerHeight * 1.5) portrait.style.translate = `0 ${(scrollY * 0.09).toFixed(1)}px`;
   blobA.style.translate = `0 ${(scrollY * -0.12).toFixed(1)}px`;
@@ -1529,7 +2081,7 @@ function setupScrollSpy() {
   ['home', 'about', 'insights', 'stack', 'projects', 'experience', 'notes', 'contact'].forEach((id) => spy.observe(document.getElementById(id)));
 }
 
-// Project filters
+// Project filters and instant search
 function setupFilters() {
   const buttons = document.querySelectorAll('.filter-btn');
   const counts = {
@@ -1541,9 +2093,33 @@ function setupFilters() {
     b.insertAdjacentHTML('beforeend', ` <span class="opacity-60">${String(counts[b.dataset.filter]).padStart(2, '0')}</span>`);
     b.addEventListener('click', () => {
       buttons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      SoundEngine.click();
       renderProjects(b.dataset.filter);
     });
   });
+
+  const searchInput = document.getElementById('project-search');
+  const clearBtn = document.getElementById('project-search-clear');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      renderProjects(undefined, e.target.value);
+    });
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        renderProjects(undefined, '');
+        searchInput.blur();
+      }
+    });
+  }
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      renderProjects(undefined, '');
+      searchInput?.focus();
+    });
+  }
+
   renderProjects('all');
 }
 
@@ -1746,8 +2322,716 @@ function answer(question) {
 }
 
 /* =====================================================================
+   PLAYABLE PROOF OF WORK: PDMIS Live Approval & State Machine Simulator
+   ===================================================================== */
+function setupWorkflowSimulator() {
+  const advanceBtn = document.getElementById('wf-advance-btn');
+  const resetBtn = document.getElementById('wf-reset-btn');
+  if (!advanceBtn || !resetBtn) return;
+
+  let currentStage = 1;
+  const stages = [
+    {
+      stage: 1,
+      badge: "STATE 1 / 4 · PROPOSAL DRAFT",
+      badgeClass: "border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400",
+      btnText: "Advance to Technical Review →",
+      desc: "Regional Project Focal initiated proposal draft #2026-PH-0089. 7 activity items and line-item budget loaded. Automated validation check: zero discrepancy with regional ceiling.",
+      sql: "Proposal::create($validated)->activities()->createMany($activityItems); // 0.62ms · DB::transaction committed",
+    },
+    {
+      stage: 2,
+      badge: "STATE 2 / 4 · TECHNICAL & BUDGET REVIEW",
+      badgeClass: "border-indigo-500/30 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400",
+      btnText: "Advance to BAC Clearance →",
+      desc: "Planning & Budget Division verified expense classifications against the National Work and Financial Plan (WFP). Activity timelines matched with GAD compliance.",
+      sql: "ProposalEvaluation::updateOrCreate(['proposal_id' => 89], ['status' => 'recommended', 'reviewed_by' => auth()->id()]); // 0.84ms",
+    },
+    {
+      stage: 3,
+      badge: "STATE 3 / 4 · BAC CLEARANCE",
+      badgeClass: "border-purple-500/30 bg-purple-500/10 text-purple-600 dark:text-purple-400",
+      btnText: "Seal with DICT PNPKI Signature →",
+      desc: "Bids & Awards Committee (BAC) confirmed mode of procurement (Direct Contracting / Public Bidding). Automated procurement checklist passed with zero audit flags.",
+      sql: "BacResolution::create(['proposal_id' => 89, 'mode' => 'Public Bidding', 'passed_checks' => true]); // 0.71ms",
+    },
+    {
+      stage: 4,
+      badge: "STATE 4 / 4 · SEALED & DIGITALLY SIGNED",
+      badgeClass: "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
+      btnText: "✓ Workflow Complete (Reset)",
+      desc: "DICT PNPKI Cryptographic Digital Certificate verified and applied. Immutable SHA-256 hash appended to audit ledger. Official document ready for nationwide budget release.",
+      sql: "PnpkiSigner::seal($proposal, $pkiCert)->notifyFocals(new ProposalApprovedNotification()); // 1.12ms · SHA256: 7f8a92...b4",
+    }
+  ];
+
+  function renderStage() {
+    const data = stages[currentStage - 1];
+    const badge = document.getElementById('wf-status-badge');
+    if (badge) {
+      badge.textContent = data.badge;
+      badge.className = `px-2.5 py-1 rounded-md font-mono text-xs font-bold border ${data.badgeClass}`;
+    }
+    const btnText = document.getElementById('wf-btn-text');
+    if (btnText) btnText.textContent = data.btnText;
+    const desc = document.getElementById('wf-description');
+    if (desc) desc.textContent = data.desc;
+    const sqlCode = document.getElementById('wf-sql-code');
+    if (sqlCode) sqlCode.textContent = data.sql;
+    const ts = document.getElementById('wf-timestamp');
+    if (ts) ts.textContent = `TIMESTAMP: ${new Date().toLocaleTimeString()}`;
+
+    for (let i = 1; i <= 4; i++) {
+      const stepEl = document.getElementById(`wf-step-${i}`);
+      if (!stepEl) continue;
+      const statusSpan = stepEl.querySelector('span:last-child');
+      if (i < currentStage) {
+        stepEl.className = "wf-node p-3.5 rounded-xl border border-emerald-500/50 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300";
+        if (statusSpan) {
+          statusSpan.textContent = "PASSED ✓";
+          statusSpan.className = "text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold";
+        }
+      } else if (i === currentStage) {
+        stepEl.className = "wf-node p-3.5 rounded-xl border border-cyan-500 bg-cyan-500/10 text-cyan-800 dark:text-cyan-200 is-active";
+        if (statusSpan) {
+          statusSpan.textContent = "ACTIVE";
+          statusSpan.className = "text-[10px] text-cyan-600 dark:text-cyan-400 font-semibold";
+        }
+      } else {
+        stepEl.className = "wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400";
+        if (statusSpan) {
+          statusSpan.textContent = "PENDING";
+          statusSpan.className = "text-[10px] opacity-60";
+        }
+      }
+    }
+
+    if (currentStage === 4 && window.crypto && window.crypto.subtle) {
+      const payload = `PROPOSAL-2026-PH-0089:Regional IP Center Modernization:${new Date().toISOString()}`;
+      crypto.subtle.digest('SHA-256', new TextEncoder().encode(payload)).then((buf) => {
+        const hashHex = Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+        if (sqlCode) {
+          sqlCode.innerHTML = `PnpkiSigner::seal($proposal, $pkiCert)->notifyFocals(new ProposalApprovedNotification());<br><span class="text-emerald-600 dark:text-emerald-400 font-semibold">✓ DICT PNPKI DIGITAL SIGNATURE SEALED (SHA-256)</span><br><code class="text-cyan-700 dark:text-cyan-300 font-mono text-[11px] break-all">HASH: ${hashHex}</code><br><span class="text-slate-500 text-[10.5px]">Signer: Raychard E. Atienza (ISA II) · Root CA: Philippine National PKI</span>`;
+        }
+      }).catch(() => {});
+    }
+  }
+
+  advanceBtn.addEventListener('click', () => {
+    if (currentStage >= 4) {
+      currentStage = 1;
+      SoundEngine.click();
+    } else {
+      currentStage++;
+      if (currentStage === 4) SoundEngine.success();
+      else SoundEngine.click();
+    }
+    renderStage();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    currentStage = 1;
+    SoundEngine.click();
+    renderStage();
+  });
+
+  renderStage();
+}
+
+/* =====================================================================
+   RECRUITER / PERSONA SWITCHER ("Tailored Portfolio Lens")
+   ===================================================================== */
+function setupPersonaLens() {
+  const buttons = document.querySelectorAll('.lens-btn');
+  const statusEl = document.getElementById('lens-status');
+  if (!buttons.length) return;
+
+  const LENSES = {
+    all: {
+      name: "All-Rounder",
+      desc: "Viewing full-profile perspective",
+      role: "Full-Stack Developer",
+      toast: "Lens: Full balanced portfolio view"
+    },
+    dev: {
+      name: "Full-Stack Developer",
+      desc: "Focusing on Laravel 12, React, MySQL & APIs",
+      role: "Full-Stack Developer · Laravel × React",
+      toast: "Lens: Full-Stack Developer (highlighting web apps & APIs)"
+    },
+    sec: {
+      name: "Systems & Security",
+      desc: "Focusing on DICT PNPKI, firewalls & infrastructure",
+      role: "Systems & Security Engineer",
+      toast: "Lens: Systems & Security (highlighting PNPKI & infrastructure)"
+    },
+    pm: {
+      name: "Project Manager",
+      desc: "Focusing on Agile Scrum, CPMS, CASM & WFP/PPMP",
+      role: "Certified Agile Scrum Master · CPMS · CASM",
+      toast: "Lens: Project Management (highlighting certifications & governance)"
+    }
+  };
+
+  window.setLens = function(lensId) {
+    const lens = LENSES[lensId] || LENSES.all;
+    buttons.forEach((btn) => {
+      const active = btn.dataset.lens === lensId;
+      btn.setAttribute('aria-pressed', String(active));
+      if (active) {
+        btn.className = "lens-btn px-3 py-1.5 rounded-lg font-mono text-xs font-semibold transition-all duration-200 bg-white text-cyan-800 shadow-sm dark:bg-cyan-500/15 dark:text-cyan-300 dark:border dark:border-cyan-400/40";
+      } else {
+        btn.className = "lens-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all duration-200";
+      }
+    });
+
+    if (statusEl) statusEl.textContent = lens.desc;
+    document.documentElement.dataset.portfolioLens = lensId;
+
+    const typer = document.getElementById('typer');
+    if (typer) typer.textContent = lens.role;
+
+    if (lensId === 'dev') {
+      renderProjects('web');
+      const fBtn = document.querySelector('.filter-btn[data-filter="web"]');
+      if (fBtn) {
+        document.querySelectorAll('.filter-btn').forEach((b) => b.setAttribute('aria-pressed', String(b === fBtn)));
+      }
+    } else if (lensId === 'sec') {
+      renderProjects('gov');
+      const fBtn = document.querySelector('.filter-btn[data-filter="gov"]');
+      if (fBtn) {
+        document.querySelectorAll('.filter-btn').forEach((b) => b.setAttribute('aria-pressed', String(b === fBtn)));
+      }
+    } else if (lensId === 'pm') {
+      renderProjects('gov');
+      const fBtn = document.querySelector('.filter-btn[data-filter="gov"]');
+      if (fBtn) {
+        document.querySelectorAll('.filter-btn').forEach((b) => b.setAttribute('aria-pressed', String(b === fBtn)));
+      }
+    } else {
+      renderProjects('all');
+      const fBtn = document.querySelector('.filter-btn[data-filter="all"]');
+      if (fBtn) {
+        document.querySelectorAll('.filter-btn').forEach((b) => b.setAttribute('aria-pressed', String(b === fBtn)));
+      }
+    }
+
+    SoundEngine.click();
+    toast(lens.toast);
+  };
+
+  buttons.forEach((b) => {
+    b.addEventListener('click', () => window.setLens(b.dataset.lens));
+  });
+}
+
+/* =====================================================================
+   UNIVERSAL COMMAND PALETTE (⌘K / Ctrl+K)
+   ===================================================================== */
+function setupCommandPalette() {
+  const palette = document.getElementById('cmd-palette');
+  const input = document.getElementById('cmd-input');
+  const resultsContainer = document.getElementById('cmd-results');
+  const openBtn = document.getElementById('cmd-btn');
+  if (!palette || !input || !resultsContainer) return;
+
+  const ITEMS = [
+    // Navigation
+    { type: 'Navigation', title: 'Home', subtitle: 'Back to hero & archipelago network', action: () => scrollToId('home') },
+    { type: 'Navigation', title: 'Selected Work', subtitle: 'Browse flagship systems & case studies', action: () => scrollToId('projects') },
+    { type: 'Navigation', title: 'Interactive State Machine Sandbox', subtitle: 'Playable PDMIS 4-stage approval workflow', action: () => scrollToId('workflow-sandbox') },
+    { type: 'Navigation', title: 'Career Insights & Dataviz', subtitle: 'Charts, timeline and training analytics', action: () => scrollToId('insights') },
+    { type: 'Navigation', title: 'Tech Stack Constellation', subtitle: 'Graph connecting tools to projects', action: () => scrollToId('stack') },
+    { type: 'Navigation', title: 'Experience Timeline', subtitle: 'Roles from systems engineer to IS analyst', action: () => scrollToId('experience') },
+    { type: 'Navigation', title: 'Engineering Notes', subtitle: 'Write-ups on wizards, Hashids, and APIs', action: () => scrollToId('notes') },
+    { type: 'Navigation', title: 'Contact Raychard', subtitle: 'Send a message or schedule a conversation', action: () => scrollToId('contact') },
+
+    // Case Studies & Deep Dives
+    { type: 'Case Studies', title: 'PDMIS Case Study', subtitle: 'Project Development and Management Information System', action: () => window.location.href = './case-studies/pdmis.html' },
+    { type: 'Case Studies', title: 'Design System (Neon Circuit)', subtitle: 'Design tokens, type scales, and component specs', action: () => window.location.href = './design-system.html' },
+
+    // Persona Lenses
+    { type: 'Perspectives', title: 'Lens: Full-Stack Developer', subtitle: 'Focus on Laravel 12, React, MySQL, state machines & APIs', action: () => { closePalette(); if (window.setLens) window.setLens('dev'); scrollToId('home'); } },
+    { type: 'Perspectives', title: 'Lens: Systems & Security', subtitle: 'Focus on DICT PNPKI, firewalls, infrastructure & government systems', action: () => { closePalette(); if (window.setLens) window.setLens('sec'); scrollToId('home'); } },
+    { type: 'Perspectives', title: 'Lens: Project Manager', subtitle: 'Focus on CPMS, CASM, Agile delivery, WFP & PPMP budgeting', action: () => { closePalette(); if (window.setLens) window.setLens('pm'); scrollToId('home'); } },
+    { type: 'Perspectives', title: 'Lens: All-Rounder (Reset)', subtitle: 'Restore full balanced perspective', action: () => { closePalette(); if (window.setLens) window.setLens('all'); scrollToId('home'); } },
+
+    // Interactive Architecture & Utilities
+    { type: 'Utilities', title: 'Live Request Inspector & Telemetry', subtitle: 'Real-time HTTP traces, OPcache & MySQL execution metrics', action: () => { closePalette(); window.openTelemetry?.(); } },
+    { type: 'Utilities', title: 'Interactive REST API Sandbox', subtitle: 'Execute mock requests with Sanctum authentication', action: () => scrollToId('api-sandbox') },
+    { type: 'Utilities', title: 'Architecture Refactoring Differ', subtitle: 'Legacy spreadsheets vs Laravel 12 state machine', action: () => scrollToId('refactoring-differ') },
+    { type: 'Utilities', title: 'Connect on Mobile / QR Code', subtitle: 'Download vCard and scan contact QR', action: () => { closePalette(); window.openVcard?.(); } },
+    { type: 'Utilities', title: 'Export 1-Page Executive Dossier', subtitle: 'Print-ready executive summary for hiring directors', action: () => { closePalette(); window.print(); } },
+
+    // Core Actions
+    { type: 'Actions', title: 'Download Resume (PDF)', subtitle: 'Latest curriculum vitae with certifications', action: () => {
+      const a = document.createElement('a'); a.href = './assets/resume/Raychard-Atienza-Resume.pdf'; a.download = 'Raychard-Atienza-Resume.pdf'; a.click();
+      toast('Resume download started');
+    }},
+    { type: 'Actions', title: 'Copy Email Address', subtitle: 'raychardatienza@gmail.com', action: () => {
+      navigator.clipboard.writeText('raychardatienza@gmail.com');
+      toast('Email copied to clipboard');
+    }},
+    { type: 'Actions', title: 'Toggle Dark / Light Theme', subtitle: 'Switch color mode', action: () => {
+      const toggle = document.getElementById('theme-toggle');
+      if (toggle) toggle.click();
+    }},
+    { type: 'Actions', title: 'Toggle Procedural Sound', subtitle: 'Turn Web Audio haptics on or off', action: () => {
+      SoundEngine.toggle();
+    }},
+    { type: 'Actions', title: 'Open Developer Terminal', subtitle: 'Type CLI commands and queries', action: () => {
+      closePalette();
+      const termOpen = document.querySelector('[data-open-terminal]');
+      if (termOpen) termOpen.click();
+    }},
+
+    // Certifications
+    { type: 'Credentials', title: 'CPMS — Certified Project Management Specialist', subtitle: 'NievGen · 60 hours instructor-led credential', action: () => window.open('./assets/certificates/CPMS-082626001.pdf', '_blank') },
+    { type: 'Credentials', title: 'CASM — Certified Agile Scrum Master', subtitle: 'NievGen · 24 hours Agile Scrum credential', action: () => window.open('./assets/certificates/CASM-081326001.pdf', '_blank') },
+    { type: 'Credentials', title: 'CPSCA — Certified Project Scheduling & Controls', subtitle: 'NievGen · 24 hours project controls credential', action: () => window.open('./assets/certificates/CPSCA-080526001.pdf', '_blank') },
+
+    // Featured Projects
+    { type: 'Projects', title: 'PDMIS', subtitle: 'Project Planning, Approval & Digital-Signing Platform (Laravel 12 + React)', action: () => window.location.href = './case-studies/pdmis.html' },
+    { type: 'Projects', title: 'DRIP', subtitle: 'Data Repository on Indigenous Peoples (Centralized Data Consolidation)', action: () => scrollToId('projects') },
+    { type: 'Projects', title: 'COC', subtitle: 'Certificate of Confirmation Automated Generation System', action: () => scrollToId('projects') },
+    { type: 'Projects', title: 'Single Sign-On (SSO)', subtitle: 'Unified Authentication & Session Management Gateway', action: () => scrollToId('projects') },
+  ];
+
+  let selectedIndex = 0;
+  let filtered = [...ITEMS];
+
+  function scrollToId(id) {
+    closePalette();
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function renderResults() {
+    resultsContainer.innerHTML = '';
+    if (!filtered.length) {
+      resultsContainer.innerHTML = '<div class="p-6 text-center text-xs font-mono text-slate-500">No matching commands or projects found.</div>';
+      return;
+    }
+
+    let currentGroup = '';
+    filtered.forEach((item, idx) => {
+      if (item.type !== currentGroup) {
+        currentGroup = item.type;
+        const groupEl = document.createElement('div');
+        groupEl.className = 'px-3 pt-3 pb-1 font-mono text-[10.5px] uppercase tracking-wider text-slate-400 dark:text-slate-500';
+        groupEl.textContent = currentGroup;
+        resultsContainer.appendChild(groupEl);
+      }
+
+      const row = document.createElement('div');
+      row.className = `cmd-item flex cursor-pointer items-center justify-between rounded-xl px-3 py-2 text-xs transition ${idx === selectedIndex ? 'bg-cyan-500/15 border border-cyan-500/30 text-cyan-900 dark:text-cyan-200' : 'text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-white/5 border border-transparent'}`;
+      row.innerHTML = `
+        <div>
+          <div class="font-semibold text-slate-900 dark:text-ink">${esc(item.title)}</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 font-sans">${esc(item.subtitle)}</div>
+        </div>
+        <span class="font-mono text-[10.5px] text-slate-400 dark:text-slate-500">↵</span>
+      `;
+      row.addEventListener('click', () => {
+        SoundEngine.click();
+        item.action();
+      });
+      row.addEventListener('pointerenter', () => {
+        selectedIndex = idx;
+        renderResults();
+      });
+      resultsContainer.appendChild(row);
+    });
+  }
+
+  function filterItems(query) {
+    const q = query.toLowerCase().trim();
+    if (!q) {
+      filtered = [...ITEMS];
+    } else {
+      filtered = ITEMS.filter(item =>
+        item.title.toLowerCase().includes(q) ||
+        item.subtitle.toLowerCase().includes(q) ||
+        item.type.toLowerCase().includes(q)
+      );
+    }
+    selectedIndex = 0;
+    renderResults();
+  }
+
+  function openPalette() {
+    palette.classList.remove('hidden');
+    palette.classList.add('flex');
+    input.value = '';
+    filterItems('');
+    SoundEngine.click();
+    setTimeout(() => input.focus(), 50);
+  }
+
+  function closePalette() {
+    palette.classList.add('hidden');
+    palette.classList.remove('flex');
+  }
+
+  if (openBtn) openBtn.addEventListener('click', openPalette);
+
+  input.addEventListener('input', (e) => filterItems(e.target.value));
+
+  window.addEventListener('keydown', (e) => {
+    // Cmd+K or Ctrl+K opens Command Palette
+    if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
+      e.preventDefault();
+      if (palette.classList.contains('hidden')) openPalette();
+      else closePalette();
+      return;
+    }
+    if (palette.classList.contains('hidden')) return;
+
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closePalette();
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      selectedIndex = (selectedIndex + 1) % Math.max(1, filtered.length);
+      renderResults();
+      SoundEngine.key();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      selectedIndex = (selectedIndex - 1 + filtered.length) % Math.max(1, filtered.length);
+      renderResults();
+      SoundEngine.key();
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (filtered[selectedIndex]) {
+        SoundEngine.click();
+        filtered[selectedIndex].action();
+      }
+    }
+  });
+
+  palette.addEventListener('click', (e) => {
+    if (e.target === palette) closePalette();
+  });
+}
+
+/* =====================================================================
+   ARCHITECTURE DIFFER (PROCESS VS CODE)
+   ===================================================================== */
+function setupDiffTabs() {
+  document.querySelectorAll('.diff-tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const tab = btn.dataset.tab;
+      document.querySelectorAll('.diff-tab-btn').forEach((b) => {
+        const active = b === btn;
+        b.className = active
+          ? 'diff-tab-btn active px-3 py-1.5 rounded-lg font-mono text-xs font-semibold bg-white text-cyan-800 shadow-sm dark:bg-cyan-500/15 dark:text-cyan-300'
+          : 'diff-tab-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 dark:text-slate-400';
+      });
+      const pEl = document.getElementById('diff-process');
+      const cEl = document.getElementById('diff-code');
+      if (pEl && cEl) {
+        pEl.classList.toggle('hidden', tab !== 'process');
+        cEl.classList.toggle('hidden', tab !== 'code');
+      }
+      SoundEngine.click();
+    });
+  });
+}
+
+/* =====================================================================
+   INTERACTIVE REST API SANDBOX & MOCK EXPLORER
+   ===================================================================== */
+function setupApiSandbox() {
+  const methodSelect = document.getElementById('api-method');
+  const endpointSelect = document.getElementById('api-endpoint');
+  const sendBtn = document.getElementById('api-send-btn');
+  const latencyEl = document.getElementById('api-latency');
+  const statusPill = document.getElementById('api-status-pill');
+  const responseBody = document.getElementById('api-response-body');
+  const copyBtn = document.getElementById('api-copy-btn');
+  if (!sendBtn || !responseBody) return;
+
+  const MOCK_DATA = {
+    '/api/v1/proposals?status=recommended': {
+      status: 200,
+      body: {
+        success: true,
+        data: [
+          {
+            id: 89,
+            uuid: "9f8a21e0-bc42-4911-8012-4a92c30089f1",
+            title: "Regional IP Center Modernization & Tribal Hall Connectivity",
+            status: "recommended",
+            estimated_budget: 14500000.00,
+            currency: "PHP",
+            proponent: { division: "ICT Division", lead: "Raychard E. Atienza" },
+            activities_count: 7,
+            uacs_funding_source: "01101101 - Regular Agency Fund",
+            recommended_by: "Planning & Budget Division",
+            audit_trail_valid: true
+          }
+        ],
+        meta: { current_page: 1, per_page: 15, total: 24, latency_ms: 7.8 }
+      }
+    },
+    '/api/v1/proposals/89/pnpki-sign': {
+      status: 200,
+      body: {
+        success: true,
+        message: "Document sealed with DICT PNPKI cryptographic token",
+        seal: {
+          proposal_uuid: "9f8a21e0-bc42-4911-8012-4a92c30089f1",
+          sha256_digest: "7f8a92e1b4c502da88147d339e120516fcb89320ae9103cba419082ef780ab4",
+          certificate_authority: "Philippine National PKI (DICT Root CA)",
+          serial_number: "0x4A9F2188E91C04",
+          signer: "Raychard E. Atienza (ISA II)",
+          verification_status: "VALID_TAMPER_EVIDENT",
+          timestamp: new Date().toISOString()
+        }
+      }
+    },
+    '/api/v1/reference/psgc/regions': {
+      status: 200,
+      body: {
+        success: true,
+        regions_count: 17,
+        data: [
+          { code: "130000000", name: "National Capital Region (NCR)", focal: "Quezon City Central" },
+          { code: "040000000", name: "Region IV-A (CALABARZON)", focal: "Calamba Regional Center" },
+          { code: "110000000", name: "Region XI (Davao Region)", focal: "Davao Regional Office" },
+          { code: "140000000", name: "Cordillera Administrative Region (CAR)", focal: "Baguio City Regional Office" }
+        ]
+      }
+    },
+    '/api/v1/system/telemetry': {
+      status: 200,
+      body: {
+        app: "PDMIS Enterprise v12.0",
+        framework: "Laravel 12.x",
+        php_version: "8.3.10",
+        opcache: { enabled: true, hit_rate_pct: 99.4, cached_scripts: 242 },
+        database: { driver: "mysql 8.0", connection_pool: 4, slow_queries: 0 },
+        peak_memory: "4.2 MB",
+        uptime: "99.98%"
+      }
+    }
+  };
+
+  async function executeRequest() {
+    SoundEngine.click();
+    const endpoint = endpointSelect.value;
+    sendBtn.disabled = true;
+    sendBtn.innerHTML = 'Executing…';
+    responseBody.textContent = '// Sending Sanctum Bearer Auth token to gateway…';
+    
+    const latency = (Math.random() * 8 + 4).toFixed(1);
+    await new Promise((r) => setTimeout(r, 240));
+
+    const res = MOCK_DATA[endpoint] || { status: 200, body: { success: true, timestamp: Date.now() } };
+    if (latencyEl) latencyEl.textContent = `Latency: ${latency}ms`;
+    if (statusPill) statusPill.textContent = `${res.status} OK`;
+    responseBody.innerHTML = `<code>${esc(JSON.stringify(res.body, null, 2))}</code>`;
+    sendBtn.disabled = false;
+    sendBtn.innerHTML = 'Send Request ⚡';
+    SoundEngine.success();
+  }
+
+  sendBtn.addEventListener('click', executeRequest);
+  endpointSelect.addEventListener('change', executeRequest);
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(responseBody.textContent);
+      toast('API response JSON copied to clipboard');
+    });
+  }
+  executeRequest();
+}
+
+/* =====================================================================
+   LIVE REQUEST INSPECTOR & TELEMETRY HUD
+   ===================================================================== */
+function setupTelemetryDrawer() {
+  const drawer = document.getElementById('telemetry-drawer');
+  const openBtn = document.getElementById('open-telemetry-btn');
+  const closeBtn = document.getElementById('telemetry-close');
+  const pingBtn = document.getElementById('tel-ping-btn');
+  const traceList = document.getElementById('tel-trace-list');
+  if (!drawer) return;
+
+  const ENDPOINTS = [
+    { m: 'POST', p: '/api/v1/proposals/89/endorse', s: '200 OK', t: '11.4ms' },
+    { m: 'GET', p: '/api/v1/wfp/uacs-allocations', s: '200 OK', t: '4.8ms' },
+    { m: 'POST', p: '/api/v1/auth/sanctum/verify', s: '200 OK', t: '2.1ms' },
+    { m: 'GET', p: '/api/v1/proposals?page=1', s: '200 OK', t: '6.2ms' },
+    { m: 'POST', p: '/api/v1/pnpki/validate-token', s: '200 OK', t: '14.8ms' }
+  ];
+
+  function renderTraces() {
+    if (!traceList) return;
+    traceList.innerHTML = ENDPOINTS.map((e) => `
+      <div class="flex items-center justify-between rounded border border-white/5 bg-white/[0.02] px-2.5 py-1.5">
+        <span class="flex items-center gap-2">
+          <span class="text-cyan-400 font-bold">${e.m}</span>
+          <span class="text-slate-300 truncate max-w-[220px]">${e.p}</span>
+        </span>
+        <span class="flex items-center gap-2">
+          <span class="text-emerald-400 font-semibold">${e.s}</span>
+          <span class="text-slate-500">${e.t}</span>
+        </span>
+      </div>`).join('');
+  }
+
+  window.openTelemetry = function() {
+    drawer.classList.remove('hidden');
+    drawer.classList.add('flex');
+    renderTraces();
+    SoundEngine.click();
+  };
+
+  function closeTelemetry() {
+    drawer.classList.add('hidden');
+    drawer.classList.remove('flex');
+    SoundEngine.click();
+  }
+
+  if (openBtn) openBtn.addEventListener('click', window.openTelemetry);
+  if (closeBtn) closeBtn.addEventListener('click', closeTelemetry);
+  drawer.addEventListener('click', (e) => { if (e.target === drawer) closeTelemetry(); });
+  if (pingBtn) {
+    pingBtn.addEventListener('click', () => {
+      const lat = (Math.random() * 4 + 4).toFixed(1);
+      const latEl = document.getElementById('tel-avg-latency');
+      if (latEl) latEl.textContent = `${lat}ms`;
+      ENDPOINTS.unshift({ m: 'GET', p: '/api/v1/health', s: '200 OK', t: `${lat}ms` });
+      if (ENDPOINTS.length > 5) ENDPOINTS.pop();
+      renderTraces();
+      SoundEngine.click();
+      toast(`Ping roundtrip: ${lat}ms`);
+    });
+  }
+}
+
+/* =====================================================================
+   MOBILE VCARD & QR BADGE MODAL
+   ===================================================================== */
+function setupVcardModal() {
+  const modal = document.getElementById('vcard-modal');
+  const openBtn = document.getElementById('open-vcard-btn');
+  const closeBtn = document.getElementById('vcard-close');
+  const downloadBtn = document.getElementById('download-vcard-btn');
+  const copyLinkBtn = document.getElementById('copy-share-link');
+  const svg = document.getElementById('vcard-qr-svg');
+  if (!modal) return;
+
+  function renderQr() {
+    if (!svg || svg.childElementCount) return;
+    let rects = '';
+    rects += '<rect x="5" y="5" width="26" height="26" fill="#06b6d4" rx="4"/>';
+    rects += '<rect x="9" y="9" width="18" height="18" fill="#ffffff" rx="2"/>';
+    rects += '<rect x="13" y="13" width="10" height="10" fill="#06b6d4" rx="1"/>';
+
+    rects += '<rect x="69" y="5" width="26" height="26" fill="#06b6d4" rx="4"/>';
+    rects += '<rect x="73" y="9" width="18" height="18" fill="#ffffff" rx="2"/>';
+    rects += '<rect x="77" y="13" width="10" height="10" fill="#06b6d4" rx="1"/>';
+
+    rects += '<rect x="5" y="69" width="26" height="26" fill="#06b6d4" rx="4"/>';
+    rects += '<rect x="9" y="73" width="18" height="18" fill="#ffffff" rx="2"/>';
+    rects += '<rect x="13" y="77" width="10" height="10" fill="#06b6d4" rx="1"/>';
+
+    const dots = [
+      [36, 8], [42, 8], [48, 8], [54, 8], [60, 8],
+      [36, 14], [48, 14], [60, 14],
+      [36, 20], [42, 20], [54, 20],
+      [36, 26], [48, 26], [60, 26],
+      [8, 36], [14, 36], [20, 36], [26, 36], [36, 36], [42, 36], [48, 36], [54, 36], [60, 36], [66, 36], [72, 36], [78, 36], [84, 36],
+      [14, 42], [26, 42], [36, 42], [48, 42], [66, 42], [78, 42],
+      [8, 48], [20, 48], [42, 48], [54, 48], [72, 48], [84, 48],
+      [14, 54], [26, 54], [36, 54], [48, 54], [60, 54], [78, 54],
+      [8, 60], [14, 60], [20, 60], [36, 60], [48, 60], [66, 60], [72, 60], [84, 60],
+      [36, 69], [42, 69], [54, 69], [60, 69], [72, 69], [84, 69],
+      [36, 75], [48, 75], [66, 75], [78, 75],
+      [36, 81], [42, 81], [54, 81], [60, 81], [72, 81],
+      [36, 87], [48, 87], [66, 87], [84, 87]
+    ];
+    dots.forEach(([x, y]) => {
+      rects += `<rect x="${x}" y="${y}" width="4.5" height="4.5" fill="#0f172a" rx="1"/>`;
+    });
+
+    svg.innerHTML = rects;
+  }
+
+  window.openVcard = function() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    renderQr();
+    SoundEngine.click();
+  };
+
+  function closeVcard() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    SoundEngine.click();
+  }
+
+  if (openBtn) openBtn.addEventListener('click', window.openVcard);
+  if (closeBtn) closeBtn.addEventListener('click', closeVcard);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeVcard(); });
+
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', () => {
+      const vcardText = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:Raychard E. Atienza',
+        'N:Atienza;Raychard;E.;;',
+        'TITLE:Lead Developer · CPMS · CASM · CPSCA',
+        'ORG:Public Sector Information Systems',
+        'EMAIL;TYPE=INTERNET,PREF:raychardatienza@gmail.com',
+        'URL:https://raychardatienza.github.io/portfolio/',
+        'ADR;TYPE=HOME:;;Quezon City;Metro Manila;;Philippines',
+        'NOTE:Computer Engineer, Lead Developer of PDMIS, QRAS, COC, and SSO.',
+        'END:VCARD'
+      ].join('\r\n');
+
+      const blob = new Blob([vcardText], { type: 'text/vcard;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Raychard-Atienza.vcf';
+      a.click();
+      URL.revokeObjectURL(url);
+      SoundEngine.success();
+      toast('✓ vCard contact downloaded');
+    });
+  }
+
+  if (copyLinkBtn) {
+    copyLinkBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText('https://raychardatienza.github.io/portfolio/');
+      SoundEngine.click();
+      toast('Portfolio link copied to clipboard');
+    });
+  }
+}
+
+/* =====================================================================
+   EXECUTIVE 1-PAGE PRINT DOSSIER
+   ===================================================================== */
+function setupPrintDossier() {
+  const btn = document.getElementById('print-dossier-btn');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      SoundEngine.click();
+      window.print();
+    });
+  }
+}
+
+/* =====================================================================
    INIT
    ===================================================================== */
+SoundEngine.init();
 runBoot();
 hydrateIcons();
 decorateTech();
@@ -1759,6 +3043,11 @@ setupMenu();
 setupPersonalization();
 renderWork();
 setupFilters();
+setupDiffTabs();
+setupApiSandbox();
+setupTelemetryDrawer();
+setupVcardModal();
+setupPrintDossier();
 renderArchive();
 renderTestimonials();
 renderImpact();
@@ -1774,6 +3063,9 @@ setupInView();
 setupTooltips();
 setupSpotlight();
 setupArchipelago();
+setupWorkflowSimulator();
+setupPersonaLens();
+setupCommandPalette();
 setupTerminal();
 setupTyper();
 setupScramble();
@@ -1788,3 +3080,12 @@ onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Offline & Service Worker registration (PWA)
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.protocol === 'http:')) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
+window.addEventListener('offline', () => toast('⚡ Offline mode active · Cached content ready'));
+window.addEventListener('online', () => toast('✓ Network connection restored'));

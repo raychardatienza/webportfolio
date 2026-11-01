@@ -1,0 +1,32 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://img.shields.io https://*.githubusercontent.com; font-src 'self'; connect-src 'self' https://api.web3forms.com https://*.goatcounter.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; upgrade-insecure-requests
+
+# Cache-Control: Immutable long-term caching for fonts & compiled CSS/JS
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/css/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/assets/js/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/assets/images/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/assets/certificates/*
+  Cache-Control: public, max-age=86400
+
+# HTML pages - Stale-while-revalidate for instant edge delivery
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+

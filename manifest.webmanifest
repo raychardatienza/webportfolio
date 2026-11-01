@@ -1,0 +1,25 @@
+{
+  "name": "Raychard Atienza — Lead Developer Portfolio",
+  "short_name": "Raychard.dev",
+  "description": "Portfolio of Raychard Atienza, Lead Developer, Systems Engineer, and Certified Agile Scrum Master based in Quezon City, Philippines.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
+  "icons": [
+    {
+      "src": "./assets/img/avatar.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/img/avatar.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

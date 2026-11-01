@@ -70,7 +70,7 @@ To add an illustration for a new project, add an entry in `_src/project-art.js`,
 - **Light mode** has its own art direction (paper texture, soft shadows, deeper accent colors) rather than inverted dark colors. The rules are under "Light mode" in `_src/input.css`.
 - **Section dividers:** each `.section` gets a glowing line with a moving sweep. Remove the `section` class from a block to drop it.
 - **Closing call to action:** the `#cta` section above the footer.
-- **Photo duotone:** the About portrait has a cyan tint that clears on hover (`.duotone` in `_src/input.css`). It works best with a well-lit photo on a plain background.
+- **Photo portrait:** the About portrait displays in crisp, natural, true-to-life color inside an animated rotating neon ring.
 - **Case study:** `case-studies/pdmis.html` has an animated architecture diagram (dashed lines show requests flowing) and a before/after comparison.
 
 ## Personal touches

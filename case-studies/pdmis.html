@@ -31,6 +31,7 @@
   <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="manifest" href="../site.webmanifest" />
 </head>
 
 <body class="relative font-sans">
@@ -44,15 +45,25 @@
 
   <header class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4">
     <nav class="glass mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-3 sm:px-4" aria-label="Primary">
-      <a href="../index.html#projects" class="btn-ghost btn-sm">
-        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Back to portfolio
+      <a href="../index.html#projects" class="group inline-flex items-center gap-2 rounded-xl border border-slate-200/80 bg-slate-100/70 px-3 py-1.5 font-mono text-xs font-medium text-slate-700 transition hover:border-cyan-500/50 hover:text-cyan-700 dark:border-white/[0.08] dark:bg-void-950/70 dark:text-slate-300 dark:hover:border-cyan-400/40 dark:hover:text-cyan-300">
+        <svg class="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>Back to portfolio</span>
       </a>
-      <span class="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500 sm:block">case study · pdmis</span>
-      <button id="theme-toggle" type="button" class="icon-btn h-9 w-9" aria-label="Toggle dark mode" aria-pressed="true">
-        <svg class="h-[18px] w-[18px] dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        <svg class="hidden h-[18px] w-[18px] dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      </button>
+
+      <div class="hidden sm:inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-100/70 px-3.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.2em] text-slate-600 backdrop-blur-md dark:border-white/[0.08] dark:bg-void-950/70 dark:text-cyan-300">
+        <span class="relative flex h-2 w-2">
+          <span class="ping-soft absolute inline-flex h-full w-full rounded-full bg-cyan-400"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-cyan-400"></span>
+        </span>
+        case study // pdmis
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/80 bg-slate-100/70 text-slate-600 transition hover:border-cyan-500/50 hover:text-cyan-700 dark:border-white/[0.08] dark:bg-void-950/70 dark:text-slate-300 dark:hover:border-cyan-400/40 dark:hover:text-cyan-300" aria-label="Toggle dark mode" aria-pressed="true">
+          <svg class="h-[18px] w-[18px] dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="hidden h-[18px] w-[18px] dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -73,7 +84,7 @@
         </div>
 
         <dl class="reveal mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Role</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Co-creator, in-house dev team</dd></div>
+          <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Role</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Lead Developer, in-house dev team</dd></div>
           <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Year</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">2026</dd></div>
           <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Type</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Internal government web app</dd></div>
           <div class="glass p-5"><dt class="font-mono text-[10.5px] uppercase tracking-[0.18em]">Stack</dt><dd class="mt-1.5 font-semibold text-slate-900 dark:text-ink">Laravel 12 · Inertia · React · MySQL</dd></div>
@@ -113,6 +124,71 @@
             Each one is reviewed, commented on, returned for revision, recommended, approved and signed by different people.
             When that happens in spreadsheets, email and paper, nobody can see where a document is, who last touched it, or whether a printed copy is genuine.
           </p>
+        </div>
+      </div>
+
+      <!-- Architecture Impact // Before & After Refactoring Differ -->
+      <div class="container-x mt-10">
+        <div class="reveal card p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-4 dark:border-white/10">
+            <div>
+              <span class="eyebrow !mb-1 text-cyan-600 dark:text-cyan-400">Architecture Impact // Before &amp; After</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">From Fragmented Spreadsheets to Event-Driven State Machine</h3>
+            </div>
+            <div class="flex gap-1.5 p-1 rounded-xl border border-slate-200/80 bg-slate-100/70 dark:border-white/10 dark:bg-void-950/70" role="tablist">
+              <button type="button" class="diff-tab-btn active px-3 py-1.5 rounded-lg font-mono text-xs font-semibold bg-white text-cyan-800 shadow-sm dark:bg-cyan-500/15 dark:text-cyan-300" data-tab="process">
+                Process Metrics
+              </button>
+              <button type="button" class="diff-tab-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 dark:text-slate-400" data-tab="code">
+                Query &amp; Code Diff
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab 1: Process Metrics Diff -->
+          <div id="diff-process" class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="rounded-xl border border-rose-500/30 bg-rose-500/[0.04] p-5">
+              <span class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-rose-600 dark:text-rose-400">
+                <span>✕</span> BEFORE: Legacy Paper &amp; Spreadsheets
+              </span>
+              <ul class="mt-3 space-y-2.5 text-xs text-slate-600 dark:text-slate-300 font-sans">
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Turnaround:</strong> 2 to 3 weeks average per document routing cycle.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Visibility:</strong> Zero real-time tracking; manual phone follow-ups across regional offices.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Discrepancies:</strong> Formula calculation errors and budget ceiling mismatches caught late.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Verification:</strong> Physical wet signatures vulnerable to alteration without audit log.</span></li>
+              </ul>
+            </div>
+            <div class="rounded-xl border border-emerald-500/30 bg-emerald-500/[0.04] p-5">
+              <span class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                <span>✓</span> AFTER: PDMIS Laravel 12 Monolith
+              </span>
+              <ul class="mt-3 space-y-2.5 text-xs text-slate-600 dark:text-slate-300 font-sans">
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Turnaround:</strong> Under 4 hours for multi-stage technical reviews.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Visibility:</strong> Live status indicators and automated email/in-app notification queues.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Discrepancies:</strong> Zero budget discrepancies with real-time UACS validation rules.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Verification:</strong> DICT PNPKI digital signatures with immutable SHA-256 audit log.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 2: Code Diff (Refactoring N+1 queries to optimized Eloquent pipeline) -->
+          <div id="diff-code" class="mt-6 hidden rounded-xl border border-slate-200/80 bg-[#070b14] p-4 font-mono text-xs text-slate-300 dark:border-white/10 shadow-inner">
+            <div class="flex items-center justify-between border-b border-white/10 pb-2 text-[11px] text-slate-400">
+              <span>ProposalReviewController.php — Performance Refactor</span>
+              <span class="text-emerald-400">N+1 Eliminated · 84% Latency Drop</span>
+            </div>
+            <pre class="mt-3 overflow-x-auto text-[11.5px] leading-relaxed">
+<span class="diff-del block px-2 py-0.5">- // Legacy: N+1 query loop fetching activities for each proposal (142 queries, 210ms)</span>
+<span class="diff-del block px-2 py-0.5">- $proposals = Proposal::where('region_id', $regId)-&gt;get();</span>
+<span class="diff-del block px-2 py-0.5">- foreach ($proposals as $p) { $p-&gt;items = BudgetItem::where('proposal_id', $p-&gt;id)-&gt;get(); }</span>
+<span class="diff-context block px-2 py-0.5"> </span>
+<span class="diff-add block px-2 py-0.5">+ // Refactored: Eager-loaded relations with subquery constraints (2 queries, 1.2ms)</span>
+<span class="diff-add block px-2 py-0.5">+ return Proposal::where('region_id', $regId)</span>
+<span class="diff-add block px-2 py-0.5">+     -&gt;with(['activities:id,proposal_id,title', 'budgetItems:id,proposal_id,amount,uacs_code'])</span>
+<span class="diff-add block px-2 py-0.5">+     -&gt;withSum('budgetItems', 'amount')</span>
+<span class="diff-add block px-2 py-0.5">+     -&gt;paginate(25);</span>
+            </pre>
+          </div>
         </div>
       </div>
     </section>
@@ -220,11 +296,441 @@
       </div>
     </section>
 
+    <!-- ============ INTERACTIVE 7-STAGE PROPOSAL WIZARD & SCHEMA EXPLORER ============ -->
+    <section class="section relative">
+      <div class="container-x">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow">[interactive] // 7-step proposal wizard &amp; schema</p>
+          <h2 class="section-title">The 7-step proposal <span class="text-neon">engine</span>.</h2>
+          <p class="section-lead">Explore how PDMIS structures proposal data from initial concept to DICT PNPKI digital signing across 75 Eloquent models and 93 migrations.</p>
+        </div>
+
+        <div class="reveal card relative mt-10 p-6 sm:p-8">
+          <span class="hud-corners" aria-hidden="true"></span>
+          
+          <!-- Stepper Navigation Pills -->
+          <div class="no-scrollbar -mx-2 flex gap-2 overflow-x-auto px-2 pb-2" role="tablist" aria-label="PDMIS Wizard Steps">
+            <button type="button" class="wizard-step-btn active px-3.5 py-2 rounded-xl font-mono text-xs font-semibold whitespace-nowrap transition-all duration-200 border border-cyan-500/40 bg-cyan-500/15 text-cyan-800 dark:text-cyan-300 dark:shadow-[0_0_15px_rgba(34,211,238,0.35)]" data-step="1">
+              01. General Profile
+            </button>
+            <button type="button" class="wizard-step-btn px-3.5 py-2 rounded-xl font-mono text-xs font-medium whitespace-nowrap transition-all duration-200 border border-slate-200 bg-white/50 text-slate-600 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400" data-step="2">
+              02. Beneficiaries &amp; Location
+            </button>
+            <button type="button" class="wizard-step-btn px-3.5 py-2 rounded-xl font-mono text-xs font-medium whitespace-nowrap transition-all duration-200 border border-slate-200 bg-white/50 text-slate-600 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400" data-step="3">
+              03. Objectives &amp; KPIs
+            </button>
+            <button type="button" class="wizard-step-btn px-3.5 py-2 rounded-xl font-mono text-xs font-medium whitespace-nowrap transition-all duration-200 border border-slate-200 bg-white/50 text-slate-600 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400" data-step="4">
+              04. Activity Designs
+            </button>
+            <button type="button" class="wizard-step-btn px-3.5 py-2 rounded-xl font-mono text-xs font-medium whitespace-nowrap transition-all duration-200 border border-slate-200 bg-white/50 text-slate-600 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400" data-step="5">
+              05. WFP &amp; Budget
+            </button>
+            <button type="button" class="wizard-step-btn px-3.5 py-2 rounded-xl font-mono text-xs font-medium whitespace-nowrap transition-all duration-200 border border-slate-200 bg-white/50 text-slate-600 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400" data-step="6">
+              06. PPMP Procurement
+            </button>
+            <button type="button" class="wizard-step-btn px-3.5 py-2 rounded-xl font-mono text-xs font-medium whitespace-nowrap transition-all duration-200 border border-slate-200 bg-white/50 text-slate-600 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400" data-step="7">
+              07. Multi-Office &amp; PNPKI
+            </button>
+          </div>
+
+          <!-- Step Content Display -->
+          <div id="wizard-display" class="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1.3fr] items-start">
+            <!-- Left: Step Details -->
+            <div class="rounded-xl border border-slate-200/80 bg-slate-50/70 p-5 dark:border-white/10 dark:bg-void-950/70">
+              <div class="flex items-center gap-2">
+                <span id="wizard-num" class="font-mono text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Step 1 of 7</span>
+                <span class="text-slate-400 dark:text-slate-600">·</span>
+                <span id="wizard-tag" class="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">Core Metadata</span>
+              </div>
+              <h3 id="wizard-title" class="mt-2 text-xl font-bold text-slate-900 dark:text-ink">Project Profile &amp; Governance Classification</h3>
+              <p id="wizard-desc" class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                Initiates the Mother Project Proposal (MPP). Validates project title, proposing division, program categorization, implementing dates, and generates the immutable proposal UUID.
+              </p>
+              
+              <div class="mt-5 border-t border-slate-200/60 pt-4 dark:border-white/10">
+                <p class="font-mono text-[10.5px] uppercase tracking-wider text-slate-500">Associated Eloquent Models</p>
+                <div id="wizard-models" class="mt-2 flex flex-wrap gap-1.5">
+                  <span class="chip font-mono text-xs font-semibold">Proposal</span>
+                  <span class="chip font-mono text-xs">ProgramCategory</span>
+                  <span class="chip font-mono text-xs">Division</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Code & Architecture Drawer -->
+            <div class="rounded-xl border border-slate-200/80 bg-[#070b14] p-5 font-mono text-xs text-slate-300 dark:border-white/10 shadow-inner">
+              <div class="flex items-center justify-between border-b border-white/10 pb-2.5 text-[11px] text-slate-400">
+                <span class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+                  <span id="wizard-schema-label">Schema: proposals migration</span>
+                </span>
+                <span class="text-cyan-400">Laravel 12 · Eloquent</span>
+              </div>
+              <pre id="wizard-code" class="mt-3 overflow-x-auto text-[11.5px] leading-relaxed text-cyan-300"><code>Schema::create('proposals', function (Blueprint $table) {
+    $table-&gt;id();
+    $table-&gt;uuid('uuid')-&gt;unique();
+    $table-&gt;string('title', 300);
+    $table-&gt;foreignId('program_id')-&gt;constrained();
+    $table-&gt;foreignId('proponent_id')-&gt;constrained('users');
+    $table-&gt;enum('status', ['draft', 'submitted', 'review', 'recommended', 'approved', 'sealed'])-&gt;default('draft');
+    $table-&gt;decimal('total_estimated_budget', 15, 2)-&gt;default(0);
+    $table-&gt;timestamps();
+    $table-&gt;softDeletes();
+});</code></pre>
+            </div>
+          </div>
+
+          <!-- Wizard Navigation Buttons -->
+          <div class="mt-6 flex items-center justify-between border-t border-slate-200/80 pt-4 dark:border-white/10">
+            <button type="button" id="wizard-prev" class="btn-ghost btn-sm inline-flex items-center gap-1 font-mono text-xs">
+              ← Previous Step
+            </button>
+            <div class="font-mono text-xs text-slate-500">
+              <span id="wizard-indicator">1 / 7</span>
+            </div>
+            <button type="button" id="wizard-next" class="btn-primary btn-sm inline-flex items-center gap-1 font-mono text-xs">
+              Next Step →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LIVE SCREENCAST WALKTHROUGH ============ -->
+    <section id="screencast-walkthrough" class="section">
+      <div class="container-x">
+        <div class="reveal max-w-3xl">
+          <p class="eyebrow">[04] // interactive screencast walkthrough</p>
+          <h2 class="section-title">Synthetic runtime simulation: <span class="text-neon">30-second workflow in motion</span>.</h2>
+          <p class="section-lead">
+            Because PDMIS is an in-house government platform that processes confidential public records, this interactive simulation reproduces the 4-phase proposal lifecycle with synthetic mock data — demonstrating automatic budget balance checking, inter-division routing, and cryptographic DICT digital signing in real time.
+          </p>
+        </div>
+
+        <!-- Obsidian / macOS Screencast Frame -->
+        <div class="reveal card relative mt-10 overflow-hidden border border-slate-200/80 bg-slate-900/95 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-void-950/90">
+          <span class="hud-corners" aria-hidden="true"></span>
+          
+          <!-- Browser Top Chrome -->
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-slate-950/80 px-4 py-3 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="h-3 w-3 rounded-full bg-rose-500/80 border border-rose-400"></span>
+              <span class="h-3 w-3 rounded-full bg-amber-500/80 border border-amber-400"></span>
+              <span class="h-3 w-3 rounded-full bg-emerald-500/80 border border-emerald-400"></span>
+              <span class="ml-2 font-mono text-[11px] font-semibold text-slate-400">PDMIS // Virtualized Engine</span>
+            </div>
+
+            <!-- Simulated Address Bar -->
+            <div class="flex flex-1 max-w-md items-center gap-2 rounded-lg border border-white/10 bg-black/40 px-3 py-1 font-mono text-[11px] text-slate-300">
+              <svg class="h-3.5 w-3.5 text-emerald-400 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span id="player-url" class="truncate text-cyan-300">https://pdmis.gov.ph/proposals/2026-PH-0089/workflow</span>
+            </div>
+
+            <div class="flex items-center gap-3 font-mono text-[10.5px]">
+              <span class="flex items-center gap-1.5 text-emerald-400">
+                <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>60 FPS SIM</span>
+              </span>
+              <span id="player-phase-chip" class="rounded px-2 py-0.5 bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                PHASE 1: INGESTION
+              </span>
+            </div>
+          </div>
+
+          <!-- Viewport Screen (Dynamic 4 Scenes) -->
+          <div id="player-viewport" class="relative min-h-[380px] sm:min-h-[420px] p-5 sm:p-7 text-slate-200 font-sans transition-all duration-300 bg-gradient-to-b from-void-950/60 to-slate-950/80">
+            <!-- Scene 1: Ingestion & Line Items -->
+            <div id="sc-scene-1" class="sc-scene space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+                <div>
+                  <span class="font-mono text-[10px] uppercase tracking-wider text-cyan-400">Document Registry #2026-PH-0089</span>
+                  <h4 class="text-base sm:text-lg font-bold text-white">Ancestral Domain Livelihood &amp; Solar Connectivity Facility</h4>
+                  <p class="text-xs text-slate-400">Initiating Office: Regional Office III - Field Operations Division</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-mono text-xs text-slate-400">Allocation Requested</span>
+                  <div class="font-mono text-lg font-bold text-cyan-400">₱2,450,000.00</div>
+                </div>
+              </div>
+
+              <!-- Itemized Activity Design -->
+              <div class="rounded-xl border border-white/10 bg-black/30 p-3 sm:p-4 text-xs font-mono space-y-2.5">
+                <div class="flex justify-between items-center text-slate-400 border-b border-white/5 pb-1 text-[11px]">
+                  <span>Item Description</span>
+                  <span>UACS Sub-Ledger</span>
+                  <span>Amount (PHP)</span>
+                </div>
+                <div class="flex justify-between items-center text-slate-200">
+                  <span>12x Solar Micro-Inverter Kits</span>
+                  <span class="text-slate-400">5020301000 - ICT &amp; Power</span>
+                  <span class="font-bold">₱1,200,000.00</span>
+                </div>
+                <div class="flex justify-between items-center text-slate-200">
+                  <span>Community ICT Literacy Workshops (3 Batches)</span>
+                  <span class="text-slate-400">5020201000 - Training</span>
+                  <span class="font-bold">₱850,000.00</span>
+                </div>
+                <div class="flex justify-between items-center text-slate-200">
+                  <span>Field Operations &amp; Verification Travel</span>
+                  <span class="text-slate-400">5029999099 - Operations</span>
+                  <span class="font-bold">₱400,000.00</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs font-mono rounded-lg bg-cyan-950/40 border border-cyan-500/20 px-3 py-2 text-cyan-300">
+                <span class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-cyan-400 animate-ping"></span>
+                  Inertia Payload: Form sanitized and committed to draft queue
+                </span>
+                <span class="text-[10px] text-slate-400">Sanctum Token: Valid</span>
+              </div>
+            </div>
+
+            <!-- Scene 2: Automated UACS Budget & Ceiling Validation -->
+            <div id="sc-scene-2" class="sc-scene hidden space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+                <div>
+                  <span class="font-mono text-[10px] uppercase tracking-wider text-amber-400">Automated Audit &amp; Fiscal Gates</span>
+                  <h4 class="text-base sm:text-lg font-bold text-white">Automated Budget Ledger &amp; Ceiling Enforcement</h4>
+                  <p class="text-xs text-slate-400">DBM Form 703 compliance check against approved FY2026 Agency Ceilings</p>
+                </div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-mono text-xs font-bold">
+                  ✓ ZERO OVERDRAW
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="rounded-xl border border-white/10 bg-black/30 p-3">
+                  <div class="font-mono text-[11px] text-slate-400">UACS 5020301000 (ICT)</div>
+                  <div class="mt-1 font-mono text-base font-bold text-white">₱1,200,000</div>
+                  <div class="mt-2 h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-cyan-400 rounded-full" style="width: 48%"></div>
+                  </div>
+                  <div class="mt-1 flex justify-between font-mono text-[10px] text-emerald-400">
+                    <span>Ceiling: ₱2.5M</span>
+                    <span>48% Utilized</span>
+                  </div>
+                </div>
+
+                <div class="rounded-xl border border-white/10 bg-black/30 p-3">
+                  <div class="font-mono text-[11px] text-slate-400">UACS 5020201000 (Training)</div>
+                  <div class="mt-1 font-mono text-base font-bold text-white">₱850,000</div>
+                  <div class="mt-2 h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-violet-400 rounded-full" style="width: 65%"></div>
+                  </div>
+                  <div class="mt-1 flex justify-between font-mono text-[10px] text-emerald-400">
+                    <span>Ceiling: ₱1.3M</span>
+                    <span>65% Utilized</span>
+                  </div>
+                </div>
+
+                <div class="rounded-xl border border-white/10 bg-black/30 p-3">
+                  <div class="font-mono text-[11px] text-slate-400">UACS 5029999099 (Ops)</div>
+                  <div class="mt-1 font-mono text-base font-bold text-white">₱400,000</div>
+                  <div class="mt-2 h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-amber-400 rounded-full" style="width: 26%"></div>
+                  </div>
+                  <div class="mt-1 flex justify-between font-mono text-[10px] text-emerald-400">
+                    <span>Ceiling: ₱1.5M</span>
+                    <span>26% Utilized</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs font-mono rounded-lg bg-emerald-950/40 border border-emerald-500/20 px-3 py-2 text-emerald-300">
+                <span>Rule Engine: 14 validation rules evaluated in 8.2ms · All assertions PASSED</span>
+                <span class="text-[10px] text-slate-400">Ledger Variance: ₱0.00</span>
+              </div>
+            </div>
+
+            <!-- Scene 3: Multi-Office Endorsement Queue Routing -->
+            <div id="sc-scene-3" class="sc-scene hidden space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+                <div>
+                  <span class="font-mono text-[10px] uppercase tracking-wider text-violet-400">State Transition Machine</span>
+                  <h4 class="text-base sm:text-lg font-bold text-white">Inter-Division Multi-Office Review Routing</h4>
+                  <p class="text-xs text-slate-400">Automated transitions with immutable audit timestamps &amp; role-based policies</p>
+                </div>
+                <div class="font-mono text-xs text-violet-300 bg-violet-500/15 border border-violet-500/30 px-2.5 py-1 rounded-md">
+                  Active SLA: 4.8 hrs / 24 hrs
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-4 gap-2.5 font-mono text-xs">
+                <div class="p-3 rounded-xl border border-emerald-500/40 bg-emerald-500/10">
+                  <div class="flex items-center justify-between text-[11px] text-emerald-400 font-bold">
+                    <span>01. FIELD RO</span>
+                    <span>✓ DONE</span>
+                  </div>
+                  <p class="mt-1 font-sans text-[11px] text-slate-300">Draft created &amp; submitted</p>
+                  <div class="mt-2 text-[10px] text-slate-400">10:14:02 AM</div>
+                </div>
+
+                <div class="p-3 rounded-xl border border-emerald-500/40 bg-emerald-500/10">
+                  <div class="flex items-center justify-between text-[11px] text-emerald-400 font-bold">
+                    <span>02. PLANNING</span>
+                    <span>✓ ENDORSED</span>
+                  </div>
+                  <p class="mt-1 font-sans text-[11px] text-slate-300">Program priority matched</p>
+                  <div class="mt-2 text-[10px] text-slate-400">11:22:45 AM</div>
+                </div>
+
+                <div class="p-3 rounded-xl border border-cyan-500 bg-cyan-500/15 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
+                  <div class="flex items-center justify-between text-[11px] text-cyan-300 font-bold">
+                    <span>03. BUDGET</span>
+                    <span class="animate-pulse">● IN PROGRESS</span>
+                  </div>
+                  <p class="mt-1 font-sans text-[11px] text-slate-200">Fund availability confirmed</p>
+                  <div class="mt-2 text-[10px] text-cyan-400">01:45:10 PM</div>
+                </div>
+
+                <div class="p-3 rounded-xl border border-white/10 bg-black/30 opacity-70">
+                  <div class="flex items-center justify-between text-[11px] text-slate-400">
+                    <span>04. EXECUTIVE</span>
+                    <span>QUEUED</span>
+                  </div>
+                  <p class="mt-1 font-sans text-[11px] text-slate-400">Final approval &amp; signing</p>
+                  <div class="mt-2 text-[10px] text-slate-500">Pending Stage 03</div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs font-mono rounded-lg bg-violet-950/40 border border-violet-500/20 px-3 py-2 text-violet-300">
+                <span>Notification Dispatcher: 3 department heads alerted via queued email &amp; in-app feed</span>
+                <span class="text-[10px] text-slate-400">Queue: Redis Default</span>
+              </div>
+            </div>
+
+            <!-- Scene 4: DICT PNPKI Cryptographic SHA-256 Seal -->
+            <div id="sc-scene-4" class="sc-scene hidden space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+                <div>
+                  <span class="font-mono text-[10px] uppercase tracking-wider text-emerald-400">Cryptographic Verification &amp; Export</span>
+                  <h4 class="text-base sm:text-lg font-bold text-white">DICT PNPKI Digital Certificate &amp; Public Seal</h4>
+                  <p class="text-xs text-slate-400">Tamper-evident Hashids verification with embedded QR audit manifest</p>
+                </div>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-mono text-xs font-bold">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  SEALED &amp; VERIFIED
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="sm:col-span-2 rounded-xl border border-white/10 bg-black/40 p-4 font-mono text-xs space-y-2">
+                  <div class="flex items-center justify-between text-slate-400 text-[11px] border-b border-white/10 pb-1.5">
+                    <span>DIGITAL SIGNATURE MANIFEST</span>
+                    <span class="text-emerald-400">STATUS: VALID</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-500">PKI Provider:</span>
+                    <span class="text-slate-200">DICT Philippine National PKI Sub-CA 2026</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-500">SHA-256 Hash:</span>
+                    <span class="text-cyan-300 break-all text-[11px]">8f4e2b9c71a301d0e588f249c0c1b7e45290bca23f81e3a6104bc1264c90d099</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-500">Public Hashid:</span>
+                    <span class="text-white font-bold underline">https://pdmis.gov.ph/verify/v7Q9x2</span>
+                  </div>
+                  <div class="text-[11px] text-slate-400">
+                    Signing Proxy: Fallback-safe asynchronous dispatch (Zero stall architecture)
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-4 rounded-xl border border-emerald-500/30 bg-emerald-950/20 text-center">
+                  <div class="h-20 w-20 rounded-lg border border-emerald-400/40 bg-white p-1 flex items-center justify-center shadow-lg">
+                    <!-- Embedded SVG QR code simulation -->
+                    <svg class="h-full w-full" viewBox="0 0 24 24" fill="#070b14">
+                      <rect x="2" y="2" width="6" height="6" fill="#070b14"/><rect x="4" y="4" width="2" height="2" fill="#fff"/>
+                      <rect x="16" y="2" width="6" height="6" fill="#070b14"/><rect x="18" y="4" width="2" height="2" fill="#fff"/>
+                      <rect x="2" y="16" width="6" height="6" fill="#070b14"/><rect x="4" y="18" width="2" height="2" fill="#fff"/>
+                      <rect x="10" y="3" width="2" height="4"/><rect x="10" y="9" width="4" height="2"/><rect x="10" y="15" width="2" height="6"/>
+                      <rect x="15" y="11" width="3" height="3"/><rect x="18" y="16" width="4" height="4"/><rect x="14" y="18" width="2" height="3"/>
+                    </svg>
+                  </div>
+                  <span class="mt-2 font-mono text-[10px] text-emerald-400 font-bold uppercase tracking-wider">Scannable Verification</span>
+                  <span class="text-[10px] text-slate-400">PDF Tamper-Proof Stamp</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs font-mono rounded-lg bg-emerald-950/40 border border-emerald-500/20 px-3 py-2 text-emerald-300">
+                <span>PDF Generation: DomPDF + Embedded QRs rendered in 210ms</span>
+                <span class="text-[10px] text-slate-400">Audit Log ID: #98421-AUD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Walkthrough Interactive Player Controls -->
+          <div class="border-t border-white/10 bg-black/60 p-4 sm:p-5">
+            <!-- Scrubber Slider & Progress Bar -->
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between font-mono text-xs text-slate-400">
+                <span class="flex items-center gap-1.5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+                  <span id="player-time-display" class="font-bold text-white">00:00</span>
+                  <span>/ 00:30</span>
+                </span>
+                <span id="player-scene-label" class="text-cyan-400 font-semibold">Stage 01: Proposal Ingestion &amp; Line Items</span>
+              </div>
+
+              <div class="relative flex items-center">
+                <input id="player-scrubber" type="range" min="0" max="30" step="0.1" value="0" class="w-full accent-cyan-400 cursor-pointer h-2 bg-slate-800 rounded-lg appearance-none" aria-label="Walkthrough timeline scrubber">
+              </div>
+
+              <!-- Chapter Markers -->
+              <div class="grid grid-cols-4 gap-1.5 pt-1">
+                <button type="button" class="player-chapter-btn active text-left px-2 py-1.5 rounded border border-cyan-500/30 bg-cyan-500/10 hover:bg-cyan-500/20 transition text-[11px] font-mono text-cyan-300" data-seek="0">
+                  <div class="font-bold">00:00</div>
+                  <div class="truncate text-[10px] text-slate-400">01. Ingestion</div>
+                </button>
+                <button type="button" class="player-chapter-btn text-left px-2 py-1.5 rounded border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] transition text-[11px] font-mono text-slate-400" data-seek="8">
+                  <div class="font-bold">00:08</div>
+                  <div class="truncate text-[10px] text-slate-400">02. UACS Budget</div>
+                </button>
+                <button type="button" class="player-chapter-btn text-left px-2 py-1.5 rounded border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] transition text-[11px] font-mono text-slate-400" data-seek="16">
+                  <div class="font-bold">00:16</div>
+                  <div class="truncate text-[10px] text-slate-400">03. Inter-Office Queue</div>
+                </button>
+                <button type="button" class="player-chapter-btn text-left px-2 py-1.5 rounded border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] transition text-[11px] font-mono text-slate-400" data-seek="24">
+                  <div class="font-bold">00:24</div>
+                  <div class="truncate text-[10px] text-slate-400">04. DICT Seal</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Bottom Transport Buttons -->
+            <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-white/5 pt-3">
+              <div class="flex items-center gap-2">
+                <button type="button" id="player-play-btn" class="inline-flex items-center gap-1.5 rounded-lg bg-cyan-500 px-3.5 py-1.5 font-mono text-xs font-bold text-void-950 shadow-md hover:bg-cyan-400 active:scale-95 transition">
+                  <svg id="player-play-icon" class="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span id="player-play-text">Play Simulation</span>
+                </button>
+
+                <button type="button" id="player-reset-btn" class="inline-flex items-center gap-1 rounded-lg border border-white/10 px-2.5 py-1.5 font-mono text-xs text-slate-300 hover:bg-white/5 active:scale-95 transition" title="Rewind to start">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                  <span>Reset</span>
+                </button>
+
+                <button type="button" id="player-speed-btn" class="rounded-lg border border-white/10 px-2.5 py-1.5 font-mono text-xs font-semibold text-cyan-300 hover:bg-white/5 transition" title="Playback Speed">
+                  1x Speed
+                </button>
+              </div>
+
+              <div class="flex items-center gap-3 font-mono text-xs text-slate-400">
+                <span class="hidden sm:inline text-[11px]">Press <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-slate-200">Space</kbd> to Play/Pause</span>
+                <span class="chip font-mono text-[10px]">60 FPS Virtual Clock</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ ARCHITECTURE ============ -->
     <section class="section">
       <div class="container-x">
         <div class="reveal max-w-2xl">
-          <p class="eyebrow">[04] // architecture</p>
+          <p class="eyebrow">[05] // architecture</p>
           <h2 class="section-title">A modern monolith, <span class="text-neon">no separate SPA</span>.</h2>
           <p class="section-lead">Inertia.js lets React pages be served by Laravel routes and controllers, giving a single-page-app feel without maintaining a separate API for the UI. The dashed lines show requests flowing.</p>
         </div>
@@ -284,7 +790,7 @@
     <section class="section">
       <div class="container-x">
         <div class="reveal max-w-2xl">
-          <p class="eyebrow">[05] // before → after</p>
+          <p class="eyebrow">[06] // before → after</p>
           <h2 class="section-title">What <span class="text-neon">changed</span> for the people using it.</h2>
         </div>
         <div class="mt-12 grid gap-6 lg:grid-cols-2">
@@ -317,7 +823,7 @@
     <section class="section">
       <div class="container-x">
         <div class="reveal max-w-2xl">
-          <p class="eyebrow">[06] // engineering decisions</p>
+          <p class="eyebrow">[07] // engineering decisions</p>
           <h2 class="section-title">Choices that <span class="text-neon">made it work</span>.</h2>
         </div>
         <div class="mt-12 grid gap-6 lg:grid-cols-2">
@@ -351,9 +857,9 @@
       <div class="container-x grid gap-6 lg:grid-cols-2">
         <article class="reveal card relative p-6 sm:p-8">
           <span class="hud-corners" aria-hidden="true"></span>
-          <p class="eyebrow">[07] // my role</p>
+          <p class="eyebrow">[08] // my role</p>
           <p class="text-sm leading-relaxed sm:text-base">
-            I co-created PDMIS as part of an in-house government development team in 2026. I worked across development,
+            I led the development of PDMIS as part of an in-house government development team in 2026. I worked across development,
             requirements gathering with end users, testing and QA, and user onboarding, the same responsibilities I carry across the agency's other in-house systems.
           </p>
           <div class="mt-5 flex flex-wrap gap-2">
@@ -361,7 +867,7 @@
           </div>
         </article>
         <article class="reveal card relative p-6 sm:p-8">
-          <p class="eyebrow">[08] // outcome</p>
+          <p class="eyebrow">[09] // outcome</p>
           <ul class="space-y-3 text-sm leading-relaxed sm:text-base">
             <li class="flex gap-3"><span class="mt-1 text-cyan-600 dark:text-cyan-300">◆</span>One system from proposal to procurement plan, replacing documents passed around by hand.</li>
             <li class="flex gap-3"><span class="mt-1 text-cyan-600 dark:text-cyan-300">◆</span>Every review, comment, return and approval is traceable in the audit trail.</li>
@@ -460,6 +966,299 @@
     addEventListener('scroll', updateFlow, { passive: true });
     addEventListener('resize', updateFlow);
     updateFlow();
+
+    const navEl = document.querySelector('header nav');
+    function updateNav() {
+      if (navEl) navEl.classList.toggle('nav-scrolled', window.scrollY > 20);
+    }
+    addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    // Interactive 7-Step Proposal Wizard & Schema Explorer
+    const WIZARD_STEPS = [
+      {
+        num: "Step 1 of 7",
+        tag: "Core Metadata",
+        title: "Project Profile & Governance Classification",
+        desc: "Initiates the Mother Project Proposal (MPP). Validates project title, proposing division, program categorization, implementing dates, and generates the immutable proposal UUID.",
+        models: ["Proposal", "ProgramCategory", "Division", "User"],
+        schemaLabel: "Schema: proposals migration",
+        code: `Schema::create('proposals', function (Blueprint $table) {\n    $table->id();\n    $table->uuid('uuid')->unique();\n    $table->string('title', 300);\n    $table->foreignId('program_id')->constrained();\n    $table->foreignId('proponent_id')->constrained('users');\n    $table->enum('status', ['draft', 'submitted', 'review', 'recommended', 'approved', 'sealed'])->default('draft');\n    $table->decimal('total_estimated_budget', 15, 2)->default(0);\n    $table->timestamps();\n    $table->softDeletes();\n});`
+      },
+      {
+        num: "Step 2 of 7",
+        tag: "Geographic Registry",
+        title: "Beneficiaries & PSGC Location Hierarchy",
+        desc: "Connects national project sites to Philippine Standard Geographic Codes (PSGC): Region, Province, Municipality, Barangay, and ancestral domains with validated indigenous demographic metrics.",
+        models: ["ProposalLocation", "PsgcRegion", "PsgcProvince", "AncestralDomain"],
+        schemaLabel: "Schema: proposal_locations migration",
+        code: `Schema::create('proposal_locations', function (Blueprint $table) {\n    $table->id();\n    $table->foreignId('proposal_id')->constrained()->cascadeOnDelete();\n    $table->char('region_code', 9)->index();\n    $table->char('province_code', 9)->index();\n    $table->string('ancestral_domain_code', 30)->nullable();\n    $table->unsignedInteger('target_ip_beneficiaries');\n    $table->timestamps();\n});`
+      },
+      {
+        num: "Step 3 of 7",
+        tag: "Strategic Mandate",
+        title: "Objectives & OPIF Key Performance Indicators",
+        desc: "Maps proposal deliverables directly to the agency's 5-Year Strategic Plan and Organizational Performance Indicator Framework (OPIF) targets, enforcing measurable outputs.",
+        models: ["ProposalObjective", "KeyPerformanceIndicator", "OpifTarget"],
+        schemaLabel: "Eloquent: Proposal -> hasMany(ProposalObjective)",
+        code: `class Proposal extends Model {\n    public function objectives(): HasMany {\n        return $this->hasMany(ProposalObjective::class);\n    }\n    public function kpis(): BelongsToMany {\n        return $this->belongsToMany(KeyPerformanceIndicator::class, 'proposal_kpi');\n    }\n}`
+      },
+      {
+        num: "Step 4 of 7",
+        tag: "Work Breakdown",
+        title: "Granular Activity Designs & Schedules",
+        desc: "Decomposes each proposal into scheduled technical activities: workshops, field validations, community consultations, each with expected outputs, dates, and venue requisitions.",
+        models: ["ActivityDesign", "ActivitySchedule", "ExpectedOutput"],
+        schemaLabel: "Schema: activity_designs migration",
+        code: `Schema::create('activity_designs', function (Blueprint $table) {\n    $table->id();\n    $table->foreignId('proposal_id')->constrained()->cascadeOnDelete();\n    $table->string('title', 255);\n    $table->date('target_start_date');\n    $table->date('target_end_date');\n    $table->decimal('allocated_amount', 14, 2);\n    $table->string('activity_hash', 64)->index();\n    $table->timestamps();\n});`
+      },
+      {
+        num: "Step 5 of 7",
+        tag: "Budget Compliance",
+        title: "Work & Financial Plan (UACS Compliance)",
+        desc: "Constructs line-item expense entries strictly conforming to the Unified Accounts Code Structure (UACS), travel allowances, supplies, and regional allocation ceilings.",
+        models: ["WorkFinancialPlan", "BudgetItem", "UacsObjectCode", "FundSource"],
+        schemaLabel: "Eloquent Transaction: WFP Validation",
+        code: `DB::transaction(function () use ($proposal, $budgetItems) {\n    $wfp = $proposal->workFinancialPlan()->firstOrCreate();\n    foreach ($budgetItems as $item) {\n        $wfp->items()->create([\n            'uacs_code' => $item['uacs'],\n            'amount' => $item['amount'],\n            'quarter' => $item['quarter'],\n        ]);\n    }\n    $wfp->validateAgainstCeiling();\n});`
+      },
+      {
+        num: "Step 6 of 7",
+        tag: "BAC Procurement",
+        title: "Project Procurement Management Plan (PPMP)",
+        desc: "Derives procurement requirements from budget line items: automatically maps supplies and equipment to procurement modes (Small Value / Public Bidding) and consolidates into agency APP.",
+        models: ["PpmpItem", "ProcurementMode", "AnnualProcurementPlan"],
+        schemaLabel: "Schema: ppmp_items migration",
+        code: `Schema::create('ppmp_items', function (Blueprint $table) {\n    $table->id();\n    $table->foreignId('proposal_id')->constrained();\n    $table->string('item_description', 255);\n    $table->string('procurement_mode_code', 20);\n    $table->decimal('estimated_cost', 14, 2);\n    $table->timestamps();\n});`
+      },
+      {
+        num: "Step 7 of 7",
+        tag: "Cryptographic Seal",
+        title: "Multi-Office Endorsement & DICT PNPKI Seal",
+        desc: "Directs proposal through review queues (Planning, Budget, BAC, Regional Director, Executive). Computes immutable SHA-256 hash and stamps DICT PNPKI digital certificate.",
+        models: ["ProposalEndorsement", "Signatory", "PnpkiDigitalSignature", "AuditTrail"],
+        schemaLabel: "Crypto: DICT PNPKI Signature Seal",
+        code: `public function sealWithPnpki(Proposal $proposal, PkiCertificate $cert): void {\n    $hash = hash('sha256', $proposal->renderSigningPayload());\n    $signature = $cert->sign($hash);\n    $proposal->pnpkiSignature()->create([\n        'sha256_hash' => $hash,\n        'signature_blob' => $signature,\n        'certificate_serial' => $cert->getSerial(),\n        'sealed_at' => now(),\n    ]);\n    $proposal->update(['status' => 'sealed']);\n}`
+      }
+    ];
+
+    let currentStep = 1;
+    function renderWizardStep(stepNum) {
+      currentStep = Math.min(Math.max(1, stepNum), 7);
+      const data = WIZARD_STEPS[currentStep - 1];
+      
+      document.querySelectorAll('.wizard-step-btn').forEach((btn) => {
+        const isActive = Number(btn.dataset.step) === currentStep;
+        if (isActive) {
+          btn.className = "wizard-step-btn active px-3.5 py-2 rounded-xl font-mono text-xs font-semibold whitespace-nowrap transition-all duration-200 border border-cyan-500/40 bg-cyan-500/15 text-cyan-800 dark:text-cyan-300 dark:shadow-[0_0_15px_rgba(34,211,238,0.35)]";
+        } else {
+          btn.className = "wizard-step-btn px-3.5 py-2 rounded-xl font-mono text-xs font-medium whitespace-nowrap transition-all duration-200 border border-slate-200 bg-white/50 text-slate-600 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400";
+        }
+      });
+
+      const numEl = document.getElementById('wizard-num');
+      if (numEl) numEl.textContent = data.num;
+      const tagEl = document.getElementById('wizard-tag');
+      if (tagEl) tagEl.textContent = data.tag;
+      const titleEl = document.getElementById('wizard-title');
+      if (titleEl) titleEl.textContent = data.title;
+      const descEl = document.getElementById('wizard-desc');
+      if (descEl) descEl.textContent = data.desc;
+      const schemaLabelEl = document.getElementById('wizard-schema-label');
+      if (schemaLabelEl) schemaLabelEl.textContent = data.schemaLabel;
+      const codeEl = document.getElementById('wizard-code');
+      if (codeEl) codeEl.querySelector('code').textContent = data.code;
+      const indEl = document.getElementById('wizard-indicator');
+      if (indEl) indEl.textContent = `${currentStep} / 7`;
+
+      const modelsEl = document.getElementById('wizard-models');
+      if (modelsEl) {
+        modelsEl.innerHTML = data.models.map((m, idx) => 
+          `<span class="chip font-mono text-xs ${idx === 0 ? 'font-semibold text-cyan-700 dark:text-cyan-300' : ''}">${m}</span>`
+        ).join('');
+      }
+
+      const prevBtn = document.getElementById('wizard-prev');
+      if (prevBtn) prevBtn.disabled = currentStep === 1;
+      const nextBtn = document.getElementById('wizard-next');
+      if (nextBtn) nextBtn.textContent = currentStep === 7 ? '✓ Start from Step 1' : 'Next Step →';
+    }
+
+    document.querySelectorAll('.wizard-step-btn').forEach((btn) => {
+      btn.addEventListener('click', () => renderWizardStep(Number(btn.dataset.step)));
+    });
+    document.getElementById('wizard-prev')?.addEventListener('click', () => renderWizardStep(currentStep - 1));
+    document.getElementById('wizard-next')?.addEventListener('click', () => {
+      renderWizardStep(currentStep >= 7 ? 1 : currentStep + 1);
+    });
+    renderWizardStep(1);
+
+    // Diff Tab Switcher
+    document.querySelectorAll('.diff-tab-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        document.querySelectorAll('.diff-tab-btn').forEach((b) => {
+          const active = b === btn;
+          b.className = active
+            ? 'diff-tab-btn active px-3 py-1.5 rounded-lg font-mono text-xs font-semibold bg-white text-cyan-800 shadow-sm dark:bg-cyan-500/15 dark:text-cyan-300'
+            : 'diff-tab-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 dark:text-slate-400';
+        });
+        const pEl = document.getElementById('diff-process');
+        const cEl = document.getElementById('diff-code');
+        if (pEl && cEl) {
+          pEl.classList.toggle('hidden', tab !== 'process');
+          cEl.classList.toggle('hidden', tab !== 'code');
+        }
+      });
+    });
+
+    // ============ INTERACTIVE SCREENCAST WALKTHROUGH PLAYER ============
+    (function setupWalkthroughPlayer() {
+      let isPlaying = false;
+      let currentTime = 0;
+      let playbackSpeed = 1;
+      let lastFrameTimestamp = null;
+      let animFrameId = null;
+      const DURATION = 30; // 30 seconds total
+
+      const scenes = [
+        { start: 0, end: 8, id: 'sc-scene-1', label: 'Stage 01: Proposal Ingestion & Line Items', phase: 'PHASE 1: INGESTION', url: 'https://pdmis.gov.ph/proposals/2026-PH-0089/initiate' },
+        { start: 8, end: 16, id: 'sc-scene-2', label: 'Stage 02: Automated UACS Budget Validation', phase: 'PHASE 2: BUDGET CHECK', url: 'https://pdmis.gov.ph/proposals/2026-PH-0089/budget-audit' },
+        { start: 16, end: 24, id: 'sc-scene-3', label: 'Stage 03: Inter-Office Routing Queue', phase: 'PHASE 3: REVIEW QUEUE', url: 'https://pdmis.gov.ph/proposals/2026-PH-0089/endorsements' },
+        { start: 24, end: 30, id: 'sc-scene-4', label: 'Stage 04: DICT PNPKI Cryptographic Seal', phase: 'PHASE 4: DICT SEALING', url: 'https://pdmis.gov.ph/verify/v7Q9x2' }
+      ];
+
+      const playBtn = document.getElementById('player-play-btn');
+      const playIcon = document.getElementById('player-play-icon');
+      const playText = document.getElementById('player-play-text');
+      const resetBtn = document.getElementById('player-reset-btn');
+      const speedBtn = document.getElementById('player-speed-btn');
+      const scrubber = document.getElementById('player-scrubber');
+      const timeDisplay = document.getElementById('player-time-display');
+      const sceneLabel = document.getElementById('player-scene-label');
+      const phaseChip = document.getElementById('player-phase-chip');
+      const urlDisplay = document.getElementById('player-url');
+      const chapterBtns = document.querySelectorAll('.player-chapter-btn');
+
+      if (!playBtn || !scrubber) return;
+
+      function formatTime(s) {
+        const sec = Math.floor(s);
+        const mins = Math.floor(sec / 60);
+        const remSec = sec % 60;
+        return `${String(mins).padStart(2, '0')}:${String(remSec).padStart(2, '0')}`;
+      }
+
+      function updatePlayerUI() {
+        if (timeDisplay) timeDisplay.textContent = formatTime(currentTime);
+        if (scrubber) scrubber.value = currentTime;
+
+        // Find active scene
+        const activeScene = scenes.find(sc => currentTime >= sc.start && (currentTime < sc.end || sc.end === DURATION)) || scenes[0];
+
+        if (sceneLabel) sceneLabel.textContent = activeScene.label;
+        if (phaseChip) phaseChip.textContent = activeScene.phase;
+        if (urlDisplay) urlDisplay.textContent = activeScene.url;
+
+        scenes.forEach(sc => {
+          const el = document.getElementById(sc.id);
+          if (el) {
+            el.classList.toggle('hidden', sc.id !== activeScene.id);
+          }
+        });
+
+        chapterBtns.forEach(btn => {
+          const seek = Number(btn.dataset.seek);
+          const isActive = (seek <= currentTime && (seek + 8 > currentTime || (seek === 24 && currentTime >= 24)));
+          btn.className = isActive
+            ? 'player-chapter-btn active text-left px-2 py-1.5 rounded border border-cyan-500/30 bg-cyan-500/15 text-cyan-300 font-mono text-[11px]'
+            : 'player-chapter-btn text-left px-2 py-1.5 rounded border border-white/5 bg-white/[0.02] text-slate-400 font-mono text-[11px] hover:bg-white/[0.06] transition';
+        });
+      }
+
+      function stepAnimation(timestamp) {
+        if (!lastFrameTimestamp) lastFrameTimestamp = timestamp;
+        const delta = (timestamp - lastFrameTimestamp) / 1000;
+        lastFrameTimestamp = timestamp;
+
+        if (isPlaying) {
+          currentTime += delta * playbackSpeed;
+          if (currentTime >= DURATION) {
+            currentTime = DURATION;
+            pauseSimulation();
+          }
+          updatePlayerUI();
+          if (isPlaying) {
+            animFrameId = requestAnimationFrame(stepAnimation);
+          }
+        }
+      }
+
+      function playSimulation() {
+        if (currentTime >= DURATION) {
+          currentTime = 0;
+        }
+        isPlaying = true;
+        lastFrameTimestamp = null;
+        if (playIcon) playIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+        if (playText) playText.textContent = 'Pause';
+        animFrameId = requestAnimationFrame(stepAnimation);
+      }
+
+      function pauseSimulation() {
+        isPlaying = false;
+        if (animFrameId) cancelAnimationFrame(animFrameId);
+        lastFrameTimestamp = null;
+        if (playIcon) playIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
+        if (playText) playText.textContent = currentTime >= DURATION ? 'Replay' : 'Play Simulation';
+      }
+
+      function togglePlay() {
+        if (isPlaying) pauseSimulation();
+        else playSimulation();
+      }
+
+      playBtn.addEventListener('click', togglePlay);
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          pauseSimulation();
+          currentTime = 0;
+          updatePlayerUI();
+        });
+      }
+
+      if (speedBtn) {
+        speedBtn.addEventListener('click', () => {
+          playbackSpeed = playbackSpeed === 1 ? 2 : 1;
+          speedBtn.textContent = `${playbackSpeed}x Speed`;
+        });
+      }
+
+      scrubber.addEventListener('input', (e) => {
+        currentTime = Number(e.target.value);
+        updatePlayerUI();
+      });
+
+      chapterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentTime = Number(btn.dataset.seek);
+          updatePlayerUI();
+        });
+      });
+
+      // Keyboard shortcut (spacebar when player section is visible)
+      window.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+          const rect = document.getElementById('screencast-walkthrough')?.getBoundingClientRect();
+          if (rect && rect.top < window.innerHeight && rect.bottom > 0) {
+            e.preventDefault();
+            togglePlay();
+          }
+        }
+      });
+
+      updatePlayerUI();
+    })();
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

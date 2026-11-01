@@ -1,10 +1,10 @@
 {
-  "name": "Raychard Atienza — Portfolio",
-  "short_name": "R. Atienza",
+  "name": "Raychard Atienza — Lead Developer Portfolio",
+  "short_name": "Raychard.dev",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#05070f",
-  "theme_color": "#05070f",
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
   "icons": [
     { "src": "./assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
     { "src": "./assets/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
