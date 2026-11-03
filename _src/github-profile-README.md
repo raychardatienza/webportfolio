@@ -48,7 +48,8 @@ I build systems people rely on: data platforms, approval workflows, single sign-
 
 | Project | What it is | Stack |
 |---|---|---|
-| [PDMIS case study](https://raychardatienza.github.io/portfolio/case-studies/pdmis.html) | Proposal → review → approval → signed plan workflow | Laravel 12 · Inertia · React · MySQL |
+| Pulse (SystemOnlineHealth) | Automated 24/7 server fleet telemetry, ICMP pings, SSL tracker & Cloudflare threat matrix | Laravel 12 · React · Recharts · Cloudflare API |
+| PDMIS | Proposal → review → approval → signed plan workflow | Laravel 12 · Inertia · React · MySQL |
 | E-commerce (MERN) | Full-stack store with REST API and admin dashboard | MongoDB · Express · React · Node |
 
 <!-- Add your public Laravel demo here once it's live:
