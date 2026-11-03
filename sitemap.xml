@@ -6,11 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://raychardatienza.github.io/portfolio/case-studies/pdmis.html</loc>
-    <lastmod>2026-10-31</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://raychardatienza.github.io/portfolio/notes/multi-step-wizard-laravel-inertia.html</loc>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>

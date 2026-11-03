@@ -2,7 +2,7 @@
  *  npx -y tailwindcss@3.4.17 -i ./_src/input.css -o ./assets/css/styles.css --minify
  */
 module.exports = {
-  content: ['./index.html', './design-system.html', './case-studies/**/*.html', './notes/**/*.html', './assets/js/**/*.js'],
+  content: ['./index.html', './design-system.html', './notes/**/*.html', './assets/js/**/*.js'],
   darkMode: 'class',
   theme: {
     extend: {

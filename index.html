@@ -285,7 +285,7 @@
             </div>
             <div class="space-y-1 text-[11px] text-slate-600 dark:text-slate-400">
               <div class="flex justify-between"><span>Throughput:</span><span id="telemetry-stat1" class="text-slate-900 dark:text-slate-200 font-medium">10 Gbps</span></div>
-              <div class="flex justify-between"><span>Connected:</span><span id="telemetry-stat2" class="text-slate-900 dark:text-slate-200 font-medium">PDMIS · DRIP · SSO</span></div>
+              <div class="flex justify-between"><span>Connected:</span><span id="telemetry-stat2" class="text-slate-900 dark:text-slate-200 font-medium">Pulse Monitor · DRIP · SSO</span></div>
               <div class="flex justify-between"><span>Security:</span><span class="text-cyan-700 dark:text-cyan-300 font-medium">DICT PNPKI + Sanctum</span></div>
             </div>
           </div>
@@ -501,8 +501,8 @@
                 <span class="rounded-md border border-laravel/40 bg-laravel/10 px-2.5 py-1 font-mono text-[10.5px] font-semibold uppercase tracking-[0.15em] text-laravel">primary stack</span>
               </div>
               <p class="mt-3 max-w-3xl leading-relaxed">
-                Laravel 12 + Inertia.js + React + Tailwind CSS on MySQL is the stack behind PDMIS and my 2026 public-sector platforms. I work with Eloquent ORM and migrations,
-                multi-level approval workflows, REST APIs secured with Sanctum tokens, digital document signing, PDF and Excel report generation, audit logging, and Pest tests.
+                Laravel 12 + Inertia.js + React + Tailwind CSS on MySQL is the stack behind SystemOnlineHealth, PDMIS, and my 2026 public-sector platforms. I work with Eloquent ORM and migrations,
+                fleet health monitoring, multi-level approval workflows, REST APIs, digital document signing, PDF and Excel report generation, and automated alerting.
               </p>
               <div class="mt-5 flex flex-wrap gap-2">
                 <span class="chip">Laravel 12</span><span class="chip">PHP 8.2</span><span class="chip">Eloquent ORM</span><span class="chip">Inertia.js</span>
@@ -593,194 +593,257 @@
         </div>
       </div>
 
-      <!-- PLAYABLE PROOF OF WORK: Live Interactive Approval Workflow Sandbox -->
+      <!-- PLAYABLE PROOF OF WORK: SystemOnlineHealth Live Telemetry & Ops Deck -->
       <div class="container-x mt-10">
-        <article id="workflow-sandbox" class="reveal card relative overflow-hidden p-6 sm:p-8 border border-slate-200/90 dark:border-white/10 shadow-2xl">
+        <article id="monitoring-sandbox" class="reveal card relative overflow-hidden p-6 sm:p-8 border border-slate-200/90 dark:border-white/10 shadow-2xl">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-4 dark:border-white/10">
             <div>
               <div class="flex items-center gap-2 mb-1">
-                <span class="inline-flex h-2 w-2 rounded-full bg-cyan-500 dark:bg-cyan-400 animate-pulse"></span>
-                <span class="font-mono text-[11px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300 font-semibold">Playable Architecture Demo · Laravel 12 State Machine</span>
+                <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-emerald-700 dark:text-emerald-400 font-semibold">Flagship Observability Platform · Laravel 12 + React + Cloudflare API</span>
               </div>
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">PDMIS Project Approval &amp; Digital-Signing Sandbox</h3>
-              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Step through the live 4-stage approval state machine powering nationwide public-sector project proposals.</p>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">SystemOnlineHealth · Enterprise Fleet Telemetry &amp; Threat Monitor</h3>
+              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Interactive operations deck monitoring live server IP pings, HTTP uptime status codes, SSL certificate expirations, and Cloudflare WAF threat mitigation.</p>
             </div>
             <div class="flex items-center gap-2 flex-wrap">
-              <span id="wf-status-badge" class="px-2.5 py-1 rounded-md font-mono text-xs font-bold border border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400">
-                STATE 1 / 4 · PROPOSAL DRAFT
+              <span id="monitor-status-badge" class="px-2.5 py-1 rounded-md font-mono text-xs font-bold border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                100% OPERATIONAL · 4/4 NODES ONLINE
               </span>
-              <a href="./case-studies/pdmis.html" class="btn-ghost btn-sm">Full Case Study →</a>
-              <a href="./case-studies/pdmis.html#screencast-walkthrough" class="btn-primary btn-sm inline-flex items-center gap-1.5 shadow-sm">
-                <svg class="h-3 w-3 fill-current text-void-950 dark:text-cyan-400" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span>30s Walkthrough</span>
-              </a>
+              <button type="button" id="fleet-ping-btn" class="btn-primary btn-sm inline-flex items-center gap-1.5 shadow-sm">
+                <span>Trigger Fleet Ping Sweep ⚡</span>
+              </button>
             </div>
           </div>
 
-          <!-- Step Progression Track -->
-          <div class="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 font-mono text-xs">
-            <div id="wf-step-1" class="wf-node p-3.5 rounded-xl border border-cyan-500 bg-cyan-500/10 text-cyan-800 dark:text-cyan-200 is-active">
+          <!-- Infrastructure Fleet Nodes Grid -->
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 font-mono text-xs">
+            <div id="node-card-1" class="wf-node p-3.5 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-800 dark:text-emerald-200 shadow-md ring-1 ring-emerald-500/40 is-active cursor-pointer transition-all">
               <div class="flex items-center justify-between">
-                <span class="font-bold">01. INITIATION</span>
-                <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-semibold">ACTIVE</span>
+                <span class="font-bold">01. APP SERVER</span>
+                <span id="node-ping-1" class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">● 4.2ms</span>
               </div>
-              <p class="mt-2 text-[11px] font-sans text-slate-600 dark:text-slate-300">Activity design &amp; line-item budget input</p>
+              <p class="mt-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">192.168.11.191 · Primary</p>
+              <div class="mt-2 flex items-center justify-between text-[10.5px]">
+                <span class="text-emerald-700 dark:text-emerald-300 font-medium">HTTP 200 OK</span>
+                <span class="text-slate-500">99.98% SLA</span>
+              </div>
             </div>
-            <div id="wf-step-2" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400">
+
+            <div id="node-card-2" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400 cursor-pointer hover:border-slate-300 dark:hover:border-white/20 transition-all">
               <div class="flex items-center justify-between">
-                <span class="font-bold">02. TECH REVIEW</span>
-                <span class="text-[10px] opacity-60">PENDING</span>
+                <span class="font-bold">02. EDGE SHIELD</span>
+                <span id="node-ping-2" class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">● 2.1ms</span>
               </div>
-              <p class="mt-2 text-[11px] font-sans text-slate-600 dark:text-slate-400">Planning &amp; Budget Division compliance</p>
+              <p class="mt-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">Cloudflare GraphQL WAF</p>
+              <div class="mt-2 flex items-center justify-between text-[10.5px]">
+                <span class="text-cyan-700 dark:text-cyan-300 font-medium">142 Blocked</span>
+                <span class="text-slate-500">TLS 1.3 Strict</span>
+              </div>
             </div>
-            <div id="wf-step-3" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400">
+
+            <div id="node-card-3" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400 cursor-pointer hover:border-slate-300 dark:hover:border-white/20 transition-all">
               <div class="flex items-center justify-between">
-                <span class="font-bold">03. BAC CLEARANCE</span>
-                <span class="text-[10px] opacity-60">PENDING</span>
+                <span class="font-bold">03. DB CLUSTER</span>
+                <span id="node-ping-3" class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">● 1.8ms</span>
               </div>
-              <p class="mt-2 text-[11px] font-sans text-slate-600 dark:text-slate-400">Bids &amp; Awards Committee procurement trail</p>
+              <p class="mt-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">192.168.11.192 · Core</p>
+              <div class="mt-2 flex items-center justify-between text-[10.5px]">
+                <span class="text-emerald-700 dark:text-emerald-300 font-medium">MySQL Pool 4</span>
+                <span class="text-slate-500">0 Slow Qs</span>
+              </div>
             </div>
-            <div id="wf-step-4" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400">
+
+            <div id="node-card-4" class="wf-node p-3.5 rounded-xl border border-slate-200 bg-white/50 text-slate-500 dark:border-white/10 dark:bg-void-950/40 dark:text-slate-400 cursor-pointer hover:border-slate-300 dark:hover:border-white/20 transition-all">
               <div class="flex items-center justify-between">
-                <span class="font-bold">04. PNPKI SIGNING</span>
-                <span class="text-[10px] opacity-60">PENDING</span>
+                <span class="font-bold">04. SSL RADAR</span>
+                <span id="node-ping-4" class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">● 12.4ms</span>
               </div>
-              <p class="mt-2 text-[11px] font-sans text-slate-600 dark:text-slate-400">DICT cryptographic token seal &amp; release</p>
+              <p class="mt-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">*.ncip.gov.ph</p>
+              <div class="mt-2 flex items-center justify-between text-[10.5px]">
+                <span class="text-cyan-700 dark:text-cyan-300 font-medium">214 Days Left</span>
+                <span class="text-slate-500">Auto-Alarm OK</span>
+              </div>
             </div>
           </div>
 
-          <!-- Active Simulation Console -->
+          <!-- 90-Day SLA Availability Heatmap & Streaks -->
+          <div class="mt-6 rounded-xl border border-slate-200/80 bg-slate-50/70 p-4 dark:border-white/10 dark:bg-void-950/80">
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-200/60 dark:border-white/10 text-xs font-mono">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+                  <span class="animate-pulse">🔥</span> Streak: 90 Days &ge; 99%
+                </span>
+                <span class="text-slate-600 dark:text-slate-400">Fleet SLA Average: <strong class="text-emerald-600 dark:text-emerald-400" id="monitor-uptime-sla">99.98%</strong></span>
+              </div>
+              <div class="text-[11px] text-slate-500 flex items-center gap-2">
+                <span>Avg Response: <strong class="text-slate-800 dark:text-slate-200" id="monitor-avg-latency">4.8ms</strong></span>
+                <span>·</span>
+                <span>Active Nodes: <strong class="text-slate-800 dark:text-slate-200">4 / 4</strong></span>
+              </div>
+            </div>
+
+            <!-- Heatmap Tiles Bar -->
+            <div class="mt-3.5 overflow-x-auto pb-1">
+              <div id="monitor-heatmap-grid" class="flex gap-1 min-w-[580px] items-center">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+            <div class="mt-2 flex items-center justify-between text-[10px] font-mono text-slate-400 uppercase tracking-widest">
+              <span>90 Days Ago</span>
+              <span class="text-emerald-500 font-semibold">● 100% Operational Baseline</span>
+              <span>Today</span>
+            </div>
+          </div>
+
+          <!-- Active Node Diagnostics & Live Kernel Stream -->
           <div class="mt-6 rounded-xl border border-slate-200/80 bg-slate-50/70 p-4 font-mono text-xs dark:border-white/10 dark:bg-void-950/80">
             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/60 pb-2 text-[11px] text-slate-500 dark:border-white/10">
               <span class="flex items-center gap-2">
                 <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-                <span>EVENT LOG // PROPOSAL #2026-PH-0089: Regional IP Center Modernization</span>
+                <span id="monitor-active-node-title" class="font-bold text-slate-800 dark:text-slate-200">Primary Application Server (192.168.11.191)</span>
               </span>
-              <span id="wf-timestamp">TIMESTAMP: 21:27:00</span>
+              <span class="text-slate-400">POLLING INTERVAL: 60 SECONDS</span>
             </div>
-            <div id="wf-description" class="mt-3 text-sm font-sans text-slate-800 dark:text-slate-200 font-medium">
-              Regional Focal submitted proposal draft. 7 activity line items entered. Automated validation: zero budget discrepancies detected.
+            <div id="monitor-active-node-desc" class="mt-2.5 text-xs font-sans text-slate-700 dark:text-slate-300">
+              Monitored every 60s via ICMP Echo socket ping. Host to core web platforms with automated queue workers and scheduled monitoring daemons.
             </div>
-            <div id="wf-sql-drawer" class="mt-3 rounded-lg border border-slate-200 bg-white p-3 text-[11.5px] text-slate-700 dark:border-white/10 dark:bg-[#070b14] dark:text-cyan-300">
-              <span class="text-slate-400 dark:text-slate-500">/* Eloquent Query &amp; Audit Log */</span><br />
-              <code id="wf-sql-code">Proposal::where('uuid', $id)-&gt;with(['activities', 'budgetItems'])-&gt;firstOrFail(); // 0.62ms</code>
+            <div id="monitor-sql-code" class="mt-2.5 rounded-lg border border-slate-200 bg-white p-3 text-[11.5px] text-slate-700 dark:border-white/10 dark:bg-[#070b14] dark:text-emerald-300 overflow-x-auto">
+              <code>ServerPingService::check('192.168.11.191', timeout: 2)->logMetric(['icmp_ms' => 4.2, 'loss' => 0]); // 0.4ms · Socket ICMP</code>
+            </div>
+
+            <!-- Live Event Log Stream -->
+            <div class="mt-4 border-t border-slate-200/60 dark:border-white/10 pt-3">
+              <div class="flex items-center justify-between mb-2 text-[10px] text-slate-500 uppercase tracking-wider">
+                <span>Real-Time Health Check Stream &amp; Daemon Log</span>
+                <span class="text-emerald-500">Live Socket Active</span>
+              </div>
+              <div id="monitor-log-stream" class="space-y-1.5 max-h-36 overflow-y-auto font-mono text-[11px] pr-1">
+                <!-- Dynamically populated -->
+              </div>
             </div>
           </div>
 
           <!-- Controls -->
           <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
             <div class="flex flex-wrap items-center gap-3">
-              <button id="wf-advance-btn" type="button" class="btn-primary btn-sm flex items-center gap-2">
-                <span id="wf-btn-text">Advance to Technical Review →</span>
+              <button id="simulate-spike-btn" type="button" class="btn-ghost btn-sm flex items-center gap-1.5 text-amber-600 dark:text-amber-400 hover:border-amber-500/50">
+                <span>Simulate Latency Spike ⚠️</span>
               </button>
-              <button id="wf-reset-btn" type="button" class="btn-ghost btn-sm">
-                Reset Simulator
+              <button id="reset-monitor-btn" type="button" class="btn-ghost btn-sm">
+                Reset Baseline
               </button>
             </div>
             <div class="font-mono text-[11px] text-slate-500 flex items-center gap-2">
-              <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
-              <span>Sanctum Token Verified · Eloquent ORM · DICT PNPKI Compliant</span>
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+              <span>ICMP Sockets · Cloudflare GraphQL · Automated Alert Queue</span>
             </div>
           </div>
         </article>
       </div>
 
-      <!-- Architecture Impact // Before & After Refactoring Differ -->
+      <!-- Infrastructure Impact // Before & After Refactoring Differ -->
       <div class="container-x mt-8">
         <article id="refactoring-differ" class="reveal card relative overflow-hidden p-6 sm:p-8">
           <span class="hud-corners" aria-hidden="true"></span>
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-4 dark:border-white/10">
             <div>
-              <span class="eyebrow !mb-1 text-cyan-600 dark:text-cyan-400">Architecture Impact // Before &amp; After</span>
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">From Fragmented Spreadsheets to Event-Driven State Machine</h3>
-              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Comparing the legacy paper routing flow against the modern Laravel 12 state machine.</p>
+              <span class="eyebrow !mb-1 text-emerald-600 dark:text-emerald-400">DevOps Observability // Before &amp; After</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">From Blind Manual Pings to 24/7 Automated Fleet Surveillance</h3>
+              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Comparing manual reactive IT troubleshooting against the automated SystemOnlineHealth ecosystem.</p>
             </div>
             <div class="flex gap-1.5 p-1 rounded-xl border border-slate-200/80 bg-slate-100/70 dark:border-white/10 dark:bg-void-950/70" role="tablist">
-              <button type="button" class="diff-tab-btn active px-3 py-1.5 rounded-lg font-mono text-xs font-semibold bg-white text-cyan-800 shadow-sm dark:bg-cyan-500/15 dark:text-cyan-300" data-tab="process">
-                Process Metrics
+              <button type="button" class="diff-tab-btn active px-3 py-1.5 rounded-lg font-mono text-xs font-semibold bg-white text-emerald-800 shadow-sm dark:bg-emerald-500/15 dark:text-emerald-300" data-tab="process">
+                Operations Metrics
               </button>
               <button type="button" class="diff-tab-btn px-3 py-1.5 rounded-lg font-mono text-xs font-medium text-slate-600 dark:text-slate-400" data-tab="code">
-                Query &amp; Code Diff
+                Service &amp; Code Diff
               </button>
             </div>
           </div>
 
-          <!-- Tab 1: Process Metrics Diff -->
+          <!-- Tab 1: Operations Metrics Diff -->
           <div id="diff-process" class="mt-6 grid gap-4 md:grid-cols-2">
             <div class="rounded-xl border border-rose-500/30 bg-rose-500/[0.04] p-5">
               <span class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-rose-600 dark:text-rose-400">
-                <span>✕</span> BEFORE: Legacy Paper &amp; Spreadsheets
+                <span>✕</span> BEFORE: Manual / Reactive IT Administration
               </span>
               <ul class="mt-3 space-y-2.5 text-xs text-slate-600 dark:text-slate-300 font-sans">
-                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Turnaround:</strong> 2 to 3 weeks average per document routing cycle.</span></li>
-                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Visibility:</strong> Zero real-time tracking; manual phone follow-ups across regional offices.</span></li>
-                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Discrepancies:</strong> Formula calculation errors and budget ceiling mismatches caught late.</span></li>
-                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Verification:</strong> Physical wet signatures vulnerable to alteration without audit log.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Downtime Discovery:</strong> Outages only noticed when employee departments called the IT helpdesk in distress.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>SSL Management:</strong> Expirations tracked on sticky notes; expired certificates locked users out of government portals.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>Threat Visibility:</strong> Zero insight into brute-force bot attacks, unauthorized scans, or edge probe bursts.</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">•</span><span><strong>SLA Reporting:</strong> Manual spreadsheet tallying at the end of each month with no MTTR calculation.</span></li>
               </ul>
             </div>
             <div class="rounded-xl border border-emerald-500/30 bg-emerald-500/[0.04] p-5">
               <span class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">
-                <span>✓</span> AFTER: PDMIS Laravel 12 Monolith
+                <span>✓</span> AFTER: SystemOnlineHealth Automated Telemetry
               </span>
               <ul class="mt-3 space-y-2.5 text-xs text-slate-600 dark:text-slate-300 font-sans">
-                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Turnaround:</strong> Under 4 hours for multi-stage technical reviews.</span></li>
-                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Visibility:</strong> Live status indicators and automated email/in-app notification queues.</span></li>
-                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Discrepancies:</strong> Zero budget discrepancies with real-time UACS validation rules.</span></li>
-                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Verification:</strong> DICT PNPKI digital signatures with immutable SHA-256 audit log.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Downtime Discovery:</strong> Automated 60-second ICMP socket pings &amp; HTTP probes with instant audio and email alert dispatch.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>SSL Management:</strong> Proactive certificate crawler alerting administrators 30, 14, and 3 days before expiration.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>Threat Visibility:</strong> Cloudflare GraphQL API integration streaming real-time WAF telemetry and bot mitigation scores.</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">•</span><span><strong>SLA Reporting:</strong> Interactive 90-day SLA heatmaps, MTTR tracking, and automated daily/weekly executive digests.</span></li>
               </ul>
             </div>
           </div>
 
-          <!-- Tab 2: Code Diff (Refactoring N+1 queries to optimized Eloquent pipeline) -->
+          <!-- Tab 2: Code Diff (Refactoring shell ping to reactive ServerPingService) -->
           <div id="diff-code" class="mt-6 hidden rounded-xl border border-slate-200/80 bg-[#070b14] p-4 font-mono text-xs text-slate-300 dark:border-white/10 shadow-inner">
             <div class="flex items-center justify-between border-b border-white/10 pb-2 text-[11px] text-slate-400">
-              <span>ProposalReviewController.php — Performance Refactor</span>
-              <span class="text-emerald-400">N+1 Eliminated · 84% Latency Drop</span>
+              <span>ServerPingService.php — Microsecond ICMP Socket Architecture</span>
+              <span class="text-emerald-400">Non-blocking Socket · Zero Thread Lock</span>
             </div>
             <pre class="mt-3 overflow-x-auto text-[11.5px] leading-relaxed">
-<span class="diff-del block px-2 py-0.5">- // Legacy: N+1 query loop fetching activities for each proposal (142 queries, 210ms)</span>
-<span class="diff-del block px-2 py-0.5">- $proposals = Proposal::where('region_id', $regId)-&gt;get();</span>
-<span class="diff-del block px-2 py-0.5">- foreach ($proposals as $p) { $p-&gt;items = BudgetItem::where('proposal_id', $p-&gt;id)-&gt;get(); }</span>
+<span class="diff-del block px-2 py-0.5">- // Legacy: Blocking shell_exec executing OS ping command (500ms - 2000ms blocking child process)</span>
+<span class="diff-del block px-2 py-0.5">- $output = shell_exec("ping -n 1 " . escapeshellarg($server->ip));</span>
+<span class="diff-del block px-2 py-0.5">- if (strpos($output, 'Received = 1') === false) { mail($admin, "Server Down", $server->name); }</span>
 <span class="diff-context block px-2 py-0.5"> </span>
-<span class="diff-add block px-2 py-0.5">+ // Refactored: Eager-loaded relations with subquery constraints (2 queries, 1.2ms)</span>
-<span class="diff-add block px-2 py-0.5">+ return Proposal::where('region_id', $regId)</span>
-<span class="diff-add block px-2 py-0.5">+     -&gt;with(['activities:id,proposal_id,title', 'budgetItems:id,proposal_id,amount,uacs_code'])</span>
-<span class="diff-add block px-2 py-0.5">+     -&gt;withSum('budgetItems', 'amount')</span>
-<span class="diff-add block px-2 py-0.5">+     -&gt;paginate(25);</span>
+<span class="diff-add block px-2 py-0.5">+ // Refactored: Non-blocking raw ICMP socket probe with timeout guard &amp; database telemetry</span>
+<span class="diff-add block px-2 py-0.5">+ public function ping(string $ip, int $timeoutSec = 2): PingResult</span>
+<span class="diff-add block px-2 py-0.5">+ {</span>
+<span class="diff-add block px-2 py-0.5">+     $start = microtime(true);</span>
+<span class="diff-add block px-2 py-0.5">+     $socket = @socket_create(AF_INET, SOCK_RAW, getprotobyname('icmp'));</span>
+<span class="diff-add block px-2 py-0.5">+     socket_set_option($socket, SOL_SOCKET, SO_RCVTIMEO, ['sec' => $timeoutSec, 'usec' => 0]);</span>
+<span class="diff-add block px-2 py-0.5">+     $package = $this->buildIcmpPacket();</span>
+<span class="diff-add block px-2 py-0.5">+     @socket_sendto($socket, $package, strlen($package), 0, $ip, 0);</span>
+<span class="diff-add block px-2 py-0.5">+     $received = @socket_recvfrom($socket, $buf, 65535, 0, $from, $port);</span>
+<span class="diff-add block px-2 py-0.5">+     $latencyMs = round((microtime(true) - $start) * 1000, 2);</span>
+<span class="diff-add block px-2 py-0.5">+     return new PingResult(isOnline: (bool)$received, latencyMs: $latencyMs);</span>
+<span class="diff-add block px-2 py-0.5">+ }</span>
             </pre>
           </div>
         </article>
       </div>
 
-      <!-- Interactive REST API Sandbox & Mock Explorer -->
+      <!-- Interactive Monitoring REST API Sandbox & Explorer -->
       <div class="container-x mt-8">
         <article id="api-sandbox" class="reveal card relative overflow-hidden p-6 sm:p-8">
           <span class="hud-corners" aria-hidden="true"></span>
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-4 dark:border-white/10">
             <div>
               <div class="flex items-center gap-2 mb-1">
-                <span class="inline-flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                <span class="font-mono text-[11px] uppercase tracking-wider text-cyan-700 dark:text-cyan-300 font-semibold">Live RESTful API Sandbox · Laravel Sanctum</span>
+                <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-emerald-700 dark:text-emerald-400 font-semibold">Live Observability API · SystemOnlineHealth Endpoints</span>
               </div>
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">Interactive API Endpoint Explorer</h3>
-              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Execute mock requests against public-sector API endpoints with simulated Sanctum bearer authentication.</p>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">Interactive Telemetry API Explorer</h3>
+              <p class="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400">Execute mock requests against live monitoring endpoints, Cloudflare threat matrix feeds, and SysAdmin AI intents.</p>
             </div>
             <div class="flex items-center gap-2">
-              <span class="chip font-mono text-xs">v1.2.0 · REST JSON</span>
+              <span class="chip font-mono text-xs">v2.4.0 · Telemetry JSON</span>
             </div>
           </div>
 
           <!-- Request Bar -->
           <div class="mt-6 flex flex-col sm:flex-row gap-2 font-mono text-xs">
-            <select id="api-method" class="field !py-2 w-full sm:w-28 font-bold text-cyan-600 dark:text-cyan-400">
+            <select id="api-method" class="field !py-2 w-full sm:w-28 font-bold text-emerald-600 dark:text-emerald-400">
               <option value="GET">GET</option>
               <option value="POST">POST</option>
             </select>
             <select id="api-endpoint" class="field !py-2 flex-1">
-              <option value="/api/v1/proposals?status=recommended">/api/v1/proposals?status=recommended</option>
-              <option value="/api/v1/proposals/89/pnpki-sign">/api/v1/proposals/89/pnpki-sign</option>
-              <option value="/api/v1/reference/psgc/regions">/api/v1/reference/psgc/regions</option>
-              <option value="/api/v1/system/telemetry">/api/v1/system/telemetry</option>
+              <option value="/api/servers/all/stats?days=30">/api/servers/all/stats?days=30</option>
+              <option value="/api/threats/matrix?period=24h">/api/threats/matrix?period=24h</option>
+              <option value="/api/health-check/ping-fleet">/api/health-check/ping-fleet</option>
+              <option value="/api/sysadmin/chat">/api/sysadmin/chat</option>
             </select>
             <button type="button" id="api-send-btn" class="btn-primary btn-sm flex items-center justify-center gap-2 font-mono text-xs whitespace-nowrap">
               <span>Send Request ⚡</span>
@@ -792,13 +855,13 @@
             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-2.5 text-[11px] text-slate-400">
               <div class="flex items-center gap-2">
                 <span id="api-status-pill" class="rounded px-2 py-0.5 font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">200 OK</span>
-                <span id="api-latency" class="text-slate-400">Latency: 8.4ms</span>
+                <span id="api-latency" class="text-slate-400">Latency: 4.2ms</span>
                 <span class="text-slate-600">·</span>
-                <span class="text-cyan-400">Sanctum Token Valid</span>
+                <span class="text-emerald-400">Daemon Active</span>
               </div>
-              <button type="button" id="api-copy-btn" class="hover:text-cyan-300 transition-colors">Copy JSON</button>
+              <button type="button" id="api-copy-btn" class="hover:text-emerald-300 transition-colors">Copy JSON</button>
             </div>
-            <pre id="api-response-body" class="mt-3 overflow-x-auto text-[11.5px] leading-relaxed text-cyan-300 max-h-72 overflow-y-auto"><code>Loading response...</code></pre>
+            <pre id="api-response-body" class="mt-3 overflow-x-auto text-[11.5px] leading-relaxed text-emerald-300 max-h-72 overflow-y-auto"><code>Loading response...</code></pre>
           </div>
         </article>
       </div>
@@ -1148,8 +1211,8 @@
     <div class="relative flex h-full sm:h-[92vh] w-full max-w-xl flex-col overflow-hidden rounded-none sm:rounded-2xl border border-cyan-400/30 bg-[#070b14]/98 p-5 text-xs font-mono text-slate-300 shadow-[0_25px_80px_rgba(0,0,0,0.9)]">
       <div class="flex items-center justify-between border-b border-white/10 pb-3">
         <div class="flex items-center gap-2">
-          <span class="h-2.5 w-2.5 rounded-full bg-cyan-400 animate-ping"></span>
-          <h2 id="telemetry-title" class="font-bold text-sm text-cyan-300">PDMIS Live Request Inspector &amp; Telemetry</h2>
+          <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+          <h2 id="telemetry-title" class="font-bold text-sm text-emerald-300">Pulse · SystemOnlineHealth Telemetry HUD</h2>
         </div>
         <button type="button" id="telemetry-close" class="rounded px-2 py-1 text-slate-400 hover:text-white hover:bg-white/10">✕ Close</button>
       </div>
@@ -1157,44 +1220,44 @@
       <div class="mt-4 grid grid-cols-3 gap-2 text-center text-[11px]">
         <div class="rounded-lg border border-white/10 bg-white/[0.02] p-2.5">
           <span class="block text-slate-500 uppercase tracking-wider">Avg Latency</span>
-          <span id="tel-avg-latency" class="block font-bold text-emerald-400 text-sm mt-0.5">8.4ms</span>
+          <span id="tel-avg-latency" class="block font-bold text-emerald-400 text-sm mt-0.5">4.2ms</span>
         </div>
         <div class="rounded-lg border border-white/10 bg-white/[0.02] p-2.5">
-          <span class="block text-slate-500 uppercase tracking-wider">OPcache Hit</span>
-          <span class="block font-bold text-cyan-400 text-sm mt-0.5">99.4%</span>
+          <span class="block text-slate-500 uppercase tracking-wider">90-Day SLA</span>
+          <span class="block font-bold text-cyan-400 text-sm mt-0.5">99.98%</span>
         </div>
         <div class="rounded-lg border border-white/10 bg-white/[0.02] p-2.5">
-          <span class="block text-slate-500 uppercase tracking-wider">N+1 Queries</span>
-          <span class="block font-bold text-emerald-400 text-sm mt-0.5">0 Detected</span>
+          <span class="block text-slate-500 uppercase tracking-wider">Active Fleet</span>
+          <span class="block font-bold text-emerald-400 text-sm mt-0.5">4 Nodes</span>
         </div>
       </div>
 
       <div class="mt-4 flex-1 overflow-y-auto space-y-3 pr-1">
         <div>
-          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">Live Endpoints Activity Trace</p>
+          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">Live Endpoints &amp; Health Probe Trace</p>
           <div id="tel-trace-list" class="space-y-1.5 font-mono text-[11px]">
             <!-- Rendered dynamically -->
           </div>
         </div>
 
         <div class="border-t border-white/10 pt-3">
-          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">MySQL Execution Plan (EXPLAIN)</p>
-          <pre class="rounded-lg border border-white/10 bg-black/50 p-2.5 text-[10.5px] leading-relaxed text-cyan-300 overflow-x-auto"><code>id: 1 | select_type: SIMPLE | table: proposals | type: const | key: PRIMARY | key_len: 8 | ref: const | rows: 1 | filtered: 100.00 | Extra: NULL</code></pre>
+          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">Cloudflare WAF Threat Matrix Status</p>
+          <pre class="rounded-lg border border-white/10 bg-black/50 p-2.5 text-[10.5px] leading-relaxed text-emerald-300 overflow-x-auto"><code>Zone: ncip.gov.ph | Threat Score: 0 | 24h WAF Blocks: 142 | TLS: 1.3 Strict | Status: SECURE</code></pre>
         </div>
 
         <div class="border-t border-white/10 pt-3">
-          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">Sanctum Auth &amp; DICT Root CA Chain</p>
+          <p class="text-slate-400 uppercase tracking-wider text-[10px] mb-1.5">Kernel Daemon &amp; SSL Expiration Crawler</p>
           <div class="rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-2.5 text-[10.5px] space-y-1 text-emerald-300">
-            <div>✓ Token: <span class="text-white">Bearer 89|sanctum_token_valid</span> (Capabilities: [*])</div>
-            <div>✓ DICT PNPKI Root CA: <span class="text-white">GovPH Root CA 2026 (SHA-256)</span></div>
-            <div>✓ Tamper Check: <span class="text-white">Pass (0 byte discrepancy)</span></div>
+            <div>✓ Scheduler: <span class="text-white">App\Console\Commands\PingAllServers (60s loop)</span></div>
+            <div>✓ SSL Expiration Radar: <span class="text-white">Valid for 214 days (Auto-alarm at 30d)</span></div>
+            <div>✓ Automated Reports: <span class="text-white">Daily &amp; Weekly health digests enabled</span></div>
           </div>
         </div>
       </div>
 
       <div class="mt-4 border-t border-white/10 pt-3 flex justify-between items-center text-[11px] text-slate-500">
-        <span>PHP 8.3.10 · Laravel 12.0 · MySQL 8.0</span>
-        <button type="button" id="tel-ping-btn" class="btn-ghost btn-sm !py-1 text-[11px]">Simulate Ping</button>
+        <span>PHP 8.2+ · Laravel 12.0 · ICMP Sockets · SQLite/MySQL</span>
+        <button type="button" id="tel-ping-btn" class="btn-ghost btn-sm !py-1 text-[11px]">Ping Fleet</button>
       </div>
     </div>
   </div>
@@ -1247,13 +1310,18 @@
     <div class="mt-3">
       <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-0.5">Executive Summary</h2>
       <p class="mt-1.5 text-xs leading-relaxed text-slate-700">
-        Lead Full-Stack Developer and Computer Engineer with enterprise expertise architecting high-concurrency public-sector platforms, approval state machines, and REST APIs. Led the nationwide engineering of PDMIS (268 routes, 75 Eloquent models, 93 migrations, DICT PNPKI digital signatures), QRAS (CodeIgniter), and COC. Certified Project Management Specialist (CPMS), Certified Agile Scrum Master (CASM), and Certified Project Scheduling &amp; Controls Analyst (CPSCA).
+        Lead Full-Stack Developer and Computer Engineer with enterprise expertise architecting high-concurrency public-sector platforms, fleet telemetry monitors, approval state machines, and REST APIs. Architected SystemOnlineHealth (Pulse Monitoring: 24/7 ICMP fleet surveillance, SSL expiration radar, Cloudflare GraphQL WAF threat matrix), and engineered public-sector enterprise systems including PDMIS, DRIP, QRAS, and COC. Certified Project Management Specialist (CPMS), Certified Agile Scrum Master (CASM), and Certified Project Scheduling &amp; Controls Analyst (CPSCA).
       </p>
     </div>
 
     <div class="mt-3">
       <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-0.5">Core Enterprise Systems (Lead Developer)</h2>
       <div class="mt-1.5 grid grid-cols-2 gap-2 text-xs">
+        <div class="border border-slate-300 p-2 rounded">
+          <p class="font-bold text-slate-900">Pulse · SystemOnlineHealth Fleet Telemetry</p>
+          <p class="text-slate-600 text-[10.5px]">Stack: Laravel 12 · React · Inertia · Cloudflare API · Recharts</p>
+          <p class="text-slate-700 mt-0.5 text-[10.5px]">24/7 server fleet observability: real-time ICMP ping checks, HTTP uptime status codes, SSL certificate expiration countdowns, and automated threat digests.</p>
+        </div>
         <div class="border border-slate-300 p-2 rounded">
           <p class="font-bold text-slate-900">PDMIS · Project Dev &amp; Management Information System</p>
           <p class="text-slate-600 text-[10.5px]">Stack: Laravel 12 · React · Inertia · MySQL · DICT PNPKI</p>

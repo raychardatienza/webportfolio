@@ -7,7 +7,6 @@ index.html                     ← main page markup
 assets/js/main.js              ← all content data (projects, timeline, charts, notes, testimonials) and behaviour
 notes/                         ← technical articles
 .htaccess                      ← Hostinger: HTTPS, security headers, caching (GitHub Pages ignores it)
-case-studies/pdmis.html        ← PDMIS case study
 404.html                       ← themed "route not found" page (GitHub Pages and Hostinger use it automatically)
 assets/css/styles.css          ← compiled stylesheet (generated, don't edit by hand)
 assets/fonts/                  ← self-hosted variable fonts (Inter, Space Grotesk, JetBrains Mono)
@@ -71,7 +70,7 @@ To add an illustration for a new project, add an entry in `_src/project-art.js`,
 - **Section dividers:** each `.section` gets a glowing line with a moving sweep. Remove the `section` class from a block to drop it.
 - **Closing call to action:** the `#cta` section above the footer.
 - **Photo portrait:** the About portrait displays in crisp, natural, true-to-life color inside an animated rotating neon ring.
-- **Case study:** `case-studies/pdmis.html` has an animated architecture diagram (dashed lines show requests flowing) and a before/after comparison.
+- **Monitoring highlight:** SystemOnlineHealth provides an interactive operations center, live fleet ping simulations, Cloudflare WAF threat matrix, and 90-day SLA analytics.
 
 ## Personal touches
 
@@ -85,13 +84,13 @@ To add an illustration for a new project, add an entry in `_src/project-art.js`,
 ## Before you deploy
 
 1. **Contact form:** get a free access key at <https://web3forms.com> using `raychardatienza@gmail.com`, then paste it into `WEB3FORMS_ACCESS_KEY` at the top of `assets/js/main.js`. Until then, the form opens the visitor's email app.
-2. **Site URL:** link previews, the sitemap and search engines need the full address. Everything assumes `https://raychardatienza.github.io/portfolio/`. If you deploy elsewhere (for example a custom domain), find and replace that URL in `index.html`, `case-studies/pdmis.html`, `robots.txt`, `sitemap.xml`, `_src/og-image.html` and `_src/github-profile-README.md`.
-3. **Check the content:** the descriptions of DRIP, COC, IPS/IPO and the SSO site, the expansions of COC, IPS and IPO, and the tech stack for each public-sector system, other than PDMIS which was confirmed from its source code.
-4. **Employer clearance:** confirm with your agency that describing these internal systems and the PDMIS case study publicly is allowed.
+2. **Site URL:** link previews, the sitemap and search engines need the full address. Everything assumes `https://raychardatienza.github.io/portfolio/`. If you deploy elsewhere (for example a custom domain), find and replace that URL in `index.html`, `robots.txt`, `sitemap.xml`, `_src/og-image.html` and `_src/github-profile-README.md`.
+3. **Check the content:** the descriptions of SystemOnlineHealth, DRIP, PDMIS, COC, IPS/IPO and the SSO site.
+4. **Employer clearance:** confirm with your agency that describing these internal systems publicly is allowed.
 
 ## Still to add (needs your input)
 
-- **Real numbers** in the project impact lines and the case study's outcome section (look for `TODO` in `case-studies/pdmis.html`), such as employees trained, offices onboarded or records processed.
+- **Real numbers** in the project impact lines, such as employees trained, offices onboarded or records processed.
 - **Testimonials:** the "kind words" section stays hidden until you add quotes. Ask your supervisor or colleagues for 1–3 sentences, get their permission, then fill `TESTIMONIALS` in `assets/js/main.js`:
   ```js
   const TESTIMONIALS = [
@@ -100,7 +99,6 @@ To add an illustration for a new project, add an entry in `_src/project-art.js`,
   ```
 - **A higher-resolution professional photo** to replace `assets/images/profile.jpg` and `profile.webp`. Use a square image, at least 800×800, with no signature, ideally a plain light or dark background so the duotone looks clean. Then regenerate the preview image.
 - **Deploy the Laravel demo** (`Desktop/approval-workflow-demo`) and set `DEMO_LINKS` so its card appears.
-- **A DRIP case study:** copy `case-studies/pdmis.html` as a template.
 - **Booking link (optional):** create a free Cal.com (or Calendly) page and set `BOOKING_URL` at the top of `assets/js/main.js`. A "Book a call" button appears in Contact.
 - **Custom domain (optional):** buy one (for example `raychard.dev`), point it at GitHub Pages or Hostinger, then replace the site URL as described above. A matching address like `hello@raychard.dev` looks more established than Gmail.
 

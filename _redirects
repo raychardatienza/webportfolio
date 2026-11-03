@@ -1,5 +1,4 @@
 # Edge Redirects
-/pdmis          /case-studies/pdmis.html      301
 /design         /design-system.html           301
 /resume         /assets/resume/Raychard-Atienza-Resume.pdf 302
 

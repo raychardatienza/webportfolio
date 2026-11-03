@@ -3,7 +3,6 @@ const CACHE_NAME = 'raychard-portfolio-v2026';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
-  './case-studies/pdmis.html',
   './design-system.html',
   './assets/css/styles.css',
   './assets/js/main.js',

@@ -4,7 +4,6 @@
       "staticDistDir": "./",
       "url": [
         "http://localhost/index.html",
-        "http://localhost/case-studies/pdmis.html",
         "http://localhost/design-system.html"
       ],
       "numberOfRuns": 3
